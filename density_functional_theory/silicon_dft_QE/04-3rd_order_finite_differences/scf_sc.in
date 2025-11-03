@@ -1,0 +1,31 @@
+&CONTROL
+  calculation = 'scf'
+  outdir = 'tmp'
+  prefix = 'si'
+  pseudo_dir = '../pseudo/'
+  tprnfor = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  ecutrho =   240
+  ecutwfc =   30
+  ibrav = 0
+  nat = ##NATOMS##
+  nosym = .false.
+  ntyp = 1
+  occupations = 'fixed'
+/
+&ELECTRONS
+  conv_thr =   1.0d-12
+  electron_maxstep = 80
+  mixing_beta =   0.4
+  startingpot = 'file'
+  startingwfc = 'file'
+/
+
+ATOMIC_SPECIES
+Si     28.0855 Si.pbesol-n-rrkjus_psl.1.0.0.UPF
+
+##COORDINATES##
+K_POINTS gamma
+##CELL##

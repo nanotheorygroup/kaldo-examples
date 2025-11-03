@@ -1,0 +1,6 @@
+&input
+   fildyn  =  'si.dyn'
+   zasr    =  'crystal',
+   flfrc   =  'espresso.ifc2'
+ /
+

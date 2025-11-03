@@ -1,2 +1,2 @@
 # kALDo-examples
-(semi) official repository for examples for kALDo
+Official repository for examples for kALDo
