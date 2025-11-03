@@ -1,0 +1,235 @@
+2025-09-23 10:25:27.918043: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1758648327.941442  184795 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758648327.948566  184795 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-09-23 10:25:28.037605: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/zekun/Programs/miniconda3/envs/kaldo2.0/lib/python3.10/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+2025-09-23 10:25:30,833 - kaldo - WARNING - Directly use ForceConstants to load data from folder is discouraged with limit                             functionalities. Please use ForceConstants.from_folder for more options.
+2025-09-23 10:25:30,833 - kaldo - WARNING - Directly use ForceConstants to load data from folder is discouraged with limit                             functionalities. Please use ForceConstants.from_folder for more options.
+2025-09-23 10:25:30,879 - kaldo - INFO - Reading stored second
+2025-09-23 10:25:30,879 - kaldo - INFO - Reading stored second
+2025-09-23 10:25:31,329 - kaldo - INFO - Reading stored third
+2025-09-23 10:25:31,329 - kaldo - INFO - Reading stored third
+
+
+2025-09-23 10:25:31,330 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/conductivity not found in formatted format, calculating conductivity
+2025-09-23 10:25:31,330 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/conductivity not found in formatted format, calculating conductivity
+2025-09-23 10:25:31,330 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+2025-09-23 10:25:31,330 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+2025-09-23 10:25:31,331 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:25:31,331 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:25:31,332 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 10:25:31,332 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 10:25:31,332 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:25:31,332 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:25:31,333 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 10:25:31,333 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 10:25:33,909 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:25:33,909 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:25:35,990 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 10:25:35,990 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 10:25:35,991 - kaldo - INFO - Memory needed: 4722 MB, available: 255919 / 270102 MB
+2025-09-23 10:25:35,991 - kaldo - INFO - Memory needed: 4722 MB, available: 255919 / 270102 MB
+2025-09-23 10:25:36,520 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/bandwidth not found in numpy format, calculating bandwidth
+2025-09-23 10:25:36,520 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/bandwidth not found in numpy format, calculating bandwidth
+2025-09-23 10:25:36,520 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/anharmonic_bandwidth not found in numpy format, calculating anharmonic_bandwidth
+2025-09-23 10:25:36,520 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/anharmonic_bandwidth not found in numpy format, calculating anharmonic_bandwidth
+2025-09-23 10:25:36,520 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/_ps_and_gamma not found in numpy format, calculating _ps_and_gamma
+2025-09-23 10:25:36,520 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/_ps_and_gamma not found in numpy format, calculating _ps_and_gamma
+2025-09-23 10:25:37,875 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:25:37,875 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:25:37,879 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/_ps_and_gamma stored
+2025-09-23 10:25:37,879 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/_ps_and_gamma stored
+2025-09-23 10:25:37,879 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/anharmonic_bandwidth stored
+2025-09-23 10:25:37,879 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/anharmonic_bandwidth stored
+2025-09-23 10:25:37,880 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/bandwidth stored
+2025-09-23 10:25:37,880 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/bandwidth stored
+2025-09-23 10:36:57,986 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:36:57,986 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:36:57,986 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 10:36:57,986 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 10:36:58,739 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:36:58,739 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:37:01,039 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 10:37:01,039 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 10:37:01,040 - kaldo - INFO - Memory needed: 4722 MB, available: 250687 / 270102 MB
+2025-09-23 10:37:01,040 - kaldo - INFO - Memory needed: 4722 MB, available: 250687 / 270102 MB
+2025-09-23 10:37:01,673 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/bandwidth
+2025-09-23 10:37:01,673 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/bandwidth
+2025-09-23 10:48:34,114 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:48:34,114 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 10:48:34,115 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 10:48:34,115 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 10:48:34,785 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:48:34,785 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 10:48:36,919 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 10:48:36,919 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 10:48:36,919 - kaldo - INFO - Memory needed: 4722 MB, available: 249778 / 270102 MB
+2025-09-23 10:48:36,919 - kaldo - INFO - Memory needed: 4722 MB, available: 249778 / 270102 MB
+2025-09-23 10:48:37,455 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/bandwidth
+2025-09-23 10:48:37,455 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/bandwidth
+2025-09-23 11:00:10,063 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity not found in numpy format, calculating heat_capacity
+2025-09-23 11:00:10,063 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity not found in numpy format, calculating heat_capacity
+I0000 00:00:1758650410.837821  184795 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1467 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5
+I0000 00:00:1758650410.838916  184795 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 9791 MB memory:  -> device: 1, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:21:00.0, compute capability: 7.5
+I0000 00:00:1758650410.839541  184795 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 9791 MB memory:  -> device: 2, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:4b:00.0, compute capability: 7.5
+I0000 00:00:1758650410.840092  184795 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 8937 MB memory:  -> device: 3, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:4c:00.0, compute capability: 7.5
+I0000 00:00:1758650410.898935  184795 cuda_solvers.cc:178] Creating GpuSolver handles for stream 0x1b5a9ac0
+2025-09-23 11:00:25,339 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity stored
+2025-09-23 11:00:25,339 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity stored
+2025-09-23 11:00:25,340 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:00:25,340 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:00:25,340 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:25,340 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:25,349 - kaldo - INFO - Conductivity calculated
+2025-09-23 11:00:25,349 - kaldo - INFO - Conductivity calculated
+Bulk thermal conductivity (W/m/K):  260.2652816389177
+
+
+Thermal condutivity tensor: 
+
+[[ 2.64608547e+02  5.78997217e-01  2.43088665e-01]
+ [ 4.18946787e-01  2.64671284e+02 -2.31451194e-01]
+ [ 3.69859965e-01  3.98814383e-01  2.51516013e+02]]
+2025-09-23 11:00:25,702 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/isotopes/conductivity not found in formatted format, calculating conductivity
+2025-09-23 11:00:25,702 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/isotopes/conductivity not found in formatted format, calculating conductivity
+2025-09-23 11:00:25,703 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/isotopes/mean_free_path not found in formatted format, calculating mean_free_path
+2025-09-23 11:00:25,703 - kaldo - INFO - ALD_AlN_ACE/15_15_9/inverse/300/quantum/isotopes/mean_free_path not found in formatted format, calculating mean_free_path
+2025-09-23 11:00:25,703 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:25,703 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:25,703 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:00:25,703 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:00:25,703 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:25,703 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:25,704 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:00:25,704 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:00:26,505 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 11:00:26,505 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 11:00:28,907 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 11:00:28,907 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 11:00:28,907 - kaldo - INFO - Memory needed: 4722 MB, available: 249358 / 270102 MB
+2025-09-23 11:00:28,907 - kaldo - INFO - Memory needed: 4722 MB, available: 249358 / 270102 MB
+2025-09-23 11:00:29,565 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth not found in numpy format, calculating bandwidth
+2025-09-23 11:00:29,565 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth not found in numpy format, calculating bandwidth
+2025-09-23 11:00:29,565 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/anharmonic_bandwidth
+2025-09-23 11:00:29,565 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/anharmonic_bandwidth
+2025-09-23 11:00:29,565 - kaldo - INFO - ALD_AlN_ACE/15_15_9/isotopic_bandwidth not found in numpy format, calculating isotopic_bandwidth
+2025-09-23 11:00:29,565 - kaldo - INFO - ALD_AlN_ACE/15_15_9/isotopic_bandwidth not found in numpy format, calculating isotopic_bandwidth
+2025-09-23 11:00:29,566 - kaldo - WARNING - input isotopic gfactors are missing, using isotopic concentrations from ase database (NIST)
+2025-09-23 11:00:29,566 - kaldo - WARNING - input isotopic gfactors are missing, using isotopic concentrations from ase database (NIST)
+2025-09-23 11:00:29,787 - kaldo - INFO - online isotopic data not available, using legacy data.
+2025-09-23 11:00:29,787 - kaldo - INFO - online isotopic data not available, using legacy data.
+2025-09-23 11:00:29,789 - kaldo - INFO - g factors=[0.00000000e+00 1.83766579e-05 0.00000000e+00 1.83766579e-05]
+2025-09-23 11:00:29,789 - kaldo - INFO - g factors=[0.00000000e+00 1.83766579e-05 0.00000000e+00 1.83766579e-05]
+2025-09-23 11:00:29,789 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:00:29,789 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:00:29,790 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:29,790 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:00:29,796 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/_eigensystem
+2025-09-23 11:00:29,796 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/_eigensystem
+2025-09-23 11:00:29,797 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:00:29,797 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:00:29,801 - kaldo - INFO - per25,per50,per75,mean sigma=0.060724900400019974 0.17529965262659952 0.4483672456011707 0.5146050902193493
+2025-09-23 11:00:29,801 - kaldo - INFO - per25,per50,per75,mean sigma=0.060724900400019974 0.17529965262659952 0.4483672456011707 0.5146050902193493
+2025-09-23 11:00:29,801 - kaldo - INFO - Using Gaussian diffusivity_shape
+2025-09-23 11:00:29,801 - kaldo - INFO - Using Gaussian diffusivity_shape
+2025-09-23 11:00:29,801 - kaldo - INFO - Calculating isotopic bandwidth  0, 0.0%
+2025-09-23 11:00:29,801 - kaldo - INFO - Calculating isotopic bandwidth  0, 0.0%
+2025-09-23 11:00:30,453 - kaldo - INFO - Calculating isotopic bandwidth  1000, 4.0%
+2025-09-23 11:00:30,453 - kaldo - INFO - Calculating isotopic bandwidth  1000, 4.0%
+2025-09-23 11:00:31,112 - kaldo - INFO - Calculating isotopic bandwidth  2000, 8.0%
+2025-09-23 11:00:31,112 - kaldo - INFO - Calculating isotopic bandwidth  2000, 8.0%
+2025-09-23 11:00:31,769 - kaldo - INFO - Calculating isotopic bandwidth  3000, 12.0%
+2025-09-23 11:00:31,769 - kaldo - INFO - Calculating isotopic bandwidth  3000, 12.0%
+2025-09-23 11:00:32,452 - kaldo - INFO - Calculating isotopic bandwidth  4000, 16.0%
+2025-09-23 11:00:32,452 - kaldo - INFO - Calculating isotopic bandwidth  4000, 16.0%
+2025-09-23 11:00:33,127 - kaldo - INFO - Calculating isotopic bandwidth  5000, 21.0%
+2025-09-23 11:00:33,127 - kaldo - INFO - Calculating isotopic bandwidth  5000, 21.0%
+2025-09-23 11:00:33,783 - kaldo - INFO - Calculating isotopic bandwidth  6000, 25.0%
+2025-09-23 11:00:33,783 - kaldo - INFO - Calculating isotopic bandwidth  6000, 25.0%
+2025-09-23 11:00:34,426 - kaldo - INFO - Calculating isotopic bandwidth  7000, 28.999999999999996%
+2025-09-23 11:00:34,426 - kaldo - INFO - Calculating isotopic bandwidth  7000, 28.999999999999996%
+2025-09-23 11:00:35,056 - kaldo - INFO - Calculating isotopic bandwidth  8000, 33.0%
+2025-09-23 11:00:35,056 - kaldo - INFO - Calculating isotopic bandwidth  8000, 33.0%
+2025-09-23 11:00:35,707 - kaldo - INFO - Calculating isotopic bandwidth  9000, 37.0%
+2025-09-23 11:00:35,707 - kaldo - INFO - Calculating isotopic bandwidth  9000, 37.0%
+2025-09-23 11:00:36,345 - kaldo - INFO - Calculating isotopic bandwidth  10000, 41.0%
+2025-09-23 11:00:36,345 - kaldo - INFO - Calculating isotopic bandwidth  10000, 41.0%
+2025-09-23 11:00:37,045 - kaldo - INFO - Calculating isotopic bandwidth  11000, 45.0%
+2025-09-23 11:00:37,045 - kaldo - INFO - Calculating isotopic bandwidth  11000, 45.0%
+2025-09-23 11:00:37,705 - kaldo - INFO - Calculating isotopic bandwidth  12000, 49.0%
+2025-09-23 11:00:37,705 - kaldo - INFO - Calculating isotopic bandwidth  12000, 49.0%
+2025-09-23 11:00:38,459 - kaldo - INFO - Calculating isotopic bandwidth  13000, 53.0%
+2025-09-23 11:00:38,459 - kaldo - INFO - Calculating isotopic bandwidth  13000, 53.0%
+2025-09-23 11:00:39,126 - kaldo - INFO - Calculating isotopic bandwidth  14000, 57.99999999999999%
+2025-09-23 11:00:39,126 - kaldo - INFO - Calculating isotopic bandwidth  14000, 57.99999999999999%
+2025-09-23 11:00:39,808 - kaldo - INFO - Calculating isotopic bandwidth  15000, 62.0%
+2025-09-23 11:00:39,808 - kaldo - INFO - Calculating isotopic bandwidth  15000, 62.0%
+2025-09-23 11:00:40,451 - kaldo - INFO - Calculating isotopic bandwidth  16000, 66.0%
+2025-09-23 11:00:40,451 - kaldo - INFO - Calculating isotopic bandwidth  16000, 66.0%
+2025-09-23 11:00:41,107 - kaldo - INFO - Calculating isotopic bandwidth  17000, 70.0%
+2025-09-23 11:00:41,107 - kaldo - INFO - Calculating isotopic bandwidth  17000, 70.0%
+2025-09-23 11:00:41,769 - kaldo - INFO - Calculating isotopic bandwidth  18000, 74.0%
+2025-09-23 11:00:41,769 - kaldo - INFO - Calculating isotopic bandwidth  18000, 74.0%
+2025-09-23 11:00:42,404 - kaldo - INFO - Calculating isotopic bandwidth  19000, 78.0%
+2025-09-23 11:00:42,404 - kaldo - INFO - Calculating isotopic bandwidth  19000, 78.0%
+2025-09-23 11:00:43,060 - kaldo - INFO - Calculating isotopic bandwidth  20000, 82.0%
+2025-09-23 11:00:43,060 - kaldo - INFO - Calculating isotopic bandwidth  20000, 82.0%
+2025-09-23 11:00:43,717 - kaldo - INFO - Calculating isotopic bandwidth  21000, 86.0%
+2025-09-23 11:00:43,717 - kaldo - INFO - Calculating isotopic bandwidth  21000, 86.0%
+2025-09-23 11:00:44,347 - kaldo - INFO - Calculating isotopic bandwidth  22000, 91.0%
+2025-09-23 11:00:44,347 - kaldo - INFO - Calculating isotopic bandwidth  22000, 91.0%
+2025-09-23 11:00:45,042 - kaldo - INFO - Calculating isotopic bandwidth  23000, 95.0%
+2025-09-23 11:00:45,042 - kaldo - INFO - Calculating isotopic bandwidth  23000, 95.0%
+2025-09-23 11:00:45,758 - kaldo - INFO - Calculating isotopic bandwidth  24000, 99.0%
+2025-09-23 11:00:45,758 - kaldo - INFO - Calculating isotopic bandwidth  24000, 99.0%
+2025-09-23 11:00:45,987 - kaldo - INFO - 'compute_isotopic_bw'  16.20 s
+2025-09-23 11:00:45,987 - kaldo - INFO - 'compute_isotopic_bw'  16.20 s
+2025-09-23 11:00:45,988 - kaldo - INFO - ALD_AlN_ACE/15_15_9/isotopic_bandwidth stored
+2025-09-23 11:00:45,988 - kaldo - INFO - ALD_AlN_ACE/15_15_9/isotopic_bandwidth stored
+2025-09-23 11:00:45,988 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth stored
+2025-09-23 11:00:45,988 - kaldo - INFO - ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth stored
+2025-09-23 11:12:20,689 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:12:20,689 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:12:20,690 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:12:20,690 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:12:21,455 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 11:12:21,455 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 11:12:23,791 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 11:12:23,791 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 11:12:23,791 - kaldo - INFO - Memory needed: 4722 MB, available: 249429 / 270102 MB
+2025-09-23 11:12:23,791 - kaldo - INFO - Memory needed: 4722 MB, available: 249429 / 270102 MB
+2025-09-23 11:12:24,455 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth
+2025-09-23 11:12:24,455 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth
+2025-09-23 11:23:57,009 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:23:57,009 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:23:57,009 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:23:57,009 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/frequency
+2025-09-23 11:23:57,690 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 11:23:57,690 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/_ps_gamma_and_gamma_tensor
+2025-09-23 11:23:59,830 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 11:23:59,830 - kaldo - INFO - _scattering_matrix: [24297 24297] * <class 'float'>
+2025-09-23 11:23:59,830 - kaldo - INFO - Memory needed: 4722 MB, available: 249750 / 270102 MB
+2025-09-23 11:23:59,830 - kaldo - INFO - Memory needed: 4722 MB, available: 249750 / 270102 MB
+2025-09-23 11:24:00,380 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth
+2025-09-23 11:24:00,380 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/isotopes/bandwidth
+2025-09-23 11:35:32,416 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity
+2025-09-23 11:35:32,416 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity
+2025-09-23 11:35:32,416 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:35:32,416 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/velocity
+2025-09-23 11:35:32,416 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:35:32,416 - kaldo - INFO - Loading ALD_AlN_ACE/15_15_9/physical_mode
+2025-09-23 11:35:32,419 - kaldo - INFO - Conductivity calculated
+2025-09-23 11:35:32,419 - kaldo - INFO - Conductivity calculated
+Bulk thermal conductivity with iso(W/m/K):  259.8659092868542
+
+
+Thermal condutivity tensor with iso: 
+
+[[ 2.64186375e+02  5.76801222e-01  2.42219797e-01]
+ [ 4.17874653e-01  2.64246959e+02 -2.31684048e-01]
+ [ 3.66651347e-01  3.93057933e-01  2.51164394e+02]]
+
+
