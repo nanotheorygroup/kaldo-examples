@@ -1,4 +1,4 @@
-# empricial_potentials
+# empirical_potentials
 This collection of examples shows how to perform thermal transport with kALDo for cystal and amorphous
 systems using [Tersoff potential](https://docs.lammps.org/pair_tersoff.html). Before running simulations with kALDo, download the following third-party packages: [LAMMPS](https://lammps.sandia.gov/download.html)
 - To calculate 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS and ASE, after downloading [LAMMPS](https://lammps.sandia.gov/),compile LAMMPS with shlib mode:
