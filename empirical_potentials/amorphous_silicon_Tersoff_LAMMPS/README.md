@@ -14,24 +14,19 @@ External files required:
 	in.aSi512:
     1.  Compute 2nd and 3rd force constants with LAMMPS PHONON
 			
-	or
-			
-	get_precalculated_fc.sh:
-	1.  Download precalculated force constants computed with LAMMPS PHONON
-
 - 1_aSi512_Tersoff_thermal_conductivity.py proceeds as follows:
 
-    1. Set up force constant object by loading in 2nd, 3rd force constants computed with LAMMPS USER-PHONON.
+    1. Set up force constant object by loading in 2nd, 3rd force constants computed with LAMMPS PHONON.
 			
 	2. Set up phonon object and perform quantum simulation at 300K.
 			
-	3. Set up Conductivity object and compute thermal conductivity with Quasi Harmonic Green Kubo method.
+	3. Set up Conductivity object and compute thermal conductivity with Quasi Harmonic Green Kubo (QHGK) method.
 			
 	4. Set up Conductivity object and compute diffusivity with QHGK method.
 
 - 2_aSi512_Tersoff_visualize_QHGK_properties.py proceeds as follows:
 
-	1. Set up force constant object by loading in 2nd, 3rd force constants computed with LAMMPS USER-PHONON.
+	1. Set up force constant object by loading in 2nd, 3rd force constants computed with LAMMPS PHONON.
 			
 	2. Set up phonon object and perform quantum simulation at 300K.
 			

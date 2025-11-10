@@ -17,11 +17,7 @@ make install-python
 To speed up the calculation, one can download and compile LAMMPS with optimized force constants calculation functionality from the following repo: [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d). 
 - Some features on the OptimizedDynamicalMatrix are broken as of commits in April 2020, please checkout the following commit which works reliably from 01/29/2020:
         - in your cloned repo: `git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d`
-- To obtain precalculated force constants for each example, navigate to each example folder and execute:
-```console
-chmod +x get_precalculated_fc.sh
-./get_precalculated.sh
-```
+
 - Suggestions of specificing GPU/CPU usage for tensorflow can be accessed [here](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
 
 ## List and content of examples folder
