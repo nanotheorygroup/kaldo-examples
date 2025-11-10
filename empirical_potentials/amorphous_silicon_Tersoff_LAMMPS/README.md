@@ -23,16 +23,8 @@ External files required:
 	3. Set up Conductivity object and compute thermal conductivity with Quasi Harmonic Green Kubo (QHGK) method.
 			
 	4. Set up Conductivity object and compute diffusivity with QHGK method.
-
-- 2_aSi512_Tersoff_visualize_QHGK_properties.py proceeds as follows:
-
-	1. Set up force constant object by loading in 2nd, 3rd force constants computed with LAMMPS PHONON.
-			
-	2. Set up phonon object and perform quantum simulation at 300K.
-			
-	3. Set up Conductivity object and compute thermal conductivity and diffusivity with QHGK method.
-			
-	4. Visualize diffusivity and cumulative conductivity from QHGK method as functions of frequency. 
+   
+    5. Visualize intermediate quantities from QHGK simulations. 
 
 
 - LAMMPS with speed up force constant calculations for large systems is available in the following repo: [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d).
@@ -52,7 +44,6 @@ External files required:
 - To perform thermal transport simulation after computing force constants, navigate to this directory and execute:
 ```python
 python 1_aSi512_Tersoff_thermal_conductivity.py
-python 2_aSi512_Tersoff_visualize_QHGK_properties.py
 ```
 - To view figures generated during simulations, navigate to this folder: ***plots/***
 - To access data computed during simulations, navigate to this folder: ***ALD_Si_512***
