@@ -43,7 +43,7 @@ External files required:
 - LAMMPS with speed up force constant calculations for large systems is available in the following repo: [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d).
 - Some features on the OptimizedDynamicalMatrix are broken as of commits in April 2020, please checkout the following commit which works reliably from 01/29/2020: 
 	- in your cloned repo: `git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d`
-- LAMMPS packages to install/compile include: [MAKE, MANYBODY, MOLECULE, KSPACE, PHONON](https://lammps.sandia.gov/doc/Packages_details.html).
+- LAMMPS packages to install/compile include: [MAKE, MANYBODY, MOLECULE, KSPACE, PHONON](https://docs.lammps.org/Packages_details.html).
 
 
 - To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS PHONON, navigate to this directory and execute:
