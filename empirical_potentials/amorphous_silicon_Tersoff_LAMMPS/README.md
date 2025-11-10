@@ -54,11 +54,6 @@ External files required:
 ```console
 ./mpirun -np 8 /path/to/lammps/src/lmp_mpi < in.aSi512_speed_up > aSi512_speed_up.log 
 ```
-- To obtain precalcluated 2<sup>nd</sup> and 3<sup>rd</sup> order force constants, navigate to this directory and execute:
-```console
-chmod +x  get_precalculated_fc.sh
-./get_precalculated_fc.sh
-```
 - To perform thermal transport simulation after computing force constants, navigate to this directory and execute:
 ```python
 python 1_aSi512_Tersoff_thermal_conductivity.py

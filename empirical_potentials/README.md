@@ -22,12 +22,8 @@ To speed up the calculation, one can download and compile LAMMPS with optimized 
 chmod +x get_precalculated_fc.sh
 ./get_precalculated.sh
 ```
-- To obtain reference calculations of phonon properties and plots for each example, navigate to each example folder and execute:
-```console
-chmod +x get_reference.sh
-./get_reference.sh
-```
 - Suggestions of specificing GPU/CPU usage for tensorflow can be accessed [here](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
+
 ## List and content of examples folder
 For each example, more detailed information is provided by the README.md file contained in the corresponding directory.
 - `amorphous_silicon_Tersoff_LAMMPS:`
