@@ -11,7 +11,7 @@ from kaldo.conductivity import Conductivity
 import kaldo.controllers.plotter as plotter
 
 # Replicate the unit cell 'nrep'=10 times
-nrep = 10
+nrep = 9
 supercell = np.array([nrep, nrep, nrep])
 
 # Define loading instructions
@@ -21,7 +21,7 @@ force_constants = ForceConstants.from_folder(
                            supercell=supercell,
                            only_second=True,
                            is_acoustic_sum=True,
-                           folder='fc_DFT',
+                           folder='fc_DFT_with_NAC',
                            format='shengbte-qe')
 
 
@@ -37,11 +37,12 @@ force_constants = ForceConstants.from_folder(
 
 
 # Define the k-point mesh using 'kpts' parameter
-k_points = 24  # 'k_points'= 24 k points in each direction
+k_points = 18  # 'k_points'= 24 k points in each direction
 phonons_config = {'kpts': [k_points, k_points, k_points],
                   'is_classic': False,
+                  'is_unfolding':True,
                   'temperature': 300,  # 'temperature'=300K
-                  'folder': 'ALD_ge_bulk',
+                  'folder': 'ALD_MgO_phonons_with_NAC',
                   'storage': 'formatted'}
 
 # Set up phonon object by passing in configuration details and the forceconstants object computed above

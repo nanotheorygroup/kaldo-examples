@@ -1,4 +1,4 @@
-## Computing and Plotting 2nd-Order Thermal Properties for Ge bulk using kALDo:
+## Computing and Plotting 2nd-Order Thermal Properties for MgO bulk using kALDo:
 
 > Running `phonon.py` requires [ASE](https://ase-lib.org) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.  
 > NOTE: Example uses **d3q ver. 1.1.10, QE ver. 7.2**
