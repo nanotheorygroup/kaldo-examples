@@ -13,7 +13,7 @@ make mpi mode=shlib
 cd path/to/lammps/src
 make install-python				
 ```
-- In amorphous silicon and silicon clathrate examples, 2<sup>nd</sup> and 3<sup>rd</sup> order force constants are computed by using LAMMPS USER-PHONON package. Since these material systems have relatively large  unit cell, computing force constants using the USER-PHONON package currently available in the official website can take hours. 
+- In amorphous silicon and silicon clathrate examples, 2<sup>nd</sup> and 3<sup>rd</sup> order force constants are computed by using LAMMPS PHONON package. Since these material systems have relatively large  unit cell, computing force constants using the PHONON package currently available in the official website can take hours. 
 To speed up the calculation, one can download and compile LAMMPS with optimized force constants calculation functionality from the following repo: [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d). 
 - Some features on the OptimizedDynamicalMatrix are broken as of commits in April 2020, please checkout the following commit which works reliably from 01/29/2020:
         - in your cloned repo: `git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d`
@@ -31,10 +31,10 @@ chmod +x get_reference.sh
 ## List and content of examples folder
 For each example, more detailed information is provided by the README.md file contained in the corresponding directory.
 - `amorphous_silicon_Tersoff_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for an amorphous silicon system (512 atoms per cell) with [LAMMPS USER-PHONON](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
+This example illustrates how to perform thermal transport simulation for an amorphous silicon system (512 atoms per cell) with [LAMMPS PHONON](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
 - `carbon_diamond_Tersoff_ASE_LAMMPS:`
 This example illustrates how to perform thermal transport simulation for a carbon diamond (2 atoms per cell) system using [ASE and LAMMPS](https://wiki.fysik.dtu.dk/ase/_modules/ase/calculators/lammpslib.html) as force calculator.
 - `carbon_nanotube_Tersoff_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using [LAMMPS USER-PHONON](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
+This example illustrates how to perform thermal transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using [LAMMPS PHONON](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
 - `silicon_clathrate_Tersoff_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for a type I clathrate (46 atoms per cell) system using [LAMMPS USER-PHONON](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
+This example illustrates how to perform thermal transport simulation for a type I clathrate (46 atoms per cell) system using [LAMMPS PHONON](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
