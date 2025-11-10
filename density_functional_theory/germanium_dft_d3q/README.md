@@ -6,7 +6,7 @@
 > NOTE: Example uses **d3q ver. 1.1.10, QE ver. 7.2**
   
 0. Setup the required input files listed here: `pw.in`, `ph.in`, `q2r.in`, `kaldo_q2r.in`, `CONTROL`, `d3.in`, and the `UPF/` pseudopotential folder in their respective folders. Check out the documentation of QE and d3q for more information on this step.  
-1. Under `01-2nd_order_DFPT/`: Execute the `run-01.sh` script to run all necessary commands to obtain the 2nd order force constants `espresso.ifc2`.
+1. Under `01-2nd_order_DFPT/`: Execute all necessary commands to obtain the 2nd order force constants `espresso.ifc2`.
    - Ensure the required input files are in the directory: `pw.in`, `ph.in`, `q2r.in`, `kaldo_q2r.in`, and the `UPF/` pseudopotential folder.
    
       `pw.x`: Performs self consistent field calculations for Germanium.  
@@ -39,7 +39,7 @@
      
    - After performing the calculation, use the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation).
 
-3. Under `03-3rd_order_d3q/`: Execute the `run-02` script to run all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.
+3. Under `03-3rd_order_d3q/`: Execute all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.
 
    ```console
    cp -r 01-2nd_order_DFPT/FILDRHO 03-3rd_order_d3q/

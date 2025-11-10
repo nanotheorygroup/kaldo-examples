@@ -4,8 +4,8 @@
 > d3q: https://anharmonic.github.io/d3q/  
 > Quantum Espresso (QE): https://www.quantum-espresso.org/
 
-- Execute the `run-02` script to run all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.  
-  - Example command to do this:
+- Execute the following commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.  
+  - Copy over FILDRHO file from previous calculations:
     
   ```console  
   cp -r 01-2nd_order_DFPT/FILDRHO 03-3rd_order_d3q/
