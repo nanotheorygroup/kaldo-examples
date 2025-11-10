@@ -4,7 +4,7 @@
 > d3q: https://anharmonic.github.io/d3q/  
 > Quantum Espresso (QE): https://www.quantum-espresso.org/
 
-- Execute the `run-01.sh` script to run all necessary commands to obtain the 2nd order force constants `espresso.ifc2`.
+- Execute the following commands to run all necessary commands to obtain the 2nd order force constants `espresso.ifc2`.
    - Ensure the required input files are in the directory: `pw.in`, `ph.in`, `q2r.in`, `kaldo_q2r.in`, and the `UPF/` pseudopotential folder.
    
       `pw.x`: Performs self consistent field calculations for Germanium.  
