@@ -9,6 +9,7 @@ from ase.io import read
 from kaldo.conductivity import Conductivity
 from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
+from kaldo.controllers import plotter
 import numpy as np
 
 ### Set up force constant objects via interface to LAMMPS ####
@@ -54,3 +55,4 @@ qhgk_cond = Conductivity(phonons=phonons, method='qhgk', storage='numpy')
 qhgk_cond.diffusivity_bandwidth = phonons.bandwidth
 print('Conductivity from QHGK (W/m-K): %.3f' % (np.mean(np.diag(qhgk_cond.conductivity.sum(axis=0)))))
 print(qhgk_cond.conductivity.sum(axis=0))
+plotter.plot_amorphous(phonons)
