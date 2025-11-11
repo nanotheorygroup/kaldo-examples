@@ -1,4 +1,4 @@
-## Create 2nd-order Interatomic Force Constants for Ge bulk using Quantum Espresso.
+## Create 2nd-order Interatomic Force Constants for MgO using Quantum Espresso.
 
 > Additional Resources:  
 > d3q: https://anharmonic.github.io/d3q/  

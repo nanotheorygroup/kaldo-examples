@@ -7,17 +7,12 @@ from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
 import kaldo.controllers.plotter as plotter
 import numpy as np
+import os
 import tarfile
-
-# Etract tar ball
-tar = tarfile.open("fc_DFT_with_NAC.tar.gz")
-tar.extractall()
-tar.close()
-
 
 # Denote supercell size for seocnd fc and root folder
 ini_sc=[9,9,9]
-root='./fc_DFT_with_NAC/'
+root='./fc_DFT/'
 
 ### Set up forceconstants object
 # possible different supercell for second and third
@@ -40,9 +35,8 @@ temperature = 300
 phonons_config = {'kpts': [k_points, k_points, k_points],
                   'is_classic': False, 
                   'temperature': temperature, #'temperature'=300K
-                  'folder': 'ALD_with_NAC',
-                  'is_unfolding':True,
-		   'storage': 'numpy'}
+                  'folder': 'ALD',
+		          'storage': 'numpy'}
 
 # Set up phonon object by passing in configuration details and the forceconstants object computed above
 phonons = Phonons(forceconstants=forceconstants, **phonons_config)

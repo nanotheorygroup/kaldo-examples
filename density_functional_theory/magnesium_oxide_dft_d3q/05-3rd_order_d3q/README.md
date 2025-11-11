@@ -1,4 +1,4 @@
-## Create 3rd-order Interatomic Force Constants for Ge bulk using Quantum Espresso and d3q.
+## Create 3rd-order Interatomic Force Constants for MgO using Quantum Espresso and d3q.
 
 > Additional Resources:  
 > d3q: https://anharmonic.github.io/d3q/  
@@ -26,8 +26,6 @@
    ```console
    d3_asr3.x -i FORCE_CONSTANTS_3RD -o FORCE_CONSTANTS_3RD.asr -t 1.e-12 -n 10000 -p 2 -m > d3_asr3.out
    ```
-
- - Uncomment the second part of the run file to enable thermal conductivity computation using d3q. This computes the thermal conductivity in the SMA approximation (equivalent to RTA in kaldo). The output should be similar to the file output.TK-sma.
 
  - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 

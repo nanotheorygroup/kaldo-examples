@@ -9,13 +9,7 @@ from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
 from kaldo.conductivity import Conductivity
 import kaldo.controllers.plotter as plotter
-import tarfile
-
-# Etract tar ball
-tar = tarfile.open("fc_DFT_with_NAC.tar.gz")
-tar.extractall()
-tar.close()
-
+import os
 
 # Replicate the unit cell 'nrep'=10 times
 nrep = 9
@@ -59,4 +53,5 @@ phonons = Phonons(forceconstants=force_constants, **phonons_config)
 # Compute phonons, density of state and other harmonic properties
 plotter.plot_dispersion(phonons, n_k_points=300, with_velocity=True, is_showing=False)
 plotter.plot_dos(phonons,bandwidth=0.01, filename='dos')
+os.rename('plots', 'plots_with_NAC')
 print("Phonons from DFPT done!")
