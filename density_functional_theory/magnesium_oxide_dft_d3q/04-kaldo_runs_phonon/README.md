@@ -17,7 +17,7 @@
      or
 
      ```console
-     tar xzvf fc_DFT
+     tar xzvf fc_DFT.tar.gz
      python phonon.py
      ```
      

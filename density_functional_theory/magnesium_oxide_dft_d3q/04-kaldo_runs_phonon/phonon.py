@@ -41,8 +41,8 @@ force_constants = ForceConstants.from_folder(
 k_points = 18  # 'k_points'= 24 k points in each direction
 phonons_config = {'kpts': [k_points, k_points, k_points],
                   'is_classic': False,
-                  'is_unfolding':True,
                   'temperature': 300,  # 'temperature'=300K
+                   'is_unfolding': True, 
                   'folder': 'ALD_MgO_phonons',
                   'storage': 'formatted'}
 
