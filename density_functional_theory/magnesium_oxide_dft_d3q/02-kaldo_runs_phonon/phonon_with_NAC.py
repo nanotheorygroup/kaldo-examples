@@ -13,7 +13,7 @@ import tarfile
 
 # Etract tar ball
 tar = tarfile.open("fc_DFT_with_NAC.tar.gz")
-tar.extractall(filter='data')
+tar.extractall()
 tar.close()
 
 
