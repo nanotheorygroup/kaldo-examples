@@ -7,6 +7,13 @@ from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
 import kaldo.controllers.plotter as plotter
 import numpy as np
+import tarfile
+
+# Etract tar ball
+tar = tarfile.open("fc_DFT_with_NAC.tar.gz")
+tar.extractall()
+tar.close()
+
 
 # Denote supercell size for seocnd fc and root folder
 ini_sc=[9,9,9]
@@ -27,13 +34,13 @@ forceconstants = ForceConstants.from_folder(root,supercell=ini_sc,third_supercel
 #            for python numpy array and 'memory' for quick calculations, no data stored)
 
 # Define the k-point mesh using 'kpts' parameter
-k_points = 9 # k points in each direction
+k_points = 15 # k points in each direction
 temperature = 300
 
 phonons_config = {'kpts': [k_points, k_points, k_points],
                   'is_classic': False, 
                   'temperature': temperature, #'temperature'=300K
-                  'folder': 'ald',
+                  'folder': 'ALD_with_NAC',
                   'is_unfolding':True,
 		   'storage': 'numpy'}
 
