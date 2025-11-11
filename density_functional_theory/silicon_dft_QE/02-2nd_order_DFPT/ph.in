@@ -1,9 +1,0 @@
-&inputph
-    tr2_ph=1.6d-19,
-    prefix='si',
-    outdir='tmp',
-    fildyn='si.dyn',
-    ldisp=.true.,
-    asr = .true.,
-    nq1=8, nq2=8, nq3=8,
-/
