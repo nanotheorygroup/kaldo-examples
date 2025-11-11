@@ -26,6 +26,8 @@
    ```console
    d3_asr3.x -i FORCE_CONSTANTS_3RD -o FORCE_CONSTANTS_3RD.asr -t 1.e-12 -n 10000 -p 2 -m > d3_asr3.out
    ```
+ 
+ - Since non-analytical correction (NAC) only applies to second order, only one modulus is needed for 3rd IFCs computation.
 
  - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 

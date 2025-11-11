@@ -16,7 +16,7 @@
      or
 
      ```console
-     tar czvf fc_DFT_with_NAC.tar.gz 
+     tar xzvf fc_DFT_with_NAC.tar.gz 
      python phonon_with_NAC.py
      ```
 

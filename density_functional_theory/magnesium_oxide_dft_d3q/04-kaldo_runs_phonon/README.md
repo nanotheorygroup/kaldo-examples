@@ -13,5 +13,12 @@
      cp ../02-2nd_order_DFPT/espresso.ifc2 fc_DFT/
      python phonon.py
      ```
+
+     or
+
+     ```console
+     tar xzvf fc_DFT
+     python phonon.py
+     ```
      
 - After performing the calculation, use the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation).
