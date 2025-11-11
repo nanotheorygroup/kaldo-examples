@@ -9,6 +9,13 @@ from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
 from kaldo.conductivity import Conductivity
 import kaldo.controllers.plotter as plotter
+import tarfile
+
+# Etract tar ball
+tar = tarfile.open("fc_DFT_with_NAC.tar.gz")
+tar.extractall(filter='data')
+tar.close()
+
 
 # Replicate the unit cell 'nrep'=10 times
 nrep = 9
