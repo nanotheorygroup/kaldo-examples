@@ -11,7 +11,7 @@
        ```console
        pw.x -in scf.in > scf.out
        ```
-      - `ph.x`: Calculates dynamical matrices on q-vector in reciprocal space for 2nd order.  
+       `ph.x`: Calculates dynamical matrices on q-vector in reciprocal space for 2nd order.  
        ```console
        ph.x -in ph_for_d3q.in > ph_for_d3q.out
        ``` 
@@ -37,4 +37,4 @@
  - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 
 - Note on Supercell Convergence:  
-  The supercells used for FORCE_CONSTANTS_3RD are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
+  The supercells used for `FORCE_CONSTANTS_3RD` are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
