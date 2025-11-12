@@ -5,7 +5,8 @@
 > Quantum Espresso (QE): https://www.quantum-espresso.org/
 
 - Execute the following commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`.  
-      `pw.x`: Performs self consistent field calculations for magnesium oxide.  
+      
+       `pw.x`: Performs self consistent field calculations for magnesium oxide.  
        ```console
        pw.x -in scf.in > scf.out
        ```
