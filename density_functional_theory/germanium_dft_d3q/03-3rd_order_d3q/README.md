@@ -30,4 +30,4 @@
  - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 
 - Note on Supercell Convergence:  
-  The supercells used for FORCE_CONSTANTS_3RD are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
+  The supercells used for `FORCE_CONSTANTS_3RD` are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
