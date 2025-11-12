@@ -15,16 +15,12 @@
        ```console
        ph.x -in ph.in > ph.out
        ```
-      `d3_q2r.x`: Obtains 2nd order force constants (`mat2R`) by translating matrices from reciprocal space into real space.  
-       ```console
-       d3_q2r.x < q2r.in > d3_q2r.out
-       ```
       `d2r.x`: Obtains 2nd order force constants in a format to be used by kALDo (`espresso.ifc2`).  
        ```console
-       q2r.x -in kaldo_q2r.in > kaldo_q2r.out
+       q2r.x -in q2r.in > kaldo_q2r.out
        ```
 
 - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 
 - Note on Supercell Convergence:  
-  The supercells used for espresso.ifc2 and FORCE_CONSTANTS_3RD are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
+  The supercells used for `espresso.ifc2` are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.

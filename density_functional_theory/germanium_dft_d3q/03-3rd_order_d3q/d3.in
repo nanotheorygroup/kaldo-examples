@@ -1,7 +1,7 @@
-d3 for silicon
+d3 for germanium
 &inputd3q
    mode='full'
-   prefix = 'silicon',
+   prefix = 'germanium',
    outdir='./tmp'
    fildrho = 'auto:drho',
    fildrho_dir = 'FILDRHO'

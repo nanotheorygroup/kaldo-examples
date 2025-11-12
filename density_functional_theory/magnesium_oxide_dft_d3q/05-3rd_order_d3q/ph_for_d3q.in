@@ -1,0 +1,15 @@
+MgO
+ &inputph
+  prefix = 'MgO'
+  outdir='./qe_wfcs'
+  tr2_ph = 1.d-17,
+  epsil  = .true.,
+  fildyn = 'FILDYN/MgO.Dyn',
+  ldisp=.true.
+  drho_star%open = .true.
+  drho_star%dir  = "rhostar"
+  drho_star%ext  = "MgO"
+  nq1=5,
+  nq2=5,
+  nq3=5,
+ /

@@ -4,14 +4,19 @@
 > d3q: https://anharmonic.github.io/d3q/  
 > Quantum Espresso (QE): https://www.quantum-espresso.org/
 
-- Execute the following commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.  
-  - Copy over FILDRHO file from previous calculations:
-    
-  ```console  
-  cp -r 01-2nd_order_DFPT/FILDRHO 03-3rd_order_d3q/
-  ```
-   
- - Ensure the input file `d3.in` is in the directory, as well as `FILDRHO/` from earlier.
+- Execute the following commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`.  
+   - Ensure the required input files are in the directory: `scf.in`, `ph_for_d3q.in`, and the `UPF/` pseudopotential folder.
+
+       `pw.x`: Performs self consistent field calculations for magnesium oxide.  
+       ```console
+       pw.x -in scf.in > scf.out
+       ```
+       `ph.x`: Calculates dynamical matrices on q-vector in reciprocal space for 2nd order.  
+       ```console
+       ph.x -in ph_for_d3q.in > ph_for_d3q.out
+       ``` 
+
+ - Ensure the input file `d3.in` is in the directory.
    
    `d3q.x`: Calculates dynamical matrices on q-vector in reciprocal space for 3rd order.
    ```console
@@ -32,4 +37,4 @@
  - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 
 - Note on Supercell Convergence:  
-  The supercells used for espresso.ifc2 and FORCE_CONSTANTS_3RD are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
+  The supercells used for `FORCE_CONSTANTS_3RD` are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.

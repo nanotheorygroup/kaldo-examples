@@ -1,0 +1,13 @@
+d3 for mgo
+&inputd3q
+   mode='full'
+   prefix = 'MgO',
+   outdir='./qe_wfcs'
+   fildrho = 'auto:MgO',
+   fildrho_dir = 'rhostar'
+   fild3dyn = 'rhostar/anh',
+   ethr_ph = 1.d-8
+   restart=.true.
+ /
+ 5 5 5
+
