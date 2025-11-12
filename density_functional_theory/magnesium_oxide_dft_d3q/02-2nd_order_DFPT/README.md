@@ -9,7 +9,7 @@
    
       `pw.x`: Performs self consistent field calculations for magnesium oxide.  
        ```console
-       pw.x -in pw.in > pw.out
+       pw.x -in scf.in > scf.out
        ```
       `ph.x`: Calculates dynamical matrices on q-vector in reciprocal space for 2nd order.  
        ```console
@@ -23,4 +23,4 @@
 - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
 
 - Note on Supercell Convergence:  
-  The supercells used for espresso.ifc2 and FORCE_CONSTANTS_3RD are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
+  The supercells used for espresso.ifc2 are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
