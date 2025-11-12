@@ -5,7 +5,7 @@
 > Quantum Espresso (QE): https://www.quantum-espresso.org/
 
 - Execute the following commands to run all necessary commands to obtain the 2nd order force constants `espresso.ifc2`.
-   - Ensure the required input files are in the directory: `pw.in`, `ph.in`, `q2r.in`, and the `UPF/` pseudopotential folder.
+   - Ensure the required input files are in the directory: `scf.in`, `ph.in`, `q2r.in`, and the `UPF/` pseudopotential folder.
    
       `pw.x`: Performs self consistent field calculations for magnesium oxide.  
        ```console

@@ -5,12 +5,13 @@
 > Quantum Espresso (QE): https://www.quantum-espresso.org/
 
 - Execute the following commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`.  
-      
+   - Ensure the required input files are in the directory: `scf.in`, `ph_for_d3q.in`, and the `UPF/` pseudopotential folder.
+
        `pw.x`: Performs self consistent field calculations for magnesium oxide.  
        ```console
        pw.x -in scf.in > scf.out
        ```
-      `ph.x`: Calculates dynamical matrices on q-vector in reciprocal space for 2nd order.  
+      - `ph.x`: Calculates dynamical matrices on q-vector in reciprocal space for 2nd order.  
        ```console
        ph.x -in ph_for_d3q.in > ph_for_d3q.out
        ``` 
