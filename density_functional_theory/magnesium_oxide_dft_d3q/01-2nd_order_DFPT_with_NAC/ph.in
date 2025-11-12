@@ -1,0 +1,12 @@
+MgO
+ &inputph
+  prefix = 'MgO'
+  outdir='./qe_wfcs'
+  tr2_ph = 1.d-17,
+  epsil  = .true.,
+  fildyn = 'FILDYN/MgO.Dyn',
+  ldisp=.true.
+  nq1=9,
+  nq2=9,
+  nq3=9,
+ /

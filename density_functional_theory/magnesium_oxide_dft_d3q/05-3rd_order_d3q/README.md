@@ -8,9 +8,15 @@
   - Copy over FILDRHO file from previous calculations:
     
   ```console  
-  cp -r 01-2nd_order_DFPT/FILDRHO 03-3rd_order_d3q/
+  cp -r 01-2nd_order_DFPT_with_NAC/FILDRHO 03-3rd_order_d3q/
+  ```
+  or
+
+  ```console  
+  cp -r 02-2nd_order_DFPT/FILDRHO 03-3rd_order_d3q/
   ```
    
+
  - Ensure the input file `d3.in` is in the directory, as well as `FILDRHO/` from earlier.
    
    `d3q.x`: Calculates dynamical matrices on q-vector in reciprocal space for 3rd order.

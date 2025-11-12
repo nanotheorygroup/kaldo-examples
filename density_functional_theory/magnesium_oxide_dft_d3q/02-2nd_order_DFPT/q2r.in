@@ -1,0 +1,6 @@
+&input
+  fildyn = 'FILDYN/MgO.Dyn'
+  zasr = 'simple'
+  flfrc = 'espresso.ifc2'
+/
+
