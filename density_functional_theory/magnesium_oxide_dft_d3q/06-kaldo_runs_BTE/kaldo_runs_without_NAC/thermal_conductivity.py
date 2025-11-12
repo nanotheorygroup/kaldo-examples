@@ -36,7 +36,8 @@ phonons_config = {'kpts': [k_points, k_points, k_points],
                   'is_classic': False, 
                   'temperature': temperature, #'temperature'=300K
                   'folder': 'ALD',
-		          'storage': 'numpy'}
+                  'is_unfolding':True,
+		  'storage': 'numpy'}
 
 # Set up phonon object by passing in configuration details and the forceconstants object computed above
 phonons = Phonons(forceconstants=forceconstants, **phonons_config)
