@@ -35,5 +35,5 @@
 - Navigate to `plots/12_12_12/` to view figures generated during simulations.
   - Alternatively, use the jupyter notebook `kALDo_with_orb_gallery.ipynb` to visualize all properties calculated during simulations.
  
-- Reference Thermal Conductivity (12x12x12 2nd order supercell, 6x6x6 3rd order supercell, 12x12x12 k-point mesh):
-  - 32.9 W/m-K (Inversion), 31.8 W/m-K (Isotopic)
+ Reference Thermal Conductivity (12x12x12 2nd order supercell, 6x6x6 3rd order supercell, 12x12x12 k-point mesh):
+  - ***32.9 W/m-K (Inversion), 31.8 W/m-K (Isotopic)***
