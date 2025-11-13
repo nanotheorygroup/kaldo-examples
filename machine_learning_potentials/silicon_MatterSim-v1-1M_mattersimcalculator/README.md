@@ -10,7 +10,7 @@
   
   - The 2nd order force constants are calculated with `MatterSim-v1-1M` and MatterSimCalculator.
   
-  - The quasiharmonic approximations are conducted from 0 to 1800K on 5K increments.
+  - The quasiharmonic approximations are conducted from 0 to 1800K on 5K increments, with 6x6x6 supercell and 1 percent purtbued volumes.
    
 - Navigate to `kaldo_runs` to view calculated properties during simulations.
   - Alternatively, use the jupyter notebook `kALDo_with_MatterSim_gallery.ipynb` to visualize all properties calculated during simulations.

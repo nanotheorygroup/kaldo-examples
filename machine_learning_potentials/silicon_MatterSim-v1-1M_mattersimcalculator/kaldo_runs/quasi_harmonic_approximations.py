@@ -19,7 +19,18 @@ calc =  MatterSimCalculator(device=device)
 atoms = bulk('Si', a=5.432, cubic=True)
 atoms.calc = calc
 
-# Run quasi harmonic approximation simulations
+#   Run quasi-harmonic approximation (QHA) simulations:
+#   - Computes temperature-dependent lattice constants, Helmholtz free energies
+#     and linear thermal expansion coefficients for bulk silicon.
+#   - Temperatures are sampled from 0 K to 1800 K every 5 K
+#     (np.linspace(0, 1800, 361)).
+#   - supercell controls the size of the supercell used for force-constant
+#     calculations (here 6×6×6); larger values improve accuracy but are slower.
+#   - kpts sets the Brillouin-zone sampling for phonon calculations.
+#   - lattice_range and n_lattice_points control how densely the code samples
+#     the lattice parameter grid around the initial structure.
+#   - n_fine_points defines how fine the grid is when minimizing the fitted
+#     free-energy surface; increasing it gives smoother curves at higher cost.
 results = qha.calculate_qha(atoms=atoms, 
         calculator=calc, temperatures=np.linspace(0, 1800, 361), 
         supercell=(6, 6, 6), kpts=(12, 12, 12), symmetry=None, 
