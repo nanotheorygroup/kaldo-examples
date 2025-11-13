@@ -35,5 +35,5 @@
 - Navigate to `plots/15_15_9/` to view figures generated during simulations.
   - Alternatively, use the jupyter notebook `kALDo_with_ace_gallery.ipynb` to visualize all properties calculated during simulations.
  
-- Reference Thermal Conductivity (15x15x9 2nd order supercell, 4x4x3 3rd order supercell, 15x15x9 k-point mesh):
-  - 260.3 W/m-K (Inversion), 259.9 W/m-K (Isotopic)
+ Reference Thermal Conductivity (15x15x9 2nd order supercell, 4x4x3 3rd order supercell, 15x15x9 k-point mesh):
+  - ***260.3 W/m-K (Inversion), 259.9 W/m-K (Isotopic)***
