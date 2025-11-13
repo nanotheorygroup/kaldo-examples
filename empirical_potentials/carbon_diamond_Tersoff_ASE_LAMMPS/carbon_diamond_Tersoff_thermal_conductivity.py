@@ -1,6 +1,6 @@
 # Example: carbon diamond, Tersoff potential
-# Computes: 2nd, 3rd order force constants and harmonic properties for carbon diamond (2 atoms per cell)
-# Uses: ASE, LAMMPS, LAMMPSlib
+# Computes:anharmonic properties and thermal conductivity for carbon diamond (2 atoms per cell)
+# Uses: ASE, LAMMPS
 # External files: forcefields/C.tersoff
 
 # Import necessary packages
@@ -10,21 +10,21 @@ from ase.calculators.lammpslib import LAMMPSlib
 from kaldo.conductivity import Conductivity
 from kaldo.controllers import plotter
 from kaldo.forceconstants import ForceConstants
-from kaldo.helpers.storage import get_folder_from_label
 from kaldo.phonons import Phonons
-import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-plt.style.use('seaborn-poster')
+import kaldo.controllers.plotter as plotter
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-v0_8')
 
-# --  Set up the coordinates of the system and the force constant calculations -- #
+# -- Set up the coordinates of the system and the force constant calculations -- #
 
 # Define the system according to ASE style. 'a': lattice parameter (Angstrom)
 atoms = bulk('C', 'diamond', a=3.566)
 
 # Replicate the unit cell 'nrep'=3 times
-nrep = 3
+nrep = 5
 supercell = np.array([nrep, nrep, nrep])
 
 # Configure force constant calculator
@@ -39,12 +39,12 @@ lammps_inputs = {'lmpcmds': [
     'keep_alive': True,
     'log_file': 'lammps-c-diamond.log'}
 
-# Compute 2nd and 3rd IFCs with the defined calculator
+# Compute 2nd and 3rd IFCs with the defined calculators
 # delta_shift: finite difference displacement, in angstrom
 forceconstants.second.calculate(LAMMPSlib(**lammps_inputs), delta_shift=1e-4)
 forceconstants.third.calculate(LAMMPSlib(**lammps_inputs), delta_shift=1e-4)
 
-# -- Set up the phonon object and the harmonic property calculations -- #
+# -- Set up the phonon object and the anharmonic properties calculations -- #
 
 # Configure phonon object
 # 'k_points': number of k-points
@@ -52,49 +52,44 @@ forceconstants.third.calculate(LAMMPSlib(**lammps_inputs), delta_shift=1e-4)
 # 'temperature: temperature (Kelvin) at which simulation is performed
 # 'folder': name of folder containing phonon property and thermal conductivity calculations
 # 'storage': Format to storage phonon properties ('formatted' for ASCII format data, 'numpy'
-#            for python numpy array and 'memory' for quick calculations, no data stored")
-
+#            for python numpy array and 'memory' for quick calculations, no data stored)
 
 # Define the k-point mesh using 'kpts' parameter
-k_points = 5  # 'k_points'=5 k points in each direction
+k_points = 15  # 'k_points'=5 k points in each direction
 phonons_config = {'kpts': [k_points, k_points, k_points],
                   'is_classic': False,
                   'temperature': 300,  # 'temperature'=300K
                   'folder': 'ALD_c_diamond',
-                  'storage': 'formatted'}
+                  'storage': 'numpy'}
 
 # Set up phonon object by passing in configuration details and the forceconstants object computed above
 phonons = Phonons(forceconstants=forceconstants, **phonons_config)
 
-# Visualize phonon dispersion, group velocity and density of states with
-# the build-in plotter.
+# -- Set up the Conductivity object and thermal conductivity calculations -- #
 
-# 'with_velocity': specify whether to plot both group velocity and dispersion relation
-# 'is_showing':specify if figure window pops up during simulation
+# Compute thermal conductivity (t.c.) by solving Boltzmann Transport
+# Equation (BTE) with various of methods
+
+# 'phonons': phonon object obtained from the above calculations
+# 'method': specify methods to solve for BTE
+# ('rta' for RTA,'sc' for self-consistent and 'inverse' for direct inversion of the scattering matrix)
+
+print('\n')
+inv_cond_matrix = (Conductivity(phonons=phonons, method='inverse').conductivity.sum(axis=0))
+print('Conductivity from inversion (W/m-K): %.3f' % (np.mean(np.diag(inv_cond_matrix))))
+print(inv_cond_matrix)
+
+print('\n')
+sc_cond_matrix = Conductivity(phonons=phonons, method='sc', n_iterations=20).conductivity.sum(axis=0)
+print('Conductivity from self-consistent (W/m-K): %.3f' % (np.mean(np.diag(sc_cond_matrix))))
+print(sc_cond_matrix)
+
+print('\n')
+rta_cond_matrix = Conductivity(phonons=phonons, method='rta').conductivity.sum(axis=0)
+print('Conductivity from RTA (W/m-K): %.3f' % (np.mean(np.diag(rta_cond_matrix))))
+print(rta_cond_matrix)
+
+# Make plots for quick data visualization
 plotter.plot_dispersion(phonons, with_velocity=True, is_showing=False)
 plotter.plot_dos(phonons, is_showing=False)
-
-# Visualize heat capacity vs frequency and
-# 'order': Index order to reshape array,
-# 'order'='C' for C-like index order; 'F' for Fortran-like index order
-
-# Define the base folder to contain plots
-# 'base_folder':name of the base folder
-folder = get_folder_from_label(phonons, base_folder='plots')
-if not os.path.exists(folder):
-    os.makedirs(folder)
-# Define a Boolean flag to specify if figure window pops during simulation
-is_show_fig = False
-
-frequency = phonons.frequency.flatten(order='C')
-heat_capacity = phonons.heat_capacity.flatten(order='C')
-plt.figure()
-plt.scatter(frequency[3:], 1e23 * heat_capacity[3:],
-            s=5)  # Get rid of the first three non-physical modes while plotting
-plt.xlabel("$\\nu$ (THz)", fontsize=16)
-plt.ylabel(r"$C_{v} \ (10^{23} \ J/K)$", fontsize=16)
-plt.savefig(folder + '/cv_vs_freq.png', dpi=300)
-if not is_show_fig:
-    plt.close()
-else:
-    plt.show()
+plotter.plot_crystal(phonons, is_showing=False)
