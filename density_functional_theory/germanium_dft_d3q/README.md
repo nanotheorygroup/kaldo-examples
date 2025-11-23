@@ -39,7 +39,7 @@
      
    - After performing the calculation, use the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation).
 
-3. Under `03-3rd_order_d3q/`: Execute all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.
+3. Under `03-3rd_order_d3q/`: Execute all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD_D3Q`. This requires the `FILDRHO/` folder created from `ph.x` in step 1.
 
    ```console
    cp -r 01-2nd_order_DFPT/FILDRHO 03-3rd_order_d3q/
@@ -51,17 +51,17 @@
    ```console
    d3q.x -in d3.in > d3.out
    ```
-   `d3_qq2rr.x`: Obtains 3rd order force constants (`mat3R`) by translating matrices from reciprocal space into real space and recenters into a format to be used by kALDo (`FORCE_CONSTANTS_3RD`).
+   `d3_qq2rr.x`: Obtains 3rd order force constants (`mat3R`) by translating matrices from reciprocal space into real space and recenters into a format to be used by kALDo (`FORCE_CONSTANTS_3RD_D3Q`).
    ```console
    ls FILD3DYN/anh* | d3_qq2rr.x 3 3 3 -o mat3R > d3_qq2rr.out
-   ls FILD3DYN/anh* | d3_qq2rr.x 3 3 3 -f 0 -o FORCE_CONSTANTS_3RD > kaldo_3ifc.out
+   ls FILD3DYN/anh* | d3_qq2rr.x 3 3 3 -f 0 -o FORCE_CONSTANTS_3RD_D3Q > kaldo_3ifc.out
    ```
-   `d3_asr3.x`: Applies accoustic sum rules to 3rd order force constants to create `FORCE_CONSTANTS_3RD`.
+   `d3_asr3.x`: Applies accoustic sum rules to 3rd order force constants to create `FORCE_CONSTANTS_3RD_D3Q`.
    ```console
-   d3_asr3.x -i FORCE_CONSTANTS_3RD -o FORCE_CONSTANTS_3RD.asr -t 1.e-12 -n 10000 -p 2 -m > d3_asr3.out
+   d3_asr3.x -i FORCE_CONSTANTS_3RD_D3Q -o FORCE_CONSTANTS_3RD_D3Q.asr -t 1.e-12 -n 10000 -p 2 -m > d3_asr3.out
    ```
 
-4. Under `04-kaldo_runs_BTE`: Perform BTE calculations using kALDo for Germanium. Like for the previous step, create a folder `fc_DFT/` and input the calculated `espresso.ifc2` and `FORCE_CONSTANTS_3RD` and the provided `CONTROL` file.
+4. Under `04-kaldo_runs_BTE`: Perform BTE calculations using kALDo for Germanium. Like for the previous step, create a folder `fc_DFT/` and input the calculated `espresso.ifc2` and `FORCE_CONSTANTS_3RD_D3Q` and the provided `CONTROL` file.
 
    - An example procedure for performing this calculation is below:
 
@@ -70,7 +70,7 @@
      mkdir fc_DFT/
      cp CONTROL fc_DFT/
      cp ../01-2nd_order_DFPT/espresso.ifc2 fc_DFT/
-     cp ../03-3rd_order_d3q/FORCE_CONSTANTS_3RD fc_DFT/
+     cp ../03-3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT/
      python thermal_conductivity.py
      ```
 
