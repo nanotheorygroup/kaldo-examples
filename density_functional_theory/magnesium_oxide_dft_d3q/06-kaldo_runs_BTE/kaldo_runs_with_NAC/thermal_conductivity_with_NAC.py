@@ -15,7 +15,7 @@ root='./fc_DFT_with_NAC/'
 
 ### Set up forceconstants object
 # possible different supercell for second and third
-forceconstants = ForceConstants.from_folder(root,supercell=ini_sc,third_supercell=np.array([5,5,5]),format='shengbte-d3q')
+forceconstants = ForceConstants.from_folder(root,supercell=ini_sc,third_supercell=np.array([5,5,5]),format='qe-d3q')
 
 ### Set up the phonon object and the anharmonic properties calculations ####
 

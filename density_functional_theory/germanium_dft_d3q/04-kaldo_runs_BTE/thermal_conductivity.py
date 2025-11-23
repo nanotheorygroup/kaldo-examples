@@ -14,7 +14,7 @@ root='./fc/'
 
 ### Set up forceconstants object
 # possible different supercell for second and third
-forceconstants = ForceConstants.from_folder(root,supercell=ini_sc,third_supercell=np.array([3,3,3]),format='shengbte-d3q')
+forceconstants = ForceConstants.from_folder(root,supercell=ini_sc,third_supercell=np.array([3,3,3]),format='qe-d3q')
 
 #Cij = forceconstants.elastic_prop()
 #print("C11: %.1f GPa" %Cij[0, 0, 0, 0])

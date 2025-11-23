@@ -23,7 +23,7 @@ force_constants = ForceConstants.from_folder(
                            only_second=True,
                            is_acoustic_sum=True,
                            folder='fc_DFT',
-                           format='shengbte-d3q')
+                           format='qe-d3q')
 
 
 # -- Set up the phonon object and the harmonic property calculations -- #
