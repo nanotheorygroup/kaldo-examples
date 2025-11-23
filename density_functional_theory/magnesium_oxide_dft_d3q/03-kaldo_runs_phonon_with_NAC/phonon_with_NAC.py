@@ -19,11 +19,12 @@ supercell = np.array([nrep, nrep, nrep])
 # only loading second order force constants
 # apply acoustic sum rule when loading 2nd order fc to kALDo
 force_constants = ForceConstants.from_folder(
-                           supercell=supercell,
-                           only_second=True,
-                           is_acoustic_sum=True,
-                           folder='fc_DFT_with_NAC',
-                           format='qe-d3q')
+    supercell=supercell,
+    only_second=True,
+    is_acoustic_sum=True,
+    folder="fc_DFT_with_NAC",
+    format="qe-d3q",
+)
 
 
 # -- Set up the phonon object and the harmonic property calculations -- #
@@ -39,12 +40,14 @@ force_constants = ForceConstants.from_folder(
 
 # Define the k-point mesh using 'kpts' parameter
 k_points = 18  # 'k_points'= 24 k points in each direction
-phonons_config = {'kpts': [k_points, k_points, k_points],
-                  'is_classic': False,
-                  'is_unfolding':True,
-                  'temperature': 300,  # 'temperature'=300K
-                  'folder': 'ALD_MgO_phonons_with_NAC',
-                  'storage': 'formatted'}
+phonons_config = {
+    "kpts": [k_points, k_points, k_points],
+    "is_classic": False,
+    "is_unfolding": True,
+    "temperature": 300,  # 'temperature'=300K
+    "folder": "ALD_MgO_phonons_with_NAC",
+    "storage": "formatted",
+}
 
 # Set up phonon object by passing in configuration details and the forceconstants object computed above
 phonons = Phonons(forceconstants=force_constants, **phonons_config)
@@ -52,6 +55,6 @@ phonons = Phonons(forceconstants=force_constants, **phonons_config)
 
 # Compute phonons, density of state and other harmonic properties
 plotter.plot_dispersion(phonons, n_k_points=300, with_velocity=True, is_showing=False)
-plotter.plot_dos(phonons,bandwidth=0.01, filename='dos')
-os.rename('plots', 'plots_with_NAC')
+plotter.plot_dos(phonons, bandwidth=0.01, filename="dos")
+os.rename("plots", "plots_with_NAC")
 print("Phonons from DFPT done!")
