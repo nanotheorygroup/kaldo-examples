@@ -1,4 +1,4 @@
-## Create 3rd-order Interatomic Force Constants for MgO using Quantum Espresso and d3q.
+## Create 3rd-order Interatomic Force Constants for MgO using QE and d3q.
 
 > Additional Resources:  
 > d3q: https://anharmonic.github.io/d3q/  
