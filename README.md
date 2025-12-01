@@ -1,6 +1,6 @@
 # kALDo-examples
-Official repository for examples for kALDo
+Official repository demonstrating various examples to use [kALDo](https://github.com/nanotheorygroup/kaldo) and related software packages.
 
 <p align="center">
-<img src="kaldo-inputs.png" width="450">
+<img src="kaldo-schema.png" width="450">
 </p>
