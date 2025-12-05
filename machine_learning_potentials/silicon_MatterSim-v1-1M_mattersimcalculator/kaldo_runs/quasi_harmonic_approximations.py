@@ -12,17 +12,17 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 logger.info(f"Running MatterSim on {device}")
 
 # Set up mattersim calculator
-calc = MatterSimCalculator(device=device)
+calc =  MatterSimCalculator(device=device)
 
 
 # Set up cubic system for silicon
-atoms = bulk("MgO", "rocksalt", a=4.273, cubic=True)
+atoms = bulk('Si', a=5.432, cubic=True)
 atoms.calc = calc
 
 # Run quasi harmonic approximation simulations
 results = qha.calculate_qha(atoms=atoms, 
-        calculator=calc, temperatures=np.linspace(0, 900, 361), 
-        supercell=(3, 3, 3), kpts=(12, 12, 12), symmetry=None, 
+        calculator=calc, temperatures=np.linspace(0, 1800, 361), 
+        supercell=(6, 6, 6), kpts=(12, 12, 12), symmetry=None, 
         lattice_range=0.01, n_lattice_points=11, 
         n_fine_points=10**(5))
 
