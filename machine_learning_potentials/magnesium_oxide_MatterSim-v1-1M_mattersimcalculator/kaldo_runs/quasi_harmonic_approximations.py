@@ -15,7 +15,7 @@ logger.info(f"Running MatterSim on {device}")
 calc = MatterSimCalculator(device=device)
 
 
-# Set up cubic system for silicon
+# Set up MgO
 atoms = bulk("MgO", "rocksalt", a=4.273, cubic=True)
 atoms.calc = calc
 
