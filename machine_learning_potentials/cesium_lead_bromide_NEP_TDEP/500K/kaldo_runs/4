@@ -13,7 +13,7 @@ tdep_fcs = ForceConstants.from_folder(folder='tdep_fcs_cubic_CsPbBr3',
 # and the assumption for the
 # phonon poluation (i.e classical vs. quantum)
 kpts = [12, 12, 12]
-temperature = 360
+temperature = 500
 is_classic = False
     
 # Denote if is computing full QHGK

@@ -1,0 +1,244 @@
+2025-12-07 15:42:19.331880: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/zekun/Programs/miniconda3/envs/orb-turbo/lib/python3.11/site-packages/seekpath/hpkot/__init__.py:172: DeprecationWarning: dict interface is deprecated. Use attribute interface instead
+  conv_lattice = dataset["std_lattice"]
+2025-12-07 15:46:39.722728: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-12-07 15:46:39.722790: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:160] env: CUDA_VISIBLE_DEVICES=""
+2025-12-07 15:46:39.722802: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:163] CUDA_VISIBLE_DEVICES is set to an empty string - this hides all GPUs from CUDA
+2025-12-07 15:46:39.722808: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:171] verbose logging is disabled. Rerun with verbose logging (usually --v=1 or --vmodule=cuda_diagnostics=1) to get more diagnostic output from this module
+2025-12-07 15:46:39.722815: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:176] retrieving CUDA diagnostic information for host: lambda-ryzen
+2025-12-07 15:46:39.722821: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:183] hostname: lambda-ryzen
+2025-12-07 15:46:39.723028: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:190] libcuda reported version is: 580.95.5
+2025-12-07 15:46:39.723063: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:194] kernel reported version is: 580.95.5
+2025-12-07 15:46:39.723073: I external/local_xla/xla/stream_executor/cuda/cuda_diagnostics.cc:284] kernel version seems to match DSO: 580.95.5
+2025-12-07 15:46:42,772 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/_eigensystem not found in numpy format, calculating _eigensystem
+2025-12-07 15:46:45,692 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/_eigensystem stored
+2025-12-07 15:46:45,693 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/physical_mode not found in numpy format, calculating physical_mode
+2025-12-07 15:46:45,709 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/frequency not found in numpy format, calculating frequency
+2025-12-07 15:46:47,902 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/frequency stored
+2025-12-07 15:46:47,902 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/physical_mode stored
+2025-12-07 15:46:48,555 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_eigensystem
+2025-12-07 15:46:48,555 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-07 15:46:48,689 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_eigensystem
+2025-12-07 15:46:48,691 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-07 15:46:48,824 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_eigensystem
+2025-12-07 15:46:48,824 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+
+
+2025-12-07 15:46:49,137 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/qhgk/360/quantum/conductivity not found in formatted format, calculating conductivity
+2025-12-07 15:46:49,138 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/frequency
+2025-12-07 15:46:49,138 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-07 15:46:49,138 - kaldo - INFO - Using Lorentzian diffusivity_shape
+2025-12-07 15:46:49,138 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth not found in numpy format, calculating bandwidth
+2025-12-07 15:46:49,138 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/anharmonic_bandwidth not found in numpy format, calculating anharmonic_bandwidth
+2025-12-07 15:46:49,138 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_and_gamma not found in numpy format, calculating _ps_and_gamma
+2025-12-07 15:46:49,138 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/population not found in numpy format, calculating population
+2025-12-07 15:46:51,357 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/population stored
+2025-12-07 15:46:51,357 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/_sparse_phase_and_potential not found in numpy format, calculating _sparse_phase_and_potential
+2025-12-07 15:46:58,187 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_eigensystem
+2025-12-07 15:46:58,195 - kaldo - INFO - Projection started
+2025-12-07 15:46:58,195 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-07 15:46:58,196 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/frequency
+2025-12-07 15:46:58,196 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/velocity not found in numpy format, calculating velocity
+2025-12-07 15:47:20,388 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/velocity stored
+2025-12-07 15:47:20,388 - kaldo - INFO - calculating third 0: 0.00%
+2025-12-07 15:53:29,518 - kaldo - INFO - calculating third 200: 0.77%
+2025-12-07 15:59:45,875 - kaldo - INFO - calculating third 400: 1.54%
+2025-12-07 16:06:02,367 - kaldo - INFO - calculating third 600: 2.31%
+2025-12-07 16:12:19,554 - kaldo - INFO - calculating third 800: 3.09%
+2025-12-07 16:18:36,623 - kaldo - INFO - calculating third 1000: 3.86%
+2025-12-07 16:24:48,616 - kaldo - INFO - calculating third 1200: 4.63%
+2025-12-07 16:31:03,860 - kaldo - INFO - calculating third 1400: 5.40%
+2025-12-07 16:37:20,289 - kaldo - INFO - calculating third 1600: 6.17%
+2025-12-07 16:43:37,014 - kaldo - INFO - calculating third 1800: 6.94%
+2025-12-07 16:49:53,138 - kaldo - INFO - calculating third 2000: 7.72%
+2025-12-07 16:56:08,875 - kaldo - INFO - calculating third 2200: 8.49%
+2025-12-07 17:02:24,593 - kaldo - INFO - calculating third 2400: 9.26%
+2025-12-07 17:08:40,174 - kaldo - INFO - calculating third 2600: 10.03%
+2025-12-07 17:14:56,066 - kaldo - INFO - calculating third 2800: 10.80%
+2025-12-07 17:21:11,657 - kaldo - INFO - calculating third 3000: 11.57%
+2025-12-07 17:27:26,195 - kaldo - INFO - calculating third 3200: 12.35%
+2025-12-07 17:33:38,299 - kaldo - INFO - calculating third 3400: 13.12%
+2025-12-07 17:39:52,817 - kaldo - INFO - calculating third 3600: 13.89%
+2025-12-07 17:46:08,023 - kaldo - INFO - calculating third 3800: 14.66%
+2025-12-07 17:52:23,263 - kaldo - INFO - calculating third 4000: 15.43%
+2025-12-07 17:58:38,655 - kaldo - INFO - calculating third 4200: 16.20%
+2025-12-07 18:04:53,416 - kaldo - INFO - calculating third 4400: 16.98%
+2025-12-07 18:11:08,875 - kaldo - INFO - calculating third 4600: 17.75%
+2025-12-07 18:17:23,796 - kaldo - INFO - calculating third 4800: 18.52%
+2025-12-07 18:23:38,706 - kaldo - INFO - calculating third 5000: 19.29%
+2025-12-07 18:29:53,825 - kaldo - INFO - calculating third 5200: 20.06%
+2025-12-07 18:36:08,532 - kaldo - INFO - calculating third 5400: 20.83%
+2025-12-07 18:42:21,831 - kaldo - INFO - calculating third 5600: 21.60%
+2025-12-07 18:48:37,095 - kaldo - INFO - calculating third 5800: 22.38%
+2025-12-07 18:54:52,066 - kaldo - INFO - calculating third 6000: 23.15%
+2025-12-07 19:01:07,511 - kaldo - INFO - calculating third 6200: 23.92%
+2025-12-07 19:07:21,708 - kaldo - INFO - calculating third 6400: 24.69%
+2025-12-07 19:13:36,278 - kaldo - INFO - calculating third 6600: 25.46%
+2025-12-07 19:19:50,974 - kaldo - INFO - calculating third 6800: 26.23%
+2025-12-07 19:26:05,993 - kaldo - INFO - calculating third 7000: 27.01%
+2025-12-07 19:32:20,944 - kaldo - INFO - calculating third 7200: 27.78%
+2025-12-07 19:38:36,082 - kaldo - INFO - calculating third 7400: 28.55%
+2025-12-07 19:44:50,751 - kaldo - INFO - calculating third 7600: 29.32%
+2025-12-07 19:51:05,089 - kaldo - INFO - calculating third 7800: 30.09%
+2025-12-07 19:57:19,868 - kaldo - INFO - calculating third 8000: 30.86%
+2025-12-07 20:03:34,512 - kaldo - INFO - calculating third 8200: 31.64%
+2025-12-07 20:09:49,358 - kaldo - INFO - calculating third 8400: 32.41%
+2025-12-07 20:16:04,423 - kaldo - INFO - calculating third 8600: 33.18%
+2025-12-07 20:22:19,642 - kaldo - INFO - calculating third 8800: 33.95%
+2025-12-07 20:28:34,753 - kaldo - INFO - calculating third 9000: 34.72%
+2025-12-07 20:34:49,094 - kaldo - INFO - calculating third 9200: 35.49%
+2025-12-07 20:41:03,683 - kaldo - INFO - calculating third 9400: 36.27%
+2025-12-07 20:47:18,077 - kaldo - INFO - calculating third 9600: 37.04%
+2025-12-07 20:53:32,781 - kaldo - INFO - calculating third 9800: 37.81%
+2025-12-07 20:59:44,680 - kaldo - INFO - calculating third 10000: 38.58%
+2025-12-07 21:05:59,258 - kaldo - INFO - calculating third 10200: 39.35%
+2025-12-07 21:12:13,532 - kaldo - INFO - calculating third 10400: 40.12%
+2025-12-07 21:18:27,317 - kaldo - INFO - calculating third 10600: 40.90%
+2025-12-07 21:24:40,402 - kaldo - INFO - calculating third 10800: 41.67%
+2025-12-07 21:30:52,119 - kaldo - INFO - calculating third 11000: 42.44%
+2025-12-07 21:37:03,615 - kaldo - INFO - calculating third 11200: 43.21%
+2025-12-07 21:43:17,600 - kaldo - INFO - calculating third 11400: 43.98%
+2025-12-07 21:49:30,840 - kaldo - INFO - calculating third 11600: 44.75%
+2025-12-07 21:55:44,224 - kaldo - INFO - calculating third 11800: 45.52%
+2025-12-07 22:01:53,672 - kaldo - INFO - calculating third 12000: 46.30%
+2025-12-07 22:08:05,222 - kaldo - INFO - calculating third 12200: 47.07%
+2025-12-07 22:14:17,914 - kaldo - INFO - calculating third 12400: 47.84%
+2025-12-07 22:20:30,411 - kaldo - INFO - calculating third 12600: 48.61%
+2025-12-07 22:26:42,335 - kaldo - INFO - calculating third 12800: 49.38%
+2025-12-07 22:32:54,152 - kaldo - INFO - calculating third 13000: 50.15%
+2025-12-07 22:39:02,599 - kaldo - INFO - calculating third 13200: 50.93%
+2025-12-07 22:45:12,087 - kaldo - INFO - calculating third 13400: 51.70%
+2025-12-07 22:51:22,571 - kaldo - INFO - calculating third 13600: 52.47%
+2025-12-07 22:57:32,974 - kaldo - INFO - calculating third 13800: 53.24%
+2025-12-07 23:03:41,723 - kaldo - INFO - calculating third 14000: 54.01%
+2025-12-07 23:09:39,558 - kaldo - INFO - calculating third 14200: 54.78%
+2025-12-07 23:15:45,291 - kaldo - INFO - calculating third 14400: 55.56%
+2025-12-07 23:21:57,645 - kaldo - INFO - calculating third 14600: 56.33%
+2025-12-07 23:28:09,787 - kaldo - INFO - calculating third 14800: 57.10%
+2025-12-07 23:34:20,602 - kaldo - INFO - calculating third 15000: 57.87%
+2025-12-07 23:40:29,919 - kaldo - INFO - calculating third 15200: 58.64%
+2025-12-07 23:46:42,128 - kaldo - INFO - calculating third 15400: 59.41%
+2025-12-07 23:52:54,891 - kaldo - INFO - calculating third 15600: 60.19%
+2025-12-07 23:59:07,594 - kaldo - INFO - calculating third 15800: 60.96%
+2025-12-08 00:05:20,758 - kaldo - INFO - calculating third 16000: 61.73%
+2025-12-08 00:11:33,845 - kaldo - INFO - calculating third 16200: 62.50%
+2025-12-08 00:17:41,680 - kaldo - INFO - calculating third 16400: 63.27%
+2025-12-08 00:23:54,720 - kaldo - INFO - calculating third 16600: 64.04%
+2025-12-08 00:30:07,616 - kaldo - INFO - calculating third 16800: 64.81%
+2025-12-08 00:36:20,560 - kaldo - INFO - calculating third 17000: 65.59%
+2025-12-08 00:42:33,449 - kaldo - INFO - calculating third 17200: 66.36%
+2025-12-08 00:48:45,289 - kaldo - INFO - calculating third 17400: 67.13%
+2025-12-08 00:54:57,849 - kaldo - INFO - calculating third 17600: 67.90%
+2025-12-08 01:01:11,445 - kaldo - INFO - calculating third 17800: 68.67%
+2025-12-08 01:07:24,788 - kaldo - INFO - calculating third 18000: 69.44%
+2025-12-08 01:13:37,379 - kaldo - INFO - calculating third 18200: 70.22%
+2025-12-08 01:19:50,375 - kaldo - INFO - calculating third 18400: 70.99%
+2025-12-08 01:26:00,667 - kaldo - INFO - calculating third 18600: 71.76%
+2025-12-08 01:32:13,097 - kaldo - INFO - calculating third 18800: 72.53%
+2025-12-08 01:38:25,933 - kaldo - INFO - calculating third 19000: 73.30%
+2025-12-08 01:44:38,450 - kaldo - INFO - calculating third 19200: 74.07%
+2025-12-08 01:50:51,354 - kaldo - INFO - calculating third 19400: 74.85%
+2025-12-08 01:57:03,574 - kaldo - INFO - calculating third 19600: 75.62%
+2025-12-08 02:03:16,021 - kaldo - INFO - calculating third 19800: 76.39%
+2025-12-08 02:09:29,160 - kaldo - INFO - calculating third 20000: 77.16%
+2025-12-08 02:15:42,295 - kaldo - INFO - calculating third 20200: 77.93%
+2025-12-08 02:21:55,250 - kaldo - INFO - calculating third 20400: 78.70%
+2025-12-08 02:28:08,142 - kaldo - INFO - calculating third 20600: 79.48%
+2025-12-08 02:34:19,748 - kaldo - INFO - calculating third 20800: 80.25%
+2025-12-08 02:40:32,065 - kaldo - INFO - calculating third 21000: 81.02%
+2025-12-08 02:46:44,231 - kaldo - INFO - calculating third 21200: 81.79%
+2025-12-08 02:52:56,065 - kaldo - INFO - calculating third 21400: 82.56%
+2025-12-08 02:59:07,926 - kaldo - INFO - calculating third 21600: 83.33%
+2025-12-08 03:05:20,837 - kaldo - INFO - calculating third 21800: 84.10%
+2025-12-08 03:11:32,806 - kaldo - INFO - calculating third 22000: 84.88%
+2025-12-08 03:17:45,848 - kaldo - INFO - calculating third 22200: 85.65%
+2025-12-08 03:23:57,730 - kaldo - INFO - calculating third 22400: 86.42%
+2025-12-08 03:30:09,965 - kaldo - INFO - calculating third 22600: 87.19%
+2025-12-08 03:36:20,715 - kaldo - INFO - calculating third 22800: 87.96%
+2025-12-08 03:42:33,398 - kaldo - INFO - calculating third 23000: 88.73%
+2025-12-08 03:48:45,688 - kaldo - INFO - calculating third 23200: 89.51%
+2025-12-08 03:54:58,232 - kaldo - INFO - calculating third 23400: 90.28%
+2025-12-08 04:01:10,176 - kaldo - INFO - calculating third 23600: 91.05%
+2025-12-08 04:07:22,421 - kaldo - INFO - calculating third 23800: 91.82%
+2025-12-08 04:13:34,118 - kaldo - INFO - calculating third 24000: 92.59%
+2025-12-08 04:19:46,006 - kaldo - INFO - calculating third 24200: 93.36%
+2025-12-08 04:25:57,620 - kaldo - INFO - calculating third 24400: 94.14%
+2025-12-08 04:32:09,827 - kaldo - INFO - calculating third 24600: 94.91%
+2025-12-08 04:38:20,437 - kaldo - INFO - calculating third 24800: 95.68%
+2025-12-08 04:44:29,345 - kaldo - INFO - calculating third 25000: 96.45%
+2025-12-08 04:50:40,120 - kaldo - INFO - calculating third 25200: 97.22%
+2025-12-08 04:56:52,736 - kaldo - INFO - calculating third 25400: 97.99%
+2025-12-08 05:03:04,933 - kaldo - INFO - calculating third 25600: 98.77%
+2025-12-08 05:09:17,132 - kaldo - INFO - calculating third 25800: 99.54%
+2025-12-08 05:13:00,998 - kaldo - INFO - '_project_crystal'  48369.64 s
+2025-12-08 05:13:29,279 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/_sparse_phase_and_potential stored as 25917 per-mu arrays
+2025-12-08 05:14:14,755 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_sparse_phase_and_potential
+2025-12-08 05:16:18,585 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_and_gamma stored
+2025-12-08 05:16:19,157 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/anharmonic_bandwidth stored
+2025-12-08 05:16:22,121 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth stored
+2025-12-08 05:16:29,165 - kaldo - INFO - Start calculation diffusivity
+/home/zekun/Programs/miniconda3/envs/orb-turbo/lib/python3.11/site-packages/kaldo/controllers/dirac_kernel.py:26: RuntimeWarning: invalid value encountered in divide
+  lorentzian = 1 / np.pi * 1 / 2 * sigma / (delta_omega ** 2 + (sigma / 2) ** 2)
+2025-12-08 05:19:47,771 - kaldo - INFO - Conductivity calculated
+kappa from QHGK (W/mK) along x: 0.453
+kappa from QHGK (W/mK) along y: 0.452
+kappa from QHGK (W/mK) along z: 0.452
+
+
+2025-12-08 05:19:48,130 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/conductivity not found in formatted format, calculating conductivity
+2025-12-08 05:19:48,130 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+2025-12-08 05:19:48,131 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:19:48,132 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/velocity
+2025-12-08 05:19:48,132 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:19:48,133 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/frequency
+2025-12-08 05:19:48,133 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_gamma_and_gamma_tensor not found in numpy format, calculating _ps_gamma_and_gamma_tensor
+2025-12-08 05:19:48,134 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/population
+2025-12-08 05:20:12,001 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_sparse_phase_and_potential
+2025-12-08 05:21:29,275 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/_sparse_phase_and_potential
+2025-12-08 05:21:31,430 - kaldo - INFO - scattering_tensor: [25920 25922] * <class 'float'>
+2025-12-08 05:21:31,499 - kaldo - INFO - Memory needed: 5375 MB, available: 147166 / 270102 MB
+2025-12-08 05:43:22,694 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_gamma_and_gamma_tensor stored
+2025-12-08 05:44:00,622 - kaldo - INFO - _scattering_matrix: [25917 25917] * <class 'float'>
+2025-12-08 05:44:00,622 - kaldo - INFO - Memory needed: 5373 MB, available: 142635 / 270102 MB
+2025-12-08 05:44:01,264 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth
+2025-12-08 05:45:14,380 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:45:14,381 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/frequency
+2025-12-08 05:45:15,197 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_gamma_and_gamma_tensor
+2025-12-08 05:45:17,637 - kaldo - INFO - _scattering_matrix: [25917 25917] * <class 'float'>
+2025-12-08 05:45:17,638 - kaldo - INFO - Memory needed: 5373 MB, available: 141474 / 270102 MB
+2025-12-08 05:45:18,266 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth
+2025-12-08 05:46:25,419 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:46:25,420 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/frequency
+2025-12-08 05:46:26,225 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_gamma_and_gamma_tensor
+2025-12-08 05:46:28,683 - kaldo - INFO - _scattering_matrix: [25917 25917] * <class 'float'>
+2025-12-08 05:46:28,683 - kaldo - INFO - Memory needed: 5373 MB, available: 141833 / 270102 MB
+2025-12-08 05:46:29,321 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth
+2025-12-08 05:47:37,586 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/heat_capacity not found in numpy format, calculating heat_capacity
+2025-12-08 05:47:55,571 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/360/quantum/heat_capacity stored
+2025-12-08 05:47:55,574 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/velocity
+2025-12-08 05:47:55,574 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:47:55,628 - kaldo - INFO - Conductivity calculated
+kappa from inverseion (W/mK) along x: 0.384
+kappa from inverseion (W/mK) along y: 0.383
+kappa from inverseion (W/mK) along z : 0.383
+
+
+2025-12-08 05:47:55,981 - kaldo - WARNING - rta method is specified, but n_iterations is not specified to be 0. Please check your setup. Now, n_iterations is reset to 0.
+2025-12-08 05:47:55,983 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/rta/360/quantum/conductivity not found in formatted format, calculating conductivity
+2025-12-08 05:47:55,983 - kaldo - INFO - ALD_CsPbBr3_NEP/12_12_12/rta/360/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+2025-12-08 05:47:55,985 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/velocity
+2025-12-08 05:47:55,985 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:47:55,985 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth
+2025-12-08 05:47:56,113 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/360/quantum/heat_capacity
+2025-12-08 05:47:56,115 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/velocity
+2025-12-08 05:47:56,115 - kaldo - INFO - Loading ALD_CsPbBr3_NEP/12_12_12/physical_mode
+2025-12-08 05:47:56,177 - kaldo - INFO - Conductivity calculated
+kappa from RTA (W/mK) along x: 0.357
+kappa from RTA (W/mK) along y: 0.356
+kappa from RTA (W/mK) along z: 0.356
+
+
+kappa full QHGK (W/mK) along x: 0.480
+kappa full QHGK (W/mK) along y: 0.480
+kappa full QHGK (W/mK) along z: 0.480
