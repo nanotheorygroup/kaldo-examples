@@ -1,0 +1,9 @@
+velocity 500
+
+potential ./nep-CsPbBr3-CX.txt
+
+ensemble nvt_lan 500 500 100
+time_step 1
+dump_thermo 100
+dump_exyz 100 1 1 1
+run 200000
