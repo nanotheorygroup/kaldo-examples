@@ -19,8 +19,3 @@
        ```console
        q2r.x -in q2r.in > q2r.out
        ```
-
-- Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
-
-- Note on Supercell Convergence:  
-  The supercells used for `espresso.ifc2` are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.
