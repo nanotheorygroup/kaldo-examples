@@ -13,10 +13,6 @@ make mpi mode=shlib
 cd path/to/lammps/src
 make install-python				
 ```
-- In amorphous silicon and silicon clathrate examples, 2<sup>nd</sup> and 3<sup>rd</sup> order force constants are computed by using LAMMPS PHONON package. Since these material systems have relatively large  unit cell, computing force constants using the PHONON package currently available in the official website can take hours. 
-To speed up the calculation, one can download and compile LAMMPS with optimized force constants calculation functionality from the following repo: [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d). 
-- Some features on the OptimizedDynamicalMatrix are broken as of commits in April 2020, please checkout the following commit which works reliably from 01/29/2020:
-        - in your cloned repo: `git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d`
 
 - Suggestions of specificing GPU/CPU usage for tensorflow can be accessed [here](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
 

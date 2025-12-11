@@ -3,7 +3,7 @@
 > More details on MatterSim potential file can be found [here](https://github.com/microsoft/mattersim).  
 > Running `python quasi_harmonic_approximations.py` requires [MatterSim](https://github.com/microsoft/mattersim) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed with Python 3.10+.
 
-Execute `python quasi_harmonic_approximations.py` to calculate Gibbs free energy and lattice constant of MgO under a range of temperatures with MatterSim. 
+Execute `python quasi_harmonic_approximations.py` to calculate Gibbs free energy and lattice constant of Si under a range of temperatures. 
 
 This calculation proceeds as follows:
 

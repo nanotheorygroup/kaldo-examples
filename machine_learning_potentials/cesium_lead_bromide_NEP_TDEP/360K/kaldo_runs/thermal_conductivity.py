@@ -27,14 +27,6 @@ phonons = Phonons(forceconstants=tdep_fcs,
                 folder='ALD_CsPbBr3_NEP',
                 storage='numpy')
 
-Cij = forceconstants.elastic_prop()
-print("C11: %.1f GPa" %Cij[0, 0, 0, 0])
-print("C12: %.1f GPa" %Cij[0, 0, 1, 1])
-print("C44: %.1f GPa" %Cij[1, 2, 1, 2])
-print("Bulk Modulus:  %.1f GPa" %((Cij[0, 0, 0, 0] + 2 * Cij[0, 0, 1, 1])/3))
-np.save("Cij.npy", Cij)
-
-
 # Plot dispersion relation and group velocity in each direction
 plotter.plot_dispersion(phonons,n_k_points=300, is_showing=False)
 plotter.plot_dos(phonons, bandwidth=0.001)
