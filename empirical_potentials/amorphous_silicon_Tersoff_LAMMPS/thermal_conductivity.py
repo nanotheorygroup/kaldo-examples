@@ -39,6 +39,9 @@ phonons_config = {'is_classic': False,
 # Set up phonon object by passing in configuration details and the forceconstants object computed above
 phonons = Phonons(forceconstants=forceconstants, **phonons_config)
 
+# Compute Density of States (DOS)
+plotter.plot_dos(phonons,p_atoms=None, bandwidth=0.01, filename='dos')
+
 ### Set up the Conductivity object and thermal conductivity calculations ####
 
 # Compute thermal conductivity (t.c.) by solving Boltzmann Transport
@@ -50,8 +53,17 @@ phonons = Phonons(forceconstants=forceconstants, **phonons_config)
 # 'storage': Format to storage phonon properties ('formatted' for ASCII format data, 'numpy' 
 #            for python numpy array and 'memory' for quick calculations, no data stored)
 
+
 print('\n')
 qhgk_cond = Conductivity(phonons=phonons, method='qhgk', storage='numpy')
 qhgk_cond.diffusivity_bandwidth = phonons.bandwidth
 print('Conductivity from QHGK (W/m-K): %.3f' % (np.mean(np.diag(qhgk_cond.conductivity.sum(axis=0)))))
 print(qhgk_cond.conductivity.sum(axis=0))
+
+# Compute diffusivity and participation ratio
+diffusivity = qhgk_cond.diffusivity
+if phonons_config['is_classic']:
+    np.save('diffusivity_classical.npy', diffusivity)
+else:
+    np.save('diffusivity_quantum.npy', diffusivity)
+phonons.participation_ratio
