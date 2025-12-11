@@ -13,3 +13,7 @@ This example illustrates how to perform thermal transport simulation for a germa
 This example illustrates how to perform thermal transport simulation for a rock-salt MgO (2 atoms per cell) system using [D3Q](https://anharmonic.github.io/d3q/) package as force calculator.
 - `silicon_dft_qe:`
 This example illustrates how to perform thermal transport simulation for a silicon diamond (2 atoms per cell) system using [QE](https://www.quantum-espresso.org/) package as force calculator.
+
+## Using Git Large File Storage (LFS)
+
+This repository uses Git Large File Storage (LFS) to handle large files. To ensure you properly download all the content, you may need to have Git LFS installed on your system. If you haven't installed it yet, you can do so by following the instructions on the [Git LFS website](https://git-lfs.github.com/). Once Git LFS is installed, you can clone this repository as usual with `git clone`. Git LFS is integrated into normal Git commands, so large files will be downloaded automatically when you checkout a commit that includes them. If you've already cloned the repository without Git LFS, you can download the large files with `git lfs pull`.
