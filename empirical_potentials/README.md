@@ -1,17 +1,21 @@
 # empirical_potentials
 This collection of examples shows how to perform thermal transport with kALDo for cystal and amorphous
 systems using [Tersoff potential](https://docs.lammps.org/pair_tersoff.html). Before running simulations with kALDo, download the following third-party packages: [LAMMPS](https://lammps.sandia.gov/download.html)
-- To calculate 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS and ASE, after downloading [LAMMPS](https://lammps.sandia.gov/),compile LAMMPS with shlib mode:
+- To calculate 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS and ASE,compile LAMMPS with shlib mode using cmake:
 ```console
 cd path/to/lammps/src
-make yes-manybody
-make yes-molecule
-make mpi mode=shlib
-```
-- After properly install kALDo, run the following line in command window to link LAMMPS with Python and ASE:
-```console
-cd path/to/lammps/src
-make install-python				
+mkdir build
+cd build
+cmake ../cmake -DLAMMPS_EXCEPTIONS=yes \
+               -DBUILD_SHARED_LIBS=yes \
+               -DMLIAP_ENABLE_PYTHON=yes \
+               -DPKG_PYTHON=yes \
+               -DPKG_MANYBODY=yes \
+               -DPKG_KSPACE=yes \
+               -DPKG_PHONON=yes \
+               -DPYTHON_EXECUTABLE:FILEPATH=`which python`
+make -j 16
+make install-python
 ```
 
 - Suggestions of specificing GPU/CPU usage for tensorflow can be accessed [here](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
