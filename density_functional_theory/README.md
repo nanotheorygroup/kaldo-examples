@@ -1,4 +1,4 @@
-# empirical_potentials
+# density_functional_theory
 This collection of examples shows how to perform thermal transport with kALDo for cystaline
 systems using DFT. Before running simulations with kALDo, download the following third-party packages: [QE](https://www.quantum-espresso.org/), [D3Q](https://anharmonic.github.io/d3q/)
 
@@ -10,6 +10,6 @@ For each example, more detailed information is provided by the README.md file co
 - `germanium_dft_d3q:`
 This example illustrates how to perform thermal transport simulation for a germanium diamond (2 atoms per cell) with [D3Q](https://anharmonic.github.io/d3q/) package as force calculator.
 - `magnesium_oxide_dft_d3q:`
-This example illustrates how to perform thermal transport simulation for a rock-salt MgO (2 atoms per cell) system using [D3Q](https://anharmonic.github.io/d3q/) as force calculator.
+This example illustrates how to perform thermal transport simulation for a rock-salt MgO (2 atoms per cell) system using [D3Q](https://anharmonic.github.io/d3q/) package as force calculator.
 - `silicon_dft_qe:`
-This example illustrates how to perform thermal transport simulation for a silicon diamond (2 atoms per cell) system using [QE](https://www.quantum-espresso.org/)) package as force calculator.
+This example illustrates how to perform thermal transport simulation for a silicon diamond (2 atoms per cell) system using [QE](https://www.quantum-espresso.org/) package as force calculator.
