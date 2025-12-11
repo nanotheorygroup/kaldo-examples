@@ -55,4 +55,3 @@ qhgk_cond = Conductivity(phonons=phonons, method='qhgk', storage='numpy')
 qhgk_cond.diffusivity_bandwidth = phonons.bandwidth
 print('Conductivity from QHGK (W/m-K): %.3f' % (np.mean(np.diag(qhgk_cond.conductivity.sum(axis=0)))))
 print(qhgk_cond.conductivity.sum(axis=0))
-plotter.plot_amorphous(phonons, is_showing=False)
