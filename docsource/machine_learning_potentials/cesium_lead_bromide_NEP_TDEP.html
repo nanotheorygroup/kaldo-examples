@@ -828,8 +828,6 @@
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
-from ase.visualize.plot import plot_atoms
-import pandas as pd
 from pylab import *
 import warnings
 warnings.filterwarnings(&quot;ignore&quot;)
@@ -1407,7 +1405,7 @@ xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
 ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
 gca().set_yticks(np.arange(0, 0.5, 0.1))
 xscale(&#39;log&#39;)
-xlim([1e-3, 5e2])
+xlim([1e-2, 5e2])
 subplots_adjust(wspace=0.33)
 show()
 </code></pre></div>

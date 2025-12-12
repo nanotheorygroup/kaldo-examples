@@ -879,7 +879,7 @@ subplot(1,3,1)
 set_fig_properties([gca()])
 plot_atoms(atoms, show_unit_cell=False, radii=0.8)
 gca().axis(&#39;off&#39;)
-gca().set_title(&#39;a-Si supercell&#39;)
+gca().set_title(&#39;a-Si structure&#39;)
 
 subplot(1,3, 2)
 set_fig_properties([gca()])
@@ -912,12 +912,12 @@ show()
 </div>
 <h3 id="Visualize-per-mode-and-cumulative-\kappa">Visualize per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#Visualize-per-mode-and-cumulative-\kappa" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote zeros to intake kappa tensor
 kappa_tensor = np.load(data_folder + \
-                       &#39;/ALD_aSi512/db_0.13706919455511468/qhgk/300/quantum/tb_0.12091898428053205/conductivity.npy&#39;, allow_pickle=True)
+                       &#39;ALD_aSi512/db_0.13706919455511365/qhgk/300/quantum/tb_0.12091898428053205/conductivity.npy&#39;, allow_pickle=True)
 
 
 # Sum over the 0th dimension to recover 3-by-3 kappa matrix

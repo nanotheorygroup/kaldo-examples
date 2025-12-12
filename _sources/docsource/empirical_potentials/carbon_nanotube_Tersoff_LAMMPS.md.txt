@@ -50,11 +50,6 @@ python 0_generate_LAMMPS_input_and_supercell_structures.py
 ```console
 ./mpirun -np 8 /path/to/lammps/src/lmp_mpi < in.CNT > CNT.log 
 ```
-- To obtain precalculated 2<sup>nd</sup> and 3<sup>rd</sup> order force constants, navigate to this directory and execute:
-```console
-chmod +x  get_precalculated_fc.sh
-./get_precalculated_fc.sh
-```
 - To perform thermal transport after computing force constants, navigate to this directory and execute:
 ```console
 python 1_CNT_Tersoff_thermal_conductivity_quantum.py
