@@ -502,7 +502,7 @@
   
   
   <span class="md-ellipsis">
-    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
     
   </span>
   
@@ -724,36 +724,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#optimized-force-constants-for-large-systems" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/index.rst#optimized-force-constants-for-large-systems (reference label)"><span>Optimized force constants for large systems</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpu-cpu-configuration" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/index.rst#gpu-cpu-configuration (reference label)"><span>GPU/CPU Configuration</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#git-large-file-storage-lfs" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/index.rst#git-large-file-storage-lfs (reference label)"><span>Git Large File Storage <wbr>(LFS)</span></span>
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -890,19 +860,21 @@
 <span class="go">make install-python</span>
 </code></pre></div>
 </div>
-<h4 id="optimized-force-constants-for-large-systems">Optimized force constants for large systems<a class="headerlink" href="#optimized-force-constants-for-large-systems" title="Link to this heading">¶</a></h4>
-<p>For amorphous silicon and silicon clathrate examples, force constants are computed using the LAMMPS PHONON package. For large unit cells, this can take hours. To speed up calculations, use the optimized version from <a class="reference external" href="https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d">OptimizedDynamicalMatrix</a>.</p>
-<p><strong>Note:</strong> Use commit <code class="docutils literal notranslate"><span class="pre">fed47b9ffc833bebffe0e460739ebd6ff69e9c8d</span></code> for reliable results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d</span>
-</code></pre></div>
-</div>
-<h4 id="gpu-cpu-configuration">GPU/CPU Configuration<a class="headerlink" href="#gpu-cpu-configuration" title="Link to this heading">¶</a></h4>
-<p>For TensorFlow-based calculations, you can specify GPU or CPU usage following <a class="reference external" href="https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow">these instructions</a>.</p>
-<hr class="docutils" />
-<h4 id="git-large-file-storage-lfs">Git Large File Storage (LFS)<a class="headerlink" href="#git-large-file-storage-lfs" title="Link to this heading">¶</a></h4>
-<p>This repository uses Git LFS to handle large files. Ensure Git LFS is installed on your system by following the instructions on the <a class="reference external" href="https://git-lfs.github.com/">Git LFS website</a>.</p>
-<p>Once installed, clone the repository as usual with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> — large files will be downloaded automatically. If you’ve already cloned without Git LFS, retrieve the large files with:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">git lfs pull</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>
+### GPU/CPU Configuration
+
+For TensorFlow-based calculations, you can specify GPU or CPU usage following [these instructions](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
+
+---
+
+### Git Large File Storage (LFS)
+
+This repository uses Git LFS to handle large files. Ensure Git LFS is installed on your system by following the instructions on the [Git LFS website](https://git-lfs.github.com/).
+
+Once installed, clone the repository as usual with `git clone` — large files will be downloaded automatically. If you&#39;ve already cloned without Git LFS, retrieve the large files with:
+
+```console
+git lfs pull
 </code></pre></div>
 </div>
 
