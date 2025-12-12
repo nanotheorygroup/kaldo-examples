@@ -21,7 +21,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Install Python dependencies
         run: |
           pip install sphinx sphinx-immaterial nbsphinx myst-parser
 
