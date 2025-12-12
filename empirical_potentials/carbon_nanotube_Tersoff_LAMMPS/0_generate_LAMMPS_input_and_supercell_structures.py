@@ -21,7 +21,7 @@ if np.linalg.det(atoms.cell) < 0:
     atoms.cell = right_handed_convetion_cell
 
 # Replicate the unit cell 'nrep'=3 times
-nrep = 3
+nrep = 5
 supercell = np.array([1, 1, nrep])
 
 # Generate input files for LAMMPS and replicated super cell structure

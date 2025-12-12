@@ -32,14 +32,6 @@ make -j 16
 make install-python
 ```
 
-### Optimized force constants for large systems
-
-For amorphous silicon and silicon clathrate examples, force constants are computed using the LAMMPS PHONON package. For large unit cells, this can take hours. To speed up calculations, use the optimized version from [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d).
-
-**Note:** Use commit `fed47b9ffc833bebffe0e460739ebd6ff69e9c8d` for reliable results:
-
-```console
-git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d
 ```
 
 ### GPU/CPU Configuration

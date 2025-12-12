@@ -2,7 +2,7 @@
 
 Example carbon_nanotube_Tersoff_LAMMPS illustrates how to perform thermal 
 transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using
-[LAMMPS USER-PHONON ](https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon) package as force calculator.
+[LAMMPS PHONON ](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
 
 External files required: 
 			1). forcefields/C.optimize.tersoff
@@ -17,16 +17,12 @@ External files required:
 - The force constant calculation proceeds as follows:
 
     in.CNT:
-    1.  Compute 2nd, 3rd force constants computed with LAMMPS USER-PHONON
+    1.  Compute 2nd, 3rd force constants computed with LAMMPS PHONON
 			
-	or
-
-	get_precalculated_fc.sh:
-	1.  Download precalculated force constants computed with LAMMPS USER-PHONON
      
 - 1_CNT_Tersoff_thermal_conductivity_quantum.py proceeds as follows:
 
-    1. Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS USER-PHONON.
+    1. Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS PHONON.
 
     2. Set up phonon object (1x1x151 k-point mesh) and perform quantum simulation at 300K.
      
@@ -34,19 +30,17 @@ External files required:
 
 -  2_CNT_Tersoff_thermal_conductivity_classical.py proceeds as follows:
 
-    1. Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS USER-PHONON.
+    1. Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS PHONON.
 
     2. Set up phonon object (1x1x151 k-point mesh) and perform classical simulation at 300K.
 
     3. Set up Conductivity object and compute thermal conductivity for infinite and finite size samples. 
 
-- LAMMPS packages to install/compile include: [MAKE, MANYBODY, MOLECULE, KSPACE, USER-PHONON](https://lammps.sandia.gov/doc/Packages_details.html).
-
 - To generate input files for LAMMPS calculations and the supercell structures, navigate to this directory and execute:
 ```console
 python 0_generate_LAMMPS_input_and_supercell_structures.py
 ```
-- To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS USER-PHONON, navigate to this directory and execute:
+- To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS PHONON, navigate to this directory and execute:
 ```console
 ./mpirun -np 8 /path/to/lammps/src/lmp_mpi < in.CNT > CNT.log 
 ```
@@ -56,5 +50,4 @@ python 1_CNT_Tersoff_thermal_conductivity_quantum.py
 python 2_CNT_Tersoff_thermal_conductivity_classical.py
 ```
 - To access data computed during simulations, navigate to this folder: ***ALD_CNT***
-- Reference conductivity (1x1x3 supercell,1x1x151 k-point mesh): 2999.680 W/m-K (classical), 8794.771 W/m-K (Quantum) 
-- Reference conductivity (1x1x5 supercell,1x1x151 k-point mesh): 3120.487 W/m-K (classical), 8639.604 W/m-K (Quantum) 
+- Reference conductivity (1x1x3 supercell,1x1x151 k-point mesh): 8800.2 W/m-K (Quantum) 
