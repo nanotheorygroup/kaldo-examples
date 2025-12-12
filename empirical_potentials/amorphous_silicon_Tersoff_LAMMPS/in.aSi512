@@ -8,7 +8,9 @@ read_data  aSi_512.lmp
 pair_style    tersoff
 pair_coeff    * * forcefields/Si.tersoff Si
 mass            1 28.06
-print 'calculating dynmat'
-dynamical_matrix all eskm 1e-06 file Dyn.form binary no
+group core id 1:512
+neighbor 0.0001 bin
+print 'calculating calculate_dynmat'
+dynamical_matrix core eskm 0.00001 file fc_aSi512/Dyn.form binary no fold yes
 print 'calculating third_order'
-third_order all eskm 1e-06 file THIRD binary no
+third_order core eskm 0.00001 file fc_aSi512/THIRD binary no fold yes

@@ -22,7 +22,7 @@ External files required:
     3. Set up Conductivity object and compute thermal conductivity with Relaxation Time Approximation (RTA) method.
 
 
-- To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS USER-PHONON, navigate to this directory and execute:
+- To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS PHONON, navigate to this directory and execute:
 ```console
 ./mpirun -np 8 /path/to/lammps/src/lmp_mpi < in.Si46 > Si46.log 
 ```
