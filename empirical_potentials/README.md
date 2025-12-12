@@ -32,8 +32,6 @@ make -j 16
 make install-python
 ```
 
-```
-
 ### GPU/CPU Configuration
 
 For TensorFlow-based calculations, you can specify GPU or CPU usage following [these instructions](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
