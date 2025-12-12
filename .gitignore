@@ -1,0 +1,7 @@
+kaldo/build/
+docs/_build
+docs/docsource/density_functional_theory/
+docs/docsource/empirical_potentials/
+docs/docsource/machine_learning_potentials/
+**/README_details.md
+kaldo
