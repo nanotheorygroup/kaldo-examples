@@ -28,14 +28,6 @@ External files required:
      
     3. Set up Conductivity object and compute thermal conductivity for infinite and finite size samples. 
 
--  2_CNT_Tersoff_thermal_conductivity_classical.py proceeds as follows:
-
-    1. Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS PHONON.
-
-    2. Set up phonon object (1x1x151 k-point mesh) and perform classical simulation at 300K.
-
-    3. Set up Conductivity object and compute thermal conductivity for infinite and finite size samples. 
-
 - To generate input files for LAMMPS calculations and the supercell structures, navigate to this directory and execute:
 ```console
 python 0_generate_LAMMPS_input_and_supercell_structures.py
@@ -47,7 +39,6 @@ python 0_generate_LAMMPS_input_and_supercell_structures.py
 - To perform thermal transport after computing force constants, navigate to this directory and execute:
 ```console
 python 1_CNT_Tersoff_thermal_conductivity_quantum.py
-python 2_CNT_Tersoff_thermal_conductivity_classical.py
 ```
 - To access data computed during simulations, navigate to this folder: ***ALD_CNT***
 - Reference conductivity (1x1x3 supercell,1x1x151 k-point mesh): 8800.2 W/m-K (Quantum) 
