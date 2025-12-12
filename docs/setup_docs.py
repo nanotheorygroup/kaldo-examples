@@ -5,8 +5,9 @@ import re
 import shutil
 from pathlib import Path
 
-REPO_ROOT = Path("/Users/juicy/Development/kaldo-examples")
-DOCS_ROOT = REPO_ROOT / "docs"
+# Use script location to determine paths (works on any system)
+DOCS_ROOT = Path(__file__).parent.resolve()
+REPO_ROOT = DOCS_ROOT.parent
 DOCSOURCE = DOCS_ROOT / "docsource"
 
 CATEGORIES = {
