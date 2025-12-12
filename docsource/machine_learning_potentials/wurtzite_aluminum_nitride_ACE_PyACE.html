@@ -1,0 +1,1358 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="silicon_carbide_MatterSim-v1-1M_mattersimcalculator.html">
+      
+      
+        <link rel="next" href="../density_functional_theory/germanium_dft_d3q.html">
+      
+      
+      <link rel="icon" href="../../_static/logo.ico">
+    
+    
+      
+        <title>Wurtzite Aluminum Nitride Ace Pyace - Examples</title>
+      
+    
+    
+      
+        
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.cf2c65c97ee1b6f01.min.css?v=0a68cab4" />
+        <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=a35ea3b2" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HQHR3LWX3F"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HQHR3LWX3F",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HQHR3LWX3F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{w-AlN}-with-ACE" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Examples" class="md-header__button md-logo" aria-label="Examples" data-md-component="logo">
+      <img src="../../_static/logo.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Wurtzite Aluminum Nitride Ace Pyace
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nanotheorygroup/kaldo-examples" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kALDo Examples
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Examples" class="md-nav__button md-logo" aria-label="Examples" data-md-component="logo">
+      <img src="../../_static/logo.png" alt="logo">
+    </a>
+    Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nanotheorygroup/kaldo-examples" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kALDo Examples
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cesium_lead_bromide_NEP_TDEP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb (reference label)"><span>Cesium Lead Bromide Nep Tdep</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gallium_arsenide_orb-v3_ORBCalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/gallium_arsenide_orb-v3_orbcalculator.ipynb (reference label)"><span>Gallium Arsenide Orb V3 Orbcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/magnesium_oxide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Magnesium Oxide Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Silicon Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_NEP89_calorine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_nep89_calorine.ipynb (reference label)"><span>Silicon Nep89 Calorine</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_carbide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_carbide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Silicon Carbide Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb (reference label)"><span>Wurtzite Aluminum Nitride Ace Pyace</span></span>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb (reference label)"><span>Wurtzite Aluminum Nitride Ace Pyace</span></span>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{w-AlN}-with-ACE" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#anharmonic-lattice-dynamics-(ald)-for-\ce{w-aln}-with-ace (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for \ce<wbr>{w-<wbr>Al<wbr>N} with ACE</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for \ce{w-AlN} with ACE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Import-Necessary-Packages" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#import-necessary-packages (reference label)"><span>Import Necessary Packages</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Custom-Define-Functions" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Illustrate-Crystal-Structure-and-Elastic-Constants" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#illustrate-crystal-structure-and-elastic-constants (reference label)"><span>Illustrate Crystal Structure and Elastic Constants</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos) (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-phonon-lifetime-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Plot Phonon Lifetime <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-per-mode-and-cumulative-\kappa" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-per-mode-and-cumulative-\kappa (reference label)"><span>Plot per mode and cumulative \kappa</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/germanium_dft_d3q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/germanium_dft_d3q.ipynb (reference label)"><span>Germanium Dft D3Q</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/magnesium_oxide_dft_d3q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/magnesium_oxide_dft_d3q.ipynb (reference label)"><span>Magnesium Oxide Dft D3Q</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/silicon_dft_qe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/silicon_dft_qe.ipynb (reference label)"><span>Silicon Dft Qe</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/amorphous_silicon_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/amorphous_silicon_tersoff_lammps.ipynb (reference label)"><span>Amorphous Silicon Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/carbon_diamond_Tersoff_ASE_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_diamond_tersoff_ase_lammps.ipynb (reference label)"><span>Carbon Diamond Tersoff Ase Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/carbon_nanotube_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/silicon_clathrate_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/silicon_clathrate_tersoff_lammps.ipynb (reference label)"><span>Silicon Clathrate Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{w-AlN}-with-ACE" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#anharmonic-lattice-dynamics-(ald)-for-\ce{w-aln}-with-ace (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for \ce<wbr>{w-<wbr>Al<wbr>N} with ACE</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for \ce{w-AlN} with ACE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Import-Necessary-Packages" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#import-necessary-packages (reference label)"><span>Import Necessary Packages</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Custom-Define-Functions" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Illustrate-Crystal-Structure-and-Elastic-Constants" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#illustrate-crystal-structure-and-elastic-constants (reference label)"><span>Illustrate Crystal Structure and Elastic Constants</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos) (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-phonon-lifetime-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Plot Phonon Lifetime <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-per-mode-and-cumulative-\kappa" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb#plot-per-mode-and-cumulative-\kappa (reference label)"><span>Plot per mode and cumulative \kappa</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
+                  
+
+
+<h1 id="Wurtzite-Aluminum-Nitride-Ace-Pyace">Wurtzite Aluminum Nitride Ace Pyace<a class="headerlink" href="#Wurtzite-Aluminum-Nitride-Ace-Pyace" title="Link to this heading">¶</a></h1>
+<h2 id="Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{w-AlN}-with-ACE">Anharmonic Lattice Dynamics (ALD) for <span class="math notranslate nohighlight">\(\ce{w-AlN}\)</span> with <a class="reference external" href="https://pubs.aip.org/aip/jap/article/135/8/085105/3266915">ACE</a><a class="headerlink" href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{w-AlN}-with-ACE" title="Link to this heading">¶</a></h2>
+<h3 id="Import-Necessary-Packages">Import Necessary Packages<a class="headerlink" href="#Import-Necessary-Packages" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[1]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
+from ase.visualize.plot import plot_atoms
+import pandas as pd
+from pylab import *
+import warnings
+warnings.filterwarnings(&quot;ignore&quot;)
+</code></pre></div>
+</div>
+</div>
+<h3 id="Custom-Define-Functions">Custom Define Functions<a class="headerlink" href="#Custom-Define-Functions" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[2]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def cumulative_cond_cal(observables, kappa_tensor, prefactor=1/3):
+
+    &quot;&quot;&quot;Compute cumulative conductivity based on either frequency or mean-free path
+
+       input:
+       observables: (ndarray) either phonon frequency or mean-free path
+       cond_tensor: (ndarray) conductivity tensor
+       prefactor: (float) prefactor to average kappa tensor, 1/3 for bulk material
+
+       ouput:
+       observeables: (ndarray) sorted phonon frequency or mean-free path
+       kappa_cond (ndarray) cumulative conductivity
+
+    &quot;&quot;&quot;
+
+    # Sum over kappa by directions
+    kappa = np.einsum(&#39;maa-&gt;m&#39;, prefactor * kappa_tensor)
+
+    # Sort observables
+    observables_argsort_indices = np.argsort(observables)
+    cumulative_kappa = np.cumsum(kappa[observables_argsort_indices])
+    return observables[observables_argsort_indices], cumulative_kappa
+
+
+
+def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
+    tl = 4
+    tw = 2
+    tlm = 2
+
+    for ax in ax_list:
+        ax.tick_params(which=&#39;major&#39;, length=tl, width=tw)
+        ax.tick_params(which=&#39;minor&#39;, length=tlm, width=tw)
+        ax.tick_params(which=&#39;both&#39;, axis=&#39;both&#39;, direction=&#39;in&#39;,
+                       right=True, top=True)
+        ax.spines[&#39;bottom&#39;].set_color(panel_color_str)
+        ax.spines[&#39;top&#39;].set_color(panel_color_str)
+        ax.spines[&#39;left&#39;].set_color(panel_color_str)
+        ax.spines[&#39;right&#39;].set_color(panel_color_str)
+
+        ax.spines[&#39;bottom&#39;].set_linewidth(line_width)
+        ax.spines[&#39;top&#39;].set_linewidth(line_width)
+        ax.spines[&#39;left&#39;].set_linewidth(line_width)
+        ax.spines[&#39;right&#39;].set_linewidth(line_width)
+
+        for t in ax.xaxis.get_ticklines(): t.set_color(panel_color_str)
+        for t in ax.yaxis.get_ticklines(): t.set_color(panel_color_str)
+        for t in ax.xaxis.get_ticklines(): t.set_linewidth(line_width)
+        for t in ax.yaxis.get_ticklines(): t.set_linewidth(line_width)
+</code></pre></div>
+</div>
+</div>
+<h3 id="Denote-Latex-Font-for-Plots">Denote Latex Font for Plots<a class="headerlink" href="#Denote-Latex-Font-for-Plots" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[3]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
+aw = 2
+fs = 12
+font = {&#39;size&#39;: fs}
+matplotlib.rc(&#39;font&#39;, **font)
+matplotlib.rc(&#39;axes&#39;, linewidth=aw)
+
+# Configure Matplotlib to use a LaTeX-like style without LaTeX
+plt.rcParams[&#39;text.usetex&#39;] = False
+plt.rcParams[&#39;font.family&#39;] = &#39;serif&#39;
+plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+</code></pre></div>
+</div>
+</div>
+<h3 id="Illustrate-Crystal-Structure-and-Elastic-Constants">Illustrate Crystal Structure and Elastic Constants<a class="headerlink" href="#Illustrate-Crystal-Structure-and-Elastic-Constants" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>DFT reference for the elastic modulus is adopted from: <a class="reference external" href="https://next-gen.materialsproject.org/materials/mp-661">https://next-gen.materialsproject.org/materials/mp-661</a></p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[4]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote data path
+data_folder = &quot;kaldo_runs/&quot;
+
+# Extract supercell structure for later display
+atoms = read(data_folder  + &#39;fd_ACE/replicated_atoms.xyz&#39;)
+
+# Retrieve elastic constants and compute bulk modulus
+Cijs = np.load(data_folder + &#39;Cij.npy&#39;)
+C11 = Cijs[0, 0, 0, 0]
+C12 = Cijs[0, 0, 1, 1]
+C13 = Cijs[0, 0, 2, 2]
+C33 = Cijs[2, 2, 2, 2]
+Bulk_modulus = (2*(C11 + C12) + 4*C13 + C33) / 9
+
+# Display supercell and bulk modulus side by side
+figure(figsize=(4, 3))
+set_fig_properties([gca()])
+plot_atoms(atoms)
+gca().axis(&#39;off&#39;)
+gca().set_title(&#39;w-AlN supercell&#39;)
+show()
+
+print(&#39;\n&#39;)
+
+# Prepare data for pandas
+df = pd.DataFrame({
+    &quot;Properties&quot;: [&quot;C11&quot;, &quot;C12&quot;, &quot;C13&quot;, &quot;C33&quot;, &quot;Bulk Modulus&quot;],
+    &quot;Predictions (GPa)&quot;: [C11, C12, C13, C33, Bulk_modulus],
+    &quot;DFT references (GPa)&quot;: [379, 128, 96, 355, 195]
+})
+
+# Format the floats to one decimal place and print
+pd.set_option(&#39;display.float_format&#39;, &#39;{:.1f}&#39;.format)
+print(df.to_string(index=False))
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_9_0.png" src="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_9_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+
+  Properties  Predictions (GPa)  DFT references (GPa)
+         C11              367.4                   379
+         C12              123.1                   128
+         C13              121.6                    96
+         C33              345.1                   355
+Bulk Modulus              201.4                   195
+</pre></div></div>
+</div>
+<h3 id="Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)">Plot Phonon Spectra (Dispersion) and Density of State (DOS)<a class="headerlink" href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Derive symbols for high symmetry directions in Brillouin zone
+dispersion = np.loadtxt(data_folder  + &#39;plots/15_15_9/dispersion&#39;)
+point_names = np.loadtxt(data_folder  + &#39;plots/15_15_9/point_names&#39;, dtype=str)
+
+point_names_list = []
+for point_name in point_names:
+    if point_name == &#39;G&#39;:
+        point_name = r&#39;$\Gamma$&#39;
+    elif point_name == &#39;U&#39;:
+        point_name = &#39;U=K&#39;
+    point_names_list.append(point_name)
+
+# Load in the &quot;tick-mark&quot; values for these symbols
+q = np.loadtxt(data_folder  + &#39;plots/15_15_9/q&#39;)
+Q = np.loadtxt(data_folder  + &#39;plots/15_15_9/Q_val&#39;)
+
+# Load in grid and dos individually
+dos_AlN = np.load(data_folder + &#39;plots/15_15_9/dos.npy&#39;)
+pdos_Al = np.load(data_folder + &#39;plots/15_15_9/pdos_Al.npy&#39;)
+pdos_N = np.load(data_folder + &#39;plots/15_15_9/pdos_N.npy&#39;)
+
+# Plot dispersion
+fig = figure(figsize=(4,3))
+set_fig_properties([gca()])
+plot(q[0], dispersion[0, 0], &#39;r-&#39;, ms=1)
+plot(q, dispersion, &#39;r-&#39;, ms=1)
+for i in range(1, 4):
+    axvline(x=Q[i], ymin=0, ymax=2, ls=&#39;--&#39;,  lw=2, c=&quot;k&quot;)
+ylabel(&#39;Frequency (THz)&#39;, fontsize=14)
+xlabel(r&#39;Wave vector ($\frac{2\pi}{a}$)&#39;, fontsize=14)
+gca().set_yticks(np.arange(0, 36, 6))
+xticks(Q, point_names_list)
+ylim([-0.1, 30])
+xlim([Q[0], Q[4]])
+dosax = fig.add_axes([0.91, .11, .17, .77])
+set_fig_properties([gca()])
+
+# Plot per projection
+for p_Al in np.expand_dims(pdos_Al[1],0):
+        dosax.plot(p_Al, pdos_N[0], c=&#39;m&#39;, label=&#39;Al&#39;)
+for p_N in np.expand_dims(pdos_Al[1],0) :
+        dosax.plot(p_N, pdos_N[0], c=&#39;orange&#39;, label=&#39;N&#39;)
+for d in np.expand_dims(dos_AlN[1],0):
+    dosax.plot(d, dos_AlN[0],c=&#39;r&#39;, label=&#39;AlN&#39;)
+dosax.set_yticks([])
+dosax.set_xticks([])
+dosax.set_xlabel(&quot;DOS&quot;)
+dosax.legend(fontsize=6)
+ylim([-0.1, 30])
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_11_0.png" src="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_11_0.png" />
+</div>
+</div>
+<h3 id="Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space">Plot Heat Capacity, Group Velocities and Phase Space<a class="headerlink" href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[6]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in group velocity, heat_capacity (cv) and frequency data
+frequency =  np.load(
+    data_folder + &#39;ALD_AlN_ACE/15_15_9/frequency.npy&#39;,
+    allow_pickle=True)
+
+cv =  np.load(
+    data_folder + &#39;ALD_AlN_ACE/15_15_9/300/quantum/heat_capacity.npy&#39;,
+    allow_pickle=True)
+
+
+group_velocity = np.load(
+    data_folder + &#39;ALD_AlN_ACE/15_15_9/velocity.npy&#39;)
+
+phase_space = np.load(data_folder +
+ &#39;ALD_AlN_ACE/15_15_9/300/quantum/_ps_and_gamma.npy&#39;,
+                      allow_pickle=True)[:,0]
+
+# Compute norm of group velocity
+# Convert the unit from angstrom / picosecond to kilometer/ second
+group_velcotiy_norm = np.linalg.norm(
+    group_velocity.reshape(-1, 3), axis=1) / 10.0
+
+# Plot observables in subplot
+figure(figsize=(12, 3))
+subplot(1,3, 1)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;)[3:], 1e23*cv.flatten(order=&#39;C&#39;)[3:],
+        facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
+ylabel (r&quot;$C_{v}$ ($10^{23}$ J/K)&quot;)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylim(0.9*1e23*cv.flatten(order=&#39;C&#39;)[3:].min(), 1.05*1e23*cv.flatten(order=&#39;C&#39;)[3:].max())
+gca().set_xticks(np.arange(0, 30, 5))
+
+subplot(1 ,3, 2)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;),
+        group_velcotiy_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;^&#39;)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylabel(r&#39;$|v| \ (\frac{km}{s})$&#39;, fontsize=14)
+gca().set_xticks(np.arange(0, 30, 5))
+gca().set_yticks(np.arange(0, 21, 3))
+
+subplot(1 ,3, 3)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;),
+        phase_space, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;o&#39;)
+ylim([-0.1, 1])
+gca().set_xticks(np.arange(0, 30, 5))
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylabel(&#39;Phase space&#39;, fontsize=14)
+subplots_adjust(wspace=0.33)
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_13_0.png" src="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_13_0.png" />
+</div>
+</div>
+<h3 id="Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&amp;-MFP-(\lambda)">Plot Phonon Lifetime (<span class="math notranslate nohighlight">\(\tau\)</span>), Scattering Rate (<span class="math notranslate nohighlight">\(\Gamma\)</span>) <span class="math notranslate nohighlight">\(\&amp;\)</span> MFP (<span class="math notranslate nohighlight">\(\lambda\)</span>)<a class="headerlink" href="#Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Note that <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> are computed only with the relaxation time approximation (RTA).</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
+scattering_rate = np.load(
+    data_folder +
+    &#39;ALD_AlN_ACE/15_15_9/300/quantum/bandwidth.npy&#39;, allow_pickle=True)
+
+# Derive lifetime, which is inverse of scattering rate
+life_time = scattering_rate ** (-1)
+
+# Denote lists to intake mean free path in each direction
+mean_free_path = []
+for i in range(3):
+    mean_free_path.append(np.loadtxt(
+    data_folder +
+    &#39;ALD_AlN_ACE/15_15_9/inverse/300/quantum/mean_free_path_&#39; +
+    str(i) + &#39;.dat&#39;))
+
+# Convert list to numpy array and compute norm for mean free path
+# Convert the unit from angstrom  to nanometer
+mean_free_path = np.array(mean_free_path).T
+mean_free_path_norm = np.linalg.norm(
+    mean_free_path.reshape(-1, 3), axis=1) / 10.0
+
+# Plot observables in subplot
+figure(figsize=(12, 3))
+subplot(1,3, 1)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;),
+        life_time, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;)
+yscale(&#39;log&#39;)
+ylabel(r&#39;$\tau \ (ps)$&#39;, fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+gca().set_xticks(np.arange(0, 30, 5))
+
+subplot(1,3, 2)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;),
+        scattering_rate, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
+ylabel(r&#39;$\Gamma \ (THz)$&#39;, fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+gca().set_xticks(np.arange(0, 30, 5))
+
+subplot(1,3, 3)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;),
+        mean_free_path_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
+ylabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+yscale(&#39;log&#39;)
+gca().set_xticks(np.arange(0, 30, 5))
+ylim([1e-2, 1e5])
+subplots_adjust(wspace=0.33)
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_15_0.png" src="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_15_0.png" />
+</div>
+</div>
+<h3 id="Plot-per-mode-and-cumulative-\kappa">Plot per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#Plot-per-mode-and-cumulative-\kappa" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[8]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote zeros to intake kappa tensor
+kappa_tensor = np.zeros([mean_free_path.shape[0], 3, 3])
+kappa_tensor_iso = np.zeros([mean_free_path.shape[0], 3, 3])
+
+for i in range(3):
+    for j in range(3):
+        kappa_tensor[:, i, j] = np.loadtxt(data_folder +
+    &#39;ALD_AlN_ACE/15_15_9/inverse/300/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_iso[:, i, j] = np.loadtxt(data_folder +
+    &#39;ALD_AlN_ACE/15_15_9/inverse/300/quantum/isotopes/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+
+# Sum over the 0th dimension to recover 3-by-3 kappa matrix
+kappa_matrix = kappa_tensor.sum(axis=0)
+print(&quot;Bulk thermal conductivity: %.1f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix)))
+print(&quot;kappa matrix: &quot;)
+print(kappa_matrix)
+print(&#39;\n&#39;)
+
+kappa_matrix_iso = kappa_tensor_iso.sum(axis=0)
+print(&quot;Bulk thermal conductivity with isotopic scattering: %.1f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_iso)))
+print(&quot;kappa matrix with isotopic scattering: &quot;)
+print(kappa_matrix_iso)
+print(&#39;\n&#39;)
+
+# Compute kappa in per mode and cumulative representations
+kappa_per_mode = kappa_tensor.sum(axis=-1).sum(axis=1)
+freq_sorted, kappa_cum_wrt_freq = cumulative_cond_cal(
+    frequency.flatten(order=&#39;C&#39;), kappa_tensor)
+lambda_sorted, kappa_cum_wrt_lambda = cumulative_cond_cal(
+    mean_free_path_norm, kappa_tensor)
+
+kappa_per_mode_iso = kappa_tensor_iso.sum(axis=-1).sum(axis=1)
+freq_sorted, kappa_cum_wrt_freq_iso = cumulative_cond_cal(
+    frequency.flatten(order=&#39;C&#39;), kappa_tensor_iso)
+lambda_sorted, kappa_cum_wrt_lambda_iso = cumulative_cond_cal(
+    mean_free_path_norm, kappa_tensor_iso)
+
+# Plot observables in subplot
+figure(figsize=(12, 3))
+subplot(1,3, 1)
+set_fig_properties([gca()])
+scatter(frequency.flatten(order=&#39;C&#39;),
+        kappa_per_mode, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{per \ mode, pure }$&#39;)
+scatter(frequency.flatten(order=&#39;C&#39;),
+        kappa_per_mode_iso, facecolor=&#39;w&#39;, edgecolor=&#39;m&#39;, s=10, marker=&#39;o&#39;, label=&#39;$\kappa_{per \ mode, iso }$&#39;)
+gca().axhline(y = 0, color=&#39;k&#39;, ls=&#39;--&#39;, lw=1)
+ylabel(r&#39;$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+legend(loc=1, fontsize=10)
+gca().set_xticks(np.arange(0, 30, 5))
+ylim([-0.2, 8])
+
+subplot(1,3, 2)
+set_fig_properties([gca()])
+plot(freq_sorted, kappa_cum_wrt_freq, &#39;r&#39;,
+     label=r&#39;$\kappa_{pure, ACE} \approx 260.3\;\frac{\rm{W}}{\rm{m}\cdot\rm{K}}$&#39;)
+plot(freq_sorted, kappa_cum_wrt_freq_iso, c=&#39;m&#39;,
+     ls=&#39;-.&#39;, label=r&quot;$\kappa_{iso, ACE} \approx 259.9\;\frac{\rm{W}}{\rm{m}\cdot\rm{K}}$&quot;)
+gca().set_yticks(np.arange(0, 300, 50))
+ylabel(r&#39;$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+gca().set_xticks(np.arange(0, 30, 5))
+legend(loc=4, fontsize=6)
+
+subplot(1,3, 3)
+set_fig_properties([gca()])
+plot(lambda_sorted, kappa_cum_wrt_lambda, &#39;r&#39;)
+plot(lambda_sorted, kappa_cum_wrt_lambda_iso, c=&#39;m&#39;)
+gca().set_yticks(np.arange(0, 300, 50))
+xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+xscale(&#39;log&#39;)
+xlim([1e-3, 1e5])
+subplots_adjust(wspace=0.33)
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Bulk thermal conductivity: 260.3 W m^-1 K^-1
+
+kappa matrix:
+[[ 2.64608547e+02  5.78997217e-01  2.43088665e-01]
+ [ 4.18946787e-01  2.64671284e+02 -2.31451194e-01]
+ [ 3.69859965e-01  3.98814383e-01  2.51516013e+02]]
+
+
+Bulk thermal conductivity with isotopic scattering: 259.9 W m^-1 K^-1
+
+kappa matrix with isotopic scattering:
+[[ 2.64186375e+02  5.76801222e-01  2.42219797e-01]
+ [ 4.17874653e-01  2.64246959e+02 -2.31684048e-01]
+ [ 3.66651347e-01  3.93057933e-01  2.51164394e+02]]
+
+
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_17_1.png" src="../../_images/docsource_machine_learning_potentials_wurtzite_aluminum_nitride_ACE_PyACE_17_1.png" />
+</div>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2022-2025, The kALDo Developers.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    8.2.3.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script id="MathJax-script" src="../../_static/mathjax/tex-mml-chtml.js"></script>
+    
+  </body>
+</html>

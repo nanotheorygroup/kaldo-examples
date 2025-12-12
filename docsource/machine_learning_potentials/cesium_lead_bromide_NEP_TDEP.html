@@ -1,0 +1,1492 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../index.html">
+      
+      
+        <link rel="next" href="gallium_arsenide_orb-v3_ORBCalculator.html">
+      
+      
+      <link rel="icon" href="../../_static/logo.ico">
+    
+    
+      
+        <title>Cesium Lead Bromide Nep Tdep - Examples</title>
+      
+    
+    
+      
+        
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.cf2c65c97ee1b6f01.min.css?v=0a68cab4" />
+        <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=a35ea3b2" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HQHR3LWX3F"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HQHR3LWX3F",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HQHR3LWX3F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{c-CsPbBr3}-with-NEP" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Examples" class="md-header__button md-logo" aria-label="Examples" data-md-component="logo">
+      <img src="../../_static/logo.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cesium Lead Bromide Nep Tdep
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nanotheorygroup/kaldo-examples" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kALDo Examples
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Examples" class="md-nav__button md-logo" aria-label="Examples" data-md-component="logo">
+      <img src="../../_static/logo.png" alt="logo">
+    </a>
+    Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nanotheorygroup/kaldo-examples" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kALDo Examples
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb (reference label)"><span>Cesium Lead Bromide Nep Tdep</span></span>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb (reference label)"><span>Cesium Lead Bromide Nep Tdep</span></span>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{c-CsPbBr3}-with-NEP" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#anharmonic-lattice-dynamics-(ald)-for-\ce{c-cspbbr3}-with-nep (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for \ce<wbr>{c-<wbr>Cs<wbr>Pb<wbr>Br3} with NEP</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for \ce{c-CsPbBr3} with NEP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Import-Necessary-Packages" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#import-necessary-packages (reference label)"><span>Import Necessary Packages</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Custom-Define-Functions" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)-at-360-and-500K" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos)-at-360-and-500k (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS) at 360 and 500K</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-phonon-lifetime-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Plot Phonon Lifetime <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plot Phonon Lifetime (\tau), Scattering Rate (\Gamma) \&amp; MFP (\lambda)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Compute-\kappa_{full,-QHGK}-with-Intraband-Contributions-from-Direct-Inversion-of-Scattering-Matrix" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#compute-\kappa_{full,-qhgk}-with-intraband-contributions-from-direct-inversion-of-scattering-matrix (reference label)"><span>Compute \kappa_<wbr><wbr>{full, QHGK} with Intraband Contributions from Direct Inversion of Scattering Matrix</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-per-mode-and-cumulative-\kappa" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-per-mode-and-cumulative-\kappa (reference label)"><span>Plot per mode and cumulative \kappa</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gallium_arsenide_orb-v3_ORBCalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/gallium_arsenide_orb-v3_orbcalculator.ipynb (reference label)"><span>Gallium Arsenide Orb V3 Orbcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/magnesium_oxide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Magnesium Oxide Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Silicon Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_NEP89_calorine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_nep89_calorine.ipynb (reference label)"><span>Silicon Nep89 Calorine</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_carbide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_carbide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Silicon Carbide Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wurtzite_aluminum_nitride_ACE_PyACE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb (reference label)"><span>Wurtzite Aluminum Nitride Ace Pyace</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/germanium_dft_d3q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/germanium_dft_d3q.ipynb (reference label)"><span>Germanium Dft D3Q</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/magnesium_oxide_dft_d3q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/magnesium_oxide_dft_d3q.ipynb (reference label)"><span>Magnesium Oxide Dft D3Q</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/silicon_dft_qe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/silicon_dft_qe.ipynb (reference label)"><span>Silicon Dft Qe</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/amorphous_silicon_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/amorphous_silicon_tersoff_lammps.ipynb (reference label)"><span>Amorphous Silicon Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/carbon_diamond_Tersoff_ASE_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_diamond_tersoff_ase_lammps.ipynb (reference label)"><span>Carbon Diamond Tersoff Ase Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/carbon_nanotube_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empirical_potentials/silicon_clathrate_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/silicon_clathrate_tersoff_lammps.ipynb (reference label)"><span>Silicon Clathrate Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{c-CsPbBr3}-with-NEP" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#anharmonic-lattice-dynamics-(ald)-for-\ce{c-cspbbr3}-with-nep (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for \ce<wbr>{c-<wbr>Cs<wbr>Pb<wbr>Br3} with NEP</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for \ce{c-CsPbBr3} with NEP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Import-Necessary-Packages" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#import-necessary-packages (reference label)"><span>Import Necessary Packages</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Custom-Define-Functions" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)-at-360-and-500K" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos)-at-360-and-500k (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS) at 360 and 500K</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-phonon-lifetime-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Plot Phonon Lifetime <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plot Phonon Lifetime (\tau), Scattering Rate (\Gamma) \&amp; MFP (\lambda)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Compute-\kappa_{full,-QHGK}-with-Intraband-Contributions-from-Direct-Inversion-of-Scattering-Matrix" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#compute-\kappa_{full,-qhgk}-with-intraband-contributions-from-direct-inversion-of-scattering-matrix (reference label)"><span>Compute \kappa_<wbr><wbr>{full, QHGK} with Intraband Contributions from Direct Inversion of Scattering Matrix</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-per-mode-and-cumulative-\kappa" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb#plot-per-mode-and-cumulative-\kappa (reference label)"><span>Plot per mode and cumulative \kappa</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
+                  
+
+
+<h1 id="Cesium-Lead-Bromide-Nep-Tdep">Cesium Lead Bromide Nep Tdep<a class="headerlink" href="#Cesium-Lead-Bromide-Nep-Tdep" title="Link to this heading">¶</a></h1>
+<h2 id="Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{c-CsPbBr3}-with-NEP">Anharmonic Lattice Dynamics (ALD) for <span class="math notranslate nohighlight">\(\ce{c-CsPbBr3}\)</span> with <a class="reference external" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.3c01542">NEP</a><a class="headerlink" href="#Anharmonic-Lattice-Dynamics-(ALD)-for-\ce{c-CsPbBr3}-with-NEP" title="Link to this heading">¶</a></h2>
+<h3 id="Import-Necessary-Packages">Import Necessary Packages<a class="headerlink" href="#Import-Necessary-Packages" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[1]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
+from ase.visualize.plot import plot_atoms
+import pandas as pd
+from pylab import *
+import warnings
+warnings.filterwarnings(&quot;ignore&quot;)
+</code></pre></div>
+</div>
+</div>
+<h3 id="Custom-Define-Functions">Custom Define Functions<a class="headerlink" href="#Custom-Define-Functions" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[2]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def cumulative_cond_cal(observables, kappa_tensor, prefactor=1/3):
+
+    &quot;&quot;&quot;Compute cumulative conductivity based on either frequency or mean-free path
+
+       input:
+       observables: (ndarray) either phonon frequency or mean-free path
+       cond_tensor: (ndarray) conductivity tensor
+       prefactor: (float) prefactor to average kappa tensor, 1/3 for bulk material
+
+       ouput:
+       observeables: (ndarray) sorted phonon frequency or mean-free path
+       kappa_cond (ndarray) cumulative conductivity
+
+    &quot;&quot;&quot;
+
+    # Sum over kappa by directions
+    kappa = np.einsum(&#39;maa-&gt;m&#39;, prefactor * kappa_tensor)
+
+    # Sort observables
+    observables_argsort_indices = np.argsort(observables)
+    cumulative_kappa = np.cumsum(kappa[observables_argsort_indices])
+    return observables[observables_argsort_indices], cumulative_kappa
+
+
+
+def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
+    tl = 4
+    tw = 2
+    tlm = 2
+
+    for ax in ax_list:
+        ax.tick_params(which=&#39;major&#39;, length=tl, width=tw)
+        ax.tick_params(which=&#39;minor&#39;, length=tlm, width=tw)
+        ax.tick_params(which=&#39;both&#39;, axis=&#39;both&#39;, direction=&#39;in&#39;,
+                       right=True, top=True)
+        ax.spines[&#39;bottom&#39;].set_color(panel_color_str)
+        ax.spines[&#39;top&#39;].set_color(panel_color_str)
+        ax.spines[&#39;left&#39;].set_color(panel_color_str)
+        ax.spines[&#39;right&#39;].set_color(panel_color_str)
+
+        ax.spines[&#39;bottom&#39;].set_linewidth(line_width)
+        ax.spines[&#39;top&#39;].set_linewidth(line_width)
+        ax.spines[&#39;left&#39;].set_linewidth(line_width)
+        ax.spines[&#39;right&#39;].set_linewidth(line_width)
+
+        for t in ax.xaxis.get_ticklines(): t.set_color(panel_color_str)
+        for t in ax.yaxis.get_ticklines(): t.set_color(panel_color_str)
+        for t in ax.xaxis.get_ticklines(): t.set_linewidth(line_width)
+        for t in ax.yaxis.get_ticklines(): t.set_linewidth(line_width)
+</code></pre></div>
+</div>
+</div>
+<h3 id="Denote-Latex-Font-for-Plots">Denote Latex Font for Plots<a class="headerlink" href="#Denote-Latex-Font-for-Plots" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[3]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
+aw = 2
+fs = 12
+font = {&#39;size&#39;: fs}
+matplotlib.rc(&#39;font&#39;, **font)
+matplotlib.rc(&#39;axes&#39;, linewidth=aw)
+
+# Configure Matplotlib to use a LaTeX-like style without LaTeX
+plt.rcParams[&#39;text.usetex&#39;] = False
+plt.rcParams[&#39;font.family&#39;] = &#39;serif&#39;
+plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+</code></pre></div>
+</div>
+</div>
+<h3 id="Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)-at-360-and-500K">Plot Phonon Spectra (Dispersion) and Density of State (DOS) at 360 and 500K<a class="headerlink" href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)-at-360-and-500K" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[4]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>data_folder_360K = &#39;360K/kaldo_runs/&#39;
+data_folder_500K = &#39;500K/kaldo_runs/&#39;
+
+# Derive symbols for high symmetry directions in Brillouin zone
+dispersion_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/dispersion&#39;)
+point_names_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/point_names&#39;, dtype=str)
+
+dispersion_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/dispersion&#39;)
+point_names_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/point_names&#39;, dtype=str)
+
+point_names_list_360K = []
+point_names_list_500K = []
+for point_name in point_names_360K:
+    if point_name == &#39;G&#39;:
+        point_name = r&#39;$\Gamma$&#39;
+    elif point_name == &#39;U&#39;:
+        point_name = &#39;U=K&#39;
+    point_names_list_360K.append(point_name)
+
+for point_name in point_names_500K:
+    if point_name == &#39;G&#39;:
+        point_name = r&#39;$\Gamma$&#39;
+    elif point_name == &#39;U&#39;:
+        point_name = &#39;U=K&#39;
+    point_names_list_500K.append(point_name)
+
+# Load in the &quot;tick-mark&quot; values for these symbols
+q_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/q&#39;)
+Q_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/Q_val&#39;)
+
+q_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/q&#39;)
+Q_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/Q_val&#39;)
+
+# Load in grid and dos individually
+dos_360K= np.load(data_folder_360K + &#39;plots/12_12_12/dos.npy&#39;)
+dos_500K= np.load(data_folder_500K + &#39;plots/12_12_12/dos.npy&#39;)
+
+# Plot dispersion
+fig = figure(figsize=(4,3))
+set_fig_properties([gca()])
+plot(q_360K[0], dispersion_360K[0, 0], &#39;b-&#39;, ms=1)
+plot(q_360K, dispersion_360K, &#39;b-&#39;, ms=1)
+plot(q_500K[0], dispersion_500K[0, 0], &#39;r-&#39;, ms=1)
+plot(q_500K, dispersion_500K, &#39;r-&#39;, ms=1)
+for i in range(1, 4):
+    axvline(x=Q_360K[i], ymin=0, ymax=2, ls=&#39;--&#39;,  lw=2, c=&quot;k&quot;)
+ylabel(&#39;Frequency (THz)&#39;, fontsize=14)
+xlabel(r&#39;Wave vector ($\frac{2\pi}{a}$)&#39;, fontsize=14)
+gca().set_yticks(np.arange(0, 5, 1))
+xticks(Q_360K, point_names_list_360K)
+ylim([-0.1, 5])
+xlim([Q_360K[0], Q_360K[4]])
+dosax = fig.add_axes([0.91, .11, .17, .77])
+set_fig_properties([gca()])
+
+# Plot per projection
+for d in np.expand_dims(dos_360K[1],0):
+    dosax.plot(d, dos_360K[0],c=&#39;b&#39;, label=&#39;360 K&#39;)
+for d in np.expand_dims(dos_500K[1],0):
+    dosax.plot(d, dos_500K[0],c=&#39;r&#39;, label=&#39;500 K&#39;)
+dosax.set_yticks([])
+dosax.set_xticks([])
+dosax.set_xlabel(&quot;DOS&quot;)
+legend(fontsize=6, loc=2)
+ylim([-0.1, 5])
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_9_0.png" src="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_9_0.png" />
+</div>
+</div>
+<h2 id="Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space">Plot Heat Capacity, Group Velocities and Phase Space<a class="headerlink" href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" title="Link to this heading">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in group velocity, heat_capacity (cv) and frequency data
+frequency_360K =  np.load(
+    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/frequency.npy&#39;,
+    allow_pickle=True)
+
+cv_360K =  np.load(
+    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/360/quantum/heat_capacity.npy&#39;,
+    allow_pickle=True)
+
+frequency_500K =  np.load(
+    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/frequency.npy&#39;,
+    allow_pickle=True)
+
+cv_500K =  np.load(
+    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/500/quantum/heat_capacity.npy&#39;,
+    allow_pickle=True)
+
+
+
+group_velocity_360K = np.load(
+    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/velocity.npy&#39;)
+
+phase_space_360K = np.load(data_folder_360K +
+ &#39;ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_and_gamma.npy&#39;,
+                      allow_pickle=True)[:,0]
+
+group_velocity_500K = np.load(
+    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/velocity.npy&#39;)
+
+phase_space_500K = np.load(data_folder_500K +
+ &#39;ALD_CsPbBr3_NEP/12_12_12/500/quantum/_ps_and_gamma.npy&#39;,
+                      allow_pickle=True)[:,0]
+
+# Compute norm of group velocity
+# Convert the unit from angstrom / picosecond to kilometer/ second
+group_velcotiy_norm_360K = np.linalg.norm(
+    group_velocity_360K.reshape(-1, 3), axis=1) / 10.0
+
+group_velcotiy_norm_500K = np.linalg.norm(
+    group_velocity_500K.reshape(-1, 3), axis=1) / 10.0
+
+# Plot observables in subplot
+figure(figsize=(12, 3))
+subplot(1,3, 1)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;)[3:], 1e23*cv_360K.flatten(order=&#39;C&#39;)[3:],
+        facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;8&#39;, label=&#39;360 K&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;)[3:], 1e23*cv_500K.flatten(order=&#39;C&#39;)[3:],
+        facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;, label=&#39;500 K&#39;)
+ylabel (r&quot;$C_{v}$ ($10^{23}$ J/K)&quot;)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylim(1.33, 1.40)
+gca().set_yticks(np.arange(1.34, 1.40, 0.01))
+gca().set_xticks(np.arange(0, 5, 1))
+legend(fontsize=10)
+subplot(1 ,3, 2)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;),
+        group_velcotiy_norm_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;^&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;),
+        group_velcotiy_norm_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;^&#39;)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylabel(r&#39;$|v| \ (\frac{km}{s})$&#39;, fontsize=14)
+gca().set_xticks(np.arange(0, 5, 1))
+gca().set_yticks(np.arange(0, 3.0, 0.5))
+ylim([-0.1, 3])
+
+subplot(1 ,3, 3)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;),
+        phase_space_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;o&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;),
+        phase_space_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;o&#39;)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylabel(&#39;Phase space&#39;, fontsize=14)
+gca().set_xticks(np.arange(0, 5, 1))
+gca().set_yticks(np.arange(0, 250, 50))
+ylim([0, 250])
+subplots_adjust(wspace=0.33)
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_11_0.png" src="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_11_0.png" />
+</div>
+</div>
+<h2 id="Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&amp;-MFP-(\lambda)">Plot Phonon Lifetime (<span class="math notranslate nohighlight">\(\tau\)</span>), Scattering Rate (<span class="math notranslate nohighlight">\(\Gamma\)</span>) <span class="math notranslate nohighlight">\(\&amp;\)</span> MFP (<span class="math notranslate nohighlight">\(\lambda\)</span>)<a class="headerlink" href="#Plot-Phonon-Lifetime-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Note that <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> are computed only with the relaxation time approximation (RTA).</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[6]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
+scattering_rate_360K = np.load(
+     data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth.npy&#39;, allow_pickle=True)
+scattering_rate_500K = np.load(
+     data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/500/quantum/bandwidth.npy&#39;, allow_pickle=True)
+
+# Derive lifetime, which is inverse of scattering rate
+life_time_360K = scattering_rate_360K ** (-1)
+life_time_500K = scattering_rate_500K ** (-1)
+
+# Denote lists to intake mean free path in each direction
+mean_free_path_360K = []
+mean_free_path_500K = []
+
+for i in range(3):
+    mean_free_path_360K.append(np.loadtxt(
+    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/mean_free_path_&#39; +
+    str(i) + &#39;.dat&#39;))
+
+    mean_free_path_500K.append(np.loadtxt(
+    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/500/quantum/mean_free_path_&#39; +
+    str(i) + &#39;.dat&#39;))
+
+# Convert list to numpy array and compute norm for mean free path
+# Convert the unit from angstrom  to nanometer
+mean_free_path_360K = np.array(mean_free_path_360K).T
+mean_free_path_norm_360K = np.linalg.norm(
+    mean_free_path_360K.reshape(-1, 3), axis=1) / 10.0
+
+mean_free_path_500K = np.array(mean_free_path_500K).T
+mean_free_path_norm_500K = np.linalg.norm(
+    mean_free_path_500K.reshape(-1, 3), axis=1) / 10.0
+
+# Plot observables in subplot
+figure(figsize=(12, 3))
+subplot(1,3, 1)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;),
+        life_time_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;s&#39;, label=&#39;360 K&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;),
+        life_time_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;, label=&#39;500 K&#39;)
+gca().set_xticks(np.arange(0, 5, 1))
+yscale(&#39;log&#39;)
+ylabel(r&#39;$\tau \ (ps)$&#39;, fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+legend(fontsize=10)
+
+subplot(1,3, 2)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;),
+        scattering_rate_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;d&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;),
+        scattering_rate_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
+gca().set_xticks(np.arange(0, 5, 1))
+ylabel(r&#39;$\Gamma \ (THz)$&#39;, fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+
+subplot(1,3, 3)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;),
+        mean_free_path_norm_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;8&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;),
+        mean_free_path_norm_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
+gca().set_xticks(np.arange(0, 5, 1))
+ylabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+yscale(&#39;log&#39;)
+ylim([1e-4, 1e3])
+subplots_adjust(wspace=0.33)
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_13_0.png" src="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_13_0.png" />
+</div>
+</div>
+<h3 id="Compute-\kappa_{full,-QHGK}-with-Intraband-Contributions-from-Direct-Inversion-of-Scattering-Matrix">Compute <span class="math notranslate nohighlight">\(\kappa_{full, QHGK}\)</span> with Intraband Contributions from Direct Inversion of Scattering Matrix<a class="headerlink" href="#Compute-\kappa_{full,-QHGK}-with-Intraband-Contributions-from-Direct-Inversion-of-Scattering-Matrix" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote zeros to intake kappa tensor
+kappa_tensor_RTA_360K  = np.zeros([mean_free_path_360K .shape[0], 3, 3])
+kappa_tensor_Inv_360K  = np.zeros([mean_free_path_360K .shape[0], 3, 3])
+kappa_tensor_QHGK_360K  = np.zeros([mean_free_path_360K .shape[0], 3, 3])
+
+kappa_tensor_RTA_500K  = np.zeros([mean_free_path_500K .shape[0], 3, 3])
+kappa_tensor_Inv_500K  = np.zeros([mean_free_path_500K .shape[0], 3, 3])
+kappa_tensor_QHGK_500K  = np.zeros([mean_free_path_500K .shape[0], 3, 3])
+
+for i in range(3):
+    for j in range(3):
+        kappa_tensor_RTA_360K [:, i, j] = np.loadtxt(data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/rta/360/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_QHGK_360K [:, i, j] = np.loadtxt(data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/qhgk/360/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_Inv_360K [:, i, j] = np.loadtxt(data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+
+        kappa_tensor_RTA_500K [:, i, j] = np.loadtxt(data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/rta/500/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_QHGK_500K [:, i, j] = np.loadtxt(data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/qhgk/500/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_Inv_500K [:, i, j] = np.loadtxt(data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/500/quantum/conductivity_&#39; +
+    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+
+
+# Sum over the 0th dimension to recover 3-by-3 kappa matrix
+kappa_matrix_RTA_360K =  kappa_tensor_RTA_360K.sum(axis=0)
+print(&quot;RTA thermal conductivity at 360 K: %.3f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_RTA_360K)))
+print(&quot;RTA kappa matrix at 360 K: &quot;)
+print(kappa_matrix_RTA_360K )
+print(&#39;\n&#39;)
+
+kappa_matrix_QHGK_360K =  kappa_tensor_QHGK_360K.sum(axis=0)
+print(&quot;QHGK thermal conductivity at 360 K: %.3f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_QHGK_360K)))
+print(&quot;QHGK kappa matrix at 360 K: &quot;)
+print(kappa_matrix_QHGK_360K )
+print(&#39;\n&#39;)
+
+kappa_matrix_Inv_360K =  kappa_tensor_Inv_360K.sum(axis=0)
+kappa_matrix_full_QHGK_360K = (kappa_matrix_QHGK_360K - kappa_matrix_RTA_360K) + kappa_matrix_Inv_360K
+
+print(&quot;Full QHGK thermal conductivity at 360 K: %.3f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_full_QHGK_360K)))
+print(&quot;Full QHGK kappa matrix at 360 K: &quot;)
+print(kappa_matrix_full_QHGK_360K)
+print(&#39;\n&#39;)
+
+
+# Sum over the 0th dimension to recover 3-by-3 kappa matrix
+kappa_matrix_RTA_500K =  kappa_tensor_RTA_500K.sum(axis=0)
+print(&quot;RTA thermal conductivity at 500 K: %.3f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_RTA_500K)))
+print(&quot;RTA kappa matrix at 500 K: &quot;)
+print(kappa_matrix_RTA_500K )
+print(&#39;\n&#39;)
+
+kappa_matrix_QHGK_500K =  kappa_tensor_QHGK_500K.sum(axis=0)
+print(&quot;QHGK thermal conductivity at 500 K: %.3f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_QHGK_500K)))
+print(&quot;QHGK kappa matrix at 500 K: &quot;)
+print(kappa_matrix_QHGK_500K )
+print(&#39;\n&#39;)
+
+kappa_matrix_Inv_500K =  kappa_tensor_Inv_500K.sum(axis=0)
+kappa_matrix_full_QHGK_500K = (kappa_matrix_QHGK_500K - kappa_matrix_RTA_500K) + kappa_matrix_Inv_500K
+
+print(&quot;Full QHGK thermal conductivity at 500 K: %.3f W m^-1 K^-1\n&quot;
+      %np.mean(np.diag(kappa_matrix_full_QHGK_500K)))
+print(&quot;Full QHGK kappa matrix at 500 K: &quot;)
+print(kappa_matrix_full_QHGK_500K)
+</code><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RTA thermal conductivity at 360 K: 0.356 W m^-1 K^-1
+
+RTA kappa matrix at 360 K:
+[[3.56854913e-01 4.87447086e-05 6.16967228e-05]
+ [4.87447086e-05 3.55694266e-01 8.79436238e-05]
+ [6.16967228e-05 8.79436238e-05 3.56004299e-01]]
+
+
+QHGK thermal conductivity at 360 K: 0.452 W m^-1 K^-1
+
+QHGK kappa matrix at 360 K:
+[[ 4.52570379e-01 -2.09144568e-04 -2.14926899e-05]
+ [-2.09144568e-04  4.52450318e-01 -6.06310217e-05]
+ [-2.14926899e-05 -6.06310217e-05  4.52399549e-01]]
+
+
+Full QHGK thermal conductivity at 360 K: 0.480 W m^-1 K^-1
+
+Full QHGK kappa matrix at 360 K:
+[[ 4.79874779e-01 -2.11513076e-04 -2.17357173e-05]
+ [-2.13159634e-04  4.79794449e-01 -4.87985140e-05]
+ [-2.32524035e-05 -4.82131606e-05  4.79698815e-01]]
+
+
+RTA thermal conductivity at 500 K: 0.320 W m^-1 K^-1
+
+RTA kappa matrix at 500 K:
+[[3.20495441e-01 3.55328838e-06 9.62991139e-06]
+ [3.55328838e-06 3.18653824e-01 4.68041501e-05]
+ [9.62991139e-06 4.68041501e-05 3.19471435e-01]]
+
+
+QHGK thermal conductivity at 500 K: 0.406 W m^-1 K^-1
+
+QHGK kappa matrix at 500 K:
+[[ 4.06178427e-01  8.58389604e-06 -2.57739924e-05]
+ [ 8.58389604e-06  4.05568366e-01  1.92156571e-04]
+ [-2.57739924e-05  1.92156571e-04  4.05196876e-01]]
+
+
+Full QHGK thermal conductivity at 500 K: 0.422 W m^-1 K^-1
+
+Full QHGK kappa matrix at 500 K:
+[[ 4.22759347e-01  1.02522965e-05 -1.86631731e-05]
+ [ 1.12941930e-05  4.22145198e-01  2.02298252e-04]
+ [-2.00556404e-05  2.03524399e-04  4.21828840e-01]]
+</pre></div></div>
+</div>
+<h3 id="Plot-per-mode-and-cumulative-\kappa">Plot per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#Plot-per-mode-and-cumulative-\kappa" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[8]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Compute kappa in per mode and cumulative representations
+kappa_tensor_full_QHGK_360K = (kappa_tensor_QHGK_360K - kappa_tensor_RTA_360K) + kappa_tensor_Inv_360K
+kappa_per_mode_full_QHGK_360K = kappa_tensor_full_QHGK_360K.sum(axis=-1).sum(axis=1)
+
+# Computation of intra band contrbutions for cumlative kappa w.r.t frequency at 360K
+freq_sorted_full_QHGK_360K, kappa_cum_wrt_freq_full_QHGK_360K = cumulative_cond_cal(
+    frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_full_QHGK_360K)
+
+freq_sorted_QHGK_360K, kappa_cum_wrt_freq_QHGK_360K = cumulative_cond_cal(
+    frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_QHGK_360K)
+
+freq_sorted_RTA_360K, kappa_cum_wrt_freq_RTA_360K = cumulative_cond_cal(
+    frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_RTA_360K)
+
+
+# Computation of intra band contrbutions for cumlative kappa w.r.t mean free path (lambda) at 360K
+lambda_sorted_full_QHGK_360K, kappa_cum_wrt_lambda_full_QHGK_360K = cumulative_cond_cal(
+    mean_free_path_norm_360K, kappa_tensor_full_QHGK_360K)
+
+lambda_sorted_QHGK_360K, kappa_cum_wrt_lambda_QHGK_360K = cumulative_cond_cal(
+     mean_free_path_norm_360K, kappa_tensor_QHGK_360K)
+
+lambda_sorted_RTA_360K, kappa_cum_wrt_lambda_RTA_360K = cumulative_cond_cal(
+     mean_free_path_norm_360K, kappa_tensor_RTA_360K)
+
+
+# Computation of intra band contrbutions for cumlative kappa w.r.t frequency at 500K
+kappa_tensor_full_QHGK_500K = (kappa_tensor_QHGK_500K - kappa_tensor_RTA_500K) + kappa_tensor_Inv_500K
+kappa_per_mode_full_QHGK_500K = kappa_tensor_full_QHGK_500K.sum(axis=-1).sum(axis=1)
+
+freq_sorted_full_QHGK_500K, kappa_cum_wrt_freq_full_QHGK_500K = cumulative_cond_cal(
+    frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_full_QHGK_500K)
+
+freq_sorted_RTA_500K, kappa_cum_wrt_freq_RTA_500K = cumulative_cond_cal(
+    frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_RTA_500K)
+
+freq_sorted_QHGK_500K, kappa_cum_wrt_freq_QHGK_500K = cumulative_cond_cal(
+    frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_QHGK_500K)
+
+# Computation of intra band contrbutions for cumlative kappa w.r.t mean free path (lambda) at 500K
+lambda_sorted_full_QHGK_500K, kappa_cum_wrt_lambda_full_QHGK_500K = cumulative_cond_cal(
+    mean_free_path_norm_500K, kappa_tensor_full_QHGK_500K)
+
+lambda_sorted_QHGK_500K, kappa_cum_wrt_lambda_QHGK_500K = cumulative_cond_cal(
+     mean_free_path_norm_500K, kappa_tensor_QHGK_500K)
+
+lambda_sorted_RTA_500K, kappa_cum_wrt_lambda_RTA_500K = cumulative_cond_cal(
+     mean_free_path_norm_500K, kappa_tensor_RTA_500K)
+
+# Plot observables in subplot
+figure(figsize=(12, 3))
+subplot(1,3, 1)
+set_fig_properties([gca()])
+scatter(frequency_360K.flatten(order=&#39;C&#39;),
+        kappa_per_mode_full_QHGK_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{full \ QHGK, 360K }$&#39;)
+scatter(frequency_500K.flatten(order=&#39;C&#39;),
+        kappa_per_mode_full_QHGK_360K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{full \ QHGK, 500K }$&#39;)
+gca().set_xticks(np.arange(0, 5, 1))
+gca().axhline(y = 0, color=&#39;k&#39;, ls=&#39;--&#39;, lw=1)
+ylabel(r&#39;$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+legend(loc=1, fontsize=10)
+ylim([-0.0005, 0.005])
+
+subplot(1,3, 2)
+set_fig_properties([gca()])
+plot(freq_sorted_full_QHGK_360K, kappa_cum_wrt_freq_full_QHGK_360K, &#39;b&#39;,
+     label=&#39;360 K&#39;)
+plot(freq_sorted_full_QHGK_500K, kappa_cum_wrt_freq_full_QHGK_500K, &#39;r&#39;,
+     label=&#39;500 K&#39;)
+plot(freq_sorted_RTA_360K, kappa_cum_wrt_freq_RTA_360K, &#39;b&#39;, ls=&#39;--&#39;)
+plot(freq_sorted_RTA_500K, kappa_cum_wrt_freq_RTA_500K, &#39;r&#39;, ls=&#39;--&#39;)
+plot(freq_sorted_QHGK_360K, (kappa_cum_wrt_freq_QHGK_360K - kappa_cum_wrt_freq_RTA_360K) , &#39;b&#39;, ls=&#39;:&#39;)
+plot(freq_sorted_QHGK_500K, (kappa_cum_wrt_freq_QHGK_500K - kappa_cum_wrt_freq_RTA_500K) , &#39;r&#39;, ls=&#39;:&#39;)
+gca().set_yticks(np.arange(0, 0.5, 0.1))
+gca().set_xticks(np.arange(0, 5, 1))
+ylabel(r&#39;$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+legend(loc=2, fontsize=10)
+
+subplot(1,3, 3)
+set_fig_properties([gca()])
+plot(lambda_sorted_full_QHGK_360K, kappa_cum_wrt_lambda_full_QHGK_360K, &#39;b&#39;)
+plot(lambda_sorted_full_QHGK_500K, kappa_cum_wrt_lambda_full_QHGK_500K, &#39;r&#39;)
+plot(lambda_sorted_RTA_360K, kappa_cum_wrt_lambda_RTA_360K, &#39;b&#39;, ls=&#39;--&#39;)
+plot(lambda_sorted_RTA_500K, kappa_cum_wrt_lambda_RTA_500K, &#39;r&#39;, ls=&#39;--&#39;)
+plot(lambda_sorted_QHGK_360K, (kappa_cum_wrt_lambda_QHGK_360K - kappa_cum_wrt_lambda_RTA_360K) , &#39;b&#39;, ls=&#39;:&#39;)
+plot(lambda_sorted_QHGK_500K, (kappa_cum_wrt_lambda_QHGK_500K - kappa_cum_wrt_lambda_RTA_500K) , &#39;r&#39;, ls=&#39;:&#39;)
+xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+gca().set_yticks(np.arange(0, 0.5, 0.1))
+xscale(&#39;log&#39;)
+xlim([1e-3, 5e2])
+subplots_adjust(wspace=0.33)
+show()
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_17_0.png" src="../../_images/docsource_machine_learning_potentials_cesium_lead_bromide_NEP_TDEP_17_0.png" />
+</div>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2022-2025, The kALDo Developers.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    8.2.3.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script id="MathJax-script" src="../../_static/mathjax/tex-mml-chtml.js"></script>
+    
+  </body>
+</html>
