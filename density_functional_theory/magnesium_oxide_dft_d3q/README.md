@@ -1,4 +1,4 @@
-# Computing Thermal Conductivity of Magnesium Oxide with and w/o NAC:
+# Computing Thermal Conductivity of MgO with and w/o NAC:
   
 >Input data descriptions for each executable in Quantum Espresso (QE) can be found [here](https://www.quantum-espresso.org).  
 > Additional information regarding the use of d3q can be found [here](https://anharmonic.github.io/d3q).  
