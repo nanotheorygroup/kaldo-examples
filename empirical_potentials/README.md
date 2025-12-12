@@ -1,7 +1,21 @@
-# empirical_potentials
-This collection of examples shows how to perform thermal transport with kALDo for cystal and amorphous
-systems using [Tersoff potential](https://docs.lammps.org/pair_tersoff.html). Before running simulations with kALDo, download the following third-party packages: [LAMMPS](https://lammps.sandia.gov/download.html)
-- To calculate 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS and ASE,compile LAMMPS with shlib mode using cmake:
+# Empirical Potentials
+
+These examples demonstrate kALDo workflows using **empirical interatomic potentials**. Classical potentials like Tersoff and Stillinger-Weber provide computationally efficient force evaluations, enabling thermal transport calculations for large systems and complex structures. The workflows shown here use **LAMMPS** and **ASE** for force constant calculations.
+
+---
+
+### Setup Instructions
+
+These examples use the [Tersoff potential](https://docs.lammps.org/pair_tersoff.html) for interatomic interactions.
+
+### Requirements
+
+Download and install [LAMMPS](https://lammps.sandia.gov/download.html) before running these examples.
+
+### Compiling LAMMPS with Python/ASE support
+
+To calculate 2nd and 3rd order force constants with LAMMPS and ASE, compile LAMMPS with shared library support using cmake:
+
 ```console
 cd path/to/lammps/src
 mkdir build
@@ -18,19 +32,28 @@ make -j 16
 make install-python
 ```
 
-- Suggestions of specificing GPU/CPU usage for tensorflow can be accessed [here](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
+### Optimized force constants for large systems
 
-## List and content of examples folder
-For each example, more detailed information is provided by the README.md file contained in the corresponding directory.
-- `amorphous_silicon_Tersoff_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for an amorphous silicon system (512 atoms per cell) with [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
-- `carbon_diamond_Tersoff_ASE_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for a carbon diamond (2 atoms per cell) system using [ASE and LAMMPS](https://wiki.fysik.dtu.dk/ase/_modules/ase/calculators/lammpslib.html) as force calculator.
-- `carbon_nanotube_Tersoff_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
-- `silicon_clathrate_Tersoff_LAMMPS:`
-This example illustrates how to perform thermal transport simulation for a type I clathrate (46 atoms per cell) system using [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
+For amorphous silicon and silicon clathrate examples, force constants are computed using the LAMMPS PHONON package. For large unit cells, this can take hours. To speed up calculations, use the optimized version from [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d).
 
-## Using Git Large File Storage (LFS)
+**Note:** Use commit `fed47b9ffc833bebffe0e460739ebd6ff69e9c8d` for reliable results:
 
-This repository uses Git Large File Storage (LFS) to handle large files. To ensure you properly download all the content, you may need to have Git LFS installed on your system. If you haven't installed it yet, you can do so by following the instructions on the [Git LFS website](https://git-lfs.github.com/). Once Git LFS is installed, you can clone this repository as usual with `git clone`. Git LFS is integrated into normal Git commands, so large files will be downloaded automatically when you checkout a commit that includes them. If you've already cloned the repository without Git LFS, you can download the large files with `git lfs pull`.
+```console
+git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d
+```
+
+### GPU/CPU Configuration
+
+For TensorFlow-based calculations, you can specify GPU or CPU usage following [these instructions](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
+
+---
+
+### Git Large File Storage (LFS)
+
+This repository uses Git LFS to handle large files. Ensure Git LFS is installed on your system by following the instructions on the [Git LFS website](https://git-lfs.github.com/).
+
+Once installed, clone the repository as usual with `git clone` — large files will be downloaded automatically. If you've already cloned without Git LFS, retrieve the large files with:
+
+```console
+git lfs pull
+```
