@@ -2,7 +2,7 @@ name: Build and Deploy Docs
 
 on:
   push:
-    branches: [main]
+    branches: ['*']  # Trigger on all branches (temporary for testing)
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
@@ -29,6 +29,7 @@ jobs:
         run: |
           cd docs
           make html
+          touch _build/html/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
