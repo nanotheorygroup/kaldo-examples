@@ -4,7 +4,7 @@ These examples demonstrate kALDo workflows using **machine learning interatomic 
 
 ---
 
-## References
+### References
 
 More information for each machine learning potential:
 

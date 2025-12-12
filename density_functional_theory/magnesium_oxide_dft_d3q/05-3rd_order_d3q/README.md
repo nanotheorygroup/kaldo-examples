@@ -33,8 +33,3 @@
    ```
  
  - Since non-analytical correction (NAC) only applies to second order, only one modulus is needed for 3rd IFCs computation.
-
- - Once the initial IFC computations are done, you can rerun phonon calculations independently with different supercells.
-
-- Note on Supercell Convergence:  
-  The supercells used for `FORCE_CONSTANTS_3RD_D3Q` are not necessarily at convergence. Adjust these as necessary based on your convergence criteria and the specifics of your calculation.

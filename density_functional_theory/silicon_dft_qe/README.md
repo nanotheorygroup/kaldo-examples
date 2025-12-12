@@ -17,7 +17,7 @@ python phonon.py
 
 After finish this step, you can run the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation). 
 
-4. Perform finite-difference calculations for 3rd order force constants. Please follow instructions in the `04-3rd_order_finite_differences` folder.
+4. Perform finite-difference calculations for 3rd order force constants. Please follow instructions in `04-3rd_order_finite_differences`.
 5. Perform BTE calculations using [kALDo](https://github.com/nanotheorygroup/kaldo) in the `05-kALDo_runs_BTE` folder. Like in the previous step, create a directory `fc_DFT` and copy `POSCAR`, `espresso.ifc2` and `FORCE_CONSTANTS_3RD` into it. Then run `python thermal_conductivity.py` to calculate. See `thermal_conductivity.py` for a detailed description. Here is a script to describe this step: 
 
 ```console

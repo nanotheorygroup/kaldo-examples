@@ -10,9 +10,9 @@ DOCS_ROOT = REPO_ROOT / "docs"
 DOCSOURCE = DOCS_ROOT / "docsource"
 
 CATEGORIES = {
+    "machine_learning_potentials": "Machine Learning Potentials",
     "density_functional_theory": "Density Functional Theory",
-    "empirical_potentials": "Empirical Potentials",
-    "machine_learning_potentials": "Machine Learning Potentials"
+    "empirical_potentials": "Empirical Potentials"
 }
 
 def get_title_from_folder(folder_name):
@@ -202,55 +202,15 @@ This repository provides examples demonstrating how to use `kALDo <https://githu
 - **Boltzmann Transport Equation (BTE)**: Solves for phonon populations under a temperature gradient, capturing both normal and Umklapp scattering processes.
 - **Quasi-Harmonic Green-Kubo (QHGK)**: A unified approach that interpolates between the particle-like (BTE) and wave-like (Allen-Feldman) pictures of thermal transport.
 
-The examples cover workflows with density functional theory (DFT), empirical potentials, and machine learning potentials.
+The examples cover workflows with machine learning potentials, density functional theory (DFT), and empirical potentials.
 
-
-Density Functional Theory
--------------------------
-
-'''
-    content += dft_intro + "\n\n"
-    content += '''
-.. toctree::
-   :maxdepth: 1
-
-'''
-
-    for example_name in examples_by_category.get("density_functional_theory", []):
-        title = get_title_from_folder(example_name)
-        content += f"   {title} <docsource/density_functional_theory/{example_name}>\n"
-
-    if dft_details:
-        content += f"\n\n.. include:: ../density_functional_theory/README_details.md\n   :parser: myst_parser.sphinx_\n"
-
-    content += '''
-
-Empirical Potentials
---------------------
-
-'''
-    content += emp_intro + "\n\n"
-    content += '''
-.. toctree::
-   :maxdepth: 1
-
-'''
-
-    for example_name in examples_by_category.get("empirical_potentials", []):
-        title = get_title_from_folder(example_name)
-        content += f"   {title} <docsource/empirical_potentials/{example_name}>\n"
-
-    if emp_details:
-        content += f"\n\n.. include:: ../empirical_potentials/README_details.md\n   :parser: myst_parser.sphinx_\n"
-
-    content += '''
 
 Machine Learning Potentials
 ---------------------------
 
-'''
-    content += ml_intro + "\n\n"
-    content += '''
+Applications
+^^^^^^^^^^^^
+
 .. toctree::
    :maxdepth: 1
 
@@ -260,8 +220,54 @@ Machine Learning Potentials
         title = get_title_from_folder(example_name)
         content += f"   {title} <docsource/machine_learning_potentials/{example_name}>\n"
 
+    content += f"\n\n{ml_intro}\n"
+
     if ml_details:
         content += f"\n\n.. include:: ../machine_learning_potentials/README_details.md\n   :parser: myst_parser.sphinx_\n"
+
+    content += '''
+
+Density Functional Theory
+-------------------------
+
+Applications
+^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+
+'''
+
+    for example_name in examples_by_category.get("density_functional_theory", []):
+        title = get_title_from_folder(example_name)
+        content += f"   {title} <docsource/density_functional_theory/{example_name}>\n"
+
+    content += f"\n\n{dft_intro}\n"
+
+    if dft_details:
+        content += f"\n\n.. include:: ../density_functional_theory/README_details.md\n   :parser: myst_parser.sphinx_\n"
+
+    content += '''
+
+Empirical Potentials
+--------------------
+
+Applications
+^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+
+'''
+
+    for example_name in examples_by_category.get("empirical_potentials", []):
+        title = get_title_from_folder(example_name)
+        content += f"   {title} <docsource/empirical_potentials/{example_name}>\n"
+
+    content += f"\n\n{emp_intro}\n"
+
+    if emp_details:
+        content += f"\n\n.. include:: ../empirical_potentials/README_details.md\n   :parser: myst_parser.sphinx_\n"
 
     index_path = DOCS_ROOT / "index.rst"
     index_path.write_text(content)

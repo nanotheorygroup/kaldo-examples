@@ -14,7 +14,7 @@ External files required:
 	in.aSi512:
     1.  Compute 2nd and 3rd force constants with LAMMPS PHONON
 			
-- 1_aSi512_Tersoff_thermal_conductivity.py proceeds as follows:
+- thermal_conductivity.py proceeds as follows:
 
     1. Set up force constant object by loading in 2nd, 3rd force constants computed with LAMMPS PHONON.
 			
@@ -26,13 +26,6 @@ External files required:
    
     5. Visualize intermediate quantities from QHGK simulations. 
 
-
-- LAMMPS with speed up force constant calculations for large systems is available in the following repo: [OptimizedDynamicalMatrix](https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d).
-- Some features on the OptimizedDynamicalMatrix are broken as of commits in April 2020, please checkout the following commit which works reliably from 01/29/2020: 
-	- in your cloned repo: `git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d`
-- LAMMPS packages to install/compile include: [MAKE, MANYBODY, MOLECULE, KSPACE, PHONON](https://docs.lammps.org/Packages_details.html).
-
-
 - To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS PHONON, navigate to this directory and execute:
 ```console
 ./mpirun -np 8 /path/to/lammps/src/lmp_mpi < in.aSi512 > aSi512.log 
@@ -43,9 +36,8 @@ External files required:
 ```
 - To perform thermal transport simulation after computing force constants, navigate to this directory and execute:
 ```python
-python 1_aSi512_Tersoff_thermal_conductivity.py
+python thermal_conductivity.py
 ```
-- To view figures generated during simulations, navigate to this folder: ***plots/***
 - To access data computed during simulations, navigate to this folder: ***ALD_Si_512***
 - Warning: While computing force constants using LAMMPS with a triclinic (non-orthogonal) cell, it follows a strict right-handed cell convention. More information about the cell conventioncan be found [here](https://docs.lammps.org/Howto_triclinic.html). The unit cell of the structure used in this example has been made based on the right-handed cell convention. Please be aware of this rule if lammps inputs were prepared from scratch. Alternatively, it is welcome to refer our [carbon nanotube example](https://github.com/nanotheorygroup/kaldo/tree/main/examples/carbon_nanotube_Tersoff_LAMMPS) where we imposed this convention and prepared lammps input files via a python script.
  

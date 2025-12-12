@@ -4,29 +4,31 @@ These examples demonstrate kALDo workflows using **empirical interatomic potenti
 
 ---
 
-## Setup Instructions
+### Setup Instructions
 
-This collection shows how to perform thermal transport with kALDo for crystal and amorphous systems using the [Tersoff potential](https://docs.lammps.org/pair_tersoff.html).
+These examples use the [Tersoff potential](https://docs.lammps.org/pair_tersoff.html) for interatomic interactions.
 
 ### Requirements
 
 Download and install [LAMMPS](https://lammps.sandia.gov/download.html) before running these examples.
 
-### Compiling LAMMPS with ASE support
+### Compiling LAMMPS with Python/ASE support
 
-To calculate 2nd and 3rd order force constants with LAMMPS and ASE, compile LAMMPS with shlib mode:
-
-```console
-cd path/to/lammps/src
-make yes-manybody
-make yes-molecule
-make mpi mode=shlib
-```
-
-Then link LAMMPS with Python and ASE:
+To calculate 2nd and 3rd order force constants with LAMMPS and ASE, compile LAMMPS with shared library support using cmake:
 
 ```console
 cd path/to/lammps/src
+mkdir build
+cd build
+cmake ../cmake -DLAMMPS_EXCEPTIONS=yes \
+               -DBUILD_SHARED_LIBS=yes \
+               -DMLIAP_ENABLE_PYTHON=yes \
+               -DPKG_PYTHON=yes \
+               -DPKG_MANYBODY=yes \
+               -DPKG_KSPACE=yes \
+               -DPKG_PHONON=yes \
+               -DPYTHON_EXECUTABLE:FILEPATH=`which python`
+make -j 16
 make install-python
 ```
 
@@ -38,4 +40,20 @@ For amorphous silicon and silicon clathrate examples, force constants are comput
 
 ```console
 git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d
+```
+
+### GPU/CPU Configuration
+
+For TensorFlow-based calculations, you can specify GPU or CPU usage following [these instructions](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
+
+---
+
+### Git Large File Storage (LFS)
+
+This repository uses Git LFS to handle large files. Ensure Git LFS is installed on your system by following the instructions on the [Git LFS website](https://git-lfs.github.com/).
+
+Once installed, clone the repository as usual with `git clone` — large files will be downloaded automatically. If you've already cloned without Git LFS, retrieve the large files with:
+
+```console
+git lfs pull
 ```

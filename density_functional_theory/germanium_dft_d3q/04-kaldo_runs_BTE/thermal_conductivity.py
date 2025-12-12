@@ -10,7 +10,7 @@ import numpy as np
 
 # Denote supercell size for seocnd fc and root folder
 ini_sc = [10, 10, 10]
-root = "./fc/"
+root = "./fc_DFT/"
 
 ### Set up forceconstants object
 # possible different supercell for second and third
