@@ -192,7 +192,6 @@
    "outputs": [],
    "source": [
     "from ase.io import read\n",
-    "from ase.visualize.plot import plot_atoms\n",
     "from pylab import *\n",
     "import warnings\n",
     "warnings.filterwarnings(\"ignore\")"

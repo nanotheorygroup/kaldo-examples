@@ -796,7 +796,7 @@
   
   
   <span class="md-ellipsis">
-    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
     
   </span>
   
@@ -1356,7 +1356,6 @@ show()
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
-from ase.visualize.plot import plot_atoms
 from pylab import *
 import warnings
 warnings.filterwarnings(&quot;ignore&quot;)
@@ -1715,7 +1714,7 @@ gca().set_yticks(np.arange(0, 60, 10))
 xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
 ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
 xscale(&#39;log&#39;)
-xlim([1e-1, 5e2])
+xlim([1e0, 5e2])
 subplots_adjust(wspace=0.33)
 show()
 </code></pre></div>
@@ -1755,11 +1754,10 @@ kappa matrix with isotopic scattering:
 <h2 id="id7">Anharmonic Lattice Dynamics (ALD) for <span class="math notranslate nohighlight">\(\ce{MgO}\)</span> with <a class="reference external" href="https://anharmonic.github.io/d3q/">D3Q</a><a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
 <h3 id="id8">Import Necessary Packges<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
-from ase.visualize.plot import plot_atoms
 from pylab import *
 import warnings
 warnings.filterwarnings(&quot;ignore&quot;)
@@ -1768,7 +1766,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 </div>
 <h3 id="id9">Custom Define Functions<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def cumulative_cond_cal(observables, kappa_tensor, prefactor=1/3):
@@ -1825,7 +1823,7 @@ def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
 </div>
 <h3 id="id10">Denote Latex Font for Plots<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
@@ -1843,8 +1841,8 @@ plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
 </div>
 </div>
 <h3 id="id11">Plot Phonon Spectra (Dispersion) and Density of State (DOS)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[4]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>data_folder = &#39;./kaldo_runs_without_NAC/&#39;
@@ -1895,16 +1893,9 @@ show()
 </code></pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_43_0.png" src="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_43_0.png" />
-</div>
-</div>
 <h3 id="id12">Plot Heat Capacity, Group Velocities and Phase Space<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in group velocity, heat_capacity (cv) and frequency data
@@ -1960,19 +1951,12 @@ show()
 </code></pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_45_0.png" src="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_45_0.png" />
-</div>
-</div>
 <h3 id="id13">Plot Phonon Life Time (<span class="math notranslate nohighlight">\(\tau\)</span>), Scattering Rate (<span class="math notranslate nohighlight">\(\Gamma\)</span>) <span class="math notranslate nohighlight">\(\&amp;\)</span> MFP (<span class="math notranslate nohighlight">\(\lambda\)</span>)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Note that <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> are computed only with the relaxation time approximation (RTA).</p></li>
 </ul>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[6]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
@@ -2030,16 +2014,9 @@ show()
 </code></pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_47_0.png" src="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_47_0.png" />
-</div>
-</div>
 <h3 id="id14">Plot per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[ ]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote zeros to intake kappa tensor
@@ -2091,7 +2068,7 @@ scatter(frequency.flatten(order=&#39;C&#39;),
         kappa_per_mode, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{per \ mode, pure }$&#39;)
 scatter(frequency.flatten(order=&#39;C&#39;),
         kappa_per_mode_iso, facecolor=&#39;w&#39;, edgecolor=&#39;c&#39;, s=10, marker=&#39;o&#39;, label=&#39;$\kappa_{per \ mode, iso }$&#39;)
-gca().axhline(y = 0, color=&#39;0.5&#39;, ls=&#39;--&#39;, lw=2)
+gca().axhline(y = 0, color=&#39;k&#39;, ls=&#39;--&#39;, lw=1)
 gca().set_xticks(np.arange(0, 25, 5))
 ylabel(r&#39;$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
@@ -2118,40 +2095,10 @@ gca().set_yticks(np.arange(0, 60, 10))
 xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
 ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
 xscale(&#39;log&#39;)
-xlim([1e-1, 5e2])
+xlim([1e0, 5e2])
 subplots_adjust(wspace=0.33)
 show()
 </code></pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Bulk thermal conductivity: 52.9 W m^-1 K^-1
-
-kappa matrix:
-[[53.36967759  0.21657561  0.21629781]
- [ 0.20551982 52.73934678 -1.09748645]
- [ 0.2040104  -1.09830994 52.73848039]]
-
-
-Bulk thermal conductivity with isotopic scattering: 41.2 W m^-1 K^-1
-
-kappa matrix with isotopic scattering:
-[[42.08279724  0.12407705  0.12484444]
- [ 0.11153137 40.82982786 -0.29852037]
- [ 0.11109184 -0.29931771 40.82974772]]
-
-
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_49_1.png" src="../../_images/docsource_density_functional_theory_magnesium_oxide_dft_d3q_49_1.png" />
 </div>
 </div>
 

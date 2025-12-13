@@ -502,7 +502,7 @@
   
   
   <span class="md-ellipsis">
-    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
     
   </span>
   
@@ -581,10 +581,40 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#setup-instructions" class="md-nav__link">
     
     <span class="md-ellipsis">
-      <span title="/index.rst#references (reference label)"><span>References</span></span>
+      <span title="/index.rst#setup-instructions (reference label)"><span>Setup Instructions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/index.rst#requirements (reference label)"><span>Requirements</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-cpu-configuration" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/index.rst#gpu-cpu-configuration (reference label)"><span>GPU/CPU Configuration</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-large-file-storage-lfs" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/index.rst#git-large-file-storage-lfs (reference label)"><span>Git Large File Storage <wbr>(LFS)</span></span>
     </span>
   </a>
   
@@ -725,16 +755,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optimized-force-constants-for-large-systems" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/index.rst#optimized-force-constants-for-large-systems (reference label)"><span>Optimized force constants for large systems</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#gpu-cpu-configuration" class="md-nav__link">
     
     <span class="md-ellipsis">
@@ -804,34 +824,25 @@
 </ul>
 </div>
 <p>These examples demonstrate kALDo workflows using <strong>machine learning interatomic potentials (MLIPs)</strong>. MLIPs combine near-DFT accuracy with the computational efficiency of classical potentials, enabling accurate thermal transport predictions at a fraction of the cost.</p>
-<h4 id="references">References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h4>
-<p>More information for each machine learning potential:</p>
-<table class="docutils data align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Potential</p></th>
-<th class="head"><p>Paper</p></th>
-<th class="head"><p>Model</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>orb-v3</strong></p></td>
-<td><p><a class="reference external" href="https://arxiv.org/abs/2504.06231">arXiv:2504.06231</a></p></td>
-<td><p><a class="reference external" href="https://github.com/orbital-materials/orb-models">GitHub</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>NEP89</strong></p></td>
-<td><p><a class="reference external" href="https://arxiv.org/pdf/2504.21286">arXiv:2504.21286</a></p></td>
-<td><p><a class="reference external" href="https://github.com/brucefan1983/GPUMD/blob/master/potentials/nep/nep89_20250409/nep89_20250409.txt">GPUMD</a></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>MatterSim-v1-1M</strong></p></td>
-<td><p><a class="reference external" href="https://arxiv.org/abs/2405.04967">arXiv:2405.04967</a></p></td>
-<td><p><a class="reference external" href="https://github.com/microsoft/mattersim">GitHub</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>ACE</strong></p></td>
-<td><p><a class="reference external" href="https://pubs.aip.org/aip/jap/article/135/8/085105/3266915">J. Appl. Phys.</a></p></td>
-<td><p><a class="reference external" href="https://aip.figshare.com/articles/dataset/ACE_potential_files/25103729">Figshare</a></p></td>
-</tr>
-</tbody>
-</table>
+<h4 id="setup-instructions">Setup Instructions<a class="headerlink" href="#setup-instructions" title="Link to this heading">¶</a></h4>
+<h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h4>
+<p>Before running these examples, install the following packages:</p>
+<ul class="simple">
+<li><p>MatterSim — Installation guide available <a class="reference external" href="https://github.com/microsoft/mattersim">here</a></p></li>
+<li><p>Orb - Installation guide available <a class="reference external" href="https://github.com/orbital-materials/orb-models">here</a></p></li>
+<li><p>TDEP - Installation guide available <a class="reference external" href="https://tdep-developers.github.io/tdep/">here</a></p></li>
+<li><p>pyACE - Installation guide available <a class="reference external" href="https://github.com/ICAMS/python-ace">here</a></p></li>
+<li><p>calorine - Instllation guide available <a class="reference external" href="https://calorine.materialsmodeling.org/">here</a></p></li>
+</ul>
+<h4 id="gpu-cpu-configuration">GPU/CPU Configuration<a class="headerlink" href="#gpu-cpu-configuration" title="Link to this heading">¶</a></h4>
+<p>For TensorFlow-based calculations, you can specify GPU or CPU usage following <a class="reference external" href="https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow">these instructions</a>.</p>
+<hr class="docutils" />
+<h4 id="git-large-file-storage-lfs">Git Large File Storage (LFS)<a class="headerlink" href="#git-large-file-storage-lfs" title="Link to this heading">¶</a></h4>
+<p>This repository uses Git LFS to handle large files. Ensure Git LFS is installed on your system by following the instructions on the <a class="reference external" href="https://git-lfs.github.com/">Git LFS website</a>.</p>
+<p>Once installed, clone the repository as usual with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> — large files will be downloaded automatically. If you’ve already cloned without Git LFS, retrieve the large files with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">git lfs pull</span>
+</code></pre></div>
+</div>
 <h2 id="density-functional-theory">Density Functional Theory<a class="headerlink" href="#density-functional-theory" title="Link to this heading">¶</a></h2>
 <h3 id="id1">Applications<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <div class="toctree-wrapper compound">
@@ -888,12 +899,6 @@
 <span class="go">               -DPYTHON_EXECUTABLE:FILEPATH=`which python`</span>
 <span class="go">make -j 16</span>
 <span class="go">make install-python</span>
-</code></pre></div>
-</div>
-<h4 id="optimized-force-constants-for-large-systems">Optimized force constants for large systems<a class="headerlink" href="#optimized-force-constants-for-large-systems" title="Link to this heading">¶</a></h4>
-<p>For amorphous silicon and silicon clathrate examples, force constants are computed using the LAMMPS PHONON package. For large unit cells, this can take hours. To speed up calculations, use the optimized version from <a class="reference external" href="https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d">OptimizedDynamicalMatrix</a>.</p>
-<p><strong>Note:</strong> Use commit <code class="docutils literal notranslate"><span class="pre">fed47b9ffc833bebffe0e460739ebd6ff69e9c8d</span></code> for reliable results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d</span>
 </code></pre></div>
 </div>
 <h4 id="gpu-cpu-configuration">GPU/CPU Configuration<a class="headerlink" href="#gpu-cpu-configuration" title="Link to this heading">¶</a></h4>
