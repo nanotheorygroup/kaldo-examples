@@ -1,4 +1,4 @@
-# Compute kappa of Silicon with Quantum Espresso (QE)
+# Compute Thermal Conductivity of Silicon with Quantum Espresso (QE)
 
 > Input data descriptions for each executable in Quantum Espresso (QE) can be found [here](https://www.quantum-espresso.org/documentation/input-data-description/)
 
@@ -15,9 +15,9 @@ cp ../02-2nd_order_DFPT/espresso.ifc2 fc_DFT/
 python phonon.py
 ```
 
-After finish this step, you can run the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation). 
+After finishing this step, you can run the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation). 
 
-4. Perform finite-difference calculations for 3rd order force constants. Please follow instructions in `04-3rd_order_finite_differences`.
+4. Perform finite-difference calculations for 3rd order force constants. Please follow the instructions in `04-3rd_order_finite_differences`.
 5. Perform BTE calculations using [kALDo](https://github.com/nanotheorygroup/kaldo) in the `05-kALDo_runs_BTE` folder. Like in the previous step, create a directory `fc_DFT` and copy `POSCAR`, `espresso.ifc2` and `FORCE_CONSTANTS_3RD` into it. Then run `python thermal_conductivity.py` to calculate. See `thermal_conductivity.py` for a detailed description. Here is a script to describe this step: 
 
 ```console
@@ -26,7 +26,7 @@ cp -r ../03-kALDo_runs_phonon/fc_DFT .
 cp ../04-3rd_order_finite_differences/FORCE_CONSTANTS_3RD fc_DFT/
 python thermal_conductivity.py
 ```
-After finish this step, you can run the Jupyter notebook `kALDo_with_QE_gallery.ipynb` for various properties. 
+After finishing this step, you can run the Jupyter notebook `kALDo_with_QE_gallery.ipynb` for various properties. 
 
  Reference thermal conductivity for example (8x8x8 2nd order supercell, 3x3x3 3rd order supercell, 14x14x14 k-point mesh):
  - **146.0 W/m-K (Inversion), 133.1 W/m-K (Isotopic)**
