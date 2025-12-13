@@ -2,7 +2,7 @@ name: Build and Deploy Docs
 
 on:
   push:
-    branches: ['*']  # Trigger on all branches (temporary for testing)
+    branches: [main]
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
