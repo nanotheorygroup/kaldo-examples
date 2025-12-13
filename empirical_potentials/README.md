@@ -37,7 +37,18 @@ make install-python
 For TensorFlow-based calculations, you can specify GPU or CPU usage following [these instructions](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow).
 
 ---
+### List and content of examples folder
+For each example, more detailed information is provided by the README.md file contained in the corresponding directory.
+- `amorphous_silicon_Tersoff_LAMMPS:`
+This example illustrates how to perform thermal transport simulation for an amorphous silicon system (512 atoms per cell) with [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
+- `carbon_diamond_Tersoff_ASE_LAMMPS:`
+This example illustrates how to perform thermal transport simulation for a carbon diamond (2 atoms per cell) system using [ASE and LAMMPS](https://wiki.fysik.dtu.dk/ase/_modules/ase/calculators/lammpslib.html) as force calculator.
+- `carbon_nanotube_Tersoff_LAMMPS:`
+This example illustrates how to perform thermal transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
+- `silicon_clathrate_Tersoff_LAMMPS:`
+This example illustrates how to perform thermal transport simulation for a type I clathrate (46 atoms per cell) system using [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
 
+---
 ### Git Large File Storage (LFS)
 
 This repository uses Git LFS to handle large files. Ensure Git LFS is installed on your system by following the instructions on the [Git LFS website](https://git-lfs.github.com/).
