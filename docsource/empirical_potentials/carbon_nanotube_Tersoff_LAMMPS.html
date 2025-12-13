@@ -21,7 +21,7 @@
     
     
       
-        <title>Carbon Nanotube Tersoff Lammps - Examples</title>
+        <title>carbon_nanotube_Tersoff_LAMMPS - Examples</title>
       
     
     
@@ -39,7 +39,6 @@
       
     
         <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.cf2c65c97ee1b6f01.min.css?v=0a68cab4" />
-        <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=a35ea3b2" />
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -73,11 +72,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Carbon Nanotube Tersoff Lammps
+              carbon_nanotube_Tersoff_LAMMPS
             
           </span>
         </div>
@@ -507,156 +501,17 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="#" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#anharmonic-lattice-dynamics-(ald)-for-(10,0)-cnt-with-tersoff (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for <wbr>(10,0) CNT with Tersoff</span></span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for (10,0) CNT with Tersoff">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Import-Necessary-Packges" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#import-necessary-packges (reference label)"><span>Import Necessary Packges</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Custom-Define-Functions" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos) (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS)</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Plot Heat Capacity, Group Velocities and Phase Space">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-phonon-life-time-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Visualize Phonon Life Time <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Visualize-per-mode-and-cumulative-\kappa" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-per-mode-and-cumulative-\kappa (reference label)"><span>Visualize per mode and cumulative \kappa</span></span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Visualize per mode and cumulative \kappa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here." class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#full-simulations-files-for-physrevlett.127.025902-can-be-found-here. (reference label)"><span>Full Simulations files for Phys<wbr>Rev<wbr>Lett.<wbr>127.<wbr>025902 can be found here.<wbr></span></span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -702,122 +557,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#anharmonic-lattice-dynamics-(ald)-for-(10,0)-cnt-with-tersoff (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for <wbr>(10,0) CNT with Tersoff</span></span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for (10,0) CNT with Tersoff">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Import-Necessary-Packges" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#import-necessary-packges (reference label)"><span>Import Necessary Packges</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Custom-Define-Functions" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos) (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS)</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Plot Heat Capacity, Group Velocities and Phase Space">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-phonon-life-time-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Visualize Phonon Life Time <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Visualize-per-mode-and-cumulative-\kappa" class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-per-mode-and-cumulative-\kappa (reference label)"><span>Visualize per mode and cumulative \kappa</span></span>
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Visualize per mode and cumulative \kappa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here." class="md-nav__link">
-    
-    <span class="md-ellipsis">
-      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#full-simulations-files-for-physrevlett.127.025902-can-be-found-here. (reference label)"><span>Full Simulations files for Phys<wbr>Rev<wbr>Lett.<wbr>127.<wbr>025902 can be found here.<wbr></span></span>
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -832,375 +571,76 @@
                   
 
 
-<h1 id="Carbon-Nanotube-Tersoff-Lammps">Carbon Nanotube Tersoff Lammps<a class="headerlink" href="#Carbon-Nanotube-Tersoff-Lammps" title="Link to this heading">¶</a></h1>
-<h2 id="Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff">Anharmonic Lattice Dynamics (ALD) for (10,0) CNT with <a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.205441">Tersoff</a><a class="headerlink" href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" title="Link to this heading">¶</a></h2>
-<h3 id="Import-Necessary-Packges">Import Necessary Packges<a class="headerlink" href="#Import-Necessary-Packges" title="Link to this heading">¶</a></h3>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[1]:
-</code></pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
-from pylab import *
-import warnings
-warnings.filterwarnings(&quot;ignore&quot;)
-</code></pre></div>
-</div>
-</div>
-<h3 id="Custom-Define-Functions">Custom Define Functions<a class="headerlink" href="#Custom-Define-Functions" title="Link to this heading">¶</a></h3>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[2]:
-</code></pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def cumulative_cond_cal(observables, kappa_tensor, prefactor=1/3):
-
-    &quot;&quot;&quot;Compute cumulative conductivity based on either frequnecy or mean-free path
-
-       input:
-       observables: (ndarray) either phonon frequnecy or mean-free path
-       cond_tensor: (ndarray) conductivity tensor
-       prefactor: (float) prefactor to average kappa tensor, 1/3 for bulk material
-
-       ouput:
-       observeables: (ndarray) sorted phonon frequency or mean-free path
-       kappa_cond (ndarray) cumulative conductivity
-
-    &quot;&quot;&quot;
-
-    # Sum over kappa by directions
-    kappa = np.einsum(&#39;maa-&gt;m&#39;, prefactor * kappa_tensor)
-
-    # Sort observables
-    observables_argsort_indices = np.argsort(observables)
-    cumulative_kappa = np.cumsum(kappa[observables_argsort_indices])
-    return observables[observables_argsort_indices], cumulative_kappa
-
-
-
-def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
-    tl = 4
-    tw = 2
-    tlm = 2
-
-    for ax in ax_list:
-        ax.tick_params(which=&#39;major&#39;, length=tl, width=tw)
-        ax.tick_params(which=&#39;minor&#39;, length=tlm, width=tw)
-        ax.tick_params(which=&#39;both&#39;, axis=&#39;both&#39;, direction=&#39;in&#39;,
-                       right=True, top=True)
-        ax.spines[&#39;bottom&#39;].set_color(panel_color_str)
-        ax.spines[&#39;top&#39;].set_color(panel_color_str)
-        ax.spines[&#39;left&#39;].set_color(panel_color_str)
-        ax.spines[&#39;right&#39;].set_color(panel_color_str)
-
-        ax.spines[&#39;bottom&#39;].set_linewidth(line_width)
-        ax.spines[&#39;top&#39;].set_linewidth(line_width)
-        ax.spines[&#39;left&#39;].set_linewidth(line_width)
-        ax.spines[&#39;right&#39;].set_linewidth(line_width)
-
-        for t in ax.xaxis.get_ticklines(): t.set_color(panel_color_str)
-        for t in ax.yaxis.get_ticklines(): t.set_color(panel_color_str)
-        for t in ax.xaxis.get_ticklines(): t.set_linewidth(line_width)
-        for t in ax.yaxis.get_ticklines(): t.set_linewidth(line_width)
-</code></pre></div>
-</div>
-</div>
-<h3 id="Denote-Latex-Font-for-Plots">Denote Latex Font for Plots<a class="headerlink" href="#Denote-Latex-Font-for-Plots" title="Link to this heading">¶</a></h3>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[3]:
-</code></pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
-aw = 2
-fs = 12
-font = {&#39;size&#39;: fs}
-matplotlib.rc(&#39;font&#39;, **font)
-matplotlib.rc(&#39;axes&#39;, linewidth=aw)
-
-# Configure Matplotlib to use a LaTeX-like style without LaTeX
-plt.rcParams[&#39;text.usetex&#39;] = False
-plt.rcParams[&#39;font.family&#39;] = &#39;serif&#39;
-plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
-</code></pre></div>
-</div>
-</div>
-<h3 id="Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)">Plot Phonon Spectra (Dispersion) and Density of State (DOS)<a class="headerlink" href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" title="Link to this heading">¶</a></h3>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[4]:
-</code></pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote data path
-data_folder = &quot;./&quot;
-
-# Derive symbols for high symmetry directions in Brillouin zone
-dispersion = np.loadtxt(data_folder  + &#39;plots/1_1_151/dispersion&#39;)
-point_names = np.loadtxt(data_folder  + &#39;plots//1_1_151/point_names&#39;, dtype=str)
-
-point_names_list = []
-for point_name in point_names:
-    if point_name == &#39;G&#39;:
-        point_name = r&#39;$\Gamma$&#39;
-    elif point_name == &#39;U&#39;:
-        point_name = &#39;U=K&#39;
-    point_names_list.append(point_name)
-
-# Load in the &quot;tick-mark&quot; values for these symbols
-q = np.loadtxt(data_folder  + &#39;plots/1_1_151/q&#39;)
-Q = np.loadtxt(data_folder  + &#39;plots/1_1_151/Q_val&#39;)
-dos_Si = np.load(data_folder  + &#39;plots/1_1_151/dos.npy&#39;)
-
-fig = figure(figsize=(4,3))
-set_fig_properties([gca()])
-plot(q[0], dispersion[0, 0], &#39;r-&#39;, ms=1)
-plot(q, dispersion, &#39;r-&#39;, ms=1)
-ylabel(&#39;Frequency (THz)&#39;, fontsize=14)
-xlabel(r&#39;Wave vector ($\frac{2\pi}{a}$)&#39;, fontsize=14)
-gca().set_yticks(np.arange(0, 60, 10))
-xticks(Q, point_names_list)
-xlim([0, 0.5])
-dosax = fig.add_axes([0.91, .11, .17, .77])
-set_fig_properties([gca()])
-for d in np.expand_dims(dos_Si[1],0):
-    dosax.plot(d, dos_Si[0],c=&#39;r&#39;)
-dosax.set_yticks([])
-dosax.set_xticks([])
-dosax.set_xlabel(&quot;DOS&quot;)
-show()
-</code><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_9_0.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_9_0.png" />
-</div>
-</div>
-<h2 id="Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space">Plot Heat Capacity, Group Velocities and Phase Space<a class="headerlink" href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" title="Link to this heading">¶</a></h2>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
-</code></pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in group velocity and frequency data
-frequency =  np.load(
-   data_folder  +  &#39;ALD_CNT/1_1_151/frequency.npy&#39;,
-    allow_pickle=True)
-
-
-cv =  np.load(
-   data_folder  + &#39;ALD_CNT/1_1_151/300/quantum/heat_capacity.npy&#39;,
-    allow_pickle=True)
-
-
-group_velocity = np.load(
-   data_folder  +  &#39;ALD_CNT/1_1_151/velocity.npy&#39;)
-
-
-phase_space = np.load(data_folder  + &#39;ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy&#39;,
-                      allow_pickle=True)[:,0]
-
-# Compute norm of group velocity
-# Convert the unit from angstrom / picosecond to kilometer/ second
-group_velcotiy_norm = np.linalg.norm(
-    group_velocity.reshape(-1, 3), axis=1) / 10.0
-
-# Plot observables in subplot
-figure(figsize=(12, 3))
-subplot(1,3, 1)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;)[3:], 1e23*cv.flatten(order=&#39;C&#39;)[3:],
-        facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
-ylabel (r&quot;$C_{v}$ ($10^{23}$ J/K)&quot;)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-gca().set_xticks(np.arange(0, 60, 10))
-ylim(0.35*1e23*cv.flatten(order=&#39;C&#39;)[3:].min(), 1.05*1e23*cv.flatten(order=&#39;C&#39;)[3:].max())
-
-subplot(1 ,3, 2)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        group_velcotiy_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;^&#39;)
-gca().set_xticks(np.arange(0, 60, 10))
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-ylabel(r&#39;$|v| \ (\frac{km}{s})$&#39;, fontsize=14)
-
-subplot(1 ,3, 3)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        phase_space, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;o&#39;)
-gca().set_xticks(np.arange(0, 60, 10))
-ylabel(&#39;Phase space&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-yscale(&#39;log&#39;)
-ylim([1e-1, 5e3])
-subplots_adjust(wspace=0.33)
-show()
-</code></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_11_0.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_11_0.png" />
-</div>
-</div>
-<h3 id="Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&amp;-MFP-(\lambda)">Visualize Phonon Life Time (<span class="math notranslate nohighlight">\(\tau\)</span>), Scattering Rate (<span class="math notranslate nohighlight">\(\Gamma\)</span>) <span class="math notranslate nohighlight">\(\&amp;\)</span> MFP (<span class="math notranslate nohighlight">\(\lambda\)</span>)<a class="headerlink" href="#Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" title="Link to this heading">¶</a></h3>
-<ul class="simple">
-<li><p>Note that <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> are computed only with the relaxation time approximation (RTA).</p></li>
+<h1 id="carbon-nanotube-tersoff-lammps"><code class="docutils literal notranslate"><span class="pre">carbon_nanotube_Tersoff_LAMMPS</span></code><a class="headerlink" href="#carbon-nanotube-tersoff-lammps" title="Link to this heading">¶</a></h1>
+<p>Example carbon_nanotube_Tersoff_LAMMPS illustrates how to perform thermal
+transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using
+<a class="reference external" href="https://lammps.sandia.gov/doc/Packages_details.html#pkg-user-phonon">LAMMPS USER-PHONON </a> package as force calculator.</p>
+<p>External files required:
+1). forcefields/C.optimize.tersoff
+2). unit.xyz : (10,0) Carbon Nanotube unit cell (40 atoms per cell)</p>
+<ul>
+<li><p>0_generate_LAMMPS_input_and_supercell_structures.py proceeds as follows:</p>
+<ol class="arabic simple">
+<li><p>Loading in 10,0 CNT unit cell structure (unit.xyz) and write it as LAMMPS input format (CNT.lmp).</p></li>
+<li><p>Replicate the unit cell (1x1x3 supercell) and write it to force constant input folder (fc_CNT).</p></li>
+</ol>
+</li>
+<li><p>The force constant calculation proceeds as follows:</p>
+<p>in.CNT:</p>
+<ol class="arabic simple">
+<li><p>Compute 2nd, 3rd force constants computed with LAMMPS USER-PHONON</p></li>
+</ol>
+<p>or</p>
+<p>get_precalculated_fc.sh:</p>
+<ol class="arabic simple">
+<li><p>Download precalculated force constants computed with LAMMPS USER-PHONON</p></li>
+</ol>
+</li>
+<li><p>1_CNT_Tersoff_thermal_conductivity_quantum.py proceeds as follows:</p>
+<ol class="arabic simple">
+<li><p>Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS USER-PHONON.</p></li>
+<li><p>Set up phonon object (1x1x151 k-point mesh) and perform quantum simulation at 300K.</p></li>
+<li><p>Set up Conductivity object and compute thermal conductivity for infinite and finite size samples.</p></li>
+</ol>
+</li>
+<li><p>2_CNT_Tersoff_thermal_conductivity_classical.py proceeds as follows:</p>
+<ol class="arabic simple">
+<li><p>Set up force constant object by loading in computed 2nd, 3rd force constants computed with LAMMPS USER-PHONON.</p></li>
+<li><p>Set up phonon object (1x1x151 k-point mesh) and perform classical simulation at 300K.</p></li>
+<li><p>Set up Conductivity object and compute thermal conductivity for infinite and finite size samples.</p></li>
+</ol>
+</li>
+<li><p>LAMMPS packages to install/compile include: <a class="reference external" href="https://lammps.sandia.gov/doc/Packages_details.html">MAKE, MANYBODY, MOLECULE, KSPACE, USER-PHONON</a>.</p></li>
+<li><p>To generate input files for LAMMPS calculations and the supercell structures, navigate to this directory and execute:</p></li>
 </ul>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[6]:
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">python 0_generate_LAMMPS_input_and_supercell_structures.py</span>
 </code></pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
-scattering_rate = np.load(
-   data_folder  +  &#39;ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy&#39;,
-                      allow_pickle=True)[:,1]
-
-# Derive lifetime, which is inverse of scattering rate
-life_time = scattering_rate ** (-1)
-
-# Denote lists to intake mean free path in each direction
-mean_free_path = []
-for i in range(3):
-    mean_free_path.append(np.loadtxt(
-  data_folder  +   &#39;ALD_CNT/1_1_151/inverse/300/quantum/mean_free_path_&#39; +
-    str(i) + &#39;.dat&#39;))
-
-
-# Convert list to numpy array and compute norm for mean free path
-# Convert the unit from angstrom  to nanometer
-mean_free_path = np.array(mean_free_path).T
-mean_free_path_norm = np.linalg.norm(
-    mean_free_path.reshape(-1, 3), axis=1) / 10.0
-
-# Plot observables in subplot
-figure(figsize=(12, 3))
-subplot(1,3, 1)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        life_time, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;)
-gca().set_xticks(np.arange(0, 60, 10))
-yscale(&#39;log&#39;)
-ylabel(r&#39;$\tau \ (ps)$&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-ylim([1e-2, 1e4])
-
-subplot(1,3, 2)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        scattering_rate, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
-gca().set_xticks(np.arange(0, 60, 10))
-yscale(&#39;log&#39;)
-ylabel(r&#39;$\Gamma \ (THz)$&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-
-subplot(1,3, 3)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        mean_free_path_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
-gca().set_xticks(np.arange(0, 60, 10))
-ylabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-yscale(&#39;log&#39;)
-ylim([1e-2, 1e6])
-subplots_adjust(wspace=0.33)
-show()
+<ul class="simple">
+<li><p>To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS USER-PHONON, navigate to this directory and execute:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">./mpirun -np 8 /path/to/lammps/src/lmp_mpi &lt; in.CNT &gt; CNT.log </span>
 </code></pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_13_0.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_13_0.png" />
-</div>
-</div>
-<h3 id="Visualize-per-mode-and-cumulative-\kappa">Visualize per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#Visualize-per-mode-and-cumulative-\kappa" title="Link to this heading">¶</a></h3>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+<ul class="simple">
+<li><p>To obtain precalculated 2<sup>nd</sup> and 3<sup>rd</sup> order force constants, navigate to this directory and execute:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">chmod +x  get_precalculated_fc.sh</span>
+<span class="go">./get_precalculated_fc.sh</span>
 </code></pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote zeros to intake kappa tensor
-kappa_tensor = np.zeros([mean_free_path.shape[0], 3, 3])
-kappa_tensor_iso = np.zeros([mean_free_path.shape[0], 3, 3])
-
-for i in range(3):
-    for j in range(3):
-        kappa_tensor[:, i, j] = np.loadtxt(
-    data_folder  + &#39;ALD_CNT/1_1_151/inverse/300/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
-
-# Sum over the 0th dimension to recover 3-by-3 kappa matrix
-# Note that 29.92 is the volume factor
-kappa_matrix = 29.92 * kappa_tensor.sum(axis=0)
-print(&quot;Thermal conductivity along z-axis: %.1f W m^-1 K^-1\n&quot;
-      % (np.diag(kappa_matrix)[2]))
-print(&quot;kappa matrix: &quot;)
-print(kappa_matrix)
-print(&#39;\n&#39;)
-
-# Compute kappa in per mode and cumulative representations
-kappa_per_mode = 29.92 * kappa_tensor.sum(axis=-1).sum(axis=1)
-freq_sorted, kappa_cum_wrt_freq = cumulative_cond_cal(
-    frequency.flatten(order=&#39;C&#39;), 29.92 * kappa_tensor, prefactor=1.0)
-lambda_sorted, kappa_cum_wrt_lambda = cumulative_cond_cal(
-    mean_free_path_norm, 29.92 * kappa_tensor, prefactor=1.0)
-
-
-# Plot observables in subplot
-figure(figsize=(12, 3))
-subplot(1,3, 1)
-set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        kappa_per_mode, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{per \ mode}$&#39;)
-ylabel(r&#39;$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-gca().set_xticks(np.arange(0, 60, 10))
-legend(loc=1, fontsize=10)
-
-subplot(1,3, 2)
-set_fig_properties([gca()])
-plot(freq_sorted, kappa_cum_wrt_freq, &#39;r&#39;
-     , label=r&quot;$\kappa \approx 8800 \;\frac{\rm{W}}{\rm{m}\cdot\rm{K}}$&quot;)
-ylabel(r&#39;$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-legend(loc=4, fontsize=10)
-gca().set_xticks(np.arange(0, 60, 10))
-
-subplot(1,3, 3)
-set_fig_properties([gca()])
-plot(lambda_sorted, kappa_cum_wrt_lambda, &#39;r&#39;)
-xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
-ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xscale(&#39;log&#39;)
-subplots_adjust(wspace=0.35)
-xlim([1e0, 5e5])
-show()
+<ul class="simple">
+<li><p>To perform thermal transport after computing force constants, navigate to this directory and execute:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">python 1_CNT_Tersoff_thermal_conductivity_quantum.py</span>
+<span class="go">python 2_CNT_Tersoff_thermal_conductivity_classical.py</span>
 </code></pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Thermal conductivity along z-axis: 8800.2 W m^-1 K^-1
-
-kappa matrix:
-[[1.12454529e-15 4.82029887e-16 2.49599104e-06]
- [4.47408180e-16 1.96679488e-16 8.70413765e-07]
- [7.13626034e-07 2.07690458e-07 8.80023212e+03]]
-
-
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_15_1.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_15_1.png" />
-</div>
-</div>
-<h4 id="Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here.">Full Simulations files for <a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.025902">PhysRevLett.127.025902</a> can be found <a class="reference external" href="10.5281/zenodo.4698466">here</a>.<a class="headerlink" href="#Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here." title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>To access data computed during simulations, navigate to this folder: <em><strong>ALD_CNT</strong></em></p></li>
+<li><p>Reference conductivity (1x1x3 supercell,1x1x151 k-point mesh): 2999.680 W/m-K (classical), 8794.771 W/m-K (Quantum)</p></li>
+<li><p>Reference conductivity (1x1x5 supercell,1x1x151 k-point mesh): 3120.487 W/m-K (classical), 8639.604 W/m-K (Quantum)</p></li>
+</ul>
 
 
 
@@ -1266,8 +706,6 @@ kappa matrix:
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script id="MathJax-script" src="../../_static/mathjax/tex-mml-chtml.js"></script>
     
   </body>
 </html>

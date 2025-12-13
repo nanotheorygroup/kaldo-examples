@@ -502,7 +502,7 @@
   
   
   <span class="md-ellipsis">
-    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.md (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
     
   </span>
   
@@ -725,6 +725,16 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#optimized-force-constants-for-large-systems" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/index.rst#optimized-force-constants-for-large-systems (reference label)"><span>Optimized force constants for large systems</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#gpu-cpu-configuration" class="md-nav__link">
     
     <span class="md-ellipsis">
@@ -878,6 +888,12 @@
 <span class="go">               -DPYTHON_EXECUTABLE:FILEPATH=`which python`</span>
 <span class="go">make -j 16</span>
 <span class="go">make install-python</span>
+</code></pre></div>
+</div>
+<h4 id="optimized-force-constants-for-large-systems">Optimized force constants for large systems<a class="headerlink" href="#optimized-force-constants-for-large-systems" title="Link to this heading">¶</a></h4>
+<p>For amorphous silicon and silicon clathrate examples, force constants are computed using the LAMMPS PHONON package. For large unit cells, this can take hours. To speed up calculations, use the optimized version from <a class="reference external" href="https://github.com/charlessievers/lammps/tree/fed47b9ffc833bebffe0e460739ebd6ff69e9c8d">OptimizedDynamicalMatrix</a>.</p>
+<p><strong>Note:</strong> Use commit <code class="docutils literal notranslate"><span class="pre">fed47b9ffc833bebffe0e460739ebd6ff69e9c8d</span></code> for reliable results:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><code><span class="go">git checkout fed47b9ffc833bebffe0e460739ebd6ff69e9c8d</span>
 </code></pre></div>
 </div>
 <h4 id="gpu-cpu-configuration">GPU/CPU Configuration<a class="headerlink" href="#gpu-cpu-configuration" title="Link to this heading">¶</a></h4>
