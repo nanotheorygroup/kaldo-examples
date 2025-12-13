@@ -1,4 +1,4 @@
-# Compute Thermal Conductivity of Silicon with Quantum Espresso (QE)
+# Compute Thermal Conductivity of Silicon with QE
 
 > Input data descriptions for each executable in Quantum Espresso (QE) can be found [here](https://www.quantum-espresso.org/documentation/input-data-description/)
 

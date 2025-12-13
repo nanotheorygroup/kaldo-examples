@@ -15,9 +15,10 @@ This repository provides examples demonstrating how to compute thermal conductiv
 
 The examples cover workflows with:
 
-- **Machine Learning Potentials** (orb-v3, NEP89, MatterSim, ACE)
+- **Machine Learning Potentials** (orb, NEP, MatterSim, ACE)
 - **Density Functional Theory** (Quantum ESPRESSO, D3Q)
 - **Empirical Potentials** (LAMMPS, Tersoff)
+- **Finite Temperature Effective Potentials** (TDEP)
 
 ## Building the Documentation
 
