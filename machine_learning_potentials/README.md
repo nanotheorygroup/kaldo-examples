@@ -15,7 +15,7 @@ Before running these examples, install the following packages:
 - TDEP - Installation guide available [here](https://tdep-developers.github.io/tdep/)
 - pyACE - Installation guide available [here](https://github.com/ICAMS/python-ace)
 - calorine - Instllation guide available [here](https://calorine.materialsmodeling.org/)
-
+- pet-mad - Installation guide available [here](https://github.com/lab-cosmo/pet-mad)
 ----
 
 ## List and content of examples folder
@@ -34,6 +34,9 @@ This example illustrates how to perform thermal transport simulation for a silic
 This example illustrates how to perform thermal transport simulation for a silicon carbide system (2 atom per cell) with [MatterSim](https://github.com/microsoft/mattersim) packages as force calculator.
 - `wurtzite_aluminum_nitride_ACE_PyACE:`
 This example illustrates how to perform thermal transport simulation for an aluminum nitride system (4 atom per cell) with [pyACE](https://github.com/ICAMS/python-ace) packages as force calculator.
+- `sodium_chloride_PETMADCalculator:`
+This example illustrates how to perform thermal transport simulation for a sodium chloride system (2 atom per cell) with [PET-MAD](https://github.com/lab-cosmo/pet-mad) packages as force calculator.
+
 
 ---
 
