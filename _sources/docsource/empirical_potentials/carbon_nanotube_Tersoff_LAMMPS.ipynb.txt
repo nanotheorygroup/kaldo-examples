@@ -485,7 +485,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "##### Full Simulations files for [PhysRevLett.127.025902](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.025902) can be found [here](10.5281/zenodo.4698466)."
+    "##### Full Simulations files for [PhysRevLett.127.025902](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.025902) can be found [here](https://zenodo.org/records/4698466)."
    ]
   }
  ],
