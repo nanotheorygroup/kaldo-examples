@@ -11,11 +11,7 @@ import numpy as np
 import os
 from orb_models.forcefield import pretrained
 from orb_models.forcefield.calculator import ORBCalculator
-import glob
-import shutil
-import warnings
-warnings.filterwarnings("ignore")
-
+import shutils
 
 # Create atoms with rough guess of lattice constant
 raw_atoms = bulk("GaAs", "zincblende", a=5.75)

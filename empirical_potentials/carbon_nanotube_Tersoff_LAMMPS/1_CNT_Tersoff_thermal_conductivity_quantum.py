@@ -4,6 +4,7 @@
 # External files: forcefields/C.optimize.tersoff C(O)
 
 # Import necessary packages
+import kaldo.controllers.plotter as plotter
 from kaldo.conductivity import Conductivity
 from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
@@ -31,7 +32,8 @@ forceconstants = ForceConstants.from_folder(folder='fc_CNT', supercell=supercell
 #            for python numpy array and 'memory' for quick calculations, no data stored)
 
 # Define the k-point mesh using 'kpts' parameter
-k_points = 11
+k_points = 151
+
 # For one dimension system, only replicate k-point mesh
 # along the direction of transport (z-axis)
 kpts = [1, 1, k_points]
@@ -44,6 +46,11 @@ phonons = Phonons(forceconstants=forceconstants,
                   is_nw=True,
                   folder='ALD_CNT',
                   storage='numpy')
+
+
+# Plot dispersion relation and group velocity in each direction
+plotter.plot_dispersion(phonons,n_k_points=300, is_showing=False)
+plotter.plot_dos(phonons,p_atoms=None, bandwidth=0.01, filename='dos')
 
 # Compute conductivity from direct inversion of
 # scattering matrix for infinite size samples
@@ -64,5 +71,6 @@ finite_size_conductivity_config = {'method': 'inverse',
                                    'storage': 'numpy'}
 finite_size_inverse_conductivity = Conductivity(phonons=phonons, **finite_size_conductivity_config)
 finite_size_inverse_conductivity_matrix = finite_size_inverse_conductivity.conductivity.sum(axis=0)
+
 # Verify finite size conductivity at sufficient long length approaches to the infinite size limit.
 print('Finite size conductivity from inversion (W/m-K): %.3f' % (29.92 * finite_size_inverse_conductivity_matrix[2, 2]))

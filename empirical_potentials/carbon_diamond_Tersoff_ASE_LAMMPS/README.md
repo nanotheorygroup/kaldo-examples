@@ -6,19 +6,24 @@ diamond (2 atoms per cell) system using [ASE and LAMMPS](https://wiki.fysik.dtu.
 External files required: 
 		       1). forcefields/C.tersoff
 
-- To calculate 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS and ASE, after downloading [LAMMPS](https://lammps.sandia.gov/),compile LAMMPS with shlib mode:
-```console
-cd path/to/lammps/src
-make yes-manybody
-make yes-molecule
-make mpi mode=shlib
-```
-- After properly install kALDo, run the following line in command window to link LAMMPS with Python and ASE:
-```console
-cd path/to/lammps/src
-make install-python				
-```
 
+- To calculate 2nd and 3rd order force constants with LAMMPS and ASE, compile LAMMPS with shared library support using cmake:
+
+```console
+cd path/to/lammps/src
+mkdir build
+cd build
+cmake ../cmake -DLAMMPS_EXCEPTIONS=yes \
+               -DBUILD_SHARED_LIBS=yes \
+               -DMLIAP_ENABLE_PYTHON=yes \
+               -DPKG_PYTHON=yes \
+               -DPKG_MANYBODY=yes \
+               -DPKG_KSPACE=yes \
+               -DPKG_PHONON=yes \
+               -DPYTHON_EXECUTABLE:FILEPATH=`which python`
+make -j 16
+make install-python
+```
 			      
 -   `carbon_diamond_Tersoff_thermal_conductivity.py` proceeds as follows:
 
