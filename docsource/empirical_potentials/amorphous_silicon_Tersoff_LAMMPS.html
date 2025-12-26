@@ -908,9 +908,9 @@ subplot(1,3, 2)
 set_fig_properties([gca()])
 plot(dos[0], dos[1], lw=1.5, c=&#39;r&#39;)
 gca().set_xticks(np.arange(0, 25, 5))
-gca().set_yticks(np.arange(0, 480, 80))
+gca().set_yticks(np.arange(0, 480, 40))
 xlim([0, 25])
-ylim([-10, 350])
+ylim([-10, 240])
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 ylabel(&#39;DOS&#39;, fontsize=14)
 
@@ -935,7 +935,7 @@ show()
 </div>
 <h3 id="Visualize-per-mode-and-cumulative-\kappa">Visualize per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#Visualize-per-mode-and-cumulative-\kappa" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote zeros to intake kappa tensor

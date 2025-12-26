@@ -1124,7 +1124,7 @@ show()
 <li><p>Note that <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> are computed only with the relaxation time approximation (RTA).</p></li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[9]:
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
@@ -1157,7 +1157,7 @@ scatter(frequency.flatten(order=&#39;C&#39;),
         life_time, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;)
 gca().set_xticks(np.arange(0, 10, 2))
 yscale(&#39;log&#39;)
-ylabel(r&#39;$\tau \ (ps)$&#39;, fontsize=14)
+ylabel(r&#39;$\tau$  (ps)&#39;, fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 
 subplot(1,3, 2)
@@ -1165,7 +1165,7 @@ set_fig_properties([gca()])
 scatter(frequency.flatten(order=&#39;C&#39;),
         scattering_rate, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
 gca().set_xticks(np.arange(0, 10, 2))
-ylabel(r&#39;$\Gamma \ (THz)$&#39;, fontsize=14)
+ylabel(r&#39;$\Gamma$ (THz)&#39;, fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 
 subplot(1,3, 3)
@@ -1173,7 +1173,7 @@ set_fig_properties([gca()])
 scatter(frequency.flatten(order=&#39;C&#39;),
         mean_free_path_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
 gca().set_xticks(np.arange(0, 10, 2))
-ylabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+ylabel(r&#39;$\lambda$ (nm)&#39;, fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 yscale(&#39;log&#39;)
 ylim([1e-2, 1e4])
@@ -1267,7 +1267,7 @@ set_fig_properties([gca()])
 plot(lambda_sorted, kappa_cum_wrt_lambda, &#39;r&#39;)
 plot(lambda_sorted, kappa_cum_wrt_lambda_iso, c=&#39;m&#39;)
 gca().set_yticks(np.arange(0, 10, 2))
-xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+xlabel(r&#39;$\lambda$ (nm)&#39;, fontsize=14)
 ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
 xscale(&#39;log&#39;)
 xlim([1e-1, 1e3])

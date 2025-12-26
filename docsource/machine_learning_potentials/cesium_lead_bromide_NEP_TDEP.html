@@ -1160,7 +1160,7 @@ scatter(frequency_500K.flatten(order=&#39;C&#39;),
         life_time_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;, label=&#39;500 K&#39;)
 gca().set_xticks(np.arange(0, 5, 1))
 yscale(&#39;log&#39;)
-ylabel(r&#39;$\tau \ (ps)$&#39;, fontsize=14)
+ylabel(r&#39;$\tau$ (ps)&#39;, fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 legend(fontsize=10)
 
@@ -1171,7 +1171,7 @@ scatter(frequency_360K.flatten(order=&#39;C&#39;),
 scatter(frequency_500K.flatten(order=&#39;C&#39;),
         scattering_rate_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
 gca().set_xticks(np.arange(0, 5, 1))
-ylabel(r&#39;$\Gamma \ (THz)$&#39;, fontsize=14)
+ylabel(r&#39;$\Gamma$ (THz)&#39;, fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 
 subplot(1,3, 3)
@@ -1181,7 +1181,7 @@ scatter(frequency_360K.flatten(order=&#39;C&#39;),
 scatter(frequency_500K.flatten(order=&#39;C&#39;),
         mean_free_path_norm_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
 gca().set_xticks(np.arange(0, 5, 1))
-ylabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+ylabel(r&#39;$\lambda$ (nm)&#39;, fontsize=14)
 xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
 yscale(&#39;log&#39;)
 ylim([1e-4, 1e3])
@@ -1340,7 +1340,7 @@ Full QHGK kappa matrix at 500 K:
 kappa_tensor_full_QHGK_360K = (kappa_tensor_QHGK_360K - kappa_tensor_RTA_360K) + kappa_tensor_Inv_360K
 kappa_per_mode_full_QHGK_360K = kappa_tensor_full_QHGK_360K.sum(axis=-1).sum(axis=1)
 
-# Computation of intra band contrbutions for cumlative kappa w.r.t frequency at 360K
+# Computation of intra band contributions for cumulative kappa w.r.t frequency at 360K
 freq_sorted_full_QHGK_360K, kappa_cum_wrt_freq_full_QHGK_360K = cumulative_cond_cal(
     frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_full_QHGK_360K)
 
@@ -1351,7 +1351,7 @@ freq_sorted_RTA_360K, kappa_cum_wrt_freq_RTA_360K = cumulative_cond_cal(
     frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_RTA_360K)
 
 
-# Computation of intra band contrbutions for cumlative kappa w.r.t mean free path (lambda) at 360K
+# Computation of intra band contributions for cumulative kappa w.r.t mean free path (lambda) at 360K
 lambda_sorted_full_QHGK_360K, kappa_cum_wrt_lambda_full_QHGK_360K = cumulative_cond_cal(
     mean_free_path_norm_360K, kappa_tensor_full_QHGK_360K)
 
@@ -1362,7 +1362,7 @@ lambda_sorted_RTA_360K, kappa_cum_wrt_lambda_RTA_360K = cumulative_cond_cal(
      mean_free_path_norm_360K, kappa_tensor_RTA_360K)
 
 
-# Computation of intra band contrbutions for cumlative kappa w.r.t frequency at 500K
+# Computation of intra band contributions for cumulative kappa w.r.t frequency at 500K
 kappa_tensor_full_QHGK_500K = (kappa_tensor_QHGK_500K - kappa_tensor_RTA_500K) + kappa_tensor_Inv_500K
 kappa_per_mode_full_QHGK_500K = kappa_tensor_full_QHGK_500K.sum(axis=-1).sum(axis=1)
 
@@ -1375,7 +1375,7 @@ freq_sorted_RTA_500K, kappa_cum_wrt_freq_RTA_500K = cumulative_cond_cal(
 freq_sorted_QHGK_500K, kappa_cum_wrt_freq_QHGK_500K = cumulative_cond_cal(
     frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_QHGK_500K)
 
-# Computation of intra band contrbutions for cumlative kappa w.r.t mean free path (lambda) at 500K
+# Computation of intra band contributions for cumulative kappa w.r.t mean free path (lambda) at 500K
 lambda_sorted_full_QHGK_500K, kappa_cum_wrt_lambda_full_QHGK_500K = cumulative_cond_cal(
     mean_free_path_norm_500K, kappa_tensor_full_QHGK_500K)
 
@@ -1424,7 +1424,7 @@ plot(lambda_sorted_RTA_360K, kappa_cum_wrt_lambda_RTA_360K, &#39;b&#39;, ls=&#39
 plot(lambda_sorted_RTA_500K, kappa_cum_wrt_lambda_RTA_500K, &#39;r&#39;, ls=&#39;--&#39;)
 plot(lambda_sorted_QHGK_360K, (kappa_cum_wrt_lambda_QHGK_360K - kappa_cum_wrt_lambda_RTA_360K) , &#39;b&#39;, ls=&#39;:&#39;)
 plot(lambda_sorted_QHGK_500K, (kappa_cum_wrt_lambda_QHGK_500K - kappa_cum_wrt_lambda_RTA_500K) , &#39;r&#39;, ls=&#39;:&#39;)
-xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
+xlabel(r&#39;$\lambda$ (nm)&#39;, fontsize=14)
 ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
 gca().set_yticks(np.arange(0, 0.5, 0.1))
 xscale(&#39;log&#39;)
