@@ -17,7 +17,7 @@ The examples cover workflows with:
 
 - **Machine Learning Potentials** (orb, NEP, MatterSim, ACE)
 - **Density Functional Theory** (Quantum ESPRESSO, D3Q)
-- **Empirical Potentials** (LAMMPS, Tersoff)
+- **Empirical Potentials** (Any Empirical Potentials Supported in LAMMPS)
 - **Finite Temperature Effective Potentials** (TDEP)
 
 ## Building the Documentation
