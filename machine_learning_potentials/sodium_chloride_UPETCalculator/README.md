@@ -1,14 +1,14 @@
-### Computing Thermal Conductivity of Sodium Chloride with PET-MAD:
+### Computing Thermal Conductivity of Sodium Chloride with UPET:
 
-> Input data descriptions for the `PET-MAD` potential file can be found [here](https://github.com/lab-cosmo/pet-mad).  
-> Running `python thermal_conductivity.py` requires [PET-MAD](https://github.com/lab-cosmo/pet-mad) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
+> Input data descriptions for the `PET-MAD` potential file can be found [here](https://github.com/lab-cosmo/upet).  
+> Running `python thermal_conductivity.py` requires [UPET](https://github.com/lab-cosmo/upet) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
 
 - Execute `python thermal_conductivity.py` to calculate the thermomechanical properties of Sodium Chloride with PET-MAD.
 
 - The calculation proceeds as follows:
   - The NaCl structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-22862).
   
-  - The 2nd and 3rd order force constants are calculated with `PET-MAD` and PETMADCalculator.
+  - The 2nd and 3rd order force constants are calculated with `UPET` and PETMADCalculator.
   
   - The phonon object is created using a 12x12x12 k-point mesh and quantum simulation is conducted at 300 K.
   
