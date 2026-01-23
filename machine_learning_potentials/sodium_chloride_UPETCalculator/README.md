@@ -19,4 +19,4 @@
   - Alternatively, use the jupyter notebook `kALDo_with_pet_mad_gallery.ipynb` to visualize all properties calculated during simulations.
  
  Reference Thermal Conductivity (12x12x12 2nd order supercell, 4x4x4 3rd order supercell, 12x12x12 k-point mesh):
-  - ***7.6 W/m-K (Inversion), 7.1 W/m-K (Isotopic)***
+  - ***8.0 W/m-K (Inversion), 7.5 W/m-K (Isotopic)***
