@@ -34,9 +34,8 @@ This example illustrates how to perform thermal transport simulation for a silic
 This example illustrates how to perform thermal transport simulation for a silicon carbide system (2 atom per cell) with [MatterSim](https://github.com/microsoft/mattersim) packages as force calculator.
 - `wurtzite_aluminum_nitride_ACE_PyACE:`
 This example illustrates how to perform thermal transport simulation for an aluminum nitride system (4 atom per cell) with [pyACE](https://github.com/ICAMS/python-ace) packages as force calculator.
-- `sodium_chloride_PETMADCalculator:`
-This example illustrates how to perform thermal transport simulation for a sodium chloride system (2 atom per cell) with [PET-MAD](https://github.com/lab-cosmo/pet-mad) packages as force calculator.
-
+- `sodium_chloride_UPETCalculator:`
+This example illustrates how to perform thermal transport simulation for a sodium chloride system (2 atom per cell) with [UPET](https://github.com/lab-cosmo/upet) packages as force calculator.
 
 ---
 
