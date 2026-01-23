@@ -15,7 +15,7 @@ Before running these examples, install the following packages:
 - TDEP - Installation guide available [here](https://tdep-developers.github.io/tdep/)
 - pyACE - Installation guide available [here](https://github.com/ICAMS/python-ace)
 - calorine - Instllation guide available [here](https://calorine.materialsmodeling.org/)
-- pet-mad - Installation guide available [here](https://github.com/lab-cosmo/pet-mad)
+- upet - Installation guide available [here](https://github.com/lab-cosmo/upet)
 ----
 
 ## List and content of examples folder
