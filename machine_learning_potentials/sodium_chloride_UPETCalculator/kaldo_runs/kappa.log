@@ -1,0 +1,397 @@
+2026-01-23 06:00:00.131569: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/zekun/Programs/miniconda3/envs/kaldo_UPET/lib/python3.11/site-packages/metatrain/utils/io.py:211: UserWarning: trying to upgrade an old model checkpoint with unknown version, this might fail and require manual modifications
+  warnings.warn(
+/home/zekun/simulations/llm_driven_alloy/kaldo-examples/machine_learning_potentials/sodium_chloride_UPETCalculator/kaldo_runs/thermal_conductivity.py:24: FutureWarning: Import StrainFilter from ase.filters
+  sf = StrainFilter(raw_atoms)
+      Step     Time          Energy          fmax
+BFGS:    0 06:00:07       -6.869046        0.144929
+BFGS:    1 06:00:08       -6.869305        0.105521
+BFGS:    2 06:00:09       -6.869601        0.002291
+BFGS:    3 06:00:09       -6.869602        0.000035
+
+
+Optimized Lattices: 5.61 Å
+2026-01-23 06:00:09,657 - kaldo - INFO - Second order not found. Calculating.
+INFO:kaldo:Second order not found. Calculating.
+2026-01-23 06:00:09,657 - kaldo - INFO - Calculating second order potential derivatives, finite difference displacement: 3.000e-02 angstrom
+INFO:kaldo:Calculating second order potential derivatives, finite difference displacement: 3.000e-02 angstrom
+2026-01-23 06:00:12,851 - kaldo - INFO - Symmetry of Dynamical Matrix 0.0002974799523750569
+INFO:kaldo:Symmetry of Dynamical Matrix 0.0002974799523750569
+2026-01-23 06:00:12,851 - kaldo - INFO - fd_upet/second stored
+INFO:kaldo:fd_upet/second stored
+2026-01-23 06:00:13,078 - kaldo - INFO - Third order not found. Calculating.
+INFO:kaldo:Third order not found. Calculating.
+2026-01-23 06:00:13,078 - kaldo - INFO - Calculating third order potential derivatives, finite difference displacement: 3.000e-02 angstrom
+INFO:kaldo:Calculating third order potential derivatives, finite difference displacement: 3.000e-02 angstrom
+2026-01-23 06:02:45,322 - kaldo - INFO - total forces to calculate third : 2304
+INFO:kaldo:total forces to calculate third : 2304
+2026-01-23 06:02:45,322 - kaldo - INFO - forces calculated : 2304
+INFO:kaldo:forces calculated : 2304
+2026-01-23 06:02:45,322 - kaldo - INFO - forces skipped (outside distance threshold) : 0
+INFO:kaldo:forces skipped (outside distance threshold) : 0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1769176966.231791  368662 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 5359 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:4b:00.0, compute capability: 7.5
+I0000 00:00:1769176966.344083  368662 cuda_solvers.cc:175] Creating GpuSolver handles for stream 0x5f7010116d30
+/home/zekun/Programs/miniconda3/envs/kaldo_UPET/lib/python3.11/site-packages/kaldo/observables/harmonic_with_q.py:256: RuntimeWarning: invalid value encountered in sqrt
+  inverse_sqrt_freq = tf.cast(tf.convert_to_tensor(1 / np.sqrt(frequency)), tf.complex128)
+
+
+C11: 46.8 GPa
+C12: 10.0 GPa
+C44: 11.1 GPa
+Bulk Modulus:  22.3 GPa
+
+
+2026-01-23 06:02:50,366 - kaldo - INFO - ALD_NaCl_upet//12_12_12/_eigensystem not found in numpy format, calculating _eigensystem
+INFO:kaldo:ALD_NaCl_upet//12_12_12/_eigensystem not found in numpy format, calculating _eigensystem
+2026-01-23 06:02:53,185 - kaldo - INFO - ALD_NaCl_upet//12_12_12/_eigensystem stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/_eigensystem stored
+2026-01-23 06:02:53,185 - kaldo - INFO - ALD_NaCl_upet//12_12_12/physical_mode not found in numpy format, calculating physical_mode
+INFO:kaldo:ALD_NaCl_upet//12_12_12/physical_mode not found in numpy format, calculating physical_mode
+2026-01-23 06:02:53,202 - kaldo - INFO - ALD_NaCl_upet//12_12_12/frequency not found in numpy format, calculating frequency
+INFO:kaldo:ALD_NaCl_upet//12_12_12/frequency not found in numpy format, calculating frequency
+2026-01-23 06:02:55,295 - kaldo - INFO - ALD_NaCl_upet//12_12_12/frequency stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/frequency stored
+2026-01-23 06:02:55,295 - kaldo - INFO - ALD_NaCl_upet//12_12_12/physical_mode stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/physical_mode stored
+2026-01-23 06:02:55,836 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_eigensystem
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_eigensystem
+2026-01-23 06:02:55,836 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:02:55,887 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_eigensystem
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_eigensystem
+2026-01-23 06:02:55,887 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:02:56,112 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_eigensystem
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_eigensystem
+2026-01-23 06:02:56,112 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:02:56,321 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_eigensystem
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_eigensystem
+2026-01-23 06:02:56,322 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+
+
+2026-01-23 06:02:56,537 - kaldo - INFO - ALD_NaCl_upet//12_12_12/inverse/300/quantum/conductivity not found in formatted format, calculating conductivity
+INFO:kaldo:ALD_NaCl_upet//12_12_12/inverse/300/quantum/conductivity not found in formatted format, calculating conductivity
+2026-01-23 06:02:56,537 - kaldo - INFO - ALD_NaCl_upet//12_12_12/inverse/300/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+INFO:kaldo:ALD_NaCl_upet//12_12_12/inverse/300/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+2026-01-23 06:02:56,538 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:02:56,538 - kaldo - INFO - ALD_NaCl_upet//12_12_12/velocity not found in numpy format, calculating velocity
+INFO:kaldo:ALD_NaCl_upet//12_12_12/velocity not found in numpy format, calculating velocity
+/home/zekun/Programs/miniconda3/envs/kaldo_UPET/lib/python3.11/site-packages/kaldo/observables/harmonic_with_q.py:256: RuntimeWarning: invalid value encountered in sqrt
+  inverse_sqrt_freq = tf.cast(tf.convert_to_tensor(1 / np.sqrt(frequency)), tf.complex128)
+2026-01-23 06:03:14,907 - kaldo - INFO - ALD_NaCl_upet//12_12_12/velocity stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/velocity stored
+2026-01-23 06:03:14,908 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:03:14,908 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:03:14,908 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor not found in numpy format, calculating _ps_gamma_and_gamma_tensor
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor not found in numpy format, calculating _ps_gamma_and_gamma_tensor
+2026-01-23 06:03:14,908 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/population not found in numpy format, calculating population
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/population not found in numpy format, calculating population
+2026-01-23 06:03:17,068 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/population stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/population stored
+2026-01-23 06:03:17,068 - kaldo - INFO - ALD_NaCl_upet//12_12_12/_sparse_phase_and_potential not found in numpy format, calculating _sparse_phase_and_potential
+INFO:kaldo:ALD_NaCl_upet//12_12_12/_sparse_phase_and_potential not found in numpy format, calculating _sparse_phase_and_potential
+2026-01-23 06:03:17,107 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_eigensystem
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_eigensystem
+2026-01-23 06:03:17,108 - kaldo - INFO - Projection started
+INFO:kaldo:Projection started
+2026-01-23 06:03:17,108 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:03:17,108 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:03:17,108 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/velocity
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/velocity
+2026-01-23 06:03:17,108 - kaldo - INFO - calculating third 0: 0.00%
+INFO:kaldo:calculating third 0: 0.00%
+2026-01-23 06:03:28,022 - kaldo - INFO - calculating third 200: 1.93%
+INFO:kaldo:calculating third 200: 1.93%
+2026-01-23 06:03:38,059 - kaldo - INFO - calculating third 400: 3.86%
+INFO:kaldo:calculating third 400: 3.86%
+2026-01-23 06:03:48,148 - kaldo - INFO - calculating third 600: 5.79%
+INFO:kaldo:calculating third 600: 5.79%
+2026-01-23 06:03:58,346 - kaldo - INFO - calculating third 800: 7.72%
+INFO:kaldo:calculating third 800: 7.72%
+2026-01-23 06:04:08,282 - kaldo - INFO - calculating third 1000: 9.65%
+INFO:kaldo:calculating third 1000: 9.65%
+2026-01-23 06:04:18,257 - kaldo - INFO - calculating third 1200: 11.57%
+INFO:kaldo:calculating third 1200: 11.57%
+2026-01-23 06:04:28,446 - kaldo - INFO - calculating third 1400: 13.50%
+INFO:kaldo:calculating third 1400: 13.50%
+2026-01-23 06:04:38,599 - kaldo - INFO - calculating third 1600: 15.43%
+INFO:kaldo:calculating third 1600: 15.43%
+2026-01-23 06:04:48,633 - kaldo - INFO - calculating third 1800: 17.36%
+INFO:kaldo:calculating third 1800: 17.36%
+2026-01-23 06:04:58,690 - kaldo - INFO - calculating third 2000: 19.29%
+INFO:kaldo:calculating third 2000: 19.29%
+2026-01-23 06:05:08,660 - kaldo - INFO - calculating third 2200: 21.22%
+INFO:kaldo:calculating third 2200: 21.22%
+2026-01-23 06:05:18,649 - kaldo - INFO - calculating third 2400: 23.15%
+INFO:kaldo:calculating third 2400: 23.15%
+2026-01-23 06:05:28,695 - kaldo - INFO - calculating third 2600: 25.08%
+INFO:kaldo:calculating third 2600: 25.08%
+2026-01-23 06:05:38,966 - kaldo - INFO - calculating third 2800: 27.01%
+INFO:kaldo:calculating third 2800: 27.01%
+2026-01-23 06:05:49,081 - kaldo - INFO - calculating third 3000: 28.94%
+INFO:kaldo:calculating third 3000: 28.94%
+2026-01-23 06:05:59,116 - kaldo - INFO - calculating third 3200: 30.86%
+INFO:kaldo:calculating third 3200: 30.86%
+2026-01-23 06:06:09,021 - kaldo - INFO - calculating third 3400: 32.79%
+INFO:kaldo:calculating third 3400: 32.79%
+2026-01-23 06:06:19,106 - kaldo - INFO - calculating third 3600: 34.72%
+INFO:kaldo:calculating third 3600: 34.72%
+2026-01-23 06:06:29,193 - kaldo - INFO - calculating third 3800: 36.65%
+INFO:kaldo:calculating third 3800: 36.65%
+2026-01-23 06:06:39,049 - kaldo - INFO - calculating third 4000: 38.58%
+INFO:kaldo:calculating third 4000: 38.58%
+2026-01-23 06:06:48,942 - kaldo - INFO - calculating third 4200: 40.51%
+INFO:kaldo:calculating third 4200: 40.51%
+2026-01-23 06:06:59,016 - kaldo - INFO - calculating third 4400: 42.44%
+INFO:kaldo:calculating third 4400: 42.44%
+2026-01-23 06:07:09,034 - kaldo - INFO - calculating third 4600: 44.37%
+INFO:kaldo:calculating third 4600: 44.37%
+2026-01-23 06:07:19,168 - kaldo - INFO - calculating third 4800: 46.30%
+INFO:kaldo:calculating third 4800: 46.30%
+2026-01-23 06:07:29,452 - kaldo - INFO - calculating third 5000: 48.23%
+INFO:kaldo:calculating third 5000: 48.23%
+2026-01-23 06:07:39,477 - kaldo - INFO - calculating third 5200: 50.15%
+INFO:kaldo:calculating third 5200: 50.15%
+2026-01-23 06:07:49,585 - kaldo - INFO - calculating third 5400: 52.08%
+INFO:kaldo:calculating third 5400: 52.08%
+2026-01-23 06:07:59,540 - kaldo - INFO - calculating third 5600: 54.01%
+INFO:kaldo:calculating third 5600: 54.01%
+2026-01-23 06:08:09,243 - kaldo - INFO - calculating third 5800: 55.94%
+INFO:kaldo:calculating third 5800: 55.94%
+2026-01-23 06:08:19,198 - kaldo - INFO - calculating third 6000: 57.87%
+INFO:kaldo:calculating third 6000: 57.87%
+2026-01-23 06:08:29,322 - kaldo - INFO - calculating third 6200: 59.80%
+INFO:kaldo:calculating third 6200: 59.80%
+2026-01-23 06:08:39,157 - kaldo - INFO - calculating third 6400: 61.73%
+INFO:kaldo:calculating third 6400: 61.73%
+2026-01-23 06:08:49,152 - kaldo - INFO - calculating third 6600: 63.66%
+INFO:kaldo:calculating third 6600: 63.66%
+2026-01-23 06:08:59,031 - kaldo - INFO - calculating third 6800: 65.59%
+INFO:kaldo:calculating third 6800: 65.59%
+2026-01-23 06:09:08,887 - kaldo - INFO - calculating third 7000: 67.52%
+INFO:kaldo:calculating third 7000: 67.52%
+2026-01-23 06:09:18,704 - kaldo - INFO - calculating third 7200: 69.44%
+INFO:kaldo:calculating third 7200: 69.44%
+2026-01-23 06:09:28,677 - kaldo - INFO - calculating third 7400: 71.37%
+INFO:kaldo:calculating third 7400: 71.37%
+2026-01-23 06:09:39,082 - kaldo - INFO - calculating third 7600: 73.30%
+INFO:kaldo:calculating third 7600: 73.30%
+2026-01-23 06:09:49,000 - kaldo - INFO - calculating third 7800: 75.23%
+INFO:kaldo:calculating third 7800: 75.23%
+2026-01-23 06:09:59,275 - kaldo - INFO - calculating third 8000: 77.16%
+INFO:kaldo:calculating third 8000: 77.16%
+2026-01-23 06:10:09,170 - kaldo - INFO - calculating third 8200: 79.09%
+INFO:kaldo:calculating third 8200: 79.09%
+2026-01-23 06:10:19,321 - kaldo - INFO - calculating third 8400: 81.02%
+INFO:kaldo:calculating third 8400: 81.02%
+2026-01-23 06:10:29,445 - kaldo - INFO - calculating third 8600: 82.95%
+INFO:kaldo:calculating third 8600: 82.95%
+2026-01-23 06:10:39,334 - kaldo - INFO - calculating third 8800: 84.88%
+INFO:kaldo:calculating third 8800: 84.88%
+2026-01-23 06:10:49,130 - kaldo - INFO - calculating third 9000: 86.81%
+INFO:kaldo:calculating third 9000: 86.81%
+2026-01-23 06:10:59,100 - kaldo - INFO - calculating third 9200: 88.73%
+INFO:kaldo:calculating third 9200: 88.73%
+2026-01-23 06:11:09,461 - kaldo - INFO - calculating third 9400: 90.66%
+INFO:kaldo:calculating third 9400: 90.66%
+2026-01-23 06:11:19,697 - kaldo - INFO - calculating third 9600: 92.59%
+INFO:kaldo:calculating third 9600: 92.59%
+2026-01-23 06:11:29,814 - kaldo - INFO - calculating third 9800: 94.52%
+INFO:kaldo:calculating third 9800: 94.52%
+2026-01-23 06:11:39,720 - kaldo - INFO - calculating third 10000: 96.45%
+INFO:kaldo:calculating third 10000: 96.45%
+2026-01-23 06:11:49,865 - kaldo - INFO - calculating third 10200: 98.38%
+INFO:kaldo:calculating third 10200: 98.38%
+2026-01-23 06:11:58,424 - kaldo - INFO - '_project_crystal'  521.36 s
+INFO:kaldo:'_project_crystal'  521.36 s
+2026-01-23 06:12:03,195 - kaldo - INFO - ALD_NaCl_upet//12_12_12/_sparse_phase_and_potential stored as 10365 per-mu arrays
+INFO:kaldo:ALD_NaCl_upet//12_12_12/_sparse_phase_and_potential stored as 10365 per-mu arrays
+2026-01-23 06:12:18,880 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_sparse_phase_and_potential
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_sparse_phase_and_potential
+2026-01-23 06:12:19,027 - kaldo - INFO - scattering_tensor: [10368 10370] * <class 'float'>
+INFO:kaldo:scattering_tensor: [10368 10370] * <class 'float'>
+2026-01-23 06:12:19,036 - kaldo - INFO - Memory needed: 860 MB, available: 259544 / 270102 MB
+INFO:kaldo:Memory needed: 860 MB, available: 259544 / 270102 MB
+2026-01-23 06:15:06,200 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor stored
+2026-01-23 06:15:06,647 - kaldo - INFO - _scattering_matrix: [10365 10365] * <class 'float'>
+INFO:kaldo:_scattering_matrix: [10365 10365] * <class 'float'>
+2026-01-23 06:15:06,647 - kaldo - INFO - Memory needed: 859 MB, available: 258211 / 270102 MB
+INFO:kaldo:Memory needed: 859 MB, available: 258211 / 270102 MB
+2026-01-23 06:15:06,729 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/bandwidth not found in numpy format, calculating bandwidth
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/bandwidth not found in numpy format, calculating bandwidth
+2026-01-23 06:15:06,730 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/anharmonic_bandwidth not found in numpy format, calculating anharmonic_bandwidth
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/anharmonic_bandwidth not found in numpy format, calculating anharmonic_bandwidth
+2026-01-23 06:15:06,730 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/_ps_and_gamma not found in numpy format, calculating _ps_and_gamma
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/_ps_and_gamma not found in numpy format, calculating _ps_and_gamma
+2026-01-23 06:15:06,965 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+2026-01-23 06:15:06,967 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/_ps_and_gamma stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/_ps_and_gamma stored
+2026-01-23 06:15:06,967 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/anharmonic_bandwidth stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/anharmonic_bandwidth stored
+2026-01-23 06:15:06,968 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/bandwidth stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/bandwidth stored
+2026-01-23 06:15:16,014 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:16,014 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:15:16,132 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+2026-01-23 06:15:16,508 - kaldo - INFO - _scattering_matrix: [10365 10365] * <class 'float'>
+INFO:kaldo:_scattering_matrix: [10365 10365] * <class 'float'>
+2026-01-23 06:15:16,508 - kaldo - INFO - Memory needed: 859 MB, available: 257332 / 270102 MB
+INFO:kaldo:Memory needed: 859 MB, available: 257332 / 270102 MB
+2026-01-23 06:15:16,591 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/bandwidth
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/bandwidth
+2026-01-23 06:15:25,686 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:25,686 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:15:25,806 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+2026-01-23 06:15:26,184 - kaldo - INFO - _scattering_matrix: [10365 10365] * <class 'float'>
+INFO:kaldo:_scattering_matrix: [10365 10365] * <class 'float'>
+2026-01-23 06:15:26,184 - kaldo - INFO - Memory needed: 859 MB, available: 257599 / 270102 MB
+INFO:kaldo:Memory needed: 859 MB, available: 257599 / 270102 MB
+2026-01-23 06:15:26,266 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/bandwidth
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/bandwidth
+2026-01-23 06:15:35,229 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/heat_capacity not found in numpy format, calculating heat_capacity
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/heat_capacity not found in numpy format, calculating heat_capacity
+2026-01-23 06:15:37,823 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/heat_capacity stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/heat_capacity stored
+2026-01-23 06:15:37,823 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/velocity
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/velocity
+2026-01-23 06:15:37,823 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:37,825 - kaldo - INFO - Conductivity calculated
+INFO:kaldo:Conductivity calculated
+Bulk thermal conductivity (W/m/K):  8.0227947650197
+
+
+Thermal condutivity tensor: 
+
+[[8.02067323 0.0210236  0.01954351]
+ [0.01892167 8.02817406 0.02060871]
+ [0.01722232 0.02096537 8.01953701]]
+2026-01-23 06:15:37,962 - kaldo - INFO - ALD_NaCl_upet//12_12_12/inverse/300/quantum/isotopes/conductivity not found in formatted format, calculating conductivity
+INFO:kaldo:ALD_NaCl_upet//12_12_12/inverse/300/quantum/isotopes/conductivity not found in formatted format, calculating conductivity
+2026-01-23 06:15:37,962 - kaldo - INFO - ALD_NaCl_upet//12_12_12/inverse/300/quantum/isotopes/mean_free_path not found in formatted format, calculating mean_free_path
+INFO:kaldo:ALD_NaCl_upet//12_12_12/inverse/300/quantum/isotopes/mean_free_path not found in formatted format, calculating mean_free_path
+2026-01-23 06:15:37,962 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:37,963 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/velocity
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/velocity
+2026-01-23 06:15:37,963 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:37,964 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:15:38,086 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+2026-01-23 06:15:38,458 - kaldo - INFO - _scattering_matrix: [10365 10365] * <class 'float'>
+INFO:kaldo:_scattering_matrix: [10365 10365] * <class 'float'>
+2026-01-23 06:15:38,458 - kaldo - INFO - Memory needed: 859 MB, available: 257417 / 270102 MB
+INFO:kaldo:Memory needed: 859 MB, available: 257417 / 270102 MB
+2026-01-23 06:15:38,541 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth not found in numpy format, calculating bandwidth
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth not found in numpy format, calculating bandwidth
+2026-01-23 06:15:38,541 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/anharmonic_bandwidth
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/anharmonic_bandwidth
+2026-01-23 06:15:38,541 - kaldo - INFO - ALD_NaCl_upet//12_12_12/isotopic_bandwidth not found in numpy format, calculating isotopic_bandwidth
+INFO:kaldo:ALD_NaCl_upet//12_12_12/isotopic_bandwidth not found in numpy format, calculating isotopic_bandwidth
+2026-01-23 06:15:38,541 - kaldo - WARNING - input isotopic gfactors are missing, using isotopic concentrations from ase database (NIST)
+WARNING:kaldo:input isotopic gfactors are missing, using isotopic concentrations from ase database (NIST)
+2026-01-23 06:15:38,932 - kaldo - INFO - downloading isotopic data from NIST database, using ase.data.isotopes.
+INFO:kaldo:downloading isotopic data from NIST database, using ase.data.isotopes.
+2026-01-23 06:15:38,932 - kaldo - INFO - g factors=[0.        0.0005827]
+INFO:kaldo:g factors=[0.        0.0005827]
+2026-01-23 06:15:38,933 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:15:38,933 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:38,933 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/_eigensystem
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/_eigensystem
+2026-01-23 06:15:38,934 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/velocity
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/velocity
+2026-01-23 06:15:38,935 - kaldo - INFO - per25,per50,per75,mean sigma=0.020841832683171826 0.058838017698730434 0.10063240425191933 0.11544234254518315
+INFO:kaldo:per25,per50,per75,mean sigma=0.020841832683171826 0.058838017698730434 0.10063240425191933 0.11544234254518315
+2026-01-23 06:15:38,936 - kaldo - INFO - Using Gaussian diffusivity_shape
+INFO:kaldo:Using Gaussian diffusivity_shape
+2026-01-23 06:15:38,936 - kaldo - INFO - Calculating isotopic bandwidth  0, 0.0%
+INFO:kaldo:Calculating isotopic bandwidth  0, 0.0%
+2026-01-23 06:15:39,258 - kaldo - INFO - Calculating isotopic bandwidth  1000, 10.0%
+INFO:kaldo:Calculating isotopic bandwidth  1000, 10.0%
+2026-01-23 06:15:39,581 - kaldo - INFO - Calculating isotopic bandwidth  2000, 19.0%
+INFO:kaldo:Calculating isotopic bandwidth  2000, 19.0%
+2026-01-23 06:15:39,923 - kaldo - INFO - Calculating isotopic bandwidth  3000, 28.999999999999996%
+INFO:kaldo:Calculating isotopic bandwidth  3000, 28.999999999999996%
+2026-01-23 06:15:40,272 - kaldo - INFO - Calculating isotopic bandwidth  4000, 39.0%
+INFO:kaldo:Calculating isotopic bandwidth  4000, 39.0%
+2026-01-23 06:15:40,631 - kaldo - INFO - Calculating isotopic bandwidth  5000, 48.0%
+INFO:kaldo:Calculating isotopic bandwidth  5000, 48.0%
+2026-01-23 06:15:40,976 - kaldo - INFO - Calculating isotopic bandwidth  6000, 57.99999999999999%
+INFO:kaldo:Calculating isotopic bandwidth  6000, 57.99999999999999%
+2026-01-23 06:15:41,320 - kaldo - INFO - Calculating isotopic bandwidth  7000, 68.0%
+INFO:kaldo:Calculating isotopic bandwidth  7000, 68.0%
+2026-01-23 06:15:41,656 - kaldo - INFO - Calculating isotopic bandwidth  8000, 77.0%
+INFO:kaldo:Calculating isotopic bandwidth  8000, 77.0%
+2026-01-23 06:15:41,986 - kaldo - INFO - Calculating isotopic bandwidth  9000, 87.0%
+INFO:kaldo:Calculating isotopic bandwidth  9000, 87.0%
+2026-01-23 06:15:42,307 - kaldo - INFO - Calculating isotopic bandwidth  10000, 96.0%
+INFO:kaldo:Calculating isotopic bandwidth  10000, 96.0%
+2026-01-23 06:15:42,424 - kaldo - INFO - 'compute_isotopic_bw'  3.49 s
+INFO:kaldo:'compute_isotopic_bw'  3.49 s
+2026-01-23 06:15:42,424 - kaldo - INFO - ALD_NaCl_upet//12_12_12/isotopic_bandwidth stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/isotopic_bandwidth stored
+2026-01-23 06:15:42,424 - kaldo - INFO - ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth stored
+INFO:kaldo:ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth stored
+2026-01-23 06:15:51,511 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:15:51,512 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:15:51,636 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+2026-01-23 06:15:52,010 - kaldo - INFO - _scattering_matrix: [10365 10365] * <class 'float'>
+INFO:kaldo:_scattering_matrix: [10365 10365] * <class 'float'>
+2026-01-23 06:15:52,010 - kaldo - INFO - Memory needed: 859 MB, available: 257301 / 270102 MB
+INFO:kaldo:Memory needed: 859 MB, available: 257301 / 270102 MB
+2026-01-23 06:15:52,093 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth
+2026-01-23 06:16:01,227 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:16:01,228 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/frequency
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/frequency
+2026-01-23 06:16:01,356 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/_ps_gamma_and_gamma_tensor
+2026-01-23 06:16:01,739 - kaldo - INFO - _scattering_matrix: [10365 10365] * <class 'float'>
+INFO:kaldo:_scattering_matrix: [10365 10365] * <class 'float'>
+2026-01-23 06:16:01,739 - kaldo - INFO - Memory needed: 859 MB, available: 257337 / 270102 MB
+INFO:kaldo:Memory needed: 859 MB, available: 257337 / 270102 MB
+2026-01-23 06:16:01,823 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/isotopes/bandwidth
+2026-01-23 06:16:11,029 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/300/quantum/heat_capacity
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/300/quantum/heat_capacity
+2026-01-23 06:16:11,030 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/velocity
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/velocity
+2026-01-23 06:16:11,030 - kaldo - INFO - Loading ALD_NaCl_upet//12_12_12/physical_mode
+INFO:kaldo:Loading ALD_NaCl_upet//12_12_12/physical_mode
+2026-01-23 06:16:11,031 - kaldo - INFO - Conductivity calculated
+INFO:kaldo:Conductivity calculated
+Bulk thermal conductivity with iso(W/m/K):  7.496685410831283
+
+
+Thermal condutivity tensor with iso: 
+
+[[7.49592034 0.01835542 0.01685644]
+ [0.01647943 7.50140736 0.01452538]
+ [0.01463967 0.01479699 7.49272853]]
+
+
