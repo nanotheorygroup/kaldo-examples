@@ -31,7 +31,7 @@ Applications
    Silicon Mattersim V1 1M Mattersimcalculator <docsource/machine_learning_potentials/silicon_MatterSim-v1-1M_mattersimcalculator>
    Silicon Nep89 Calorine <docsource/machine_learning_potentials/silicon_NEP89_calorine>
    Silicon Carbide Mattersim V1 1M Mattersimcalculator <docsource/machine_learning_potentials/silicon_carbide_MatterSim-v1-1M_mattersimcalculator>
-   Sodium Chloride Petmadcalculator <docsource/machine_learning_potentials/sodium_chloride_PETMADCalculator>
+   Sodium Chloride Upetcalculator <docsource/machine_learning_potentials/sodium_chloride_UPETCalculator>
    Wurtzite Aluminum Nitride Ace Pyace <docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ACE_PyACE>
 
 
