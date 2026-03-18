@@ -1,0 +1,1470 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="carbon_diamond_Tersoff_ASE_LAMMPS.html">
+      
+      
+        <link rel="next" href="silicon_clathrate_Tersoff_LAMMPS.html">
+      
+      
+      <link rel="icon" href="../../_static/logo.ico">
+    
+    
+      
+        <title>Carbon Nanotube Tersoff Lammps - Examples</title>
+      
+    
+    
+      
+        
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.cf2c65c97ee1b6f01.min.css?v=0a68cab4" />
+        <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=a35ea3b2" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-HQHR3LWX3F"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-HQHR3LWX3F",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-HQHR3LWX3F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Examples" class="md-header__button md-logo" aria-label="Examples" data-md-component="logo">
+      <img src="../../_static/logo.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Carbon Nanotube Tersoff Lammps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nanotheorygroup/kaldo-examples" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kALDo Examples
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Examples" class="md-nav__button md-logo" aria-label="Examples" data-md-component="logo">
+      <img src="../../_static/logo.png" alt="logo">
+    </a>
+    Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nanotheorygroup/kaldo-examples" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kALDo Examples
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../machine_learning_potentials/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/index.rst (reference label)"><span>Machine Learning Potentials</span></span>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            <span title="/docsource/machine_learning_potentials/index.rst (reference label)"><span>Machine Learning Potentials</span></span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/cesium_lead_bromide_NEP_TDEP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/cesium_lead_bromide_nep_tdep.ipynb (reference label)"><span>Cesium Lead Bromide Nep Tdep</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/gallium_arsenide_orb-v3_ORBCalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/gallium_arsenide_orb-v3_orbcalculator.ipynb (reference label)"><span>Gallium Arsenide Orb V3 Orbcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/magnesium_oxide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Magnesium Oxide Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/silicon_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Silicon Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/silicon_NEP89_calorine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_nep89_calorine.ipynb (reference label)"><span>Silicon Nep89 Calorine</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/silicon_carbide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/silicon_carbide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Silicon Carbide Mattersim V1 1M Mattersimcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/sodium_chloride_UPETCalculator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/sodium_chloride_upetcalculator.ipynb (reference label)"><span>Sodium Chloride Upetcalculator</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning_potentials/wurtzite_aluminum_nitride_ACE_PyACE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ace_pyace.ipynb (reference label)"><span>Wurtzite Aluminum Nitride Ace Pyace</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../density_functional_theory/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/index.rst (reference label)"><span>Density Functional Theory</span></span>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            <span title="/docsource/density_functional_theory/index.rst (reference label)"><span>Density Functional Theory</span></span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/germanium_dft_d3q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/germanium_dft_d3q.ipynb (reference label)"><span>Germanium Dft D3Q</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/magnesium_oxide_dft_d3q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/magnesium_oxide_dft_d3q.ipynb (reference label)"><span>Magnesium Oxide Dft D3Q</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../density_functional_theory/silicon_dft_qe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/density_functional_theory/silicon_dft_qe.ipynb (reference label)"><span>Silicon Dft Qe</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/index.rst (reference label)"><span>Empirical Potentials</span></span>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            <span title="/docsource/empirical_potentials/index.rst (reference label)"><span>Empirical Potentials</span></span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="amorphous_silicon_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/amorphous_silicon_tersoff_lammps.ipynb (reference label)"><span>Amorphous Silicon Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="carbon_diamond_Tersoff_ASE_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_diamond_tersoff_ase_lammps.ipynb (reference label)"><span>Carbon Diamond Tersoff Ase Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb (reference label)"><span>Carbon Nanotube Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#anharmonic-lattice-dynamics-(ald)-for-(10,0)-cnt-with-tersoff (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for <wbr>(10,0) CNT with Tersoff</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for (10,0) CNT with Tersoff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Import-Necessary-Packges" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#import-necessary-packges (reference label)"><span>Import Necessary Packges</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Custom-Define-Functions" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos) (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plot Heat Capacity, Group Velocities and Phase Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-phonon-life-time-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Visualize Phonon Life Time <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Visualize-per-mode-and-cumulative-\kappa" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-per-mode-and-cumulative-\kappa (reference label)"><span>Visualize per mode and cumulative \kappa</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualize per mode and cumulative \kappa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here." class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#full-simulations-files-for-physrevlett.127.025902-can-be-found-here. (reference label)"><span>Full Simulations files for Phys<wbr>Rev<wbr>Lett.<wbr>127.<wbr>025902 can be found here.<wbr></span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silicon_clathrate_Tersoff_LAMMPS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span title="/docsource/empirical_potentials/silicon_clathrate_tersoff_lammps.ipynb (reference label)"><span>Silicon Clathrate Tersoff Lammps</span></span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#anharmonic-lattice-dynamics-(ald)-for-(10,0)-cnt-with-tersoff (reference label)"><span>Anharmonic Lattice Dynamics <wbr>(ALD) for <wbr>(10,0) CNT with Tersoff</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anharmonic Lattice Dynamics (ALD) for (10,0) CNT with Tersoff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Import-Necessary-Packges" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#import-necessary-packges (reference label)"><span>Import Necessary Packges</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Custom-Define-Functions" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#custom-define-functions (reference label)"><span>Custom Define Functions</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Denote-Latex-Font-for-Plots" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#denote-latex-font-for-plots (reference label)"><span>Denote Latex Font for Plots</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-phonon-spectra-(dispersion)-and-density-of-state-(dos) (reference label)"><span>Plot Phonon Spectra <wbr>(Dispersion) and Density of State <wbr>(DOS)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#plot-heat-capacity,-group-velocities-and-phase-space (reference label)"><span>Plot Heat Capacity, Group Velocities and Phase Space</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plot Heat Capacity, Group Velocities and Phase Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-phonon-life-time-(\tau),-scattering-rate-(\gamma)-\&amp;-mfp-(\lambda) (reference label)"><span>Visualize Phonon Life Time <wbr>(\tau), Scattering Rate <wbr>(\Gamma) \&amp; MFP <wbr>(\lambda)</span></span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Visualize-per-mode-and-cumulative-\kappa" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#visualize-per-mode-and-cumulative-\kappa (reference label)"><span>Visualize per mode and cumulative \kappa</span></span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualize per mode and cumulative \kappa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here." class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span title="/docsource/empirical_potentials/carbon_nanotube_tersoff_lammps.ipynb#full-simulations-files-for-physrevlett.127.025902-can-be-found-here. (reference label)"><span>Full Simulations files for Phys<wbr>Rev<wbr>Lett.<wbr>127.<wbr>025902 can be found here.<wbr></span></span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
+                  
+
+
+<h1 id="Carbon-Nanotube-Tersoff-Lammps">Carbon Nanotube Tersoff Lammps<a class="headerlink" href="#Carbon-Nanotube-Tersoff-Lammps" title="Link to this heading">¶</a></h1>
+<h2 id="Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff">Anharmonic Lattice Dynamics (ALD) for (10,0) CNT with <a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.205441">Tersoff</a><a class="headerlink" href="#Anharmonic-Lattice-Dynamics-(ALD)-for-(10,0)-CNT-with-Tersoff" title="Link to this heading">¶</a></h2>
+<h3 id="Import-Necessary-Packges">Import Necessary Packges<a class="headerlink" href="#Import-Necessary-Packges" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[1]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">ase.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="Custom-Define-Functions">Custom Define Functions<a class="headerlink" href="#Custom-Define-Functions" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[2]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">cumulative_cond_cal</span><span class="p">(</span><span class="n">observables</span><span class="p">,</span> <span class="n">kappa_tensor</span><span class="p">,</span> <span class="n">prefactor</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute cumulative conductivity based on either frequnecy or mean-free path</span>
+
+<span class="sd">       input:</span>
+<span class="sd">       observables: (ndarray) either phonon frequnecy or mean-free path</span>
+<span class="sd">       cond_tensor: (ndarray) conductivity tensor</span>
+<span class="sd">       prefactor: (float) prefactor to average kappa tensor, 1/3 for bulk material</span>
+
+<span class="sd">       ouput:</span>
+<span class="sd">       observeables: (ndarray) sorted phonon frequency or mean-free path</span>
+<span class="sd">       kappa_cond (ndarray) cumulative conductivity</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Sum over kappa by directions</span>
+    <span class="n">kappa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;maa-&gt;m&#39;</span><span class="p">,</span> <span class="n">prefactor</span> <span class="o">*</span> <span class="n">kappa_tensor</span><span class="p">)</span>
+
+    <span class="c1"># Sort observables</span>
+    <span class="n">observables_argsort_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">observables</span><span class="p">)</span>
+    <span class="n">cumulative_kappa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">kappa</span><span class="p">[</span><span class="n">observables_argsort_indices</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">observables</span><span class="p">[</span><span class="n">observables_argsort_indices</span><span class="p">],</span> <span class="n">cumulative_kappa</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">set_fig_properties</span><span class="p">(</span><span class="n">ax_list</span><span class="p">,</span> <span class="n">panel_color_str</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">tl</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">tw</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">tlm</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">ax_list</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="n">tl</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">tw</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="n">tlm</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">tw</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span>
+                       <span class="n">right</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">panel_color_str</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">panel_color_str</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">panel_color_str</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">panel_color_str</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklines</span><span class="p">():</span> <span class="n">t</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">panel_color_str</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">get_ticklines</span><span class="p">():</span> <span class="n">t</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">panel_color_str</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklines</span><span class="p">():</span> <span class="n">t</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">get_ticklines</span><span class="p">():</span> <span class="n">t</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="Denote-Latex-Font-for-Plots">Denote Latex Font for Plots<a class="headerlink" href="#Denote-Latex-Font-for-Plots" title="Link to this heading">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[3]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># Denote plot default format</span>
+<span class="n">aw</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">font</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">fs</span><span class="p">}</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">aw</span><span class="p">)</span>
+
+<span class="c1"># Configure Matplotlib to use a LaTeX-like style without LaTeX</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.usetex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.fontset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)">Plot Phonon Spectra (Dispersion) and Density of State (DOS)<a class="headerlink" href="#Plot-Phonon-Spectra-(Dispersion)-and-Density-of-State-(DOS)" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[4]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># Denote data path</span>
+<span class="n">data_folder</span> <span class="o">=</span> <span class="s2">&quot;./&quot;</span>
+
+<span class="c1"># Derive symbols for high symmetry directions in Brillouin zone</span>
+<span class="n">dispersion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;plots/1_1_151/dispersion&#39;</span><span class="p">)</span>
+<span class="n">point_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;plots//1_1_151/point_names&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="n">point_names_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">point_name</span> <span class="ow">in</span> <span class="n">point_names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">point_name</span> <span class="o">==</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span>
+        <span class="n">point_name</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$\Gamma$&#39;</span>
+    <span class="k">elif</span> <span class="n">point_name</span> <span class="o">==</span> <span class="s1">&#39;U&#39;</span><span class="p">:</span>
+        <span class="n">point_name</span> <span class="o">=</span> <span class="s1">&#39;U=K&#39;</span>
+    <span class="n">point_names_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point_name</span><span class="p">)</span>
+
+<span class="c1"># Load in the &quot;tick-mark&quot; values for these symbols</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;plots/1_1_151/q&#39;</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;plots/1_1_151/Q_val&#39;</span><span class="p">)</span>
+<span class="n">dos_Si</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;plots/1_1_151/dos.npy&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dispersion</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">dispersion</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Wave vector ($\frac{2\pi}</span><span class="si">{a}</span><span class="s1">$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">xticks</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">point_names_list</span><span class="p">)</span>
+<span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+<span class="n">dosax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.91</span><span class="p">,</span> <span class="mf">.11</span><span class="p">,</span> <span class="mf">.17</span><span class="p">,</span> <span class="mf">.77</span><span class="p">])</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">dos_Si</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">dosax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">dos_Si</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">dosax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+<span class="n">dosax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">dosax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;DOS&quot;</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</code><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_9_0.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_9_0.png" />
+</div>
+</div>
+<h2 id="Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space">Plot Heat Capacity, Group Velocities and Phase Space<a class="headerlink" href="#Plot-Heat-Capacity,-Group-Velocities-and-Phase-Space" title="Link to this heading">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[5]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># Load in group velocity and frequency data</span>
+<span class="n">frequency</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+   <span class="n">data_folder</span>  <span class="o">+</span>  <span class="s1">&#39;ALD_CNT/1_1_151/frequency.npy&#39;</span><span class="p">,</span>
+    <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">cv</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+   <span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;ALD_CNT/1_1_151/300/quantum/heat_capacity.npy&#39;</span><span class="p">,</span>
+    <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">group_velocity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+   <span class="n">data_folder</span>  <span class="o">+</span>  <span class="s1">&#39;ALD_CNT/1_1_151/velocity.npy&#39;</span><span class="p">)</span>
+
+
+<span class="n">phase_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy&#39;</span><span class="p">,</span>
+                      <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Compute norm of group velocity</span>
+<span class="c1"># Convert the unit from angstrom / picosecond to kilometer/ second</span>
+<span class="n">group_velcotiy_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+    <span class="n">group_velocity</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">10.0</span>
+
+<span class="c1"># Plot observables in subplot</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:],</span> <span class="mf">1e23</span><span class="o">*</span><span class="n">cv</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:],</span>
+        <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;8&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span> <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$C_</span><span class="si">{v}</span><span class="s2">$ ($10^</span><span class="si">{23}</span><span class="s2">$ J/K)&quot;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ylim</span><span class="p">(</span><span class="mf">0.35</span><span class="o">*</span><span class="mf">1e23</span><span class="o">*</span><span class="n">cv</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="mf">1.05</span><span class="o">*</span><span class="mf">1e23</span><span class="o">*</span><span class="n">cv</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span> <span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="n">group_velcotiy_norm</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$|v| \ (\frac</span><span class="si">{km}{s}</span><span class="s1">)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span> <span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="n">phase_space</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Phase space&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ylim</span><span class="p">([</span><span class="mf">1e-1</span><span class="p">,</span> <span class="mf">5e3</span><span class="p">])</span>
+<span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.33</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_11_0.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_11_0.png" />
+</div>
+</div>
+<h3 id="Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&amp;-MFP-(\lambda)">Visualize Phonon Life Time (<span class="math notranslate nohighlight">\(\tau\)</span>), Scattering Rate (<span class="math notranslate nohighlight">\(\Gamma\)</span>) <span class="math notranslate nohighlight">\(\&amp;\)</span> MFP (<span class="math notranslate nohighlight">\(\lambda\)</span>)<a class="headerlink" href="#Visualize-Phonon-Life-Time-(\tau),-Scattering-Rate-(\Gamma)-\&-MFP-(\lambda)" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Note that <span class="math notranslate nohighlight">\(\Gamma\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> are computed only with the relaxation time approximation (RTA).</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[6]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># Load in scattering rate</span>
+<span class="n">scattering_rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+   <span class="n">data_folder</span>  <span class="o">+</span>  <span class="s1">&#39;ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy&#39;</span><span class="p">,</span>
+                      <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Derive lifetime, which is inverse of scattering rate</span>
+<span class="n">life_time</span> <span class="o">=</span> <span class="n">scattering_rate</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Denote lists to intake mean free path in each direction</span>
+<span class="n">mean_free_path</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">mean_free_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
+  <span class="n">data_folder</span>  <span class="o">+</span>   <span class="s1">&#39;ALD_CNT/1_1_151/inverse/300/quantum/mean_free_path_&#39;</span> <span class="o">+</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.dat&#39;</span><span class="p">))</span>
+
+
+<span class="c1"># Convert list to numpy array and compute norm for mean free path</span>
+<span class="c1"># Convert the unit from angstrom  to nanometer</span>
+<span class="n">mean_free_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mean_free_path</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">mean_free_path_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+    <span class="n">mean_free_path</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">10.0</span>
+
+<span class="c1"># Plot observables in subplot</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="n">life_time</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\tau \ (ps)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ylim</span><span class="p">([</span><span class="mf">1e-2</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">])</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="n">scattering_rate</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\Gamma \ (THz)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="n">mean_free_path_norm</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;8&#39;</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\lambda \ (nm)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ylim</span><span class="p">([</span><span class="mf">1e-2</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">])</span>
+<span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.33</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_13_0.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_13_0.png" />
+</div>
+</div>
+<h3 id="Visualize-per-mode-and-cumulative-\kappa">Visualize per mode and cumulative <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#Visualize-per-mode-and-cumulative-\kappa" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[7]:
+</code></pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># Denote zeros to intake kappa tensor</span>
+<span class="n">kappa_tensor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">mean_free_path</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">kappa_tensor_iso</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">mean_free_path</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">kappa_tensor</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
+    <span class="n">data_folder</span>  <span class="o">+</span> <span class="s1">&#39;ALD_CNT/1_1_151/inverse/300/quantum/conductivity_&#39;</span> <span class="o">+</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.dat&#39;</span><span class="p">)</span>
+
+<span class="c1"># Sum over the 0th dimension to recover 3-by-3 kappa matrix</span>
+<span class="c1"># Note that 29.92 is the volume factor</span>
+<span class="n">kappa_matrix</span> <span class="o">=</span> <span class="mf">29.92</span> <span class="o">*</span> <span class="n">kappa_tensor</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thermal conductivity along z-axis: </span><span class="si">%.1f</span><span class="s2"> W m^-1 K^-1</span><span class="se">\n</span><span class="s2">&quot;</span>
+      <span class="o">%</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">kappa_matrix</span><span class="p">)[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;kappa matrix: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kappa_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Compute kappa in per mode and cumulative representations</span>
+<span class="n">kappa_per_mode</span> <span class="o">=</span> <span class="mf">29.92</span> <span class="o">*</span> <span class="n">kappa_tensor</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">freq_sorted</span><span class="p">,</span> <span class="n">kappa_cum_wrt_freq</span> <span class="o">=</span> <span class="n">cumulative_cond_cal</span><span class="p">(</span>
+    <span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span> <span class="mf">29.92</span> <span class="o">*</span> <span class="n">kappa_tensor</span><span class="p">,</span> <span class="n">prefactor</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">lambda_sorted</span><span class="p">,</span> <span class="n">kappa_cum_wrt_lambda</span> <span class="o">=</span> <span class="n">cumulative_cond_cal</span><span class="p">(</span>
+    <span class="n">mean_free_path_norm</span><span class="p">,</span> <span class="mf">29.92</span> <span class="o">*</span> <span class="n">kappa_tensor</span><span class="p">,</span> <span class="n">prefactor</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+
+<span class="c1"># Plot observables in subplot</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="n">kappa_per_mode</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$\kappa_{per \ mode}$&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\kappa_{per \ mode}\;\left(\frac{\rm</span><span class="si">{W}</span><span class="s1">}{\rm</span><span class="si">{m}</span><span class="s1">\cdot\rm</span><span class="si">{K}</span><span class="s1">}\right)$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">freq_sorted</span><span class="p">,</span> <span class="n">kappa_cum_wrt_freq</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span>
+     <span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\kappa \approx 8800 \;\frac{\rm</span><span class="si">{W}</span><span class="s2">}{\rm</span><span class="si">{m}</span><span class="s2">\cdot\rm</span><span class="si">{K}</span><span class="s2">}$&quot;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\kappa_{cumulative, \omega}\;\left(\frac{\rm</span><span class="si">{W}</span><span class="s1">}{\rm</span><span class="si">{m}</span><span class="s1">\cdot\rm</span><span class="si">{K}</span><span class="s1">}\right)$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequency (THz)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">set_fig_properties</span><span class="p">([</span><span class="n">gca</span><span class="p">()])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">lambda_sorted</span><span class="p">,</span> <span class="n">kappa_cum_wrt_lambda</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\lambda \ (nm)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm</span><span class="si">{W}</span><span class="s1">}{\rm</span><span class="si">{m}</span><span class="s1">\cdot\rm</span><span class="si">{K}</span><span class="s1">}\right)$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
+<span class="n">xlim</span><span class="p">([</span><span class="mf">1e0</span><span class="p">,</span> <span class="mf">5e5</span><span class="p">])</span>
+<span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Thermal conductivity along z-axis: 8800.2 W m^-1 K^-1
+
+kappa matrix:
+[[1.12454529e-15 4.82029887e-16 2.49599104e-06]
+ [4.47408180e-16 1.96679488e-16 8.70413765e-07]
+ [7.13626034e-07 2.07690458e-07 8.80023212e+03]]
+
+
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_15_1.png" src="../../_images/docsource_empirical_potentials_carbon_nanotube_Tersoff_LAMMPS_15_1.png" />
+</div>
+</div>
+<h4 id="Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here.">Full Simulations files for <a class="reference external" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.025902">PhysRevLett.127.025902</a> can be found <a class="reference external" href="https://zenodo.org/records/4698466">here</a>.<a class="headerlink" href="#Full-Simulations-files-for-PhysRevLett.127.025902-can-be-found-here." title="Link to this heading">¶</a></h4>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2022-2026, The kALDo Developers.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    8.2.3.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script id="MathJax-script" src="../../_static/mathjax/tex-mml-chtml.js"></script>
+    
+  </body>
+</html>
