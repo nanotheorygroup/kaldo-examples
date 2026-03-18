@@ -180,14 +180,51 @@ def read_category_content(category):
         return content, ""
     return "", ""
 
+def generate_category_index(category, category_title, examples, intro, details):
+    """Generate an index.rst for a single category."""
+    dest_dir = DOCSOURCE / category
+
+    # Build RST underline (must be at least as long as the title)
+    underline = '=' * len(category_title)
+
+    content = f'''{category_title}
+{underline}
+
+{intro}
+
+.. toctree::
+   :maxdepth: 1
+
+'''
+
+    for example_name in examples:
+        title = get_title_from_folder(example_name)
+        content += f"   {title} <{example_name}>\n"
+
+    if details:
+        content += f"\n\n.. include:: ../../../{category}/README_details.md\n   :parser: myst_parser.sphinx_\n"
+
+    index_path = dest_dir / "index.rst"
+    index_path.write_text(content)
+    print(f"Generated: {index_path}")
+
+
 def generate_main_index(examples_by_category):
     """Generate the main index.rst file."""
 
     # Read category content (intro + details)
-    dft_intro, dft_details = read_category_content("density_functional_theory")
-    emp_intro, emp_details = read_category_content("empirical_potentials")
-    ml_intro, ml_details = read_category_content("machine_learning_potentials")
+    category_content = {}
+    for category in CATEGORIES:
+        intro, details = read_category_content(category)
+        category_content[category] = (intro, details)
 
+    # Generate category sub-index pages
+    for category, cat_title in CATEGORIES.items():
+        examples = examples_by_category.get(category, [])
+        intro, details = category_content[category]
+        generate_category_index(category, cat_title, examples, intro, details)
+
+    # Generate main index referencing category sub-indexes
     content = '''.. kALDo Examples documentation
 
 .. image:: docsource/_resources/logo.png
@@ -206,78 +243,21 @@ This repository provides examples demonstrating how to use `kALDo <https://githu
 The examples cover workflows with machine learning potentials, density functional theory (DFT), and empirical potentials.
 
 
-Machine Learning Potentials
----------------------------
-
-Applications
-^^^^^^^^^^^^
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
+   docsource/machine_learning_potentials/index
+   docsource/density_functional_theory/index
+   docsource/empirical_potentials/index
 '''
-
-    for example_name in examples_by_category.get("machine_learning_potentials", []):
-        title = get_title_from_folder(example_name)
-        content += f"   {title} <docsource/machine_learning_potentials/{example_name}>\n"
-
-    content += f"\n\n{ml_intro}\n"
-
-    if ml_details:
-        content += f"\n\n.. include:: ../machine_learning_potentials/README_details.md\n   :parser: myst_parser.sphinx_\n"
-
-    content += '''
-
-Density Functional Theory
--------------------------
-
-Applications
-^^^^^^^^^^^^
-
-.. toctree::
-   :maxdepth: 1
-
-'''
-
-    for example_name in examples_by_category.get("density_functional_theory", []):
-        title = get_title_from_folder(example_name)
-        content += f"   {title} <docsource/density_functional_theory/{example_name}>\n"
-
-    content += f"\n\n{dft_intro}\n"
-
-    if dft_details:
-        content += f"\n\n.. include:: ../density_functional_theory/README_details.md\n   :parser: myst_parser.sphinx_\n"
-
-    content += '''
-
-Empirical Potentials
---------------------
-
-Applications
-^^^^^^^^^^^^
-
-.. toctree::
-   :maxdepth: 1
-
-'''
-
-    for example_name in examples_by_category.get("empirical_potentials", []):
-        title = get_title_from_folder(example_name)
-        content += f"   {title} <docsource/empirical_potentials/{example_name}>\n"
-
-    content += f"\n\n{emp_intro}\n"
-
-    if emp_details:
-        content += f"\n\n.. include:: ../empirical_potentials/README_details.md\n   :parser: myst_parser.sphinx_\n"
 
     index_path = DOCS_ROOT / "index.rst"
     index_path.write_text(content)
     print(f"\nGenerated: {index_path}")
 
     # Write details files for include
-    for category, details in [("density_functional_theory", dft_details),
-                               ("empirical_potentials", emp_details),
-                               ("machine_learning_potentials", ml_details)]:
+    for category in CATEGORIES:
+        _, details = category_content[category]
         if details:
             details_path = REPO_ROOT / category / "README_details.md"
             details_path.write_text(details)
