@@ -27,7 +27,7 @@ The examples cover workflows with machine learning potentials, density functiona
 Contributing
 ------------
 
-We welcome contributions from the community! If you have a thermal transport workflow using kALDo — whether with a new potential, a different material system, or an alternative method — we'd love to include it.
+We welcome contributions from the community! If you have a thermal transport workflow using kALDo, whether with a new potential, a different material system, or an alternative method, we'd love to include it.
 
 **How to contribute an example:**
 
