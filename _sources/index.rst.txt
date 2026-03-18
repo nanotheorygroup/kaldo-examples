@@ -16,70 +16,26 @@ This repository provides examples demonstrating how to use `kALDo <https://githu
 The examples cover workflows with machine learning potentials, density functional theory (DFT), and empirical potentials.
 
 
-Machine Learning Potentials
----------------------------
-
-Applications
-^^^^^^^^^^^^
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   Cesium Lead Bromide Nep Tdep <docsource/machine_learning_potentials/cesium_lead_bromide_NEP_TDEP>
-   Gallium Arsenide Orb V3 Orbcalculator <docsource/machine_learning_potentials/gallium_arsenide_orb-v3_ORBCalculator>
-   Magnesium Oxide Mattersim V1 1M Mattersimcalculator <docsource/machine_learning_potentials/magnesium_oxide_MatterSim-v1-1M_mattersimcalculator>
-   Silicon Mattersim V1 1M Mattersimcalculator <docsource/machine_learning_potentials/silicon_MatterSim-v1-1M_mattersimcalculator>
-   Silicon Nep89 Calorine <docsource/machine_learning_potentials/silicon_NEP89_calorine>
-   Silicon Carbide Mattersim V1 1M Mattersimcalculator <docsource/machine_learning_potentials/silicon_carbide_MatterSim-v1-1M_mattersimcalculator>
-   Sodium Chloride Upetcalculator <docsource/machine_learning_potentials/sodium_chloride_UPETCalculator>
-   Wurtzite Aluminum Nitride Ace Pyace <docsource/machine_learning_potentials/wurtzite_aluminum_nitride_ACE_PyACE>
+   docsource/machine_learning_potentials/index
+   docsource/density_functional_theory/index
+   docsource/empirical_potentials/index
 
 
-These examples demonstrate kALDo workflows using **machine learning interatomic potentials (MLIPs)**. MLIPs combine near-DFT accuracy with the computational efficiency of classical potentials, enabling accurate thermal transport predictions at a fraction of the cost.
+Contributing
+------------
 
+We welcome contributions from the community! If you have a thermal transport workflow using kALDo — whether with a new potential, a different material system, or an alternative method — we'd love to include it.
 
-.. include:: ../machine_learning_potentials/README_details.md
-   :parser: myst_parser.sphinx_
+**How to contribute an example:**
 
+1. Fork the repository and create a new branch
+2. Add your example in the appropriate category folder (``machine_learning_potentials/``, ``density_functional_theory/``, or ``empirical_potentials/``)
+3. Include a ``README.md`` describing the calculation and a Jupyter notebook (``.ipynb``) for visualization
+4. Push your branch and open a Pull Request
 
-Density Functional Theory
--------------------------
+The documentation is auto-generated from the example folders, so your example will automatically appear on the docs site once merged.
 
-Applications
-^^^^^^^^^^^^
-
-.. toctree::
-   :maxdepth: 1
-
-   Germanium Dft D3Q <docsource/density_functional_theory/germanium_dft_d3q>
-   Magnesium Oxide Dft D3Q <docsource/density_functional_theory/magnesium_oxide_dft_d3q>
-   Silicon Dft Qe <docsource/density_functional_theory/silicon_dft_qe>
-
-
-These examples demonstrate kALDo workflows using **density functional theory (DFT)** calculations. DFT provides highly accurate interatomic force constants from first principles, making it the gold standard for predicting thermal conductivity in crystalline materials. The workflows shown here use **Quantum ESPRESSO** for DFT calculations and **D3Q** or **thirdorder.py** for computing anharmonic (3rd order) force constants.
-
-
-.. include:: ../density_functional_theory/README_details.md
-   :parser: myst_parser.sphinx_
-
-
-Empirical Potentials
---------------------
-
-Applications
-^^^^^^^^^^^^
-
-.. toctree::
-   :maxdepth: 1
-
-   Amorphous Silicon Tersoff Lammps <docsource/empirical_potentials/amorphous_silicon_Tersoff_LAMMPS>
-   Carbon Diamond Tersoff Ase Lammps <docsource/empirical_potentials/carbon_diamond_Tersoff_ASE_LAMMPS>
-   Carbon Nanotube Tersoff Lammps <docsource/empirical_potentials/carbon_nanotube_Tersoff_LAMMPS>
-   Silicon Clathrate Tersoff Lammps <docsource/empirical_potentials/silicon_clathrate_Tersoff_LAMMPS>
-
-
-These examples demonstrate kALDo workflows using **empirical interatomic potentials**. Classical potentials like Tersoff and Stillinger-Weber provide computationally efficient force evaluations, enabling thermal transport calculations for large systems and complex structures. The workflows shown here use **LAMMPS** and **ASE** for force constant calculations.
-
-
-.. include:: ../empirical_potentials/README_details.md
-   :parser: myst_parser.sphinx_
+For questions or suggestions, feel free to `open an issue <https://github.com/nanotheorygroup/kaldo-examples/issues>`_.
