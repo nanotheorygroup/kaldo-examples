@@ -7,7 +7,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = 'Examples'
-copyright = "2022-2025, The kALDo Developers"
+copyright = "2022-2026, The kALDo Developers"
 author = 'Giuseppe Barbalinardo, Zekun Chen, Nicholas W. Lundgren, Dylan Folkner, Bohan Li, Davide Donadio'
 
 version = ''
@@ -82,8 +82,12 @@ html_theme_options = {
     'repo_url': 'https://github.com/nanotheorygroup/kaldo-examples',
     'repo_name': 'kALDo Examples',
 
-    'globaltoc_collapse': True,
-    'globaltoc_maxdepth': 1,
+    'globaltoc_collapse': False,
+    'globaltoc_maxdepth': 3,
+
+    'features': [
+        'navigation.expand',
+    ],
 }
 
 html_sidebars = {

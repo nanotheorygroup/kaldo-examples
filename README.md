@@ -15,10 +15,25 @@ This repository provides examples demonstrating how to compute thermal conductiv
 
 The examples cover workflows with:
 
-- **Machine Learning Potentials** (orb, NEP, MatterSim, ACE)
+- **Machine Learning Potentials** (orb, NEP, MatterSim, ACE, UPET)
 - **Density Functional Theory** (Quantum ESPRESSO, D3Q)
 - **Empirical Potentials** (Any Empirical Potentials Supported in LAMMPS)
 - **Finite Temperature Effective Potentials** (TDEP)
+
+## Contributing
+
+We welcome contributions from the community! If you have a thermal transport workflow using kALDo, whether with a new potential, a different material system, or an alternative method, we'd love to include it.
+
+### How to contribute an example
+
+1. Fork the repository and create a new branch (`git checkout -b your-branch-name`)
+2. Add your example in the appropriate category folder (`machine_learning_potentials/`, `density_functional_theory/`, or `empirical_potentials/`)
+3. Include a `README.md` describing the calculation and a Jupyter notebook (`.ipynb`) for visualization
+4. Push your branch and open a Pull Request
+
+The documentation is auto-generated from the example folders, so your example will automatically appear on the docs site once merged.
+
+For questions or suggestions, feel free to [open an issue](https://github.com/nanotheorygroup/kaldo-examples/issues).
 
 ## Building the Documentation
 
