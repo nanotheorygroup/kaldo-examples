@@ -6,6 +6,7 @@ These examples demonstrate kALDo workflows using **empirical interatomic potenti
 .. toctree::
    :maxdepth: 1
 
+   Aluminum Emt Parallel Third <aluminum_EMT_parallel_third>
    Amorphous Silicon Tersoff Lammps <amorphous_silicon_Tersoff_LAMMPS>
    Carbon Diamond Tersoff Ase Lammps <carbon_diamond_Tersoff_ASE_LAMMPS>
    Carbon Nanotube Tersoff Lammps <carbon_nanotube_Tersoff_LAMMPS>
