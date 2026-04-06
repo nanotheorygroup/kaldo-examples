@@ -6,7 +6,6 @@
 
 # Import necessary packages
 
-from ase.build import bulk
 from ase.calculators.dftb import Dftb
 from kaldo.conductivity import Conductivity
 from kaldo.forceconstants import ForceConstants
@@ -22,14 +21,9 @@ import os
 #            DOI: 10.1021/acs.jctc.4c00228
 DFTB_PREFIX = os.environ.get("DFTB_PREFIX", os.path.expanduser("~/dftb/ptbp_skf/"))
 
-# -- Set up the coordinates of the system and the force constant calculations -- #
+# -- Set up the calculator and load force constants -- #
 
-# Define the system according to ASE style. 'a': lattice parameter (Angstrom)
-atoms = bulk('C', 'diamond', a=3.567)
-
-# Replicate the unit cell 'nrep'=3 times
-nrep = 3
-supercell = np.array([nrep, nrep, nrep])
+supercell = (3, 3, 3)
 
 
 # Define the DFTB+ calculator with PTBP parametrization.
@@ -54,14 +48,17 @@ def make_calc():
     )
 
 
-# Configure force constant calculator
-# The 2nd order IFCs are loaded from disk (computed by 1_harmonic.py)
-forceconstants_config = {'atoms': atoms, 'supercell': supercell, 'folder': 'fc_c_diamond'}
-forceconstants = ForceConstants(**forceconstants_config)
+# Load 2nd order IFCs from disk (computed by 1_harmonic.py)
+forceconstants = ForceConstants.from_folder(
+    folder='fc_c_diamond',
+    supercell=supercell,
+    format='numpy',
+    is_acoustic_sum=True,
+    only_second=True,
+)
 
 # Compute 3rd order IFCs with the defined calculator
 # delta_shift: finite difference displacement, in angstrom
-# Note: this is the expensive step, it may take several hours
 forceconstants.third.calculate(make_calc(), delta_shift=1e-4)
 
 # -- Set up the phonon object and anharmonic property calculations -- #
