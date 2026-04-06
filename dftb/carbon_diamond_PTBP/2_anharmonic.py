@@ -1,7 +1,8 @@
 # Example: carbon diamond, DFTB+ with PTBP parametrization
-# Computes: 2nd, 3rd order force constants and thermal conductivity for carbon diamond (2 atoms per cell)
+# Computes: 3rd order force constants and thermal conductivity for carbon diamond (2 atoms per cell)
 # Uses: ASE, DFTB+
 # External files: PTBP Slater-Koster files from https://zenodo.org/records/14289468
+# Prerequisite: run 1_harmonic.py first to compute the 2nd order force constants
 
 # Import necessary packages
 
@@ -12,11 +13,6 @@ from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
 import numpy as np
 import os
-
-import kaldo.controllers.plotter as plotter
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
 # -- Configuration -- #
 
@@ -59,15 +55,16 @@ def make_calc():
 
 
 # Configure force constant calculator
+# The 2nd order IFCs are loaded from disk (computed by 1_harmonic.py)
 forceconstants_config = {'atoms': atoms, 'supercell': supercell, 'folder': 'fc_c_diamond'}
 forceconstants = ForceConstants(**forceconstants_config)
 
-# Compute 2nd and 3rd IFCs with the defined calculator
+# Compute 3rd order IFCs with the defined calculator
 # delta_shift: finite difference displacement, in angstrom
-forceconstants.second.calculate(make_calc(), delta_shift=1e-4)
+# Note: this is the expensive step, it may take several hours
 forceconstants.third.calculate(make_calc(), delta_shift=1e-4)
 
-# -- Set up the phonon object and the anharmonic properties calculations -- #
+# -- Set up the phonon object and anharmonic property calculations -- #
 
 # Configure phonon object
 # 'kpts': number of k-points in each direction
@@ -101,7 +98,3 @@ print('\n')
 rta_cond_matrix = Conductivity(phonons=phonons, method='rta').conductivity.sum(axis=0)
 print('Conductivity from RTA (W/m-K): %.3f' % (np.mean(np.diag(rta_cond_matrix))))
 print(rta_cond_matrix)
-
-# Make plots for quick data visualization
-plotter.plot_dispersion(phonons, with_velocity=True, is_showing=False)
-plotter.plot_dos(phonons, is_showing=False)

@@ -19,21 +19,21 @@ conda install -c conda-forge dftbplus
 export DFTB_PREFIX=/path/to/ptbp_skf/
 ```
 
--   `thermal_conductivity.py` proceeds as follows:
+-   `1_harmonic.py`: Compute 2nd order force constants and harmonic properties
+    (phonon dispersion, density of states, group velocity). This step is fast (minutes).
 
-    1. Set up the force constant object and compute the 2nd and 3rd force constants using DFTB+ with PTBP.
-
-    2. Set up the phonon object (11x11x11 k-point mesh) and perform the quantum simulation at 300K.
-
-    3. Set up the conductivity object and compute the thermal conductivity using the Relaxation Time Approximation (RTA).
-
-    4. Visualize intermediate quantities during the thermal transport simulations.
-
+-   `2_anharmonic.py`: Compute 3rd order force constants, then calculate scattering
+    rates and thermal conductivity using RTA. The 3rd order calculation is the slow
+    step (~12 hours for a 3x3x3 supercell).
 
 - To run this example, navigate to this directory and execute:
 
 ```console
-python thermal_conductivity.py
+# Step 1: 2nd order force constants and harmonic properties (fast)
+python 1_harmonic.py
+
+# Step 2: 3rd order force constants and thermal conductivity (slow)
+python 2_anharmonic.py
 ```
 
 - To view figures generated during simulations, navigate to this folder: `plots/11_11_11/`
