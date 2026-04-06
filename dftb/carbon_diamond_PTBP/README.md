@@ -20,19 +20,18 @@ export DFTB_PREFIX=/path/to/ptbp_skf/
 ```
 
 -   `1_harmonic.py`: Compute 2nd order force constants and harmonic properties
-    (phonon dispersion, density of states, group velocity). This step is fast (minutes).
+    (phonon dispersion, density of states, group velocity).
 
 -   `2_anharmonic.py`: Compute 3rd order force constants, then calculate scattering
-    rates and thermal conductivity using RTA. The 3rd order calculation is the slow
-    step (~12 hours for a 3x3x3 supercell).
+    rates and thermal conductivity using RTA.
 
 - To run this example, navigate to this directory and execute:
 
 ```console
-# Step 1: 2nd order force constants and harmonic properties (fast)
+# Step 1: 2nd order force constants and harmonic properties
 python 1_harmonic.py
 
-# Step 2: 3rd order force constants and thermal conductivity (slow)
+# Step 2: 3rd order force constants and thermal conductivity
 python 2_anharmonic.py
 ```
 
