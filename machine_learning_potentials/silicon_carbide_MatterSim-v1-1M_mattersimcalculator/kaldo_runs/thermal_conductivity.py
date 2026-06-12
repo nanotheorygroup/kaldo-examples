@@ -1,5 +1,5 @@
 from ase.build import bulk
-from ase.constraints import StrainFilter
+from ase.filters import StrainFilter
 from ase.io import read
 from ase.optimize import BFGS
 from kaldo.conductivity import Conductivity
@@ -18,7 +18,7 @@ import torch
 # https://next-gen.materialsproject.org/materials/mp-8062
 raw_atoms = bulk("SiC", "zincblende", a=4.35)
 device = "cuda" if torch.cuda.is_available() else "cpu"
-mattersim_calculator =  MatterSimCalculator(device=device)
+mattersim_calculator =  MatterSimCalculator(device=device, dtype='float64')
 print("Running MatterSim on: ", device)
 raw_atoms.calc = mattersim_calculator
 sf = StrainFilter(raw_atoms)
