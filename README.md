@@ -32,9 +32,9 @@ The examples cover workflows with:
 | 5 | [silicon_carbide_MatterSim-v1-1M_mattersimcalculator](silicon_carbide_MatterSim-v1-1M_mattersimcalculator) | ML Potentials | Zekun Chen | Thermal transport in silicon carbide (2 atoms/cell) using MatterSim. |
 | 6 | [wurtzite_aluminum_nitride_ACE_PyACE](wurtzite_aluminum_nitride_ACE_PyACE) | ML Potentials | Zekun Chen | Thermal transport in wurtzite aluminum nitride (4 atoms/cell) using pyACE. |
 | 7 | [sodium_chloride_UPETCalculator](sodium_chloride_UPETCalculator) | ML Potentials | Zekun Chen, Davide Donadio | Thermal transport in sodium chloride (2 atoms/cell) using UPET. |
-| 8 | [amorphous_silicon_Tersoff_LAMMPS](amorphous_silicon_Tersoff_LAMMPS) | Empirical | Giuseppe Barbalinardo | Thermal transport in amorphous silicon (512 atoms/cell) using LAMMPS PHONON. |
+| 8 | [amorphous_silicon_Tersoff_LAMMPS](amorphous_silicon_Tersoff_LAMMPS) | Empirical | Giuseppe Barbalinardo, Davide Donadio| Thermal transport in amorphous silicon (512 atoms/cell) using LAMMPS PHONON. |
 | 9 | [carbon_diamond_Tersoff_ASE_LAMMPS](carbon_diamond_Tersoff_ASE_LAMMPS) | Empirical | Zekun Chen | Thermal transport in carbon diamond (2 atoms/cell) using ASE and LAMMPS. |
-| 10 | [carbon_nanotube_Tersoff_LAMMPS](carbon_nanotube_Tersoff_LAMMPS) | Empirical |Giuseppe Barbalinardo, Zekun Chen, Davide Donaido | Thermal transport in a (10,0) carbon nanotube (40 atoms/cell) using LAMMPS PHONON. |
+| 10 | [carbon_nanotube_Tersoff_LAMMPS](carbon_nanotube_Tersoff_LAMMPS) | Empirical |Giuseppe Barbalinardo, Zekun Chen, Davide Donadio | Thermal transport in a (10,0) carbon nanotube (40 atoms/cell) using LAMMPS PHONON. |
 | 11 | [silicon_clathrate_Tersoff_LAMMPS](silicon_clathrate_Tersoff_LAMMPS) | Empirical | Higo Oliveira, Zekun Chen | Thermal transport in a type I silicon clathrate (46 atoms/cell) using LAMMPS PHONON. |
 | 12 | [germanium_dft_d3q](germanium_dft_d3q) | DFT |Alfredo Fiorentino, Mattias Perez | Thermal transport in germanium diamond (2 atoms/cell) using D3Q. |
 | 13 | [magnesium_oxide_dft_d3q](magnesium_oxide_dft_d3q) | DFT | Nicholas Lundgren, Mattias Perez | Thermal transport in rock-salt MgO (2 atoms/cell) using D3Q. |
