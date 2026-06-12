@@ -21,7 +21,7 @@ The examples cover workflows with:
 - **Finite Temperature Effective Potentials** (TDEP)
 
 
-## Tutorial Description
+## Tutorial Descriptions
 
 | # | folder | category | creator | description |
 | --- | --- | --- | --- | --- |
