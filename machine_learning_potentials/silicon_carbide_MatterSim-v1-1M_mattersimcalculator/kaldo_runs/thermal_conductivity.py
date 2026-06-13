@@ -66,9 +66,6 @@ phonons = Phonons(forceconstants=forceconstants,
 
 # Plot dispersion relation and group velocity in each direction
 plotter.plot_dispersion(phonons,n_k_points=300, is_showing=False)
-plotter.plot_dos(phonons,p_atoms=None, bandwidth=0.01, filename='dos')
-plotter.plot_dos(phonons,p_atoms=[0], bandwidth=0.01, filename='pdos_Si')
-plotter.plot_dos(phonons,p_atoms=[1], bandwidth=0.01, filename='pdos_C')
 
 # Calculate conductivity with direct inversion approach (inverse)
 print('\n')
