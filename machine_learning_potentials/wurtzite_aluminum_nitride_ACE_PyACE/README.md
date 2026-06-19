@@ -1,7 +1,32 @@
 ### Computing Thermal Conductivity of Aluminium Nitride with ACE (Atomic Cluster Expansion):
 
 > Input data descriptions for the `ACE` potential file can be found [here](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html).  
-> Running `python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
+> Running `python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed:
+
+```console
+# Create conda enviornment
+conda create --name ace python==3.10
+
+# Activate the enviornment and roll back
+# set up tools that contained pkg_resources
+conda activate ace
+conda install cmake
+pip install --force-reinstall "setuptools<82.0.0"
+
+# Install TensorPotential from source
+git clone https://github.com/ICAMS/TensorPotential.git
+cd TensorPotential/
+cd ../
+
+# Install python-ace form source
+git clone https://github.com/ICAMS/python-ace.git
+cd python-ace/
+pip install .
+cd ../
+ 
+# Finally install kALDo
+pip install git+https://github.com/nanotheorygroup/kaldo
+```
 
 - Execute `python phonon.py` to calculate phonon dipersions and elastic properties of Aluminium Nitride with ACE.
 
