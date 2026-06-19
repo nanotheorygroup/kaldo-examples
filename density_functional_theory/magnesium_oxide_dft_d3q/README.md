@@ -44,48 +44,7 @@
    q2r.x -in q2r.in > q2r.out
    ```
 
-3. Under `03-kaldo_runs_phonon_with_NAC/`: Perform lattice dynamic calculations with kALDo using the python script `phonon.py` to visualize data calculated from the 2nd order force constants with NAC.
-   - To perform the calculation, make a folder `fc_DFT_with_NAC/` and move `espresso.ifc2` from the previous step, as well as the provided `POSCAR` structure file into this directory. Run `python phonon_with_NAC.py` for the calculation.
-   
-   - An example procedure for performing this calculation is below:
-    
-     ```console
-     mkdir fc_DFT_with_NAC/
-     cp POSCAR fc_DFT_with_NAC/
-     cp ../01-2nd_order_DFPT_with_NAC/espresso.ifc2 fc_DFT_with_NAC/
-     python phonon_with_NAC.py
-     ```
-     or
-
-     ```console
-     tar xzvf fc_DFT_with_NAC.tar.gz 
-     python phonon_with_NAC.py
-     ```
- 
-   - After performing the calculation, use the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation).
-  
-4. Under `04-kaldo_runs_phonon/`: Perform lattice dynamic calculations with kALDo using the python script `phonon.py` to visualize data calculated from the 2nd order force constants without NAC.
-   - To perform the calculation, make a folder `fc_DFT/` and move `espresso.ifc2` from the previous step, as well as the provided `POSCAR` structure file into this directory. Run `python phonon.py` for the calculation.
-
-   - An example procedure for performing this calculation is below:
-    
-     ```console
-     mkdir fc_DFT/
-     cp POSCAR fc_DFT/
-     cp ../02-2nd_order_DFPT/espresso.ifc2 fc_DFT/
-     python phonon.py
-     ```
-
-   - or
-
-     ```console
-     tar xzvf fc_DFT.tar.gz
-     python phonon.py
-     ```
-     
-   - After performing the calculation, use the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation).
-
-5. Under `05-3rd_order_d3q/`: Execute all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD_D3Q`.
+3. Under `03-3rd_order_d3q/`: Execute all neccessary commands to obtain the 3rd order force constants `FORCE_CONSTANTS_3RD_D3Q`.
    - Ensure the required input files are in the directory: `scf.in`, `ph_for_d3q.in`, and the `UPF/` pseudopotential folder.
 
      `pw.x`: Performs self consistent field calculations for magnesium oxide.  
@@ -115,14 +74,14 @@
  
    - Since non-analytical correction (NAC) only applies to second order, only one modulus is needed for 3rd IFCs computation.
 
-6. Under `06-kaldo_runs_BTE/`: Perform BTE calculations using kALDo for magnesium oxide with and without NAC.
+4. Under `04-kaldo_runs_BTE/`: Perform BTE calculations using kALDo for magnesium oxide with and without NAC.
    - Create two folders labeled `kaldo_runs_with_NAC/` and `kaldo_runs_without_NAC/`. In each respective folder, create another folder labeled `fc_DFT_with_NAC/` or `fc_DFT_withouth_NAC/`.
    - Move the calculated IFCs from the previous steps, along with the provided `POSCAR` file, into their respective `fc_DFT_with_NAC/` or `fc_DFT_withouth_NAC/` folders.
    - Alternatively, extract the provided input files from the `fc_DFT_with_NAC.tar.gz` or `fc_DFT.tar.gz`
 
    - An example of the procedure for performing this step is below:
      ```console
-     cd 06-kaldo_runs_BTE/
+     cd 04-kaldo_runs_BTE/
      mkdir kaldo_runs_with_NAC/
      mkdir kaldo_runs_without_NAC/
      ```
@@ -131,7 +90,7 @@
      cd kaldo_runs_without_NAC/
      mkdir fc_DFT/
      cp ../../02-2nd_order_DFPT/espressoifc2 fc_DFT/
-     cp ../../05_3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT/
+     cp ../../03_3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT/
      cp POSCAR fc_DFT/
      python thermal_conductivity.py
 
@@ -140,7 +99,7 @@
      cd kaldo_runs_with_NAC/
      mkdir fc_DFT_with_NAC/
      cp ../../01-2nd_order_DFPT_with_NAC/espresso.ifc2 fc_DFT_with_NAC/
-     cp ../../05_3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT_with_NAC/
+     cp ../../03_3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT_with_NAC/
      cp POSCAR fc_DFT_with_NAC/
      python thermal_conductivity_with_NAC.py
      ```
