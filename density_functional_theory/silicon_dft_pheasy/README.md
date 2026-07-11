@@ -2,6 +2,8 @@
 
 > [pheasy](https://gitlab.com/cplin/pheasy) fits interatomic force constants from a compact set of symmetry-reduced, randomly displaced supercells and DFT (or ML potential) forces. See the pheasy repository and paper ([arXiv:2508.01020](https://arxiv.org/abs/2508.01020)) for the full method.
 
+> **Installing pheasy**: install from the GitLab source (`git clone https://gitlab.com/cplin/pheasy.git && pip install -e ./pheasy`). The package on PyPI is outdated (0.0.2) and does not match the current code or this workflow.
+
 1. Generate the symmetry-irreducible force constant clusters (null space) and the randomly displaced supercells with pheasy:
 
 ```console
