@@ -36,6 +36,8 @@ This example illustrates how to perform thermal transport simulation for a silic
 This example illustrates how to perform thermal transport simulation for an aluminum nitride system (4 atom per cell) with [pyACE](https://github.com/ICAMS/python-ace) packages as force calculator.
 - `sodium_chloride_UPETCalculator:`
 This example illustrates how to perform thermal transport simulation for a sodium chloride system (2 atom per cell) with [UPET](https://github.com/lab-cosmo/upet) packages as force calculator.
+- `silicon_ensemble_UPETCalculator:`
+This example illustrates phonon dispersion with ensemble uncertainty for a silicon diamond system (2 atoms per cell) using a committee of independent [UPET](https://github.com/lab-cosmo/upet) PET-MAD models and `kaldo.PhononsEnsemble`.
 
 ---
 
