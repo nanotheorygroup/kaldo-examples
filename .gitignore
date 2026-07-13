@@ -5,3 +5,5 @@ docs/docsource/empirical_potentials/
 docs/docsource/machine_learning_potentials/
 **/README_details.md
 kaldo
+density_functional_theory/silicon_dft_pheasy/data/
+density_functional_theory/silicon_dft_pheasy/plots/
