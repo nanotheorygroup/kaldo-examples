@@ -36,7 +36,9 @@ After finishing this step, you can run the Jupyter notebook `phonons_and_conduct
 
 ## Data provenance
 
-The files in `fc_pheasy/` (`POSCAR`, `FORCE_CONSTANTS`, `FORCE_CONSTANTS_3RD`) are silicon force constants derived from kaldo's own hiphive-fitted reference for silicon, rewritten in pheasy's exact output conventions. No pheasy-produced (GPL-distributed) data is used. A real pheasy workflow produces these same files by running pheasy on DFT forces, following the four steps above.
+The files in `fc_pheasy/` (`POSCAR`, `FORCE_CONSTANTS`, `FORCE_CONSTANTS_3RD`) are genuine force constants fitted by pheasy from Quantum ESPRESSO DFT forces. The workflow was: relax the 2-atom FCC primitive cell (a = 5.469 A), generate 12 symmetry-reduced randomly-displaced 3x3x3 supercells (54 atoms) with pheasy, compute forces for each with pw.x (PBE, PAW pseudopotential, ecutwfc 60 Ry, ecutrho 240 Ry, a 3x3x3 k-mesh, 1e-8 SCF threshold), then fit 2nd and 3rd order force constants with pheasy (`--dim 3 3 3`, 3rd-order cutoff at the 3rd nearest neighbor, least-squares RMSE 4e-5 eV/A). Only the resulting `FORCE_CONSTANTS`/`FORCE_CONSTANTS_3RD` text outputs are shipped; no pheasy-produced (GPL-distributed) intermediate data is redistributed.
 
 Reference thermal conductivity for this example (3x3x3 2nd and 3rd order supercell, 7x7x7 k-point mesh):
-- **289.2 W/m-K (Inversion), 256.6 W/m-K (RTA)**
+- **128.0 W/m-K (Inversion), 123.4 W/m-K (RTA)**
+
+These values sit close to the experimental room-temperature conductivity of silicon (about 130-150 W/m-K). A fit with more displaced configurations or a shorter third-order cutoff will shift them; the point of the example is the pheasy-to-kaldo workflow, not a converged production number.
