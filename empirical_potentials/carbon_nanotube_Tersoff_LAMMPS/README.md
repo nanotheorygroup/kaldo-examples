@@ -30,7 +30,7 @@ External files required:
 
 - To generate input files for LAMMPS calculations and the supercell structures, navigate to this directory and execute:
 ```console
-python 0_generate_LAMMPS_input_and_supercell_structures.py
+uv run python 0_generate_LAMMPS_input_and_supercell_structures.py
 ```
 - To compute 2<sup>nd</sup> and 3<sup>rd</sup> order force constants with LAMMPS PHONON, navigate to this directory and execute:
 ```console
@@ -38,7 +38,7 @@ python 0_generate_LAMMPS_input_and_supercell_structures.py
 ```
 - To perform thermal transport after computing force constants, navigate to this directory and execute:
 ```console
-python 1_CNT_Tersoff_thermal_conductivity_quantum.py
+uv run python 1_CNT_Tersoff_thermal_conductivity_quantum.py
 ```
 - To access data computed during simulations, navigate to this folder: ***ALD_CNT***
 - Reference conductivity (1x1x3 supercell,1x1x151 k-point mesh): 8800.2 W/m-K (Quantum) 
