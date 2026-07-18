@@ -14,6 +14,7 @@ uv pip install cmake "setuptools<82.0.0"
 
 # 3. Clone and install TensorPotential from source
 git clone https://github.com/ICAMS/TensorPotential.git
+cd TensorPotentia/
 uv pip install .
 cd ../
 
