@@ -8,12 +8,14 @@
 uv venv ace --python 3.10
 source ace/bin/activate
 
-# 2. Install cmake (uv can install it directly from PyPI)
+# 2. Install cmake 
 # and install the specific setuptools version
 uv pip install cmake "setuptools<82.0.0"
 
-# 3. Clone and navigate TensorPotential (Note: original snippet cloned but didn't install)
+# 3. Clone and install TensorPotential from source
 git clone https://github.com/ICAMS/TensorPotential.git
+uv pip install .
+cd ../
 
 # 4. Clone and install python-ace from source
 git clone https://github.com/ICAMS/python-ace.git
