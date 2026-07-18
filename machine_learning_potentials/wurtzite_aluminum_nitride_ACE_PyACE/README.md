@@ -4,28 +4,25 @@
 > Running `python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed:
 
 ```console
-# Create conda enviornment
-conda create --name ace python==3.10
+# 1. Create and activate a virtual environment with Python 3.10
+uv venv ace --python 3.10
+source ace/bin/activate
 
-# Activate the enviornment and roll back
-# set up tools that contained pkg_resources
-conda activate ace
-conda install cmake
-pip install --force-reinstall "setuptools<82.0.0"
+# 2. Install cmake (uv can install it directly from PyPI)
+# and install the specific setuptools version
+uv pip install cmake "setuptools<82.0.0"
 
-# Install TensorPotential from source
+# 3. Clone and navigate TensorPotential (Note: original snippet cloned but didn't install)
 git clone https://github.com/ICAMS/TensorPotential.git
-cd TensorPotential/
-cd ../
 
-# Install python-ace form source
+# 4. Clone and install python-ace from source
 git clone https://github.com/ICAMS/python-ace.git
 cd python-ace/
-pip install .
+uv pip install .
 cd ../
- 
-# Finally install kALDo
-pip install git+https://github.com/nanotheorygroup/kaldo
+
+# 5. Finally install kALDo from GitHub
+uv pip install "git+https://github.com/nanotheorygroup/kaldo"
 ```
 
 - Execute `python phonon.py` to calculate phonon dipersions and elastic properties of Aluminium Nitride with ACE.
