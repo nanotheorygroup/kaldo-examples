@@ -1,9 +1,18 @@
 ### Computing Thermal Conductivity of Sodium Chloride with UPET:
 
 > Input data descriptions for the `PET-MAD` potential file can be found [here](https://github.com/lab-cosmo/upet).  
-> Running `python thermal_conductivity.py` requires [UPET](https://github.com/lab-cosmo/upet) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [UPET](https://github.com/lab-cosmo/upet) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed:
 
-- Execute `python thermal_conductivity.py` to calculate the thermomechanical properties of Sodium Chloride with UPET.
+```console
+# 1. Create and activate a virtual environment with Python 3.12
+uv venv upet --python 3.12
+source upet/bin/activate
+
+# 2. Install both upet and kaldo
+uv pip install kaldo upet
+```
+
+- Execute `uv run python thermal_conductivity.py` to calculate the thermomechanical properties of Sodium Chloride with UPET.
 
 - The calculation proceeds as follows:
   - The NaCl structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-22862).
