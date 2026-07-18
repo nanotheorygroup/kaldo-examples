@@ -1,9 +1,9 @@
 ### Computing Thermal Conductivity of Gallium Arsenide with orb-v3:
 
 > Input data descriptions for the `orb-v3` potential file can be found [here](https://github.com/orbital-materials/orb-models).  
-> Running `python thermal_conductivity.py` requires [orb-models](https://github.com/orbital-materials/orb-models) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [orb-models](https://github.com/orbital-materials/orb-models) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
 
-- Execute `python thermal_conductivity.py` to calculate the thermal conductivies of Gallium Arsenide with orb-v3.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermal conductivies of Gallium Arsenide with orb-v3.
 
 - The calculation proceeds as follows:
   - The GaAs structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-2534).

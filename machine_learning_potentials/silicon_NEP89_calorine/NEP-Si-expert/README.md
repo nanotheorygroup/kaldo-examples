@@ -1,9 +1,9 @@
 ### Computing Thermal Conductivity of Silicon with an Expert Neuroevolution Potential (NEP):
 
 > Input data descriptions for the `nep.txt` potential file can be found [here](https://gitlab.com/brucefan1983/nep-data/-/tree/main/2024_Dong_Si/NEP-iteration-2/predict-2?ref_type=heads).  
-> Running `python thermal_conductivity.py` requires [ASE](https://ase-lib.org), [kALDo](https://github.com/nanotheorygroup/kaldo), and [calorine](https://calorine.materialsmodeling.org) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [ASE](https://ase-lib.org), [kALDo](https://github.com/nanotheorygroup/kaldo), and [calorine](https://calorine.materialsmodeling.org) to be installed.
 
-- Execute `python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon using the example expert NEP potential.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon using the example expert NEP potential.
 
 - The calculation proceeds as follows:
   - The Si structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-149).

@@ -1,9 +1,9 @@
 ### Computing Thermal Conductivity of Silicon Carbide with MatterSim-v1-1M:
 
 > Input data descriptions for the `MatterSim-v1-1M` potential file can be found [here](https://github.com/microsoft/mattersim).  
-> Running `python thermal_conductivity.py` requires [MatterSim](https://github.com/microsoft/mattersim) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [MatterSim](https://github.com/microsoft/mattersim) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
 
-- Execute `python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon Carbide with MatterSim-v1-1M.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon Carbide with MatterSim-v1-1M.
 
 - The calculation proceeds as follows:
   - The SiC structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-8062).

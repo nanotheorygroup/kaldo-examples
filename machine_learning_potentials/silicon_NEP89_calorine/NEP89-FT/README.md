@@ -1,9 +1,9 @@
 ## Computing Thermal Conductivity using a Fine-Tuned Neuroevolution Potential (NEP):
 
 > Input data descriptions for the `nep89_finetuned_on_Si.txt` potential file can be found under the `fine_tune/` folder.
-> Running `python thermal_conductivity.py` requires [ASE](https://ase-lib.org), [kALDo](https://github.com/nanotheorygroup/kaldo), and [calorine](https://calorine.materialsmodeling.org) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [ASE](https://ase-lib.org), [kALDo](https://github.com/nanotheorygroup/kaldo), and [calorine](https://calorine.materialsmodeling.org) to be installed.
 
-- Execute `python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon using the fine-tuned NEP potential.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon using the fine-tuned NEP potential.
 
 - The calculation proceeds as follows:
   - The Si structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-149).
