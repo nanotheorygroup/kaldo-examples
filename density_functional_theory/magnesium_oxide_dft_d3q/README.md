@@ -2,7 +2,7 @@
   
 >Input data descriptions for each executable in Quantum Espresso (QE) can be found [here](https://www.quantum-espresso.org).  
 > Additional information regarding the use of d3q can be found [here](https://anharmonic.github.io/d3q).  
-> Running `phonon.py`, `phonon_with_NAC.py`, `thermal_conductivity.py`, and `thermal_conductivity_with_NAC.py` requires [ASE](https://ase-lib.org) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.  
+> Running `uv run python phonon.py`, `uv run python phonon_with_NAC.py`, `uv run python thermal_conductivity.py`, and `uv run python thermal_conductivity_with_NAC.py` requires [ASE](https://ase-lib.org) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.  
 > NOTE: Examples use **d3q ver. 1.1.10, QE ver. 7.2**
 
   
@@ -92,7 +92,7 @@
      cp ../../02-2nd_order_DFPT/espressoifc2 fc_DFT/
      cp ../../03_3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT/
      cp POSCAR fc_DFT/
-     python thermal_conductivity.py
+     uv run python thermal_conductivity.py
 
      cd ../..
 
@@ -101,19 +101,19 @@
      cp ../../01-2nd_order_DFPT_with_NAC/espresso.ifc2 fc_DFT_with_NAC/
      cp ../../03_3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT_with_NAC/
      cp POSCAR fc_DFT_with_NAC/
-     python thermal_conductivity_with_NAC.py
+     uv run python thermal_conductivity_with_NAC.py
      ```
    - Or:
      ```console
      cd kaldo_runs_without_NAC/
      tar xzvf fc_DFT.tar.gz
-     python thermal_conductivity.py
+     uv run python thermal_conductivity.py
 
      cd ../..
 
      cd kaldo_runs_with_NAC/
      tar xzvf fc_DFT.tar.gz
-     python thermal_conductivity_with_NAC.py
+     uv run python thermal_conductivity_with_NAC.py
      ```
      
    - After performing the calculations, run the Jupyter notebooks `kALDo_with_d3q_gallery_with_NAC.ipynb` and `kALDo_with_d3q_gallery_without_NAC.ipynb` to visualize all properties.
