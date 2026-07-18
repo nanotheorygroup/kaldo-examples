@@ -1,7 +1,7 @@
 ### Computing Thermal Conductivity of Aluminium Nitride with ACE (Atomic Cluster Expansion):
 
 > Input data descriptions for the `ACE` potential file can be found [here](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html).  
-> Running `python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed:
+> Running `uv run python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed:
 
 ```console
 # 1. Create and activate a virtual environment with Python 3.10
@@ -28,7 +28,7 @@ cd ../
 uv pip install "git+https://github.com/nanotheorygroup/kaldo"
 ```
 
-- Execute `python phonon.py` to calculate phonon dipersions and elastic properties of Aluminium Nitride with ACE.
+- Execute `uv run python phonon.py` to calculate phonon dipersions and elastic properties of Aluminium Nitride with ACE.
 
 - The calculation proceeds as follows:
   
@@ -45,7 +45,7 @@ uv pip install "git+https://github.com/nanotheorygroup/kaldo"
   - The phonon dispersions and density of states are computed using kALDo.
 
 
-- Execute `python thermal_conductivity.py` to calculate the thermal conductivies of Aluminium Nitride with ACE potential.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermal conductivies of Aluminium Nitride with ACE potential.
 
 - The calculation proceeds as follows:
   - The AlN structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-661).
