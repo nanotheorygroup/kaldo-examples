@@ -1,5 +1,5 @@
 from ase.build import bulk
-from ase.constraints import StrainFilter
+from ase.filters import StrainFilter
 from ase.io import read
 from ase.optimize import BFGS
 from kaldo.conductivity import Conductivity

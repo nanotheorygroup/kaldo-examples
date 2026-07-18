@@ -2,7 +2,7 @@
   
 >Input data descriptions for each executable in Quantum Espresso (QE) can be found [here](https://www.quantum-espresso.org).  
 > Additional information regarding the use of d3q can be found [here](https://anharmonic.github.io/d3q).  
-> Running `phonon.py` and `thermal_conductivity.py` requires [ASE](https://ase-lib.org) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.  
+> Running `uv run python phonon.py` and `uv run python thermal_conductivity.py` requires [ASE](https://ase-lib.org) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.  
 > NOTE: Example uses **d3q ver. 1.1.10, QE ver. 7.2**
   
 0. Setup the required input files listed here: `pw.in`, `ph.in`, `q2r.in`, `kaldo_q2r.in`, `CONTROL`, `d3.in`, and the `UPF/` pseudopotential folder in their respective folders. Check out the documentation of QE and d3q for more information on this step.  
@@ -26,7 +26,7 @@
        q2r.x -in kaldo_q2r.in > kaldo_q2r.out
        ```
        
-2. Under `02-kaldo_runs_phonon/`: Perform lattice dynamic calculations with kALDo using the python script `phonon.py` to visualize data calculated from the 2nd order force constants. To perform the calculation, make a folder `fc_DFT/` and move `espresso.ifc2` from the previous step, as well as the provided `CONTROL` structure file into this directory. Run `python phonon.py` for the calculation.
+2. Under `02-kaldo_runs_phonon/`: Perform lattice dynamic calculations with kALDo using the python script `phonon.py` to visualize data calculated from the 2nd order force constants. To perform the calculation, make a folder `fc_DFT/` and move `espresso.ifc2` from the previous step, as well as the provided `CONTROL` structure file into this directory. Run `uv run python phonon.py` for the calculation.
    - An example procedure for performing this calculation is below:
     
      ```console
@@ -34,7 +34,7 @@
      mkdir fc_DFT/
      cp CONTROL fc_DFT/
      cp ../01-2nd_order_DFPT/espresso.ifc2 fc_DFT/
-     python phonon.py
+     uv run python phonon.py
      ```
      
    - After performing the calculation, use the Jupyter notebook `phonon_plotter.ipynb` to plot phonon bands (dispersion relation).
@@ -71,7 +71,7 @@
      cp CONTROL fc_DFT/
      cp ../01-2nd_order_DFPT/espresso.ifc2 fc_DFT/
      cp ../03-3rd_order_d3q/FORCE_CONSTANTS_3RD_D3Q fc_DFT/
-     python thermal_conductivity.py
+     uv run python thermal_conductivity.py
      ```
 
     - After performing the calculation, use the Jupyter notebook `kALDo_with_d3q_gallery.ipynb` to visualize all properties.

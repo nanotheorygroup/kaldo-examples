@@ -24,8 +24,6 @@ For each example, more detailed information is provided by the README.md file co
 This example illustrates how to perform thermal transport simulation for a cubic cesium lead bromide system (5 atom per cell) with [TDEP](https://tdep-developers.github.io/tdep/) and [GPUMD](https://gpumd.org/) packages as force calculator.
 - `gallium_arsenide_orb-v3_ORBCalculator:`
 This example illustrates how to perform thermal transport simulation for a gallium arsenide (2 atoms per cell) system using [Orb](https://github.com/orbital-materials/orb-model) package as force calculator.
-- `magnesium_oxide_MatterSim-v1-1M_mattersimcalculator:`
-This example illustrates how to model thermal expansion coefficients for a magnesium oxide (2 atoms per cell) system using [MatterSim](https://github.com/microsoft/mattersim) package as force calculator.
 - `silicon_MatterSim-v1-1M_mattersimcalculator:`
 This example illustrates how model thermal expansion coefficients for a silicon diamond (2 atoms per cell) system using [MatterSim](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
 - `silicon_NEP89_calorine:`

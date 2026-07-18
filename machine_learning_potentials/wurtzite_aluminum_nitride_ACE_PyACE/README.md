@@ -1,9 +1,34 @@
 ### Computing Thermal Conductivity of Aluminium Nitride with ACE (Atomic Cluster Expansion):
 
 > Input data descriptions for the `ACE` potential file can be found [here](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html).  
-> Running `python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [pyace](https://pacemaker.readthedocs.io/en/feature-docs/pyace.html) and [kALDo](https://github.com/nanotheorygroup/kaldo) to be installed:
 
-- Execute `python phonon.py` to calculate phonon dipersions and elastic properties of Aluminium Nitride with ACE.
+```console
+# 1. Create and activate a virtual environment with Python 3.10
+uv venv ace --python 3.10
+source ace/bin/activate
+
+# 2. Install cmake 
+# and install the specific setuptools version
+uv pip install cmake "setuptools<82.0.0"
+
+# 3. Clone and install TensorPotential from source
+git clone https://github.com/ICAMS/TensorPotential.git
+cd TensorPotentia/
+uv pip install .
+cd ../
+
+# 4. Clone and install python-ace from source
+git clone https://github.com/ICAMS/python-ace.git
+cd python-ace/
+uv pip install .
+cd ../
+
+# 5. Finally install kALDo from GitHub
+uv pip install "git+https://github.com/nanotheorygroup/kaldo"
+```
+
+- Execute `uv run python phonon.py` to calculate phonon dipersions and elastic properties of Aluminium Nitride with ACE.
 
 - The calculation proceeds as follows:
   
@@ -20,7 +45,7 @@
   - The phonon dispersions and density of states are computed using kALDo.
 
 
-- Execute `python thermal_conductivity.py` to calculate the thermal conductivies of Aluminium Nitride with ACE potential.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermal conductivies of Aluminium Nitride with ACE potential.
 
 - The calculation proceeds as follows:
   - The AlN structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-661).
