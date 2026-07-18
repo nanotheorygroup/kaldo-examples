@@ -20,6 +20,7 @@ The examples cover workflows with:
 - **Empirical Potentials** (Any Empirical Potentials Supported in LAMMPS)
 - **Finite Temperature Effective Potentials** (TDEP)
 
+Instllations and package dependencies are handled by [uv](https://docs.astral.sh/uv/), please refer to the manual when needed.
 
 ## Tutorial Descriptions
 

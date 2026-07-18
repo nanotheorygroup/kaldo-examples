@@ -39,4 +39,4 @@ uv run python thermal_conductivity.py
 - To view figures generated during simulations, navigate to this folder: `plots/3_3_3/`
 - To access data computed during simulations, navigate to this folder: `ALD_Si46/`
 
-- Reference conductivity (3x3x3 supercell, 3x3x3 k-point mesh, inverse, qunatun phonon populations):  **70.3 W/m-K** 
+- Reference conductivity (3x3x3 supercell, 3x3x3 k-point mesh, inverse, quantum phonon populations):  **70.3 W/m-K** 
