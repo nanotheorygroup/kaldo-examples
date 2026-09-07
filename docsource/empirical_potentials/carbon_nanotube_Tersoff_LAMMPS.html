@@ -317,30 +317,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../machine_learning_potentials/magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    <span title="/docsource/machine_learning_potentials/magnesium_oxide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Magnesium Oxide Mattersim V1 1M Mattersimcalculator</span></span>
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../machine_learning_potentials/silicon_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
         
   
@@ -1039,7 +1015,7 @@
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
 from pylab import *
 import warnings
-warnings.filterwarnings(&quot;ignore&quot;)
+warnings.filterwarnings("ignore")
 </code></pre></div>
 </div>
 </div>
@@ -1050,7 +1026,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def cumulative_cond_cal(observables, kappa_tensor, prefactor=1/3):
 
-    &quot;&quot;&quot;Compute cumulative conductivity based on either frequnecy or mean-free path
+    """Compute cumulative conductivity based on either frequnecy or mean-free path
 
        input:
        observables: (ndarray) either phonon frequnecy or mean-free path
@@ -1061,10 +1037,10 @@ warnings.filterwarnings(&quot;ignore&quot;)
        observeables: (ndarray) sorted phonon frequency or mean-free path
        kappa_cond (ndarray) cumulative conductivity
 
-    &quot;&quot;&quot;
+    """
 
     # Sum over kappa by directions
-    kappa = np.einsum(&#39;maa-&gt;m&#39;, prefactor * kappa_tensor)
+    kappa = np.einsum('maa-&gt;m', prefactor * kappa_tensor)
 
     # Sort observables
     observables_argsort_indices = np.argsort(observables)
@@ -1073,25 +1049,25 @@ warnings.filterwarnings(&quot;ignore&quot;)
 
 
 
-def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
+def set_fig_properties(ax_list, panel_color_str='black', line_width=2):
     tl = 4
     tw = 2
     tlm = 2
 
     for ax in ax_list:
-        ax.tick_params(which=&#39;major&#39;, length=tl, width=tw)
-        ax.tick_params(which=&#39;minor&#39;, length=tlm, width=tw)
-        ax.tick_params(which=&#39;both&#39;, axis=&#39;both&#39;, direction=&#39;in&#39;,
+        ax.tick_params(which='major', length=tl, width=tw)
+        ax.tick_params(which='minor', length=tlm, width=tw)
+        ax.tick_params(which='both', axis='both', direction='in',
                        right=True, top=True)
-        ax.spines[&#39;bottom&#39;].set_color(panel_color_str)
-        ax.spines[&#39;top&#39;].set_color(panel_color_str)
-        ax.spines[&#39;left&#39;].set_color(panel_color_str)
-        ax.spines[&#39;right&#39;].set_color(panel_color_str)
+        ax.spines['bottom'].set_color(panel_color_str)
+        ax.spines['top'].set_color(panel_color_str)
+        ax.spines['left'].set_color(panel_color_str)
+        ax.spines['right'].set_color(panel_color_str)
 
-        ax.spines[&#39;bottom&#39;].set_linewidth(line_width)
-        ax.spines[&#39;top&#39;].set_linewidth(line_width)
-        ax.spines[&#39;left&#39;].set_linewidth(line_width)
-        ax.spines[&#39;right&#39;].set_linewidth(line_width)
+        ax.spines['bottom'].set_linewidth(line_width)
+        ax.spines['top'].set_linewidth(line_width)
+        ax.spines['left'].set_linewidth(line_width)
+        ax.spines['right'].set_linewidth(line_width)
 
         for t in ax.xaxis.get_ticklines(): t.set_color(panel_color_str)
         for t in ax.yaxis.get_ticklines(): t.set_color(panel_color_str)
@@ -1108,14 +1084,14 @@ def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
 aw = 2
 fs = 12
-font = {&#39;size&#39;: fs}
-matplotlib.rc(&#39;font&#39;, **font)
-matplotlib.rc(&#39;axes&#39;, linewidth=aw)
+font = {'size': fs}
+matplotlib.rc('font', **font)
+matplotlib.rc('axes', linewidth=aw)
 
 # Configure Matplotlib to use a LaTeX-like style without LaTeX
-plt.rcParams[&#39;text.usetex&#39;] = False
-plt.rcParams[&#39;font.family&#39;] = &#39;serif&#39;
-plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+plt.rcParams['text.usetex'] = False
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['mathtext.fontset'] = 'cm'
 </code></pre></div>
 </div>
 </div>
@@ -1125,41 +1101,41 @@ plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
 </code></pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote data path
-data_folder = &quot;./&quot;
+data_folder = "./"
 
 # Derive symbols for high symmetry directions in Brillouin zone
-dispersion = np.loadtxt(data_folder  + &#39;plots/1_1_151/dispersion&#39;)
-point_names = np.loadtxt(data_folder  + &#39;plots//1_1_151/point_names&#39;, dtype=str)
+dispersion = np.loadtxt(data_folder  + 'plots/1_1_151/dispersion')
+point_names = np.loadtxt(data_folder  + 'plots//1_1_151/point_names', dtype=str)
 
 point_names_list = []
 for point_name in point_names:
-    if point_name == &#39;G&#39;:
-        point_name = r&#39;$\Gamma$&#39;
-    elif point_name == &#39;U&#39;:
-        point_name = &#39;U=K&#39;
+    if point_name == 'G':
+        point_name = r'$\Gamma$'
+    elif point_name == 'U':
+        point_name = 'U=K'
     point_names_list.append(point_name)
 
-# Load in the &quot;tick-mark&quot; values for these symbols
-q = np.loadtxt(data_folder  + &#39;plots/1_1_151/q&#39;)
-Q = np.loadtxt(data_folder  + &#39;plots/1_1_151/Q_val&#39;)
-dos_Si = np.load(data_folder  + &#39;plots/1_1_151/dos.npy&#39;)
+# Load in the "tick-mark" values for these symbols
+q = np.loadtxt(data_folder  + 'plots/1_1_151/q')
+Q = np.loadtxt(data_folder  + 'plots/1_1_151/Q_val')
+dos_Si = np.load(data_folder  + 'plots/1_1_151/dos.npy')
 
 fig = figure(figsize=(4,3))
 set_fig_properties([gca()])
-plot(q[0], dispersion[0, 0], &#39;r-&#39;, ms=1)
-plot(q, dispersion, &#39;r-&#39;, ms=1)
-ylabel(&#39;Frequency (THz)&#39;, fontsize=14)
-xlabel(r&#39;Wave vector ($\frac{2\pi}{a}$)&#39;, fontsize=14)
+plot(q[0], dispersion[0, 0], 'r-', ms=1)
+plot(q, dispersion, 'r-', ms=1)
+ylabel('Frequency (THz)', fontsize=14)
+xlabel(r'Wave vector ($\frac{2\pi}{a}$)', fontsize=14)
 gca().set_yticks(np.arange(0, 60, 10))
 xticks(Q, point_names_list)
 xlim([0, 0.5])
 dosax = fig.add_axes([0.91, .11, .17, .77])
 set_fig_properties([gca()])
 for d in np.expand_dims(dos_Si[1],0):
-    dosax.plot(d, dos_Si[0],c=&#39;r&#39;)
+    dosax.plot(d, dos_Si[0],c='r')
 dosax.set_yticks([])
 dosax.set_xticks([])
-dosax.set_xlabel(&quot;DOS&quot;)
+dosax.set_xlabel("DOS")
 show()
 </code><br/></pre></div>
 </div>
@@ -1178,20 +1154,20 @@ show()
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in group velocity and frequency data
 frequency =  np.load(
-   data_folder  +  &#39;ALD_CNT/1_1_151/frequency.npy&#39;,
+   data_folder  +  'ALD_CNT/1_1_151/frequency.npy',
     allow_pickle=True)
 
 
 cv =  np.load(
-   data_folder  + &#39;ALD_CNT/1_1_151/300/quantum/heat_capacity.npy&#39;,
+   data_folder  + 'ALD_CNT/1_1_151/300/quantum/heat_capacity.npy',
     allow_pickle=True)
 
 
 group_velocity = np.load(
-   data_folder  +  &#39;ALD_CNT/1_1_151/velocity.npy&#39;)
+   data_folder  +  'ALD_CNT/1_1_151/velocity.npy')
 
 
-phase_space = np.load(data_folder  + &#39;ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy&#39;,
+phase_space = np.load(data_folder  + 'ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy',
                       allow_pickle=True)[:,0]
 
 # Compute norm of group velocity
@@ -1203,29 +1179,29 @@ group_velcotiy_norm = np.linalg.norm(
 figure(figsize=(12, 3))
 subplot(1,3, 1)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;)[3:], 1e23*cv.flatten(order=&#39;C&#39;)[3:],
-        facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
-ylabel (r&quot;$C_{v}$ ($10^{23}$ J/K)&quot;)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+scatter(frequency.flatten(order='C')[3:], 1e23*cv.flatten(order='C')[3:],
+        facecolor='w', edgecolor='r', s=10, marker='8')
+ylabel (r"$C_{v}$ ($10^{23}$ J/K)")
+xlabel('Frequency (THz)', fontsize=14)
 gca().set_xticks(np.arange(0, 60, 10))
-ylim(0.35*1e23*cv.flatten(order=&#39;C&#39;)[3:].min(), 1.05*1e23*cv.flatten(order=&#39;C&#39;)[3:].max())
+ylim(0.35*1e23*cv.flatten(order='C')[3:].min(), 1.05*1e23*cv.flatten(order='C')[3:].max())
 
 subplot(1 ,3, 2)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        group_velcotiy_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;^&#39;)
+scatter(frequency.flatten(order='C'),
+        group_velcotiy_norm, facecolor='w', edgecolor='r', s=10, marker='^')
 gca().set_xticks(np.arange(0, 60, 10))
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-ylabel(r&#39;$|v| \ (\frac{km}{s})$&#39;, fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
+ylabel(r'$|v| \ (\frac{km}{s})$', fontsize=14)
 
 subplot(1 ,3, 3)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        phase_space, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;o&#39;)
+scatter(frequency.flatten(order='C'),
+        phase_space, facecolor='w', edgecolor='r', s=10, marker='o')
 gca().set_xticks(np.arange(0, 60, 10))
-ylabel(&#39;Phase space&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-yscale(&#39;log&#39;)
+ylabel('Phase space', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
+yscale('log')
 ylim([1e-1, 5e3])
 subplots_adjust(wspace=0.33)
 show()
@@ -1249,7 +1225,7 @@ show()
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
 scattering_rate = np.load(
-   data_folder  +  &#39;ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy&#39;,
+   data_folder  +  'ALD_CNT/1_1_151/300/quantum/_ps_and_gamma.npy',
                       allow_pickle=True)[:,1]
 
 # Derive lifetime, which is inverse of scattering rate
@@ -1259,8 +1235,8 @@ life_time = scattering_rate ** (-1)
 mean_free_path = []
 for i in range(3):
     mean_free_path.append(np.loadtxt(
-  data_folder  +   &#39;ALD_CNT/1_1_151/inverse/300/quantum/mean_free_path_&#39; +
-    str(i) + &#39;.dat&#39;))
+  data_folder  +   'ALD_CNT/1_1_151/inverse/300/quantum/mean_free_path_' +
+    str(i) + '.dat'))
 
 
 # Convert list to numpy array and compute norm for mean free path
@@ -1273,31 +1249,31 @@ mean_free_path_norm = np.linalg.norm(
 figure(figsize=(12, 3))
 subplot(1,3, 1)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        life_time, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;)
+scatter(frequency.flatten(order='C'),
+        life_time, facecolor='w', edgecolor='r', s=10, marker='s')
 gca().set_xticks(np.arange(0, 60, 10))
-yscale(&#39;log&#39;)
-ylabel(r&#39;$\tau \ (ps)$&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+yscale('log')
+ylabel(r'$\tau \ (ps)$', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 ylim([1e-2, 1e4])
 
 subplot(1,3, 2)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        scattering_rate, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
+scatter(frequency.flatten(order='C'),
+        scattering_rate, facecolor='w', edgecolor='r', s=10, marker='d')
 gca().set_xticks(np.arange(0, 60, 10))
-yscale(&#39;log&#39;)
-ylabel(r&#39;$\Gamma \ (THz)$&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+yscale('log')
+ylabel(r'$\Gamma \ (THz)$', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 
 subplot(1,3, 3)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        mean_free_path_norm, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
+scatter(frequency.flatten(order='C'),
+        mean_free_path_norm, facecolor='w', edgecolor='r', s=10, marker='8')
 gca().set_xticks(np.arange(0, 60, 10))
-ylabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-yscale(&#39;log&#39;)
+ylabel(r'$\lambda \ (nm)$', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
+yscale('log')
 ylim([1e-2, 1e6])
 subplots_adjust(wspace=0.33)
 show()
@@ -1323,22 +1299,22 @@ kappa_tensor_iso = np.zeros([mean_free_path.shape[0], 3, 3])
 for i in range(3):
     for j in range(3):
         kappa_tensor[:, i, j] = np.loadtxt(
-    data_folder  + &#39;ALD_CNT/1_1_151/inverse/300/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+    data_folder  + 'ALD_CNT/1_1_151/inverse/300/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
 
 # Sum over the 0th dimension to recover 3-by-3 kappa matrix
 # Note that 29.92 is the volume factor
 kappa_matrix = 29.92 * kappa_tensor.sum(axis=0)
-print(&quot;Thermal conductivity along z-axis: %.1f W m^-1 K^-1\n&quot;
+print("Thermal conductivity along z-axis: %.1f W m^-1 K^-1\n"
       % (np.diag(kappa_matrix)[2]))
-print(&quot;kappa matrix: &quot;)
+print("kappa matrix: ")
 print(kappa_matrix)
-print(&#39;\n&#39;)
+print('\n')
 
 # Compute kappa in per mode and cumulative representations
 kappa_per_mode = 29.92 * kappa_tensor.sum(axis=-1).sum(axis=1)
 freq_sorted, kappa_cum_wrt_freq = cumulative_cond_cal(
-    frequency.flatten(order=&#39;C&#39;), 29.92 * kappa_tensor, prefactor=1.0)
+    frequency.flatten(order='C'), 29.92 * kappa_tensor, prefactor=1.0)
 lambda_sorted, kappa_cum_wrt_lambda = cumulative_cond_cal(
     mean_free_path_norm, 29.92 * kappa_tensor, prefactor=1.0)
 
@@ -1347,28 +1323,28 @@ lambda_sorted, kappa_cum_wrt_lambda = cumulative_cond_cal(
 figure(figsize=(12, 3))
 subplot(1,3, 1)
 set_fig_properties([gca()])
-scatter(frequency.flatten(order=&#39;C&#39;),
-        kappa_per_mode, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{per \ mode}$&#39;)
-ylabel(r&#39;$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+scatter(frequency.flatten(order='C'),
+        kappa_per_mode, facecolor='w', edgecolor='r', s=10, marker='&gt;', label='$\kappa_{per \ mode}$')
+ylabel(r'$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$',fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 gca().set_xticks(np.arange(0, 60, 10))
 legend(loc=1, fontsize=10)
 
 subplot(1,3, 2)
 set_fig_properties([gca()])
-plot(freq_sorted, kappa_cum_wrt_freq, &#39;r&#39;
-     , label=r&quot;$\kappa \approx 8800 \;\frac{\rm{W}}{\rm{m}\cdot\rm{K}}$&quot;)
-ylabel(r&#39;$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+plot(freq_sorted, kappa_cum_wrt_freq, 'r'
+     , label=r"$\kappa \approx 8800 \;\frac{\rm{W}}{\rm{m}\cdot\rm{K}}$")
+ylabel(r'$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$',fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 legend(loc=4, fontsize=10)
 gca().set_xticks(np.arange(0, 60, 10))
 
 subplot(1,3, 3)
 set_fig_properties([gca()])
-plot(lambda_sorted, kappa_cum_wrt_lambda, &#39;r&#39;)
-xlabel(r&#39;$\lambda \ (nm)$&#39;, fontsize=14)
-ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xscale(&#39;log&#39;)
+plot(lambda_sorted, kappa_cum_wrt_lambda, 'r')
+xlabel(r'$\lambda \ (nm)$', fontsize=14)
+ylabel(r'$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$',fontsize=14)
+xscale('log')
 subplots_adjust(wspace=0.35)
 xlim([1e0, 5e5])
 show()

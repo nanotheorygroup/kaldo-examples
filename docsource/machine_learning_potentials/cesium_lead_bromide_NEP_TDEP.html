@@ -458,30 +458,6 @@
   
   
     <li class="md-nav__item">
-      <a href="magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    <span title="/docsource/machine_learning_potentials/magnesium_oxide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Magnesium Oxide Mattersim V1 1M Mattersimcalculator</span></span>
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="silicon_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
         
   
@@ -1027,7 +1003,7 @@
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>from ase.io import read
 from pylab import *
 import warnings
-warnings.filterwarnings(&quot;ignore&quot;)
+warnings.filterwarnings("ignore")
 </code></pre></div>
 </div>
 </div>
@@ -1038,7 +1014,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def cumulative_cond_cal(observables, kappa_tensor, prefactor=1/3):
 
-    &quot;&quot;&quot;Compute cumulative conductivity based on either frequency or mean-free path
+    """Compute cumulative conductivity based on either frequency or mean-free path
 
        input:
        observables: (ndarray) either phonon frequency or mean-free path
@@ -1049,10 +1025,10 @@ warnings.filterwarnings(&quot;ignore&quot;)
        observeables: (ndarray) sorted phonon frequency or mean-free path
        kappa_cond (ndarray) cumulative conductivity
 
-    &quot;&quot;&quot;
+    """
 
     # Sum over kappa by directions
-    kappa = np.einsum(&#39;maa-&gt;m&#39;, prefactor * kappa_tensor)
+    kappa = np.einsum('maa-&gt;m', prefactor * kappa_tensor)
 
     # Sort observables
     observables_argsort_indices = np.argsort(observables)
@@ -1061,25 +1037,25 @@ warnings.filterwarnings(&quot;ignore&quot;)
 
 
 
-def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
+def set_fig_properties(ax_list, panel_color_str='black', line_width=2):
     tl = 4
     tw = 2
     tlm = 2
 
     for ax in ax_list:
-        ax.tick_params(which=&#39;major&#39;, length=tl, width=tw)
-        ax.tick_params(which=&#39;minor&#39;, length=tlm, width=tw)
-        ax.tick_params(which=&#39;both&#39;, axis=&#39;both&#39;, direction=&#39;in&#39;,
+        ax.tick_params(which='major', length=tl, width=tw)
+        ax.tick_params(which='minor', length=tlm, width=tw)
+        ax.tick_params(which='both', axis='both', direction='in',
                        right=True, top=True)
-        ax.spines[&#39;bottom&#39;].set_color(panel_color_str)
-        ax.spines[&#39;top&#39;].set_color(panel_color_str)
-        ax.spines[&#39;left&#39;].set_color(panel_color_str)
-        ax.spines[&#39;right&#39;].set_color(panel_color_str)
+        ax.spines['bottom'].set_color(panel_color_str)
+        ax.spines['top'].set_color(panel_color_str)
+        ax.spines['left'].set_color(panel_color_str)
+        ax.spines['right'].set_color(panel_color_str)
 
-        ax.spines[&#39;bottom&#39;].set_linewidth(line_width)
-        ax.spines[&#39;top&#39;].set_linewidth(line_width)
-        ax.spines[&#39;left&#39;].set_linewidth(line_width)
-        ax.spines[&#39;right&#39;].set_linewidth(line_width)
+        ax.spines['bottom'].set_linewidth(line_width)
+        ax.spines['top'].set_linewidth(line_width)
+        ax.spines['left'].set_linewidth(line_width)
+        ax.spines['right'].set_linewidth(line_width)
 
         for t in ax.xaxis.get_ticklines(): t.set_color(panel_color_str)
         for t in ax.yaxis.get_ticklines(): t.set_color(panel_color_str)
@@ -1096,14 +1072,14 @@ def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
 aw = 2
 fs = 12
-font = {&#39;size&#39;: fs}
-matplotlib.rc(&#39;font&#39;, **font)
-matplotlib.rc(&#39;axes&#39;, linewidth=aw)
+font = {'size': fs}
+matplotlib.rc('font', **font)
+matplotlib.rc('axes', linewidth=aw)
 
 # Configure Matplotlib to use a LaTeX-like style without LaTeX
-plt.rcParams[&#39;text.usetex&#39;] = False
-plt.rcParams[&#39;font.family&#39;] = &#39;serif&#39;
-plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+plt.rcParams['text.usetex'] = False
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['mathtext.fontset'] = 'cm'
 </code></pre></div>
 </div>
 </div>
@@ -1112,54 +1088,54 @@ plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[4]:
 </code></pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>data_folder_360K = &#39;360K/kaldo_runs/&#39;
-data_folder_500K = &#39;500K/kaldo_runs/&#39;
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>data_folder_360K = '360K/kaldo_runs/'
+data_folder_500K = '500K/kaldo_runs/'
 
 # Derive symbols for high symmetry directions in Brillouin zone
-dispersion_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/dispersion&#39;)
-point_names_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/point_names&#39;, dtype=str)
+dispersion_360K = np.loadtxt(data_folder_360K  + 'plots/12_12_12/dispersion')
+point_names_360K = np.loadtxt(data_folder_360K  + 'plots/12_12_12/point_names', dtype=str)
 
-dispersion_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/dispersion&#39;)
-point_names_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/point_names&#39;, dtype=str)
+dispersion_500K = np.loadtxt(data_folder_500K  + 'plots/12_12_12/dispersion')
+point_names_500K = np.loadtxt(data_folder_500K  + 'plots/12_12_12/point_names', dtype=str)
 
 point_names_list_360K = []
 point_names_list_500K = []
 for point_name in point_names_360K:
-    if point_name == &#39;G&#39;:
-        point_name = r&#39;$\Gamma$&#39;
-    elif point_name == &#39;U&#39;:
-        point_name = &#39;U=K&#39;
+    if point_name == 'G':
+        point_name = r'$\Gamma$'
+    elif point_name == 'U':
+        point_name = 'U=K'
     point_names_list_360K.append(point_name)
 
 for point_name in point_names_500K:
-    if point_name == &#39;G&#39;:
-        point_name = r&#39;$\Gamma$&#39;
-    elif point_name == &#39;U&#39;:
-        point_name = &#39;U=K&#39;
+    if point_name == 'G':
+        point_name = r'$\Gamma$'
+    elif point_name == 'U':
+        point_name = 'U=K'
     point_names_list_500K.append(point_name)
 
-# Load in the &quot;tick-mark&quot; values for these symbols
-q_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/q&#39;)
-Q_360K = np.loadtxt(data_folder_360K  + &#39;plots/12_12_12/Q_val&#39;)
+# Load in the "tick-mark" values for these symbols
+q_360K = np.loadtxt(data_folder_360K  + 'plots/12_12_12/q')
+Q_360K = np.loadtxt(data_folder_360K  + 'plots/12_12_12/Q_val')
 
-q_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/q&#39;)
-Q_500K = np.loadtxt(data_folder_500K  + &#39;plots/12_12_12/Q_val&#39;)
+q_500K = np.loadtxt(data_folder_500K  + 'plots/12_12_12/q')
+Q_500K = np.loadtxt(data_folder_500K  + 'plots/12_12_12/Q_val')
 
 # Load in grid and dos individually
-dos_360K= np.load(data_folder_360K + &#39;plots/12_12_12/dos.npy&#39;)
-dos_500K= np.load(data_folder_500K + &#39;plots/12_12_12/dos.npy&#39;)
+dos_360K= np.load(data_folder_360K + 'plots/12_12_12/dos.npy')
+dos_500K= np.load(data_folder_500K + 'plots/12_12_12/dos.npy')
 
 # Plot dispersion
 fig = figure(figsize=(4,3))
 set_fig_properties([gca()])
-plot(q_360K[0], dispersion_360K[0, 0], &#39;b-&#39;, ms=1)
-plot(q_360K, dispersion_360K, &#39;b-&#39;, ms=1)
-plot(q_500K[0], dispersion_500K[0, 0], &#39;r-&#39;, ms=1)
-plot(q_500K, dispersion_500K, &#39;r-&#39;, ms=1)
+plot(q_360K[0], dispersion_360K[0, 0], 'b-', ms=1)
+plot(q_360K, dispersion_360K, 'b-', ms=1)
+plot(q_500K[0], dispersion_500K[0, 0], 'r-', ms=1)
+plot(q_500K, dispersion_500K, 'r-', ms=1)
 for i in range(1, 4):
-    axvline(x=Q_360K[i], ymin=0, ymax=2, ls=&#39;--&#39;,  lw=2, c=&quot;k&quot;)
-ylabel(&#39;Frequency (THz)&#39;, fontsize=14)
-xlabel(r&#39;Wave vector ($\frac{2\pi}{a}$)&#39;, fontsize=14)
+    axvline(x=Q_360K[i], ymin=0, ymax=2, ls='--',  lw=2, c="k")
+ylabel('Frequency (THz)', fontsize=14)
+xlabel(r'Wave vector ($\frac{2\pi}{a}$)', fontsize=14)
 gca().set_yticks(np.arange(0, 5, 1))
 xticks(Q_360K, point_names_list_360K)
 ylim([-0.1, 5])
@@ -1169,12 +1145,12 @@ set_fig_properties([gca()])
 
 # Plot per projection
 for d in np.expand_dims(dos_360K[1],0):
-    dosax.plot(d, dos_360K[0],c=&#39;b&#39;, label=&#39;360 K&#39;)
+    dosax.plot(d, dos_360K[0],c='b', label='360 K')
 for d in np.expand_dims(dos_500K[1],0):
-    dosax.plot(d, dos_500K[0],c=&#39;r&#39;, label=&#39;500 K&#39;)
+    dosax.plot(d, dos_500K[0],c='r', label='500 K')
 dosax.set_yticks([])
 dosax.set_xticks([])
-dosax.set_xlabel(&quot;DOS&quot;)
+dosax.set_xlabel("DOS")
 legend(fontsize=6, loc=2)
 ylim([-0.1, 5])
 show()
@@ -1195,35 +1171,35 @@ show()
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in group velocity, heat_capacity (cv) and frequency data
 frequency_360K =  np.load(
-    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/frequency.npy&#39;,
+    data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/frequency.npy',
     allow_pickle=True)
 
 cv_360K =  np.load(
-    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/360/quantum/heat_capacity.npy&#39;,
+    data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/360/quantum/heat_capacity.npy',
     allow_pickle=True)
 
 frequency_500K =  np.load(
-    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/frequency.npy&#39;,
+    data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/frequency.npy',
     allow_pickle=True)
 
 cv_500K =  np.load(
-    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/500/quantum/heat_capacity.npy&#39;,
+    data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/500/quantum/heat_capacity.npy',
     allow_pickle=True)
 
 
 
 group_velocity_360K = np.load(
-    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/velocity.npy&#39;)
+    data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/velocity.npy')
 
 phase_space_360K = np.load(data_folder_360K +
- &#39;ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_and_gamma.npy&#39;,
+ 'ALD_CsPbBr3_NEP/12_12_12/360/quantum/_ps_and_gamma.npy',
                       allow_pickle=True)[:,0]
 
 group_velocity_500K = np.load(
-    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/velocity.npy&#39;)
+    data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/velocity.npy')
 
 phase_space_500K = np.load(data_folder_500K +
- &#39;ALD_CsPbBr3_NEP/12_12_12/500/quantum/_ps_and_gamma.npy&#39;,
+ 'ALD_CsPbBr3_NEP/12_12_12/500/quantum/_ps_and_gamma.npy',
                       allow_pickle=True)[:,0]
 
 # Compute norm of group velocity
@@ -1238,36 +1214,36 @@ group_velcotiy_norm_500K = np.linalg.norm(
 figure(figsize=(12, 3))
 subplot(1,3, 1)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;)[3:], 1e23*cv_360K.flatten(order=&#39;C&#39;)[3:],
-        facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;8&#39;, label=&#39;360 K&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;)[3:], 1e23*cv_500K.flatten(order=&#39;C&#39;)[3:],
-        facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;, label=&#39;500 K&#39;)
-ylabel (r&quot;$C_{v}$ ($10^{23}$ J/K)&quot;)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+scatter(frequency_360K.flatten(order='C')[3:], 1e23*cv_360K.flatten(order='C')[3:],
+        facecolor='w', edgecolor='b', s=10, marker='8', label='360 K')
+scatter(frequency_500K.flatten(order='C')[3:], 1e23*cv_500K.flatten(order='C')[3:],
+        facecolor='w', edgecolor='r', s=10, marker='8', label='500 K')
+ylabel (r"$C_{v}$ ($10^{23}$ J/K)")
+xlabel('Frequency (THz)', fontsize=14)
 ylim(1.33, 1.40)
 gca().set_yticks(np.arange(1.34, 1.40, 0.01))
 gca().set_xticks(np.arange(0, 5, 1))
 legend(fontsize=10)
 subplot(1 ,3, 2)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;),
-        group_velcotiy_norm_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;^&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;),
-        group_velcotiy_norm_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;^&#39;)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-ylabel(r&#39;$|v| \ (\frac{km}{s})$&#39;, fontsize=14)
+scatter(frequency_360K.flatten(order='C'),
+        group_velcotiy_norm_360K, facecolor='w', edgecolor='b', s=10, marker='^')
+scatter(frequency_500K.flatten(order='C'),
+        group_velcotiy_norm_500K, facecolor='w', edgecolor='r', s=10, marker='^')
+xlabel('Frequency (THz)', fontsize=14)
+ylabel(r'$|v| \ (\frac{km}{s})$', fontsize=14)
 gca().set_xticks(np.arange(0, 5, 1))
 gca().set_yticks(np.arange(0, 3.0, 0.5))
 ylim([-0.1, 3])
 
 subplot(1 ,3, 3)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;),
-        phase_space_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;o&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;),
-        phase_space_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;o&#39;)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-ylabel(&#39;Phase space&#39;, fontsize=14)
+scatter(frequency_360K.flatten(order='C'),
+        phase_space_360K, facecolor='w', edgecolor='b', s=10, marker='o')
+scatter(frequency_500K.flatten(order='C'),
+        phase_space_500K, facecolor='w', edgecolor='r', s=10, marker='o')
+xlabel('Frequency (THz)', fontsize=14)
+ylabel('Phase space', fontsize=14)
 gca().set_xticks(np.arange(0, 5, 1))
 gca().set_yticks(np.arange(0, 250, 50))
 ylim([0, 250])
@@ -1293,9 +1269,9 @@ show()
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Load in scattering rate
 scattering_rate_360K = np.load(
-     data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth.npy&#39;, allow_pickle=True)
+     data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/360/quantum/bandwidth.npy', allow_pickle=True)
 scattering_rate_500K = np.load(
-     data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/500/quantum/bandwidth.npy&#39;, allow_pickle=True)
+     data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/500/quantum/bandwidth.npy', allow_pickle=True)
 
 # Derive lifetime, which is inverse of scattering rate
 life_time_360K = scattering_rate_360K ** (-1)
@@ -1307,12 +1283,12 @@ mean_free_path_500K = []
 
 for i in range(3):
     mean_free_path_360K.append(np.loadtxt(
-    data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/mean_free_path_&#39; +
-    str(i) + &#39;.dat&#39;))
+    data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/mean_free_path_' +
+    str(i) + '.dat'))
 
     mean_free_path_500K.append(np.loadtxt(
-    data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/500/quantum/mean_free_path_&#39; +
-    str(i) + &#39;.dat&#39;))
+    data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/inverse/500/quantum/mean_free_path_' +
+    str(i) + '.dat'))
 
 # Convert list to numpy array and compute norm for mean free path
 # Convert the unit from angstrom  to nanometer
@@ -1328,36 +1304,36 @@ mean_free_path_norm_500K = np.linalg.norm(
 figure(figsize=(12, 3))
 subplot(1,3, 1)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;),
-        life_time_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;s&#39;, label=&#39;360 K&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;),
-        life_time_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;s&#39;, label=&#39;500 K&#39;)
+scatter(frequency_360K.flatten(order='C'),
+        life_time_360K, facecolor='w', edgecolor='b', s=10, marker='s', label='360 K')
+scatter(frequency_500K.flatten(order='C'),
+        life_time_500K, facecolor='w', edgecolor='r', s=10, marker='s', label='500 K')
 gca().set_xticks(np.arange(0, 5, 1))
-yscale(&#39;log&#39;)
-ylabel(r&#39;$\tau$ (ps)&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+yscale('log')
+ylabel(r'$\tau$ (ps)', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 legend(fontsize=10)
 
 subplot(1,3, 2)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;),
-        scattering_rate_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;d&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;),
-        scattering_rate_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;d&#39;)
+scatter(frequency_360K.flatten(order='C'),
+        scattering_rate_360K, facecolor='w', edgecolor='b', s=10, marker='d')
+scatter(frequency_500K.flatten(order='C'),
+        scattering_rate_500K, facecolor='w', edgecolor='r', s=10, marker='d')
 gca().set_xticks(np.arange(0, 5, 1))
-ylabel(r&#39;$\Gamma$ (THz)&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylabel(r'$\Gamma$ (THz)', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 
 subplot(1,3, 3)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;),
-        mean_free_path_norm_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;8&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;),
-        mean_free_path_norm_500K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;8&#39;)
+scatter(frequency_360K.flatten(order='C'),
+        mean_free_path_norm_360K, facecolor='w', edgecolor='b', s=10, marker='8')
+scatter(frequency_500K.flatten(order='C'),
+        mean_free_path_norm_500K, facecolor='w', edgecolor='r', s=10, marker='8')
 gca().set_xticks(np.arange(0, 5, 1))
-ylabel(r&#39;$\lambda$ (nm)&#39;, fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
-yscale(&#39;log&#39;)
+ylabel(r'$\lambda$ (nm)', fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
+yscale('log')
 ylim([1e-4, 1e3])
 subplots_adjust(wspace=0.33)
 show()
@@ -1387,67 +1363,67 @@ kappa_tensor_QHGK_500K  = np.zeros([mean_free_path_500K .shape[0], 3, 3])
 
 for i in range(3):
     for j in range(3):
-        kappa_tensor_RTA_360K [:, i, j] = np.loadtxt(data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/rta/360/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
-        kappa_tensor_QHGK_360K [:, i, j] = np.loadtxt(data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/qhgk/360/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
-        kappa_tensor_Inv_360K [:, i, j] = np.loadtxt(data_folder_360K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_RTA_360K [:, i, j] = np.loadtxt(data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/rta/360/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
+        kappa_tensor_QHGK_360K [:, i, j] = np.loadtxt(data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/qhgk/360/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
+        kappa_tensor_Inv_360K [:, i, j] = np.loadtxt(data_folder_360K + 'ALD_CsPbBr3_NEP/12_12_12/inverse/360/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
 
-        kappa_tensor_RTA_500K [:, i, j] = np.loadtxt(data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/rta/500/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
-        kappa_tensor_QHGK_500K [:, i, j] = np.loadtxt(data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/qhgk/500/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
-        kappa_tensor_Inv_500K [:, i, j] = np.loadtxt(data_folder_500K + &#39;ALD_CsPbBr3_NEP/12_12_12/inverse/500/quantum/conductivity_&#39; +
-    str(i) + &#39;_&#39; + str(j) + &#39;.dat&#39;)
+        kappa_tensor_RTA_500K [:, i, j] = np.loadtxt(data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/rta/500/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
+        kappa_tensor_QHGK_500K [:, i, j] = np.loadtxt(data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/qhgk/500/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
+        kappa_tensor_Inv_500K [:, i, j] = np.loadtxt(data_folder_500K + 'ALD_CsPbBr3_NEP/12_12_12/inverse/500/quantum/conductivity_' +
+    str(i) + '_' + str(j) + '.dat')
 
 
 # Sum over the 0th dimension to recover 3-by-3 kappa matrix
 kappa_matrix_RTA_360K =  kappa_tensor_RTA_360K.sum(axis=0)
-print(&quot;RTA thermal conductivity at 360 K: %.3f W m^-1 K^-1\n&quot;
+print("RTA thermal conductivity at 360 K: %.3f W m^-1 K^-1\n"
       %np.mean(np.diag(kappa_matrix_RTA_360K)))
-print(&quot;RTA kappa matrix at 360 K: &quot;)
+print("RTA kappa matrix at 360 K: ")
 print(kappa_matrix_RTA_360K )
-print(&#39;\n&#39;)
+print('\n')
 
 kappa_matrix_QHGK_360K =  kappa_tensor_QHGK_360K.sum(axis=0)
-print(&quot;QHGK thermal conductivity at 360 K: %.3f W m^-1 K^-1\n&quot;
+print("QHGK thermal conductivity at 360 K: %.3f W m^-1 K^-1\n"
       %np.mean(np.diag(kappa_matrix_QHGK_360K)))
-print(&quot;QHGK kappa matrix at 360 K: &quot;)
+print("QHGK kappa matrix at 360 K: ")
 print(kappa_matrix_QHGK_360K )
-print(&#39;\n&#39;)
+print('\n')
 
 kappa_matrix_Inv_360K =  kappa_tensor_Inv_360K.sum(axis=0)
 kappa_matrix_full_QHGK_360K = (kappa_matrix_QHGK_360K - kappa_matrix_RTA_360K) + kappa_matrix_Inv_360K
 
-print(&quot;Full QHGK thermal conductivity at 360 K: %.3f W m^-1 K^-1\n&quot;
+print("Full QHGK thermal conductivity at 360 K: %.3f W m^-1 K^-1\n"
       %np.mean(np.diag(kappa_matrix_full_QHGK_360K)))
-print(&quot;Full QHGK kappa matrix at 360 K: &quot;)
+print("Full QHGK kappa matrix at 360 K: ")
 print(kappa_matrix_full_QHGK_360K)
-print(&#39;\n&#39;)
+print('\n')
 
 
 # Sum over the 0th dimension to recover 3-by-3 kappa matrix
 kappa_matrix_RTA_500K =  kappa_tensor_RTA_500K.sum(axis=0)
-print(&quot;RTA thermal conductivity at 500 K: %.3f W m^-1 K^-1\n&quot;
+print("RTA thermal conductivity at 500 K: %.3f W m^-1 K^-1\n"
       %np.mean(np.diag(kappa_matrix_RTA_500K)))
-print(&quot;RTA kappa matrix at 500 K: &quot;)
+print("RTA kappa matrix at 500 K: ")
 print(kappa_matrix_RTA_500K )
-print(&#39;\n&#39;)
+print('\n')
 
 kappa_matrix_QHGK_500K =  kappa_tensor_QHGK_500K.sum(axis=0)
-print(&quot;QHGK thermal conductivity at 500 K: %.3f W m^-1 K^-1\n&quot;
+print("QHGK thermal conductivity at 500 K: %.3f W m^-1 K^-1\n"
       %np.mean(np.diag(kappa_matrix_QHGK_500K)))
-print(&quot;QHGK kappa matrix at 500 K: &quot;)
+print("QHGK kappa matrix at 500 K: ")
 print(kappa_matrix_QHGK_500K )
-print(&#39;\n&#39;)
+print('\n')
 
 kappa_matrix_Inv_500K =  kappa_tensor_Inv_500K.sum(axis=0)
 kappa_matrix_full_QHGK_500K = (kappa_matrix_QHGK_500K - kappa_matrix_RTA_500K) + kappa_matrix_Inv_500K
 
-print(&quot;Full QHGK thermal conductivity at 500 K: %.3f W m^-1 K^-1\n&quot;
+print("Full QHGK thermal conductivity at 500 K: %.3f W m^-1 K^-1\n"
       %np.mean(np.diag(kappa_matrix_full_QHGK_500K)))
-print(&quot;Full QHGK kappa matrix at 500 K: &quot;)
+print("Full QHGK kappa matrix at 500 K: ")
 print(kappa_matrix_full_QHGK_500K)
 </code><br/></pre></div>
 </div>
@@ -1516,13 +1492,13 @@ kappa_per_mode_full_QHGK_360K = kappa_tensor_full_QHGK_360K.sum(axis=-1).sum(axi
 
 # Computation of intra band contributions for cumulative kappa w.r.t frequency at 360K
 freq_sorted_full_QHGK_360K, kappa_cum_wrt_freq_full_QHGK_360K = cumulative_cond_cal(
-    frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_full_QHGK_360K)
+    frequency_360K.flatten(order='C'), kappa_tensor_full_QHGK_360K)
 
 freq_sorted_QHGK_360K, kappa_cum_wrt_freq_QHGK_360K = cumulative_cond_cal(
-    frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_QHGK_360K)
+    frequency_360K.flatten(order='C'), kappa_tensor_QHGK_360K)
 
 freq_sorted_RTA_360K, kappa_cum_wrt_freq_RTA_360K = cumulative_cond_cal(
-    frequency_360K.flatten(order=&#39;C&#39;), kappa_tensor_RTA_360K)
+    frequency_360K.flatten(order='C'), kappa_tensor_RTA_360K)
 
 
 # Computation of intra band contributions for cumulative kappa w.r.t mean free path (lambda) at 360K
@@ -1541,13 +1517,13 @@ kappa_tensor_full_QHGK_500K = (kappa_tensor_QHGK_500K - kappa_tensor_RTA_500K) +
 kappa_per_mode_full_QHGK_500K = kappa_tensor_full_QHGK_500K.sum(axis=-1).sum(axis=1)
 
 freq_sorted_full_QHGK_500K, kappa_cum_wrt_freq_full_QHGK_500K = cumulative_cond_cal(
-    frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_full_QHGK_500K)
+    frequency_500K.flatten(order='C'), kappa_tensor_full_QHGK_500K)
 
 freq_sorted_RTA_500K, kappa_cum_wrt_freq_RTA_500K = cumulative_cond_cal(
-    frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_RTA_500K)
+    frequency_500K.flatten(order='C'), kappa_tensor_RTA_500K)
 
 freq_sorted_QHGK_500K, kappa_cum_wrt_freq_QHGK_500K = cumulative_cond_cal(
-    frequency_500K.flatten(order=&#39;C&#39;), kappa_tensor_QHGK_500K)
+    frequency_500K.flatten(order='C'), kappa_tensor_QHGK_500K)
 
 # Computation of intra band contributions for cumulative kappa w.r.t mean free path (lambda) at 500K
 lambda_sorted_full_QHGK_500K, kappa_cum_wrt_lambda_full_QHGK_500K = cumulative_cond_cal(
@@ -1563,45 +1539,45 @@ lambda_sorted_RTA_500K, kappa_cum_wrt_lambda_RTA_500K = cumulative_cond_cal(
 figure(figsize=(12, 3))
 subplot(1,3, 1)
 set_fig_properties([gca()])
-scatter(frequency_360K.flatten(order=&#39;C&#39;),
-        kappa_per_mode_full_QHGK_360K, facecolor=&#39;w&#39;, edgecolor=&#39;b&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{full \ QHGK, 360K }$&#39;)
-scatter(frequency_500K.flatten(order=&#39;C&#39;),
-        kappa_per_mode_full_QHGK_360K, facecolor=&#39;w&#39;, edgecolor=&#39;r&#39;, s=10, marker=&#39;&gt;&#39;, label=&#39;$\kappa_{full \ QHGK, 500K }$&#39;)
+scatter(frequency_360K.flatten(order='C'),
+        kappa_per_mode_full_QHGK_360K, facecolor='w', edgecolor='b', s=10, marker='&gt;', label='$\kappa_{full \ QHGK, 360K }$')
+scatter(frequency_500K.flatten(order='C'),
+        kappa_per_mode_full_QHGK_360K, facecolor='w', edgecolor='r', s=10, marker='&gt;', label='$\kappa_{full \ QHGK, 500K }$')
 gca().set_xticks(np.arange(0, 5, 1))
-gca().axhline(y = 0, color=&#39;k&#39;, ls=&#39;--&#39;, lw=1)
-ylabel(r&#39;$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+gca().axhline(y = 0, color='k', ls='--', lw=1)
+ylabel(r'$\kappa_{per \ mode}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$',fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 legend(loc=1, fontsize=10)
 ylim([-0.0005, 0.005])
 
 subplot(1,3, 2)
 set_fig_properties([gca()])
-plot(freq_sorted_full_QHGK_360K, kappa_cum_wrt_freq_full_QHGK_360K, &#39;b&#39;,
-     label=&#39;360 K&#39;)
-plot(freq_sorted_full_QHGK_500K, kappa_cum_wrt_freq_full_QHGK_500K, &#39;r&#39;,
-     label=&#39;500 K&#39;)
-plot(freq_sorted_RTA_360K, kappa_cum_wrt_freq_RTA_360K, &#39;b&#39;, ls=&#39;--&#39;)
-plot(freq_sorted_RTA_500K, kappa_cum_wrt_freq_RTA_500K, &#39;r&#39;, ls=&#39;--&#39;)
-plot(freq_sorted_QHGK_360K, (kappa_cum_wrt_freq_QHGK_360K - kappa_cum_wrt_freq_RTA_360K) , &#39;b&#39;, ls=&#39;:&#39;)
-plot(freq_sorted_QHGK_500K, (kappa_cum_wrt_freq_QHGK_500K - kappa_cum_wrt_freq_RTA_500K) , &#39;r&#39;, ls=&#39;:&#39;)
+plot(freq_sorted_full_QHGK_360K, kappa_cum_wrt_freq_full_QHGK_360K, 'b',
+     label='360 K')
+plot(freq_sorted_full_QHGK_500K, kappa_cum_wrt_freq_full_QHGK_500K, 'r',
+     label='500 K')
+plot(freq_sorted_RTA_360K, kappa_cum_wrt_freq_RTA_360K, 'b', ls='--')
+plot(freq_sorted_RTA_500K, kappa_cum_wrt_freq_RTA_500K, 'r', ls='--')
+plot(freq_sorted_QHGK_360K, (kappa_cum_wrt_freq_QHGK_360K - kappa_cum_wrt_freq_RTA_360K) , 'b', ls=':')
+plot(freq_sorted_QHGK_500K, (kappa_cum_wrt_freq_QHGK_500K - kappa_cum_wrt_freq_RTA_500K) , 'r', ls=':')
 gca().set_yticks(np.arange(0, 0.5, 0.1))
 gca().set_xticks(np.arange(0, 5, 1))
-ylabel(r&#39;$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
-xlabel(&#39;Frequency (THz)&#39;, fontsize=14)
+ylabel(r'$\kappa_{cumulative, \omega}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$',fontsize=14)
+xlabel('Frequency (THz)', fontsize=14)
 legend(loc=2, fontsize=10)
 
 subplot(1,3, 3)
 set_fig_properties([gca()])
-plot(lambda_sorted_full_QHGK_360K, kappa_cum_wrt_lambda_full_QHGK_360K, &#39;b&#39;)
-plot(lambda_sorted_full_QHGK_500K, kappa_cum_wrt_lambda_full_QHGK_500K, &#39;r&#39;)
-plot(lambda_sorted_RTA_360K, kappa_cum_wrt_lambda_RTA_360K, &#39;b&#39;, ls=&#39;--&#39;)
-plot(lambda_sorted_RTA_500K, kappa_cum_wrt_lambda_RTA_500K, &#39;r&#39;, ls=&#39;--&#39;)
-plot(lambda_sorted_QHGK_360K, (kappa_cum_wrt_lambda_QHGK_360K - kappa_cum_wrt_lambda_RTA_360K) , &#39;b&#39;, ls=&#39;:&#39;)
-plot(lambda_sorted_QHGK_500K, (kappa_cum_wrt_lambda_QHGK_500K - kappa_cum_wrt_lambda_RTA_500K) , &#39;r&#39;, ls=&#39;:&#39;)
-xlabel(r&#39;$\lambda$ (nm)&#39;, fontsize=14)
-ylabel(r&#39;$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$&#39;,fontsize=14)
+plot(lambda_sorted_full_QHGK_360K, kappa_cum_wrt_lambda_full_QHGK_360K, 'b')
+plot(lambda_sorted_full_QHGK_500K, kappa_cum_wrt_lambda_full_QHGK_500K, 'r')
+plot(lambda_sorted_RTA_360K, kappa_cum_wrt_lambda_RTA_360K, 'b', ls='--')
+plot(lambda_sorted_RTA_500K, kappa_cum_wrt_lambda_RTA_500K, 'r', ls='--')
+plot(lambda_sorted_QHGK_360K, (kappa_cum_wrt_lambda_QHGK_360K - kappa_cum_wrt_lambda_RTA_360K) , 'b', ls=':')
+plot(lambda_sorted_QHGK_500K, (kappa_cum_wrt_lambda_QHGK_500K - kappa_cum_wrt_lambda_RTA_500K) , 'r', ls=':')
+xlabel(r'$\lambda$ (nm)', fontsize=14)
+ylabel(r'$\kappa_{cumulative, \lambda}\;\left(\frac{\rm{W}}{\rm{m}\cdot\rm{K}}\right)$',fontsize=14)
 gca().set_yticks(np.arange(0, 0.5, 0.1))
-xscale(&#39;log&#39;)
+xscale('log')
 xlim([1e-2, 5e2])
 subplots_adjust(wspace=0.33)
 show()

@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html">
+        <link rel="prev" href="gallium_arsenide_orb-v3_ORBCalculator.html">
       
       
         <link rel="next" href="silicon_NEP89_calorine.html">
@@ -299,30 +299,6 @@
   
   <span class="md-ellipsis">
     <span title="/docsource/machine_learning_potentials/gallium_arsenide_orb-v3_orbcalculator.ipynb (reference label)"><span>Gallium Arsenide Orb V3 Orbcalculator</span></span>
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="magnesium_oxide_MatterSim-v1-1M_mattersimcalculator.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    <span title="/docsource/machine_learning_potentials/magnesium_oxide_mattersim-v1-1m_mattersimcalculator.ipynb (reference label)"><span>Magnesium Oxide Mattersim V1 1M Mattersimcalculator</span></span>
     
   </span>
   
@@ -962,25 +938,25 @@ from pylab import *
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span><code>[2]:
 </code></pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def set_fig_properties(ax_list, panel_color_str=&#39;black&#39;, line_width=2):
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code>def set_fig_properties(ax_list, panel_color_str='black', line_width=2):
     tl = 4
     tw = 2
     tlm = 2
 
     for ax in ax_list:
-        ax.tick_params(which=&#39;major&#39;, length=tl, width=tw)
-        ax.tick_params(which=&#39;minor&#39;, length=tlm, width=tw)
-        ax.tick_params(which=&#39;both&#39;, axis=&#39;both&#39;, direction=&#39;in&#39;,
+        ax.tick_params(which='major', length=tl, width=tw)
+        ax.tick_params(which='minor', length=tlm, width=tw)
+        ax.tick_params(which='both', axis='both', direction='in',
                        right=True, top=True)
-        ax.spines[&#39;bottom&#39;].set_color(panel_color_str)
-        ax.spines[&#39;top&#39;].set_color(panel_color_str)
-        ax.spines[&#39;left&#39;].set_color(panel_color_str)
-        ax.spines[&#39;right&#39;].set_color(panel_color_str)
+        ax.spines['bottom'].set_color(panel_color_str)
+        ax.spines['top'].set_color(panel_color_str)
+        ax.spines['left'].set_color(panel_color_str)
+        ax.spines['right'].set_color(panel_color_str)
 
-        ax.spines[&#39;bottom&#39;].set_linewidth(line_width)
-        ax.spines[&#39;top&#39;].set_linewidth(line_width)
-        ax.spines[&#39;left&#39;].set_linewidth(line_width)
-        ax.spines[&#39;right&#39;].set_linewidth(line_width)
+        ax.spines['bottom'].set_linewidth(line_width)
+        ax.spines['top'].set_linewidth(line_width)
+        ax.spines['left'].set_linewidth(line_width)
+        ax.spines['right'].set_linewidth(line_width)
 
         for t in ax.xaxis.get_ticklines(): t.set_color(panel_color_str)
         for t in ax.yaxis.get_ticklines(): t.set_color(panel_color_str)
@@ -997,14 +973,14 @@ from pylab import *
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Denote plot default format
 aw = 2
 fs = 12
-font = {&#39;size&#39;: fs}
-matplotlib.rc(&#39;font&#39;, **font)
-matplotlib.rc(&#39;axes&#39;, linewidth=aw)
+font = {'size': fs}
+matplotlib.rc('font', **font)
+matplotlib.rc('axes', linewidth=aw)
 
 # Configure Matplotlib to use a LaTeX-like style without LaTeX
-plt.rcParams[&#39;text.usetex&#39;] = False
-plt.rcParams[&#39;font.family&#39;] = &#39;serif&#39;
-plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+plt.rcParams['text.usetex'] = False
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['mathtext.fontset'] = 'cm'
 </code></pre></div>
 </div>
 </div>
@@ -1018,9 +994,9 @@ plt.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><code># Initalize temperature array and low in thermal expansion coefficients
 temperature = np.linspace(0, 1800, 361)
-coefficients_of_thermal_expansions = np.load(&#39;kaldo_runs/alpha_T.npy&#39;, allow_pickle=True)
-lattice = np.load(&#39;kaldo_runs/L_T.npy&#39;, allow_pickle=True)
-free_energies = np.load(&#39;kaldo_runs/F_T.npy&#39;, allow_pickle=True)
+coefficients_of_thermal_expansions = np.load('kaldo_runs/alpha_T.npy', allow_pickle=True)
+lattice = np.load('kaldo_runs/L_T.npy', allow_pickle=True)
+free_energies = np.load('kaldo_runs/F_T.npy', allow_pickle=True)
 
 # Tabluate experimental data
 tempature_exp = np.array([8.15, 13.15, 18.15, 23.15, 28.15,
@@ -1051,13 +1027,13 @@ alpha_exp = np.array([0.0, -0.1, -2.0, -13.1, -40.9,
 
 fig = figure(figsize=(4,3))
 set_fig_properties([gca()])
-scatter(tempature_exp, alpha_exp, edgecolor=&#39;k&#39;, facecolor=&#39;w&#39;, marker=&#39;o&#39;, s=20, zorder=1, label=&#39;CTE from Middelmann et al.&#39;)
-plot(temperature, 1e6 * coefficients_of_thermal_expansions, &#39;r-&#39;, lw=2, label=r&#39;$\kappa$ALDo QHA using MatterSim&#39;)
-legend(loc=&#39;upper center&#39;, fontsize=8)
+scatter(tempature_exp, alpha_exp, edgecolor='k', facecolor='w', marker='o', s=20, zorder=1, label='CTE from Middelmann et al.')
+plot(temperature, 1e6 * coefficients_of_thermal_expansions, 'r-', lw=2, label=r'$\kappa$ALDo QHA using MatterSim')
+legend(loc='upper center', fontsize=8)
 gca().set_xticks(np.arange(0, 2100, 50))
 gca().set_yticks(np.arange(-1, 6, 1))
-xlabel(&#39;Tempeature (K)&#39;)
-ylabel(r&#39;$\alpha$ ($10^{-6} \ K^{-1}$)&#39;)
+xlabel('Tempeature (K)')
+ylabel(r'$\alpha$ ($10^{-6} \ K^{-1}$)')
 xlim([0, 300])
 show()
 </code></pre></div>
@@ -1079,26 +1055,26 @@ show()
 
 subplot(1,3,1)
 set_fig_properties([gca()])
-plot(temperature, free_energies/1000, &#39;r-&#39;, lw=2)
+plot(temperature, free_energies/1000, 'r-', lw=2)
 gca().set_xticks(np.arange(0, 2400, 400))
-xlabel(&#39;Tempeature (K)&#39;)
-ylabel(r&quot;Helmholtz Free Energy (eV/atom)&quot;, fontsize=9)
+xlabel('Tempeature (K)')
+ylabel(r"Helmholtz Free Energy (eV/atom)", fontsize=9)
 
 
 subplot(1,3,2)
 set_fig_properties([gca()])
-plot(temperature, lattice, &#39;r-&#39;, lw=2)
+plot(temperature, lattice, 'r-', lw=2)
 gca().set_xticks(np.arange(0, 2400, 400))
-xlabel(&#39;Tempeature (K)&#39;)
-ylabel(r&#39;a ($\AA$)&#39;)
+xlabel('Tempeature (K)')
+ylabel(r'a ($\AA$)')
 
 subplot(1,3,3)
 set_fig_properties([gca()])
-plot(temperature, 1e6 * coefficients_of_thermal_expansions, &#39;r-&#39;, lw=2)
+plot(temperature, 1e6 * coefficients_of_thermal_expansions, 'r-', lw=2)
 gca().set_yticks(np.arange(0, 8, 1))
 gca().set_xticks(np.arange(0, 2400, 400))
-xlabel(&#39;Tempeature (K)&#39;)
-ylabel(r&#39;$\alpha$ ($10^{-6}$  K$^{-1}$)&#39;)
+xlabel('Tempeature (K)')
+ylabel(r'$\alpha$ ($10^{-6}$  K$^{-1}$)')
 subplots_adjust(hspace=0, wspace=0.3)
 show()
 </code></pre></div>
