@@ -40,7 +40,7 @@ make install-python
 - To run this example, navigate to this directory and execute:
 
 ```console
-python carbon_diamond_Tersoff_thermal_conductivity.py
+uv run python thermal_conductivity.py
 ```
 - To view figures generated during simulations, navigate to this folder: `plots/15_15_15/`
 - To access data computed during simulations, navigate to this folder: `ALD_c_diamond/`

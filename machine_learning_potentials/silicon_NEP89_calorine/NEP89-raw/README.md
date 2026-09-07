@@ -1,9 +1,9 @@
 ### Computing Thermal Conductivity of Silicon with an Universal Neuroevolution Potential (NEP):
 
 > Input data descriptions for the `nep89_20250409.txt` potential file can be found [here](https://github.com/brucefan1983/GPUMD/tree/master/potentials/nep/nep89_20250409).  
-> Running `python thermal_conductivity.py` requires [ASE](https://ase-lib.org), [kALDo](https://github.com/nanotheorygroup/kaldo), and [calorine](https://calorine.materialsmodeling.org) to be installed.
+> Running `uv run python thermal_conductivity.py` requires [ASE](https://ase-lib.org), [kALDo](https://github.com/nanotheorygroup/kaldo), and [calorine](https://calorine.materialsmodeling.org) to be installed.
 
-- Execute `python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon using the NEP89 potential.
+- Execute `uv run python thermal_conductivity.py` to calculate the thermomechanical properties of Silicon using the NEP89 potential.
 
 - The calculation proceeds as follows:
   - The Si structure is created using the Materials Project structure, sourced [here](https://next-gen.materialsproject.org/materials/mp-149).

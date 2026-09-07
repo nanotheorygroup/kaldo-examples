@@ -12,7 +12,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 logger.info(f"Running MatterSim on {device}")
 
 # Set up mattersim calculator
-calc =  MatterSimCalculator(device=device)
+calc =  MatterSimCalculator(device=device, dtype='float64')
 
 
 # Set up cubic system for silicon

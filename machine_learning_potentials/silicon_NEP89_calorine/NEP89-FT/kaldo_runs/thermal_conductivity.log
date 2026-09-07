@@ -1,0 +1,57 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781462804.016310 2074977 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+      Step     Time          Energy          fmax
+BFGS:    0 11:46:45      -10.846977        0.668519
+BFGS:    1 11:46:45      -10.849897        0.053145
+BFGS:    2 11:46:45      -10.849915        0.000591
+BFGS:    3 11:46:45      -10.849915        0.000001
+2026-06-14 11:46:45,611 - kaldo - INFO - Second order not found. Calculating.
+2026-06-14 11:46:45,612 - kaldo - INFO - Calculating second order potential derivatives, finite difference displacement: 3.000e-02 angstrom
+2026-06-14 11:46:46,743 - kaldo - INFO - Symmetry of Dynamical Matrix 4.9937510723796485e-12
+2026-06-14 11:46:46,743 - kaldo - INFO - fd_NEP/second stored
+2026-06-14 11:46:46,924 - kaldo - INFO - Third order not found. Calculating.
+2026-06-14 11:46:46,924 - kaldo - INFO - Calculating third order potential derivatives, finite difference displacement: 3.000e-02 angstrom
+2026-06-14 11:50:08,791 - kaldo - INFO - Completed atom 1: 50% done
+2026-06-14 11:50:08,862 - kaldo - INFO - Completed atom 0: 100% done
+2026-06-14 11:50:08,878 - kaldo - INFO - total forces to calculate third : 4500
+2026-06-14 11:50:08,878 - kaldo - INFO - forces calculated : 4500
+2026-06-14 11:50:08,878 - kaldo - INFO - forces skipped (outside distance threshold) : 0
+I0000 00:00:1781463011.860674 2074977 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 9479 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5
+I0000 00:00:1781463011.862043 2074977 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 6468 MB memory:  -> device: 1, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:21:00.0, compute capability: 7.5
+I0000 00:00:1781463011.863375 2074977 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 9606 MB memory:  -> device: 2, name: NVIDIA GeForce RTX 2080 Ti, pci bus id: 0000:4c:00.0, compute capability: 7.5
+I0000 00:00:1781463012.044520 2074977 cuda_solvers.cc:175] Creating GpuSolver handles for stream 0x56de6cdbd020
+/home/zekun/develop/kaldo/kaldo/observables/harmonic_with_q.py:258: RuntimeWarning: invalid value encountered in sqrt
+  inverse_sqrt_freq = tf.cast(tf.convert_to_tensor(1 / np.sqrt(frequency)), tf.complex128)
+C11: 139.0 GPa
+C12: 77.9 GPa
+C44: 48.6 GPa
+Bulk Modulus:  98.3 GPa
+2026-06-14 11:50:16,292 - kaldo - INFO - ALD_Si_NEP/15_15_15/_eigensystem not found in numpy format, calculating _eigensystem
+2026-06-14 11:50:22,112 - kaldo - INFO - ALD_Si_NEP/15_15_15/_eigensystem stored
+2026-06-14 11:50:22,113 - kaldo - INFO - ALD_Si_NEP/15_15_15/physical_mode not found in numpy format, calculating physical_mode
+2026-06-14 11:50:22,145 - kaldo - INFO - ALD_Si_NEP/15_15_15/frequency not found in numpy format, calculating frequency
+2026-06-14 11:50:26,497 - kaldo - INFO - ALD_Si_NEP/15_15_15/frequency stored
+2026-06-14 11:50:26,497 - kaldo - INFO - ALD_Si_NEP/15_15_15/physical_mode stored
+2026-06-14 11:50:27,106 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/_eigensystem
+2026-06-14 11:50:27,107 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/physical_mode
+
+
+2026-06-14 11:50:27,375 - kaldo - INFO - ALD_Si_NEP/15_15_15/inverse/300/quantum/conductivity not found in formatted format, calculating conductivity
+2026-06-14 11:50:27,376 - kaldo - INFO - ALD_Si_NEP/15_15_15/inverse/300/quantum/mean_free_path not found in formatted format, calculating mean_free_path
+2026-06-14 11:50:27,376 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/physical_mode
+2026-06-14 11:50:27,376 - kaldo - INFO - ALD_Si_NEP/15_15_15/velocity not found in numpy format, calculating velocity
+/home/zekun/develop/kaldo/kaldo/observables/harmonic_with_q.py:258: RuntimeWarning: invalid value encountered in sqrt
+  inverse_sqrt_freq = tf.cast(tf.convert_to_tensor(1 / np.sqrt(frequency)), tf.complex128)
+2026-06-14 11:51:03,365 - kaldo - INFO - ALD_Si_NEP/15_15_15/velocity stored
+2026-06-14 11:51:03,365 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/physical_mode
+2026-06-14 11:51:03,365 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/frequency
+2026-06-14 11:51:03,365 - kaldo - INFO - ALD_Si_NEP/15_15_15/300/quantum/_ps_gamma_and_gamma_tensor not found in numpy format, calculating _ps_gamma_and_gamma_tensor
+2026-06-14 11:51:03,365 - kaldo - INFO - ALD_Si_NEP/15_15_15/300/quantum/population not found in numpy format, calculating population
+2026-06-14 11:51:07,479 - kaldo - INFO - ALD_Si_NEP/15_15_15/300/quantum/population stored
+2026-06-14 11:51:07,479 - kaldo - INFO - ALD_Si_NEP/15_15_15/_sparse_phase_and_potential not found in numpy format, calculating _sparse_phase_and_potential
+2026-06-14 11:51:07,634 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/_eigensystem
+2026-06-14 11:51:07,635 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/physical_mode
+2026-06-14 11:51:07,635 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/frequency
+2026-06-14 11:51:07,635 - kaldo - INFO - Loading ALD_Si_NEP/15_15_15/velocity
+2026-06-14 11:51:08,436 - kaldo - INFO - Projection started

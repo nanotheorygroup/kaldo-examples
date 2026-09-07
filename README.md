@@ -20,6 +20,27 @@ The examples cover workflows with:
 - **Empirical Potentials** (Any Empirical Potentials Supported in LAMMPS)
 - **Finite Temperature Effective Potentials** (TDEP)
 
+Installations and package dependencies are handled by [uv](https://docs.astral.sh/uv/), please refer to the manual when needed.
+
+## Tutorial Descriptions
+
+| # | folder | category | creator | description |
+| --- | --- | --- | --- | --- |
+| 1 | [cesium_lead_bromide_NEP_TDEP](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/cesium_lead_bromide_NEP_TDEP) | ML Potentials | Dylan Folkner, Zekun Chen | Thermal transport in cubic CsPbBr₃ (5 atoms/cell) using TDEP and GPUMD. |
+| 2 | [gallium_arsenide_orb-v3_ORBCalculator](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/gallium_arsenide_orb-v3_ORBCalculator) | ML Potentials | Zekun Chen, Higo Oliveira | Thermal transport in gallium arsenide (2 atoms/cell) using Orb. |
+| 3 | [silicon_MatterSim-v1-1M_mattersimcalculator](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/silicon_MatterSim-v1-1M_mattersimcalculator) | ML Potentials | Dylan Folkner, Zekun Chen  | Thermal expansion coefficients of silicon diamond (2 atoms/cell) using MatterSim. |
+| 4 | [silicon_NEP89_calorine](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/silicon_NEP89_calorine) | ML Potentials | Zekun Chen | Thermal transport in silicon diamond (2 atoms/cell) using calorine. |
+| 5 | [silicon_carbide_MatterSim-v1-1M_mattersimcalculator](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/silicon_carbide_MatterSim-v1-1M_mattersimcalculator) | ML Potentials | Zekun Chen | Thermal transport in silicon carbide (2 atoms/cell) using MatterSim. |
+| 6 | [wurtzite_aluminum_nitride_ACE_PyACE](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/wurtzite_aluminum_nitride_ACE_PyACE) | ML Potentials | Zekun Chen, Yuanbin Liu | Thermal transport in wurtzite aluminum nitride (4 atoms/cell) using pyACE. |
+| 7 | [sodium_chloride_UPETCalculator](https://github.com/nanotheorygroup/kaldo-examples/tree/main/machine_learning_potentials/sodium_chloride_UPETCalculator) | ML Potentials | Zekun Chen, Davide Donadio | Thermal transport in sodium chloride (2 atoms/cell) using UPET. |
+| 8 | [amorphous_silicon_Tersoff_LAMMPS](https://github.com/nanotheorygroup/kaldo-examples/tree/main/empirical_potentials/amorphous_silicon_Tersoff_LAMMPS) | Empirical | Giuseppe Barbalinardo, Davide Donadio| Thermal transport in amorphous silicon (512 atoms/cell) using LAMMPS PHONON. |
+| 9 | [carbon_diamond_Tersoff_ASE_LAMMPS](https://github.com/nanotheorygroup/kaldo-examples/tree/main/empirical_potentials/carbon_diamond_Tersoff_ASE_LAMMPS) | Empirical | Zekun Chen, Mattias Perez | Thermal transport in carbon diamond (2 atoms/cell) using ASE and LAMMPS. |
+| 10 | [carbon_nanotube_Tersoff_LAMMPS](https://github.com/nanotheorygroup/kaldo-examples/tree/main/empirical_potentials/carbon_nanotube_Tersoff_LAMMPS) | Empirical |Giuseppe Barbalinardo, Zekun Chen, Davide Donadio | Thermal transport in a (10,0) carbon nanotube (40 atoms/cell) using LAMMPS PHONON. |
+| 11 | [silicon_clathrate_Tersoff_LAMMPS](https://github.com/nanotheorygroup/kaldo-examples/tree/main/empirical_potentials/silicon_clathrate_Tersoff_LAMMPS) | Empirical | Higo Oliveira, Zekun Chen | Thermal transport in a type I silicon clathrate (46 atoms/cell) using LAMMPS PHONON. |
+| 12 | [germanium_dft_d3q](https://github.com/nanotheorygroup/kaldo-examples/tree/main/density_functional_theory/germanium_dft_d3q) | DFT |Alfredo Fiorentino, Mattias Perez | Thermal transport in germanium diamond (2 atoms/cell) using D3Q. |
+| 13 | [magnesium_oxide_dft_d3q](https://github.com/nanotheorygroup/kaldo-examples/tree/main/density_functional_theory/magnesium_oxide_dft_d3q) | DFT | Nicholas Lundgren, Mattias Perez | Thermal transport in rock-salt MgO (2 atoms/cell) using D3Q. |
+| 14 | [silicon_dft_qe](https://github.com/nanotheorygroup/kaldo-examples/tree/main/density_functional_theory/silicon_dft_qe) | DFT | Bohan Li, Mattias Perez, Zekun Chen | Thermal transport in silicon diamond (2 atoms/cell) using Quantum ESPRESSO. |
+
 ## Contributing
 
 We welcome contributions from the community! If you have a thermal transport workflow using kALDo, whether with a new potential, a different material system, or an alternative method, we'd love to include it.
