@@ -47,6 +47,10 @@ This example illustrates how to perform thermal transport simulation for a carbo
 This example illustrates how to perform thermal transport simulation for a 10,0 carbon nanotube (40 atoms per cell) system using [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
 - `silicon_clathrate_Tersoff_LAMMPS:`
 This example illustrates how to perform thermal transport simulation for a type I clathrate (46 atoms per cell) system using [LAMMPS PHONON](https://docs.lammps.org/Packages_details.html#pkg-phonon) package as force calculator.
+- `silicon_cumulant_SW_TDEP:`
+This example illustrates how to compute anharmonic cumulant free-energy corrections (F1/F2) for crystalline silicon from Stillinger-Weber TDEP force constants with the `kaldo.cumulant` subpackage.
+- `argon_cumulant_LJ_TDEP:`
+This example illustrates how to compute anharmonic cumulant free-energy corrections (F1/F2) for Lennard-Jones FCC argon (one-atom primitive cell) from TDEP force constants with the `kaldo.cumulant` subpackage.
 
 ---
 ### Git Large File Storage (LFS)
