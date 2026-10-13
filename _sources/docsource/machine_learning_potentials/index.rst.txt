@@ -11,6 +11,7 @@ These examples demonstrate kALDo workflows using **machine learning interatomic 
    Silicon Mattersim V1 1M Mattersimcalculator <silicon_MatterSim-v1-1M_mattersimcalculator>
    Silicon Nep89 Calorine <silicon_NEP89_calorine>
    Silicon Carbide Mattersim V1 1M Mattersimcalculator <silicon_carbide_MatterSim-v1-1M_mattersimcalculator>
+   Silicon Ensemble Upetcalculator <silicon_ensemble_UPETCalculator>
    Sodium Chloride Upetcalculator <sodium_chloride_UPETCalculator>
    Wurtzite Aluminum Nitride Ace Pyace <wurtzite_aluminum_nitride_ACE_PyACE>
 
