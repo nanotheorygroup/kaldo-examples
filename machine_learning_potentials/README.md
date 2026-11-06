@@ -10,12 +10,12 @@ These examples demonstrate kALDo workflows using **machine learning interatomic 
 
 Before running these examples, install the following packages:
 
-- MatterSim — Installation guide available [here](https://github.com/microsoft/mattersim)
-- Orb - Installation guide available [here](https://github.com/orbital-materials/orb-models)
-- TDEP - Installation guide available [here](https://tdep-developers.github.io/tdep/)
-- pyACE - Installation guide available [here](https://github.com/ICAMS/python-ace)
-- calorine - Instllation guide available [here](https://calorine.materialsmodeling.org/)
-- upet - Installation guide available [here](https://github.com/lab-cosmo/upet)
+- MatterSim: Installation guide available [here](https://github.com/microsoft/mattersim)
+- Orb: Installation guide available [here](https://github.com/orbital-materials/orb-models)
+- TDEP:  Installation guide available [here](https://tdep-developers.github.io/tdep/)
+- pyACE: Installation guide available [here](https://github.com/ICAMS/python-ace)
+- calorine: Instllation guide available [here](https://calorine.materialsmodeling.org/)
+- upet: Installation guide available [here](https://github.com/lab-cosmo/upet)
 ----
 
 ## List and content of examples folder
