@@ -2,12 +2,12 @@ from ase.build import bulk
 from ase.filters import StrainFilter
 from ase.io import read
 from ase.optimize import BFGS
+from mattersim.forcefield import MatterSimCalculator
 from kaldo.conductivity import Conductivity
 from kaldo.forceconstants import ForceConstants
 from kaldo.phonons import Phonons
 import kaldo.controllers.plotter as plotter
 import matplotlib.pyplot as plt
-from mattersim.forcefield import MatterSimCalculator
 import numpy as np
 import torch
 
